@@ -1,0 +1,266 @@
+<HTML lang="ja">
+<HEAD>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<TITLE> Antik - Natural n' Vantage </TITLE>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="webfonttest.js"></script>
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <style type="text/css">
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+		@font-face {
+      font-family: HanaMinOT_otf;
+      src: url("HanaMinOTPr6N-Regular.otf") format("opentype");
+    }
+		@font-face {
+	      font-family: HanaMinOT_woff;
+	      src: url("HanaMinOTPr6N-Regular.woff") format('woff');
+			}
+    a:link{color:#000000}
+    a:hover{font-weight: 800; font-size: 12px;}
+		a:active {color:#000000;}
+		a:visited {color:#000000;}
+		a{text-decoration:none}
+		* {
+				   -moz-box-sizing: border-box;
+  			-webkit-box-sizing: border-box;
+          	 		box-sizing: border-box;
+								margin: 0;
+								padding: 0;
+			}
+		body{
+				margin: 0;
+				padding: 0;
+			}
+    .cleanfix{
+			display: -moz-flex;
+			display: -webkit-flex;
+      display: 				 flex;
+			   -moz-flex-direction: column;
+			-webkit-flex-direction: column;
+							flex-direction: column;
+			}
+		nav{
+			position: fixed;
+			margin-top: 15px;
+			padding-top: 20px;
+			padding-left: 25px;
+			width: 110px;
+			height: 300px;
+			background-color: #fff;
+			z-index: 1;
+		}
+		.navlinks{
+			padding-top: 20px;
+			padding-right: 20px;
+			font-size: 8pt;
+			font-weight: 300;
+			font-family: ‘Noto Sans TC’, sans-serif;
+			letter-spacing: 3px;
+			line-height: 32px;
+		}
+		.contianer{
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			flex-direction: column;
+		}
+		.bigtitle{
+			width: 28px;
+			border-right: 2px solid #000000;
+			position: absolute;
+			right: 0;
+			margin-top: 60px;
+			margin-right: 40px;
+			font-size: 14pt;
+			font-weight: 400;
+			font-family: "HanaMinOT_woff";
+			letter-spacing: 3px;
+			line-height: 30px;
+		}
+		.articlecontianer{
+			margin-top: 30px;
+			margin-left: 110px;
+			margin-right: 90px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			flex-wrap: wrap;
+			-moz-flex-direction: column;
+	 		-webkit-flex-direction: column;
+					 		flex-direction: column;
+		}
+		.title1{
+			width: 100%;
+			margin-left: 50px;
+			margin-top: 60px;
+			font-size: 14pt;
+			font-weight: 100;
+			font-family: "HanaMinOT_woff";
+			letter-spacing: 3px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.descrip{
+			max-width: 510px;
+			margin-left: 50px;
+			margin-top: 2px;
+			margin-bottom: 50px;
+			font-size: 8pt;
+			font-weight: 300;
+			font-family: ‘Noto Sans TC’, sans-serif;
+			letter-spacing: 0px;
+			line-height: 18px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.article{
+			max-width: 510px;
+			margin-left: 50px;
+			margin-top: 40px;
+			font-size: 8pt;
+			font-weight: 300;
+			font-family: ‘Noto Sans TC’, sans-serif;
+			letter-spacing: 0px;
+			line-height: 18px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.imgbox{
+			max-width: 700px;
+			margin-top: 10px;
+			margin-left: 40px;
+			overflow: hidden;
+			height: auto;
+		}
+		.block{
+			height: 300px;
+		}
+		.copyright{
+			color: #999999;
+			margin-left: 50px;
+			margin-bottom: 15px;
+			bottom: 0;
+			font-size: 7pt;
+			font-weight: 300;
+			font-family: ‘Noto Sans TC’, sans-serif;
+			letter-spacing: 0px;
+		}
+  </style>
+</HEAD>
+<BODY>
+	<div class="cleanfix">
+		<nav>
+			<a href="/Users/laitingyu/Desktop/web/Home.html"><img src="https://i.imgur.com/cwKJq2d.png" height="80px"></a>
+			<div class="navlinks">
+				<a href="/Users/laitingyu/Desktop/web/Home.html">主頁</a><br>
+				<a href="/Users/laitingyu/Desktop/web/DesRea.html">設計理念</a><br>
+				<a href="/Users/laitingyu/Desktop/web/showroom.html">作品</a><br>
+			 	<a href="/Users/laitingyu/Desktop/web/team.html">工作團隊</a><br>
+				<a>聯絡我們</a><br>
+			</div>
+		</nav>
+		<div class="contianer">
+			<div class="articlecontianer">
+										<div class="bigtitle">
+												作品
+										</div>
+										<div class="title1">
+											Antik
+										</div>
+										<div class="descrip">
+											私人旅宿，古董傢私與日常的美好交疊。
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/nQozK4l.jpg" width="100%";>
+										</div>
+										<div class="article">
+											私繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著，歷經五十年的老房子，此刻，卻有著廢墟重生後，自在的朝氣和美麗。莫名緩慢而悠哉的魔幻時空，正隨著黑膠唱盤清亮的樂聲自大片的黑格落地窗流瀉出來，在午後的陽光中，Antik，用最美好的姿態與妳相遇……
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/kw8ZGDd.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/PZahGQE.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/39398ry.jpg" width="100%";>
+										</div>
+										<div class="article">
+											施作中
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/jQBqGNc.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/T5cXpUT.jpg" width="100%";>
+										</div>
+										<div class="article">
+											三樓，樓梯間的角落也擺飾著生活的配件
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/4AAZOAq.jpg" width="100%";>
+										</div>
+										<div class="article">
+											很久以前留下的墨綠色乒乓球桌，成為了生活的印記
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/G9bQBtb.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/ywPRXVi.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/Ug4gswp.jpg" width="100%";>
+										</div>
+										<div class="article">
+											雙人房與四人房
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/YGKy7Fb.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/giA1rFH.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/ojP4nGN.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/5izmUAE.jpg" width="100%";>
+										</div>
+										<div class="article">
+											秋日蚤之市
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/FWTuGh3.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/tRYZ2sW.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/qcQUDpr.jpg" width="100%";>
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/YfLcfNk.jpg" width="100%";>
+										</div>
+										<div class="article">
+											天台上的小驚喜
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/urEJ6tf.jpg" width="100%";>
+										</div>
+										<div class="block">
+										</div>
+										<p class="copyright">
+											Copyright © 2017 Natural n' Vintage | 本質工作室
+										</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</BODY>
+</HTML>
