@@ -1,16 +1,28 @@
-<HTML>
+<HTML lang="ja">
 <HEAD>
 	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<TITLE> Natural n' Vintage </TITLE>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="webfonttest.js"></script>
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
   <style type="text/css">
     @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 		@font-face {
-        font-family: "MyHanaMinOT";
-        src: url("HanaMinOTPr6N-Regular.otf") format("opentype");
+      font-family: HanaMinOT_otf;
+      src: url("HanaMinOTPr6N-Regular.otf") format("opentype");
+    }
+		@font-face {
+	      font-family: HanaMinOT_woff;
+	      src: url("HanaMinOTPr6N-Regular.woff") format('woff');
 			}
+		@media screen and (max-width:600px) {
+	  	.picbox {
+	    	display: none;
+		 	}
+		}
     a:link{color:#000000;}
     a:hover{font-weight: 800; font-size: 10pt;}
 		a:active {color:#000000;}
@@ -32,51 +44,67 @@
 			align-content: flex-end;
 		}
 		.rightbox{
+			min-width: 400px;
 			position: relative;
-			flex:1 5 400px;
-			background-color: #EAEAEA;
+			flex:2 1;
 		}
 		.picbox{
 			position: relative;
-			flex:3 1;
-			background-color: #999999;
+			flex:1 2 300px;
 			overflow: hidden;
 		}
-		.nav{
-			top:35%;
+		nav{
+			position: fixed;
 			right: 0;
-			position: absolute;
-			height: 300px;
-			min-width: 150px;
-			width: 33%;
+			bottom: 0;
+			padding-top: 20px;
+			width: 120px;
+			height: 330px;
+			z-index: 1;
 		}
 		.navlinks{
-			padding-top: 30px;
-			padding-right: 20px;
-			font-size: 9pt;
+			direction:rtl;
+			padding-bottom: 30px;
+			padding-right: 40px;
+			font-size: 7pt;
 			font-weight: 300;
-			font-family: ‘Noto Sans TC’, sans-serif;
-			letter-spacing: 3pt;
-			line-height: 26pt;
+			font-family: "HanaMinOT_woff";
+			letter-spacing: 3px;
+			line-height: 28px;
+		}
+		.articlecontianer{
+			margin-top: 120px;
+			margin-left: 90px;
+			margin-right: 130px;
+			font-size: 8pt;
+			font-weight: 300;
+			font-family: "HanaMinOT_woff";
+			letter-spacing: 2px;
+			line-height: 24px;
 		}
   </style>
 </HEAD>
 <BODY>
 	<div class="cleanfix">
-		<div class="rightbox">
-			<div class="nav">
-				<a href="https://letsohyeah.github.io/index.html"><img src="https://i.imgur.com/cwKJq2d.png" height="100px"></a>
-				<div class="navlinks">
-					<a href="https://letsohyeah.github.io/index.html">主頁</a><br>
-					<a href="https://letsohyeah.github.io/DesRea.html">設計理念</a><br>
-					<a href="https://letsohyeah.github.io/showroom.html">作品</a><br>
-					<a href="https://letsohyeah.github.io/team.html">工作團隊</a><br>
-					<a>聯絡我們</a><br>
-				</div>
-			</div>
-		</div>
 		<div class="picbox">
-			<img src="http://i.imgur.com/2mFfADq.jpg" height="100%"/>
+			<img src="http://i.imgur.com/2mFfADq.jpg" height="100%" style="float:right;"/>
+		</div>
+		<div class="rightbox">
+					<nav>
+						<div class="navlinks">
+							<a href="https://letsohyeah.github.io/index.html">主頁</a><br>
+							<a href="https://letsohyeah.github.io/DesRea.html">設計理念</a><br>
+							<a href="https://letsohyeah.github.io/showroom.html">作品</a><br>
+						 	<a href="https://letsohyeah.github.io/team.html">工作團隊</a><br>
+							<a>聯絡我們</a><br>
+						</div>
+						<a href="https://letsohyeah.github.io/index.html" style="margin-left:43px;"><img src="https://i.imgur.com/cwKJq2d.png" height="70px"></a>
+					</nav>
+					<div class="articlecontianer">
+						一個不願在理性與感性之間妥協<br>在市場、商業與量化中輕輕閉上雙眼<br>只想繼續在原始夢境裡頭做夢的美好空間氛圍<br><br>以自然元素與物件本質做為導引<br>散發出雋永且獨特的靈魂感居家風格<br>極具溫度手工打造的木料傢俱<br>充滿質感的生活道具<br>環遊世界後，終於飄洋過海到你身邊的老物件<br>褪去多餘的人工裝飾<br>回歸內心深處多年來所嚮往的那份簡單<br>視覺輕鬆了<br>心舒服了<br>
+						生活 於是平衡了
+					</div>
+		</div>
 		</div>
 	</div>
 </BODY>
