@@ -98,7 +98,7 @@
 			margin-top: 60px;
 			font-size: 14pt;
 			font-weight: 100;
-			font-family: "HanaMinOT_woff";
+			font-family: ‘Noto Sans TC’, sans-serif;;
 			letter-spacing: 3px;
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -154,22 +154,37 @@
 		<div class="contianer">
 			<div class="articlecontianer">
 				<div class="bigtitle">
-						設計理念
+						服務項目
 				</div>
 				<div class="title1">
-					自然、原始、純粹
-				</div>
-				<div class="article">
-					專營居家生活、商業空間整體規劃，內容包含中島吧台、開放式廚房、客廳空間規劃設計，搭配Natural n' Vintage手作木工與精選的歐洲進口古董家具。
+					傢俱擺設規劃
 				</div>
 				<div class="imgbox">
-					<img src="https://i.imgur.com/e9qu9h6.jpg" width="100%";>
+					<img src="https://i.imgur.com/kw8ZGDd.jpg" width="100%";>
 				</div>
 				<div class="title1">
-					"把喜歡的美感傳達出去"
+					吧台設計/製作
 				</div>
-				<div class="article">
-					是我們 Natural n' Vintage 團隊成立的初衷。<br>過去幾年來，我們用雙手創作了幾個空間，從設計規劃到施作皆不假他人之手。<br>秉持著NV一向自然、原始、純粹的風格，<br>希望讓大家拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單，<br>由我們親自設計施作的木作，再佐上我們為您搭配的歐洲經典傢俱家飾物件，<br>就是要讓您展現任性、自豪又絕對脫俗的居家品味。<br><br>如果您跟我們一樣不滿意市面複製貼上的各種居家風格，<br>如果您跟我們一樣熱愛手作喜歡空間充滿人的溫度，<br>想要讓長久以來的夢想實現在您的日日尋常生活，歡迎來與我們聊聊。
+				<div class="imgbox">
+					<img src="https://i.imgur.com/Hlm0abK.jpg" width="100%";>
+				</div>
+				<div class="title1">
+					精選北歐傢俱
+				</div>
+				<div class="imgbox">
+					<img src="https://i.imgur.com/wTnvnmo.jpg?1" width="100%";>
+				</div>
+				<div class="title1">
+					手作家飾
+				</div>
+				<div class="imgbox">
+					<img src="https://i.imgur.com/O1JNkfj.jpg" width="100%";>
+				</div>
+				<div class="imgbox">
+					<img src="https://i.imgur.com/ki7kfCC.jpg" width="100%";>
+				</div>
+				<div class="imgbox">
+					<img src="https://i.imgur.com/H9WDgQF.jpg" width="100%";>
 				</div>
 				<div class="block">
 				</div>
