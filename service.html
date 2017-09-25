@@ -3,7 +3,7 @@
 	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
-	<TITLE> 設計理念 - Natural n' Vantage </TITLE>
+	<TITLE> 作品 - Natural n' Vantage </TITLE>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="webfonttest.js"></script>
 	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
@@ -18,7 +18,7 @@
 	      src: url("HanaMinOTPr6N-Regular.woff") format('woff');
 			}
     a:link{color:#000000}
-    a:hover{font-size: 7pt; background-color: #efefef;}
+    a:hover{font-size: 7pt;}
 		a:active {color:#000000;}
 		a:visited {color:#000000;}
 		a{text-decoration:none}
@@ -40,7 +40,7 @@
 			   -moz-flex-direction: column;
 			-webkit-flex-direction: column;
 							flex-direction: column;
-			}
+		}
 		nav{
 			position: fixed;
 			right: 0;
@@ -72,7 +72,7 @@
 			border-right: 2px solid #000000;
 			position: absolute;
 			right: 0;
-			margin-top: 60px;
+			margin-top: 90px;
 			margin-right: 40px;
 			font-size: 14pt;
 			font-weight: 400;
@@ -80,62 +80,55 @@
 			letter-spacing: 3px;
 			line-height: 30px;
 		}
-		.articlecontianer{
-			margin-top: 30px;
+		.gridcontianer{
+			margin-top: 60px;
 			margin-left: 20px;
 			margin-right: 130px;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
 			flex-wrap: wrap;
-			-moz-flex-direction: column;
-	 		-webkit-flex-direction: column;
-					 		flex-direction: column;
 		}
-		.title1{
-			width: 100%;
-			margin-left: 50px;
-			margin-top: 60px;
-			font-size: 14pt;
-			font-weight: 100;
-			font-family: ‘Noto Sans TC’, sans-serif;;
-			letter-spacing: 3px;
+		.grid{
+			margin-top: 40px;
+			margin-left: 40px;
+			min-width: 270px;
+			height: 330px;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
-		}
-		.article{
-			max-width: 510px;
-			margin-left: 50px;
-			margin-top: 20px;
-			font-size: 8pt;
-			font-weight: 300;
-			font-family: ‘Noto Sans TC’, sans-serif;
-			letter-spacing: 0px;
-			line-height: 18px;
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: 				 flex;
+			flex-direction: column;
 		}
 		.imgbox{
-			max-width: 700px;
-			margin-top: 10px;
-			margin-left: 40px;
+			height: 270px;
 			overflow: hidden;
-			height: auto;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
 		}
-		.block{
-			height: 300px;
+		.name{
+			margin-top: 8px;
+			font-size: 10pt;
+			font-weight: 300;
+			font-family: ‘Noto Sans TC’, sans-serif;
+			letter-spacing: 5px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			justify-content:center;
 		}
-		.copyright{
-			color: #999999;
-			margin-left: 50px;
-			margin-bottom: 15px;
-			bottom: 0;
+		.descrip{
+			visibility:hidden;
+			margin-top: 2px;
 			font-size: 7pt;
 			font-weight: 300;
 			font-family: ‘Noto Sans TC’, sans-serif;
-			letter-spacing: 0px;
+			letter-spacing: 1px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			justify-content:center;
+			color: #555555;
 		}
   </style>
 </HEAD>
@@ -152,45 +145,43 @@
 			<a href="https://letsohyeah.github.io/index.html" style="margin-left:43px;"><img src="https://i.imgur.com/cwKJq2d.png" height="70px"></a>
 		</nav>
 		<div class="contianer">
-			<div class="articlecontianer">
-				<div class="bigtitle">
-						服務項目
-				</div>
-				<div class="title1">
-					傢俱擺設規劃
-				</div>
-				<div class="imgbox">
-					<img src="https://i.imgur.com/kw8ZGDd.jpg" width="100%";>
-				</div>
-				<div class="title1">
-					吧台設計/製作
-				</div>
-				<div class="imgbox">
-					<img src="https://i.imgur.com/Hlm0abK.jpg" width="100%";>
-				</div>
-				<div class="title1">
-					精選北歐傢俱
-				</div>
-				<div class="imgbox">
-					<img src="https://i.imgur.com/wTnvnmo.jpg?1" width="100%";>
-				</div>
-				<div class="title1">
-					手作家飾
-				</div>
-				<div class="imgbox">
-					<img src="https://i.imgur.com/O1JNkfj.jpg" width="100%";>
-				</div>
-				<div class="imgbox">
-					<img src="https://i.imgur.com/ki7kfCC.jpg" width="100%";>
-				</div>
-				<div class="imgbox">
-					<img src="https://i.imgur.com/H9WDgQF.jpg" width="100%";>
-				</div>
-				<div class="block">
-				</div>
-				<p class="copyright">
-					Copyright © 2017 Natural n' Vintage | 本質工作室
-				</p>
+			<div class="bigtitle">
+					服務項目
+			</div>
+			<div class="gridcontianer">
+						<div class="grid">
+							<div class="imgbox">
+								<figure>
+							 		<img src="https://i.imgur.com/BRXYCuH.jpg" height="100%">
+						 		</figure>
+							</div>
+							<div class="name">傢俱擺設規劃</div>
+						</div>
+						<div class="grid">
+							<div class="imgbox">
+								<figure>
+							 		<img src="https://i.imgur.com/FVlvKMs.jpg" height="100%">
+								</figure>
+							</div>
+							<div class="name">吧台設計/製作</div>
+							<div class="descrip">自己的家自己佈置</div>
+						</div>
+						<div class="grid">
+							<div class="imgbox">
+								<figure>
+									<img src="https://i.imgur.com/wTnvnmo.jpg?1" height="100%">
+								</figure>
+							</div>
+							<div class="name">精選北歐傢俱</div>
+						</div>
+						<div class="grid">
+							<div class="imgbox">
+								<figure>
+									<img src="https://i.imgur.com/npYoaVJ.jpg" height="100%">
+								</figure>
+							</div>
+							<div class="name">手作家飾</div>
+						</div>
 			</div>
 		</div>
 	</div>
