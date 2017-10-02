@@ -1,4 +1,5 @@
-    @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+		@import url(https://letsohyeah.github.io/mobilcss.css) screen and (min-width: 400px) and (max-width: 1080px);
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 		@font-face {
 			font-family: HanaMinOT_otf;
 			src: url("HanaMinOTPr6N-Regular.otf") format("opentype");
