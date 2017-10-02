@@ -8,7 +8,6 @@
 	<script type="text/javascript" src="webfonttest.js"></script>
 	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
   <style type="text/css">
-		@import "mobilcss.css" screen and (min-width: 400px) and (max-width: 800px);
     @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 		@font-face {
 			font-family: HanaMinOT_otf;
@@ -18,10 +17,10 @@
 			font-family: HanaMinOT_woff;
 			src: url("HanaMinOTPr6N-Regular.woff") format('woff');
 		}
-    a:link{color:#000000}
-    a:hover{font-size: 7pt;}
-		a:active {color:#000000;}
-		a:visited {color:#000000;}
+    a:link{color:#fff;}
+    a:hover{font-size: 24pt;}
+		a:active {color:#fff;}
+		a:visited {color:#fff;}
 		a{text-decoration:none}
 		* {
 				   -moz-box-sizing: border-box;
@@ -44,28 +43,40 @@
 			}
 		nav{
 			position: fixed;
-			right: 0;
-			bottom: 0;
-			padding-top: 20px;
-			width: 120px;
-			height: 310px;
-			background-color: #fff;
+			top: 0;
+			width: 100%;
+			height: 100px;
+			background-color: #222;
 			z-index: 1;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			justify-content:center;
+			align-items:center;
 		}
 		.navlinks{
-			direction:rtl;
-			padding-right: 40px;
-			font-size: 7pt;
+			color: #fff;
+			padding-left: 18px;
+			padding-right: 18px;
+			padding-top:	15px;
+			font-size: 24pt;
 			font-weight: 300;
 			font-family: ‘Noto Sans TC’, sans-serif;
 			letter-spacing: 2px;
-			line-height: 28px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			flex-wrap: wrap;
 		}
 		.logobox{
-			float: right;
-			margin-top: 15px;
-			margin-right: 40px;
+			visibility:hidden;
 			height: 70px;
+			padding-top: 5px;
+			padding-left: 5px;
+			padding-right: 5px;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
 		}
 		.contianer{
 			display: -moz-flex;
@@ -74,24 +85,19 @@
 			flex-direction: column;
 		}
 		.bigtitle{
-			width: 28px;
-			border-right: 2px solid #000000;
-			position: absolute;
-			right: 0;
-			margin-top: 60px;
-			margin-right: 40px;
-			font-size: 12pt;
+			width: 200px;
+			height: 40px;
+			border-bottom: 3px solid #000000;
+			margin-top: 140px;
+			margin-left: 25px;
+			font-size: 30pt;
 			font-weight: 400;
 			font-family: ‘Noto Sans TC’, sans-serif;
 			letter-spacing: 5px;
 			line-height: 26px;
-			-webkit-writing-mode: vertical-lr ;
-			writing-mode: vertical-lr ;
 		}
 		.articlecontianer{
 			margin-top: 30px;
-			margin-left: 20px;
-			margin-right: 130px;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
@@ -102,9 +108,9 @@
 		}
 		.title1{
 			width: 100%;
-			margin-left: 50px;
-			margin-top: 60px;
-			font-size: 14pt;
+			margin-left: 25px;
+			margin-top: 90px;
+			font-size: 34pt;
 			font-weight: 100;
 			font-family: "HanaMinOT_woff";
 			letter-spacing: 3px;
@@ -113,22 +119,20 @@
 			display: 				 flex;
 		}
 		.article{
-			max-width: 510px;
-			margin-left: 50px;
-			margin-top: 20px;
-			font-size: 8pt;
+			margin-left: 25px;
+			margin-right: 25px;
+			margin-top: 60px;
+			font-size: 14pt;
 			font-weight: 300;
 			font-family: ‘Noto Sans TC’, sans-serif;
 			letter-spacing: 0px;
-			line-height: 18px;
+			line-height: 34px;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
 		}
 		.imgbox{
-			max-width: 700px;
-			margin-top: 20px;
-			margin-left: 40px;
+			margin-top: 60px;
 			overflow: hidden;
 			height: auto;
 		}
@@ -137,10 +141,10 @@
 		}
 		.copyright{
 			color: #999999;
-			margin-left: 50px;
+			margin-left: 25px;
 			margin-bottom: 15px;
 			bottom: 0;
-			font-size: 7pt;
+			font-size: 12pt;
 			font-weight: 300;
 			font-family: ‘Noto Sans TC’, sans-serif;
 			letter-spacing: 0px;
@@ -190,7 +194,7 @@
 					"把喜歡的美感傳達出去"
 				</div>
 				<div class="article">
-					是我們 Natural n' Vintage 團隊成立的初衷。<br>過去幾年來，我們用雙手創作了幾個空間，<br>從設計規劃到施作皆不假他人之手。<br>秉持著NV一向自然、原始、純粹的風格，<br>希望讓大家拋開過去非得要"裝潢"的概念，<br>讓空間載體本身回歸乾淨簡單，<br>由我們親自設計施作的木作，<br>再佐上我們為您搭配的歐洲經典傢俱家飾物件，<br>就是要讓您展現任性、自豪又絕對脫俗的居家品味。<br><br>如果您跟我們一樣不滿意市面複製貼上的各種居家風格，<br>如果您跟我們一樣熱愛手作喜歡空間充滿人的溫度，<br>想要讓長久以來的夢想實現在您的日日尋常生活，<br>歡迎來與我們聊聊。
+					是我們 Natural n' Vintage 團隊成立的初衷。<br>過去幾年來，我們用雙手創作了幾個空間，從設計規劃到施作皆不假他人之手。<br>秉持著NV一向自然、原始、純粹的風格，<br>希望讓大家拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單，<br>由我們親自設計施作的木作，再佐上我們為您搭配的歐洲經典傢俱家飾物件，<br>就是要讓您展現任性、自豪又絕對脫俗的居家品味。<br><br>如果您跟我們一樣不滿意市面複製貼上的各種居家風格，<br>如果您跟我們一樣熱愛手作喜歡空間充滿人的溫度，<br>想要讓長久以來的夢想實現在您的日日尋常生活，歡迎來與我們聊聊。
 				</div>
 				<div class="block">
 				</div>
