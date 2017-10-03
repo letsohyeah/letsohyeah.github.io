@@ -116,7 +116,9 @@ nav{
 }
 .grid-service{
 	margin-top: 40px;
-	min-width: 270px;
+	margin-left: 15px;
+	margin-right: 15px;
+	width: 100%;
 	height: 330px;
 	display: -moz-flex;
 	display: -webkit-flex;
