@@ -256,7 +256,7 @@ nav{
 
 /*TEAM*/
 .gridcontianer-team{
-	margin-top: 90px;
+	margin-top: 120px;
 	margin-left: 0px;
 	margin-right: 0px;
 	display: -moz-flex;
@@ -322,7 +322,7 @@ nav{
 /*TEAM*/
 
 .articlecontianer{
-	margin-top: 30px;
+	margin-top: 60px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
