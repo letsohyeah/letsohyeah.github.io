@@ -83,6 +83,7 @@ nav{
   .picbox {
     display: none;
   }
+}
 .rightbox{
   min-width: 400px;
   position: relative;
