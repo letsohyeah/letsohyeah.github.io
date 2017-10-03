@@ -67,7 +67,7 @@ nav{
 .bigtitle{
 	position: absolute;
 	border-bottom: 2px solid #000000;
-	margin-top: 80px;
+	margin-top: 60px;
 	margin-left: 15px;
 	font-size: 12pt;
 	font-weight: 400;
@@ -322,7 +322,7 @@ nav{
 /*TEAM*/
 
 .articlecontianer{
-	margin-top: 60px;
+	margin-top: 90px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
