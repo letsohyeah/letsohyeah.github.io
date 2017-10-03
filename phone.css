@@ -75,6 +75,33 @@ nav{
 	letter-spacing: 5px;
 }
 
+/*INDEX*/
+@media screen and (max-width:1000px) {
+  .picbox {
+    display: none;
+  }
+.rightbox{
+  min-width: 400px;
+  position: relative;
+  flex:2 1;
+}
+.picbox{
+  position: relative;
+  flex:1 2 300px;
+  overflow: hidden;
+}
+.articlecontianer-index{
+  margin-top: 120px;
+  margin-left: 90px;
+  margin-right: 130px;
+  font-size: 8pt;
+  font-weight: 300;
+  font-family: "HanaMinOT_woff";
+  letter-spacing: 2px;
+  line-height: 24px;
+}
+/*INDEX*/
+
 /*SERVICE*/
 .gridcontianer-service{
   margin-top: 50px;
