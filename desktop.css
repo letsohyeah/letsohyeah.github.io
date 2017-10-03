@@ -286,14 +286,13 @@ nav{
   margin-bottom: 40px;
   margin-left: 40px;
   min-width: 270px;
-  height: 330px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
   flex-direction: column;
 }
 .imgbox-works{
-  height: 270px;
+  max-width: 330px;
   overflow: hidden;
   display: -moz-flex;
   display: -webkit-flex;
