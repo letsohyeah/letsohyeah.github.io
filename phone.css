@@ -59,6 +59,7 @@ nav{
 	display: none;
 }
 .contianer{
+	width: 100%;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
