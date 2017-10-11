@@ -52,7 +52,7 @@ nav{
 }
 .logobox{
   float: right;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-right: 40px;
   height: 70px;
 }
@@ -81,7 +81,7 @@ nav{
 /*INDEX*/
 .picbox{
   height: 100vh;
-  margin-right: 140px;
+  margin-right: 100px;
   overflow: hidden;
 }
 .articlecontianer-index{
