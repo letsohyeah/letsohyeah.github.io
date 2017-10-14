@@ -363,13 +363,6 @@ nav{
   display: 				 flex;
   flex-direction: column;
 }
-.imgbox-press{
-  max-width: 330px;
-  overflow: hidden;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-}
 .name-press{
   margin-top: 12px;
   font-size: 14pt;
