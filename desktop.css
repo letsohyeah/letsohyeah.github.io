@@ -177,18 +177,6 @@ nav{
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.title0-about{
-  width: 100%;
-  margin-left: 50px;
-  margin-top: 60px;
-  font-size: 18pt;
-  font-weight: 100;
-  font-family: "HanaMinOT_woff";
-  letter-spacing: 3px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-}
 .title1-about{
   width: 100%;
   margin-left: 50px;
