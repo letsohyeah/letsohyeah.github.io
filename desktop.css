@@ -362,6 +362,17 @@ nav{
   display: 				 flex;
 }
 .descrip-press{
+  margin-top: 5px;
+  font-size: 7pt;
+  font-weight: 300;
+  font-family: ‘Noto Sans TC’, sans-serif;
+  letter-spacing: 1px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #555555;
+}
+.descrip-press1{
   margin-left: 50px;
   margin-top: 5px;
   font-size: 7pt;
@@ -376,8 +387,8 @@ nav{
 .article-press{
   max-width: 510px;
   margin-left: 20px;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   font-size: 8pt;
   font-weight: 300;
   font-family: ‘Noto Sans TC’, sans-serif;
