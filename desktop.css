@@ -165,8 +165,8 @@ nav{
 }
 /*SERVICE*/
 
-/*CONCEPT*/
-.articlecontianer-concept{
+/*ABOUT*/
+.articlecontianer-about{
   margin-top: 30px;
   margin-left: 20px;
   margin-right: 130px;
@@ -178,7 +178,7 @@ nav{
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.title1-concept{
+.title0-about{
   width: 100%;
   margin-left: 50px;
   margin-top: 60px;
@@ -190,7 +190,19 @@ nav{
   display: -webkit-flex;
   display: 				 flex;
 }
-.article-concept{
+.title1-about{
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 60px;
+  font-size: 14pt;
+  font-weight: 100;
+  font-family: "HanaMinOT_woff";
+  letter-spacing: 3px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.article-about{
   max-width: 510px;
   margin-left: 50px;
   margin-top: 20px;
@@ -203,14 +215,14 @@ nav{
   display: -webkit-flex;
   display: 				 flex;
 }
-.imgbox-concept{
+.imgbox-about{
   max-width: 700px;
   margin-top: 20px;
   margin-left: 40px;
   overflow: hidden;
   height: auto;
 }
-/*CONCEPT*/
+/*ABOUT/
 
 /*TEAM*/
 .gridcontianer-team{
