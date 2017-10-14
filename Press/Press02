@@ -1,0 +1,90 @@
+<HTML lang="ja">
+<HEAD>
+	<link href="https://letsohyeah.github.io/phone.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 0px) and (max-width: 320px)" />
+	<link href="https://letsohyeah.github.io/desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 321px)" />
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="viewport" content="width=device-width">
+	<TITLE> Gigi和Maite的話 - Natural n' Vintage </TITLE>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="webfonttest.js"></script>
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+</HEAD>
+<BODY>
+	<div class="cleanfix">
+
+		<!--   N   A   V   -->
+		<nav>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/about.html">About</a>
+			</div>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/service.html">Service</a>
+			</div>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/works.html">Works</a>
+			</div>
+			<div class="navlinks">
+			 	<a href="https://letsohyeah.github.io/team.html">Team</a>
+			</div>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/press.html">Press</a>
+			</div>
+			<div class="navlinks">
+				<a>Contact</a>
+			</div>
+			<div class="logobox">
+				<a href="https://letsohyeah.github.io/index.html"><img src="https://i.imgur.com/cwKJq2d.png" height="100%"></a>
+			</div>
+		</nav>
+		<!--   N   A   V   -->
+
+		<div class="contianer">
+			<div class="bigtitle">
+					Press 02
+			</div>
+			<div class="articlecontianer">
+										<div class="title1">
+											老Golf
+										</div>
+										<div class="descrip">
+											－GiGi
+										</div>
+										<div class="imgbox">
+											<img src="https://i.imgur.com/pG7Gr6E.jpg" width="100%";>
+										</div>
+										<div class="article">
+											這幾年剛出社會，遇到一些人事物的一些想法，<br>
+											多數人在這現實的社會裡，多是用名利在衡量一個人的高低與成就。<br>
+											就像囚犯入獄前在一面刻劃身高的牆上拍照似的，<br>
+											身高臉孔一覽無遺，只是刻劃數值都改成年薪數字與頭銜罷了。<br>
+											所以許多人就以賺大錢為目標一直生活著。不管是透過的管道正當或非正當，<br>
+											辛苦錢或不辛苦錢，站著賺躺著賺。有一天你真的變成所謂的好野人了，開著名車住進豪宅，<br>
+											孩子有所謂好的教育，大老婆擁有無數名牌包包，小老婆…點點點，<br>
+											我想問的是這些人的內心會滿足嗎。物慾的富足真的會讓你感到永遠的快樂直到閉上眼睛?<br>
+											這我真的我不清楚。<br>
+											我開著一部快三十年的老GOLF，很多人念到不能再念，趕快換部TOYOTA，<br>
+											”比較”省油，換一部VOLVO”比較”安全，這幾部車的特性是不可否認的，<br>
+											但他們沒有”比較”獨特，我喜歡的是80年代初圓形頭燈配上方正板金的造型，<br>
+											我清楚地知道我想要的是什麼。在這裡窮人就開TOYOTA，有錢人就開雙B。<br>
+											相信很多人根本不知道自己想要什麼!<br>
+											小學就開始上補習班，因為大家都在補!<br>
+											為什麼吃這家小吃攤，因為大家都在排!<br>
+											為何有錢一定要買房，因為租房的是傻瓜!<br>
+											若這世界上所有的人都在做一樣的事，這世界應該很快就要滅亡了。誰會想當那個傻瓜。<br>
+											很喜歡柏林城市的代表詞彙Poor but Sexy, 柏林沒有連鎖的超級大賣場，因為在地人只去在地小超級市場消費。<br>
+											他們不隨波逐流，我想只有心靈富足的人，才能體會這三個字的真諦。<br>
+											所以看到我開著我的白色老爺車，別再叫我換車了!!
+										</div>
+										<div class="block">
+										</div>
+										<p class="copyright">
+											Copyright © 2017 Natural n' Vintage | 本質工作室
+										</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</BODY>
+</HTML>
