@@ -362,6 +362,7 @@ nav{
   display: 				 flex;
 }
 .descrip-press{
+  margin-left: 50px;
   margin-top: 5px;
   font-size: 7pt;
   font-weight: 300;
@@ -375,7 +376,7 @@ nav{
 .article-press{
   max-width: 510px;
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 40px;
   font-size: 8pt;
   font-weight: 300;
