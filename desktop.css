@@ -197,7 +197,7 @@ nav{
   font-weight: 300;
   font-family: ‘Noto Sans TC’, sans-serif;
   letter-spacing: 0px;
-  line-height: 18px;
+  line-height: 20px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
@@ -375,7 +375,7 @@ nav{
 .article-press{
   max-width: 510px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
   font-size: 8pt;
   font-weight: 300;
@@ -442,7 +442,7 @@ nav{
   font-weight: 300;
   font-family: ‘Noto Sans TC’, sans-serif;
   letter-spacing: 0px;
-  line-height: 18px;
+  line-height: 20px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
