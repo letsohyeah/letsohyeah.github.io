@@ -326,8 +326,8 @@ nav{
 /*PRESS*/
 .gridcontianer-press{
   margin-top: 90px;
-  margin-left: 20px;
-  margin-right: 130px;
+	margin-left: 0px;
+	margin-right: 0px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
@@ -335,14 +335,12 @@ nav{
 }
 .grid-press{
   border-top: 1px solid #000;
-  width: 100%;
-  margin-bottom: 40px;
-  margin-left: 40px;
-  min-width: 270px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-  flex-direction: column;
+	margin-top: 40px;
+	width: 100%;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
 }
 .name-press{
   margin-top: 12px;
