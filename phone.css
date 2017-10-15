@@ -326,8 +326,8 @@ nav{
 /*PRESS*/
 .gridcontianer-press{
   margin-top: 90px;
-	margin-left: 0px;
-	margin-right: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
@@ -351,6 +351,7 @@ nav{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+	color: #000;
 }
 .descrip-press{
   margin-top: 5px;
@@ -377,7 +378,6 @@ nav{
 }
 .article-press{
   max-width: 510px;
-  margin-left: 20px;
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 8pt;
@@ -392,7 +392,6 @@ nav{
 .imgbox-press{
   max-width: 700px;
   margin-top: 10px;
-  margin-left: 20px;
   overflow: hidden;
   height: auto;
 }
