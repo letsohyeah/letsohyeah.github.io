@@ -203,7 +203,8 @@ nav{
 
 /*ABOUT*/
 .articlecontianer-about{
-	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
 	margin-top: 90px;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -214,7 +215,6 @@ nav{
 					flex-direction: column;
 }
 .title1-about{
-	width: 100%;
 	margin-left: 15px;
 	margin-top: 50px;
 	font-size: 14pt;
@@ -451,7 +451,6 @@ nav{
 					flex-direction: column;
 }
 .title1{
-	width: 100%;
 	margin-left: 15px;
 	margin-top: 50px;
 	font-size: 14pt;
