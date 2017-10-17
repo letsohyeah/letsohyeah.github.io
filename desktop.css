@@ -342,7 +342,9 @@ nav{
   display: -webkit-flex;
   display: 				 flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 .grid-press{
   border-top: 1px solid #000;
@@ -353,7 +355,9 @@ nav{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 .name-press{
   margin-top: 20px;
