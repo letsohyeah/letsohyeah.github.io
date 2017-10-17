@@ -144,6 +144,17 @@ nav{
 	letter-spacing: 2px;
 	line-height: 24px;
 }
+.title1-index{
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 14pt;
+	font-weight: 100;
+	font-family: "HanaMinOT_woff",‘Noto Sans TC’;
+	letter-spacing: 3px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+}
 /*INDEX*/
 
 /*SERVICE*/
