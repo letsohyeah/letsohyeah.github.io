@@ -186,7 +186,7 @@ nav{
   margin-top: 60px;
   font-size: 14pt;
   font-weight: 100;
-  font-family: "HanaMinOT_woff";
+  font-family: "HanaMinOT_woff",‘Noto Sans TC’;
   letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -345,7 +345,7 @@ nav{
 }
 .grid-press{
   border-top: 1px solid #000;
-  width: 100%;
+  max-width: 700px;
   margin-bottom: 40px;
   margin-left: 40px;
   min-width: 270px;
@@ -358,7 +358,7 @@ nav{
   margin-top: 20px;
   font-size: 14pt;
   font-weight: 300;
-  font-family: "HanaMinOT_woff";
+  font-family: "HanaMinOT_woff",‘Noto Sans TC’;
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -428,7 +428,7 @@ nav{
   margin-top: 60px;
   font-size: 14pt;
   font-weight: 100;
-  font-family: "HanaMinOT_woff";
+  font-family: "HanaMinOT_woff",‘Noto Sans TC’;
   letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
