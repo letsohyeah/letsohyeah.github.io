@@ -56,7 +56,7 @@ nav{
   height: 70px;
 }
 .navmob{
-  visibility: hidden;
+  display: none;
 }
 .contianer{
   display: -moz-flex;
