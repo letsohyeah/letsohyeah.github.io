@@ -342,6 +342,7 @@ nav{
   display: -webkit-flex;
   display: 				 flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .grid-press{
   border-top: 1px solid #000;
