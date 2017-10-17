@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @font-face {
   font-family: HanaMinOT_otf;
   src: url("HanaMinOTPr6N-Regular.otf") format("opentype");
@@ -405,6 +405,7 @@ nav{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+  color: #555555;
 }
 .imgbox-press{
   max-width: 700px;
