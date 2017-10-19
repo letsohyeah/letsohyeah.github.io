@@ -1,11 +1,11 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @font-face {
   font-family: "HanaMinOT_otf";
-  src: url("HanaMinOTPr6N-Regular.otf") format("opentype");
+  src: url(https://letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format("opentype");
 }
 @font-face {
   font-family: "HanaMinOT_woff";
-  src: url("HanaMinOTPr6N-Regular.woff") format("woff");
+  src: url(https://letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format("woff");
 }
 a:link{color:#000000}
 a:active {color:#000000;}
