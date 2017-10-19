@@ -1,11 +1,15 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @font-face {
   font-family: "HanaMinOT_otf";
-  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format("opentype");
+  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
 }
 @font-face {
   font-family: "HanaMinOT_woff";
-  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format("woff");
+  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: "HanaMinA_ttf";
+  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 }
 a:link{color:#000;}
 a:active {color:#000;}
