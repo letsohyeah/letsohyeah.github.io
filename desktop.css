@@ -11,10 +11,6 @@
   font-family: "HanaMinA_ttf";
   src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 }
-@-webkit-keyframes fontfix {
-  from { opacity: 1; }
-  to { opacity: 1; }
-}
 a:link{color:#000000}
 a:active {color:#000000;}
 a:visited {color:#000000;}
@@ -29,11 +25,6 @@ a{text-decoration:none}
 body{
     margin: 0;
     padding: 0;
-    -webkit-animation-duration: 0.1s;
-    -webkit-animation-name: fontfix;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0.1s;
   }
 .cleanfix{
   display: -moz-flex;
