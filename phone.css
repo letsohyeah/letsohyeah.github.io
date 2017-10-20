@@ -1,15 +1,15 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @font-face {
-  font-family: "HanaMinOT_otf";
-  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
+	font-family: "HanaMinOT_otf";
+	src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
 }
 @font-face {
-  font-family: "HanaMinOT_woff";
-  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
+	font-family: "HanaMinOT_woff";
+	src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
 }
 @font-face {
-  font-family: "HanaMinA_ttf";
-  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
+	font-family: "HanaMinA_ttf";
+	src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 }
 a:link{color:#000;}
 a:active {color:#000;}
@@ -66,6 +66,7 @@ nav{
 .navmob{
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .dropdown-menu > span {
 	-webkit-user-select: none;
@@ -95,6 +96,7 @@ nav{
 	line-height: 40px;
 	padding-left: 15px;
 	list-style:none;
+	margin-top: 10px;
 
 	visibility: hidden;
 	transition: visibility 0.5s;
@@ -124,35 +126,28 @@ nav{
 }
 
 /*INDEX*/
-@media screen and (max-width:1000px) {
-	.picbox {
-		display: none;
-	}
-}
-.rightbox{
-	min-width: 400px;
-	position: relative;
-	flex:2 1;
-}
 .picbox{
-	position: relative;
-	flex:1 2 300px;
+	height: 100%;
 	overflow: hidden;
 }
 .articlecontianer-index{
+	position: absolute;
 	margin-top: 120px;
 	margin-left: 15px;
 	margin-right: 15px;
+	padding: 20px;
 	font-size: 8pt;
-	font-weight: 300;
+	font-weight: 300;x
 	font-family: "HanaMin",‘Noto Sans TC’;
 	letter-spacing: 2px;
 	line-height: 24px;
+	background-color: #fff;
+	opacity:0.8;
 }
 .title1-index{
 	width: 100%;
-	margin-bottom: 20px;
-	font-size: 14pt;
+	margin-bottom: 30px;
+	font-size: 16pt;
 	font-weight: 100;
 	font-family: "HanaMin",‘Noto Sans TC’;
 	letter-spacing: 3px;
