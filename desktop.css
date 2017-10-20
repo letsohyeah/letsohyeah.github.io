@@ -51,7 +51,6 @@ nav{
   width: 120px;
   height: 310px;
   background-color: #fff;
-  z-index: 1;
 }
 .navlinks{
   direction:rtl;
