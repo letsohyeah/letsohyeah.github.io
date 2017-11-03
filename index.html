@@ -6,7 +6,12 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta name="viewport" content="width=device-width">
-	<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)">
+	<script>
+		document.body.className += ' fade-out';
+		$(function() {
+    $('body').removeClass('fade-out');
+		});
+	</script>
 	<TITLE> Natural n' Vintage </TITLE>
 </HEAD>
 <BODY>
