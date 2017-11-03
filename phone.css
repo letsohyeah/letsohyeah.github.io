@@ -127,7 +127,7 @@ nav{
 
 /*INDEX*/
 .picbox{
-	height: 100%;
+	min-height: 100%;
 	overflow: hidden;
 }
 .articlecontianer-index{
