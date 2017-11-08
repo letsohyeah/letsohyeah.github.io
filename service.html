@@ -7,6 +7,15 @@
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta name="viewport" content="width=device-width">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).ready(function() {
+				$("img.lazy").lazyload({
+						effect : "fadeIn"
+				});
+		});
+	</script>
 	<TITLE> Service - Natural n' Vantage </TITLE>
 </HEAD>
 <BODY>
@@ -84,7 +93,7 @@
 						<div class="grid-service">
 							<div class="imgbox-service">
 								<figure>
-							 		<img src="https://i.imgur.com/BRXYCuH.jpg" height="100%">
+							 		<img class="lazy img-responsive" data-original="https://i.imgur.com/BRXYCuH.jpg" height="100%">
 						 		</figure>
 							</div>
 							<div class="name-service">傢俱擺設規劃</div>
@@ -92,7 +101,7 @@
 						<div class="grid-service">
 							<div class="imgbox-service">
 								<figure>
-							 		<img src="https://i.imgur.com/FVlvKMs.jpg" height="100%">
+							 		<img class="lazy img-responsive" data-original="https://i.imgur.com/FVlvKMs.jpg" height="100%">
 								</figure>
 							</div>
 							<div class="name-service">吧台設計/製作</div>
@@ -100,7 +109,7 @@
 						<div class="grid-service">
 							<div class="imgbox-service">
 								<figure>
-									<img src="https://i.imgur.com/wTnvnmo.jpg?1" height="100%">
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/wTnvnmo.jpg?1" height="100%">
 								</figure>
 							</div>
 							<div class="name-service">精選北歐傢俱</div>
@@ -108,7 +117,7 @@
 						<div class="grid-service">
 							<div class="imgbox-service">
 								<figure>
-									<img src="https://i.imgur.com/npYoaVJ.jpg" height="100%">
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/npYoaVJ.jpg" height="100%">
 								</figure>
 							</div>
 							<div class="name-service">手作家飾</div>
