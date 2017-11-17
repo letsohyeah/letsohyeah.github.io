@@ -221,7 +221,7 @@ nav{
 .descrip-service{
   margin-top: 0px;
   font-size: 8pt;
-  font-weight: 100;
+  font-weight: 300;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
   display: -moz-flex;
@@ -267,7 +267,7 @@ nav{
 	margin-right: 15px;
 	margin-top: 15px;
 	font-size: 8pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 0px;
 	line-height: 34px;
@@ -311,7 +311,7 @@ nav{
 .name-works{
 	margin-top: 8px;
 	font-size: 10pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 5px;
 	display: -moz-flex;
@@ -392,7 +392,7 @@ nav{
 .descrip-team{
 	margin-top: 10px;
 	font-size: 7pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 1px;
 	line-height: 18px;
@@ -435,7 +435,7 @@ nav{
 .descrip-press{
 	margin-top: 5px;
 	font-size: 7pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 1px;
 	display: -moz-flex;
@@ -447,7 +447,7 @@ nav{
 	margin-left: 15px;
 	margin-top: 5px;
 	font-size: 7pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 1px;
 	display: -moz-flex;
@@ -460,7 +460,7 @@ nav{
 	margin-top: 50px;
 	margin-bottom: 30px;
 	font-size: 8pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 0px;
 	line-height: 18px;
@@ -504,7 +504,7 @@ nav{
 	margin-right: 15px;
 	margin-top: 30px;
 	font-size: 8pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 0px;
 	line-height: 34px;
@@ -524,7 +524,7 @@ nav{
 	margin-top: 2px;
 	margin-bottom: 50px;
 	font-size: 8pt;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 0px;
 	line-height: 18px;
