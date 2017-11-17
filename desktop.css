@@ -147,9 +147,11 @@ nav{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+	flex-wrap: wrap;
 }
 .project-service{
-  width: 100%;
+	margin-bottom: 60px;
+	min-width: 200px;
   overflow: hidden;
   display: -moz-flex;
   display: -webkit-flex;
@@ -161,7 +163,7 @@ nav{
 .title1-service{
   margin-left: 50px;
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 14pt;
   font-weight: 100;
   font-family: ‘Noto Sans TC’, sans-serif;
