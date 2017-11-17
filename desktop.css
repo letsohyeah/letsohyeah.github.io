@@ -327,20 +327,6 @@ nav{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  transform: scale(0.58);
-		transform-origin:0 0;
-
-		-ms-transform: scale(0.58);         /* IE 9 */
-		-ms-transform-origin:0 0;       /* IE 9 */
-
-		-webkit-transform: scale(0.58); /* Safari 和 Chrome */
-		-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-		-moz-transform: scale(0.58);        /* Firefox */
-		-moz-transform-origin:0 0;      /* Firefox */
-
-		-o-transform: scale(0.58);      /* Opera */
-		-o-transform-origin:0 0;        /* Opera */
 }
 /*TEAM*/
 
