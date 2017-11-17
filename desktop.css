@@ -126,55 +126,79 @@ nav{
 /*INDEX*/
 
 /*SERVICE*/
-.gridcontianer-service{
-  margin-top: 90px;
+.articlecontianer-service{
+  margin-top: 30px;
   margin-left: 20px;
   margin-right: 130px;
+  max-width: 700px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
   flex-wrap: wrap;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+          flex: 1 0 auto;
 }
-.grid-service{
-  margin-bottom: 40px;
-  margin-left: 40px;
+.projectcontianer-service{
+  margin-left: 50px;
+  margin-bottom: 80px;
   min-width: 270px;
-  height: 330px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  flex-direction: column;
 }
-.imgbox-service{
-  height: 270px;
+.project-service{
+  width: 100%;
   overflow: hidden;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
-.name-service{
-  margin-top: 8px;
-  font-size: 10pt;
-  font-weight: 300;
+.title1-service{
+  margin-left: 50px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 14pt;
+  font-weight: 100;
   font-family: ‘Noto Sans TC’, sans-serif;
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  justify-content:center;
 }
-.descrip-service{
-  visibility:hidden;
-  margin-top: 2px;
-  font-size: 7pt;
-  font-weight: 300;
+.name-service{
+  margin-top: 10px;
+  font-size: 30pt;
+  font-weight: 100;
+  line-height: 20pt;
+  letter-spacing: 0px;
   font-family: ‘Noto Sans TC’, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 10px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  justify-content:center;
-  color: #555555;
+}
+.descrip-service{
+  margin-top: 6px;
+  font-size: 8pt;
+  font-weight: 100;
+  font-family: ‘Noto Sans TC’, sans-serif;
+  letter-spacing: 2px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #555;
+}
+.price-service{
+  font-size: 16pt;
+  font-weight: 100;
+  letter-spacing: 5px;
+  color: #000;
+  font-family: ‘Noto Sans TC’, sans-serif;
 }
 /*SERVICE*/
 
