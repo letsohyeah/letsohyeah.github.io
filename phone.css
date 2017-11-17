@@ -172,24 +172,20 @@ nav{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  flex-wrap: wrap;
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
           flex-direction: column;
           flex: 1 0 auto;
 }
 .projectcontianer-service{
-
-  margin-bottom: 80px;
-  min-width: 270px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
 	flex-wrap: wrap;
 }
 .project-service{
-	min-width: 170px;
-  margin-bottom: 80px;
+	min-width: 150px;
+  margin-bottom: 60px;
   overflow: hidden;
   display: -moz-flex;
   display: -webkit-flex;
@@ -199,7 +195,7 @@ nav{
           flex-direction: column;
 }
 .title1-service{
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 40px;
   font-size: 14pt;
   font-weight: 100;
@@ -222,7 +218,7 @@ nav{
   display: 				 flex;
 }
 .descrip-service{
-  margin-top: 6px;
+  margin-top: 0px;
   font-size: 8pt;
   font-weight: 100;
   font-family: ‘Noto Sans TC’, sans-serif;
