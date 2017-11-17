@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
 @font-face {
   font-family: "HanaMinOT_otf";
   src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
@@ -47,8 +47,8 @@ nav{
   direction:rtl;
   padding-right: 40px;
   font-size: 7pt;
-  font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-weight: 400;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
   line-height: 28px;
 }
@@ -78,7 +78,7 @@ nav{
   margin-right: 40px;
   font-size: 12pt;
   font-weight: 400;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 5px;
   line-height: 26px;
   -webkit-writing-mode: vertical-lr ;
@@ -99,7 +99,7 @@ nav{
   margin-right: 130px;
   font-size: 8pt;
   font-weight: 300;
-  font-family: "HanaMin",‘Noto Sans TC’;
+  font-family: "HanaMin";
   letter-spacing: 2px;
   line-height: 24px;
   background-color: #fff;
@@ -110,7 +110,7 @@ nav{
     margin-bottom: 20px;
     font-size: 14pt;
     font-weight: 100;
-    font-family: "HanaMin",‘Noto Sans TC’;
+    font-family: "HanaMin";
     letter-spacing: 3px;
     display: -moz-flex;
     display: -webkit-flex;
@@ -163,9 +163,9 @@ nav{
   margin-left: 50px;
   margin-top: 60px;
   margin-bottom: 40px;
-  font-size: 14pt;
-  font-weight: 100;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -174,10 +174,10 @@ nav{
 .name-service{
   margin-top: 10px;
   font-size: 30pt;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 20pt;
   letter-spacing: 0px;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 10px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -186,7 +186,7 @@ nav{
 .descrip-service{
   font-size: 8pt;
   font-weight: 100;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -195,10 +195,10 @@ nav{
 }
 .price-service{
   font-size: 16pt;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 5px;
   color: #000;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 /*SERVICE*/
 
@@ -222,7 +222,7 @@ nav{
   margin-top: 60px;
   font-size: 14pt;
   font-weight: 100;
-  font-family: "HanaMin",‘Noto Sans TC’;
+  font-family: "HanaMin";
   letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -233,8 +233,8 @@ nav{
   margin-left: 50px;
   margin-top: 20px;
   font-size: 8pt;
-  font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-weight: 400;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0px;
   line-height: 20px;
   display: -moz-flex;
@@ -297,7 +297,7 @@ nav{
   width: 100%;
   font-size: 16pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -306,8 +306,8 @@ nav{
 .descrip-team{
   margin-top: 10px;
   font-size: 7pt;
-  font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-weight: 400;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 1px;
   line-height: 18px;
   display: -moz-flex;
@@ -346,7 +346,7 @@ nav{
   margin-top: 8px;
   font-size: 10pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -399,7 +399,7 @@ nav{
   margin-top: 20px;
   font-size: 14pt;
   font-weight: 300;
-  font-family: "HanaMin",‘Noto Sans TC’;
+  font-family: "HanaMin";
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -409,7 +409,7 @@ nav{
   margin-top: 5px;
   font-size: 7pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 1px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -421,7 +421,7 @@ nav{
   margin-top: 5px;
   font-size: 7pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 1px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -435,7 +435,7 @@ nav{
   margin-bottom: 30px;
   font-size: 8pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0px;
   line-height: 18px;
   display: -moz-flex;
@@ -470,7 +470,7 @@ nav{
   margin-top: 60px;
   font-size: 14pt;
   font-weight: 100;
-  font-family: "HanaMin",‘Noto Sans TC’;
+  font-family: "HanaMin";
   letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -483,7 +483,7 @@ nav{
   margin-bottom: 50px;
   font-size: 8pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0px;
   line-height: 18px;
   display: -moz-flex;
@@ -497,7 +497,7 @@ nav{
   margin-bottom: 20px;
   font-size: 8pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0px;
   line-height: 20px;
   display: -moz-flex;
@@ -528,6 +528,6 @@ nav{
   margin-left: 70px;
   font-size: 7pt;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0px;
 }
