@@ -44,27 +44,27 @@ nav{
   background-color: #fff;
 }
 .navlinks{
-	width: 135px;
+  width: 135px;
   direction:rtl;
   font-size: 12pt;
   font-weight: 400;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
   line-height: 28px;
-	transform: scale(0.58);
-		transform-origin:0 0;
+  transform: scale(0.58);
+    transform-origin:0 0;
 
-		-ms-transform: scale(0.58);         /* IE 9 */
-		-ms-transform-origin:0 0;       /* IE 9 */
+    -ms-transform: scale(0.58);         /* IE 9 */
+    -ms-transform-origin:0 0;       /* IE 9 */
 
-		-webkit-transform: scale(0.58); /* Safari 和 Chrome */
-		-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
+    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
+    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
 
-		-moz-transform: scale(0.58);        /* Firefox */
-		-moz-transform-origin:0 0;      /* Firefox */
+    -moz-transform: scale(0.58);        /* Firefox */
+    -moz-transform-origin:0 0;      /* Firefox */
 
-		-o-transform: scale(0.58);      /* Opera */
-		-o-transform-origin:0 0;        /* Opera */
+    -o-transform: scale(0.58);      /* Opera */
+    -o-transform-origin:0 0;        /* Opera */
 }
 .logobox{
   float: right;
@@ -113,7 +113,7 @@ nav{
   margin-right: 130px;
   font-size: 8pt;
   font-weight: 300;
-  font-family: "HanaMin";
+  font-family: "HanaMinA";
   letter-spacing: 2px;
   line-height: 24px;
   background-color: #fff;
@@ -124,7 +124,7 @@ nav{
     margin-bottom: 20px;
     font-size: 14pt;
     font-weight: 100;
-    font-family: "HanaMin";
+    font-family: "HanaMinA";
     letter-spacing: 3px;
     display: -moz-flex;
     display: -webkit-flex;
@@ -140,9 +140,9 @@ nav{
 /*INDEX*/
 
 /*SERVICE*/
-.articlecontianer-service{
+.articlecontianer-big-service{
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-right: 130px;
   max-width: 700px;
   display: -moz-flex;
@@ -151,20 +151,53 @@ nav{
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
           flex-direction: column;
-          flex: 1 0 auto;
+}
+.articlecontianer-small-service{
+  margin-left: 0px;
+  padding-right: 60px;
+  min-width: 250px;
+  max-width: 400px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.articlecontianer-service{
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 130px;
+  max-width: 950px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-wrap: wrap;
+}
+.numbertitle{
+  width: 28px;
+  position: absolute;
+  margin-top: 62px;
+  margin-left: 0px;
+  font-size: 12pt;
+  font-weight: 300;
+  font-family: "HanaMinA";
+  letter-spacing: 3px;
+  color: #9a9a9a;
 }
 .projectcontianer-service{
+  margin-top: 20px;
   margin-left: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   min-width: 270px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .project-service{
-	margin-bottom: 40px;
-	min-width: 200px;
+  margin-bottom: 60px;
+  min-width: 200px;
   overflow: hidden;
   display: -moz-flex;
   display: -webkit-flex;
@@ -175,12 +208,12 @@ nav{
 }
 .title1-service{
   margin-left: 50px;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: -15px;
   font-size: 12pt;
-  font-weight: 300;
+  font-weight: 500;
   font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
@@ -198,6 +231,20 @@ nav{
   display: 				 flex;
 }
 .descrip-service{
+  max-width: 510px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 8pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  line-height: 18px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.project-descrip-service{
   font-size: 8pt;
   font-weight: 100;
   font-family: 'Noto Sans TC', sans-serif;
@@ -236,7 +283,7 @@ nav{
   margin-top: 60px;
   font-size: 14pt;
   font-weight: 100;
-  font-family: "HanaMin";
+  font-family: "HanaMinA";
   letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -413,7 +460,7 @@ nav{
   margin-top: 20px;
   font-size: 14pt;
   font-weight: 300;
-  font-family: "HanaMin";
+  font-family: "HanaMinA";
   letter-spacing: 5px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -484,7 +531,7 @@ nav{
   margin-top: 60px;
   font-size: 14pt;
   font-weight: 100;
-  font-family: "HanaMin";
+  font-family: "HanaMinA";
   letter-spacing: 3px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -544,7 +591,7 @@ nav{
   font-weight: 300;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0px;
-	transform: scale(0.58);
+  transform: scale(0.58);
     transform-origin:0 0;
 
     -ms-transform: scale(0.58);         /* IE 9 */

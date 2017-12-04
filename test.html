@@ -1,4 +1,4 @@
-<HTML lang="zh">
+<HTML lang="ja">
 <HEAD>
 	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -7,7 +7,6 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
-</head>
 	<script type="text/javascript" charset="utf-8">
 		$(window).ready(function() {
 				$("img.lazy").lazyload({
@@ -15,7 +14,7 @@
 				});
 		});
 	</script>
-	<TITLE> About - Natural n' Vintage </TITLE>
+	<TITLE> Service - Natural n' Vantage </TITLE>
 	<style>
 	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 	@font-face {
@@ -132,7 +131,7 @@
 	  margin-right: 130px;
 	  font-size: 8pt;
 	  font-weight: 300;
-	  font-family: "HanaMin";
+	  font-family: "HanaMinA";
 	  letter-spacing: 2px;
 	  line-height: 24px;
 	  background-color: #fff;
@@ -143,7 +142,7 @@
 	    margin-bottom: 20px;
 	    font-size: 14pt;
 	    font-weight: 100;
-	    font-family: "HanaMin";
+	    font-family: "HanaMinA";
 	    letter-spacing: 3px;
 	    display: -moz-flex;
 	    display: -webkit-flex;
@@ -159,9 +158,9 @@
 	/*INDEX*/
 
 	/*SERVICE*/
-	.articlecontianer-service{
+	.articlecontianer-big-service{
 	  margin-top: 30px;
-	  margin-left: 20px;
+	  margin-left: 50px;
 	  margin-right: 130px;
 	  max-width: 700px;
 	  display: -moz-flex;
@@ -170,11 +169,44 @@
 	  -moz-flex-direction: column;
 	  -webkit-flex-direction: column;
 	          flex-direction: column;
-	          flex: 1 0 auto;
+	}
+	.articlecontianer-small-service{
+		margin-left: 0px;
+		padding-right: 60px;
+		min-width: 250px;
+		max-width: 400px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.articlecontianer-service{
+		margin-top: 30px;
+		margin-left: 50px;
+		margin-right: 130px;
+		max-width: 950px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.numbertitle{
+		width: 28px;
+		position: absolute;
+		margin-top: 62px;
+		margin-left: 0px;
+		font-size: 12pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		color: #9a9a9a;
 	}
 	.projectcontianer-service{
+		margin-top: 20px;
 	  margin-left: 50px;
-	  margin-bottom: 80px;
+	  margin-bottom: 40px;
 	  min-width: 270px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
@@ -182,7 +214,7 @@
 		flex-wrap: wrap;
 	}
 	.project-service{
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 		min-width: 200px;
 	  overflow: hidden;
 	  display: -moz-flex;
@@ -194,12 +226,12 @@
 	}
 	.title1-service{
 	  margin-left: 50px;
-	  margin-top: 60px;
-	  margin-bottom: 40px;
+	  margin-top: 50px;
+	  margin-bottom: -15px;
 	  font-size: 12pt;
-	  font-weight: 300;
+	  font-weight: 500;
 	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
+	  letter-spacing: 3px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
 	  display: 				 flex;
@@ -217,14 +249,28 @@
 	  display: 				 flex;
 	}
 	.descrip-service{
+		max-width: 510px;
+	  margin-left: 50px;
+	  margin-top: 20px;
+	  margin-bottom: 10px;
 	  font-size: 8pt;
-	  font-weight: 100;
+	  font-weight: 300;
 	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
+	  letter-spacing: 0px;
+	  line-height: 18px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
 	  display: 				 flex;
-	  color: #555;
+	}
+	.project-descrip-service{
+		font-size: 8pt;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
 	}
 	.price-service{
 	  font-size: 16pt;
@@ -255,7 +301,7 @@
 	  margin-top: 60px;
 	  font-size: 14pt;
 	  font-weight: 100;
-	  font-family: "HanaMin";
+	  font-family: "HanaMinA";
 	  letter-spacing: 3px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
@@ -432,7 +478,7 @@
 	  margin-top: 20px;
 	  font-size: 14pt;
 	  font-weight: 300;
-	  font-family: "HanaMin";
+	  font-family: "HanaMinA";
 	  letter-spacing: 5px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
@@ -503,7 +549,7 @@
 	  margin-top: 60px;
 	  font-size: 14pt;
 	  font-weight: 100;
-	  font-family: "HanaMin";
+	  font-family: "HanaMinA";
 	  letter-spacing: 3px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
@@ -604,7 +650,6 @@
 	</script>
 	<div class="cleanfix">
 
-
 		<!--   N   A   V   -->
 		<nav>
 			<div class="navlinks">
@@ -649,98 +694,70 @@
 		</div>
 		<!--   N   A   V   -->
 
-
 		<div class="contianer">
 			<div class="bigtitle">
-					About
+					Service
 			</div>
-			<div class="articlecontianer-about">
-				<div class="title1-about">
-					Natural n' Vintage
+
+
+			<div class="articlecontianer-big-service">
+				<div class="numbertitle">01</div>
+				<div class="title1">傢俱擺設規劃</div>
+				<div class="descrip-service">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</div>
+				<div class="imgbox">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/58ZBzFG.jpg" width="100%";>
 				</div>
-				<div class="descrip">
-					 自然、原始、純粹、老物
-				</div>
-				<div class="article-about">
-					專營居家生活、商業空間整體擺設規劃，內容包含公共開放空間傢俱擺設、NV手作木工中島吧台、開放式廚房，搭配精選的歐洲進口古董家具。
-				</div>
-				<div id="trigger"></div>
-				<div class="imgbox-about">
-					<img id=target class="lazy img-responsive" data-original="https://i.imgur.com/e9qu9h6.jpg" width="100%";>
-				</div>
-				<div class="title1-about">
-					"把喜歡的美感傳達出去"
-				</div>
-				<div class="article-about">
-					是我們 Natural n' Vintage 團隊成立的初衷。<br>
-					過去幾年來，我們用雙手創作了幾個空間，<br>
-					從設計規劃到施作皆不假他人之手。<br>
-					秉持著NV一向自然、原始、純粹的風格，<br>
-					希望讓大家拋開過去非得要"裝潢"的概念，<br>
-					讓空間載體本身回歸乾淨簡單，<br>
-					再佐上我們為您搭配的歐洲經典傢俱家飾物件，<br>
-					由我們親自設計施作的木作，<br>
-					就是要讓您展現任性、自豪又絕對脫俗的居家品味。
-				</div>
-				<div class="imgbox-about">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/z5wVYZJ.jpg" width="100%";>
-				</div>
-				<div class="imgbox-about">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/lNdirlR.jpg" width="100%";>
-				</div>
-				<div class="imgbox-about">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/akJ4R1w.jpg" width="100%";>
-				</div>
-				<div class="imgbox-about">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/DG1dhKp.jpg" width="100%";>
-				</div>
-				<div class="article-about">
-					如果您跟我們一樣不滿意市面複製貼上的各種居家風格，<br>
-					如果您跟我們一樣熱愛手作喜歡空間充滿人的溫度，<br>
-					想要讓長久以來的夢想實現在您的日日尋常生活，<br>
-					歡迎來與我們聊聊。
+				<div class="title1-service">Home Project</div>
+				<div class="descrip-service">家庭規劃方案。依需求規劃設計，不含吧台設計製作。</div>
+				<div class="projectcontianer-service">
+					<div class="project-service">
+						<div class="name-service">H1<br>-</div>
+						<div class="project-descrip-service">物件數量：13</div>
+						<div class="project-descrip-service"><br>NT$</div><p class="price-service">15萬</p>
+						<div class="project-descrip-service">建議坪數：10-20坪</div>
+					</div>
+					<div class="project-service">
+						<div class="name-service">H2<br>-</div>
+						<div class="project-descrip-service">物件數量：18</div>
+						<div class="project-descrip-service"><br>NT$</div><p class="price-service">25萬</p>
+						<div class="project-descrip-service">建議坪數：20-35坪</div>
+					</div>
+					<div class="project-service">
+						<div class="name-service">H3<br>-</div>
+						<div class="project-descrip-service">物件數量：25</div>
+						<div class="project-descrip-service"><br>NT$</div><p class="price-service">40萬</p>
+						<div class="project-descrip-service">建議坪數：35-55坪</div>
+					</div>
 				</div>
 			</div>
-			<script>
-				$(function () { // wait for document ready
-					// init controller
-					var controller = new ScrollMagic.Controller({loglevel: 3});
 
-					// build tween
-					var tween = TweenMax.to("#target", 0.5, {backgroundColor: "black"});
+			<div class="articlecontianer-service">
+				<div class="articlecontianer-small-service">
+					<div class="numbertitle">02</div>
+					<div class="title1">中島吧台設計製作</div>
+					<div class="descrip-service">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</div>
+					<div class="imgbox">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/Jqq1suY.jpg" width="100%";>
+					</div>
+				</div>
+				<div class="articlecontianer-small-service">
+					<div class="numbertitle">03</div>
+					<div class="title1">精選北歐家具</div>
+					<div class="descrip-service">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</div>
+					<div class="imgbox">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/vmFveiM.jpg" width="100%";>
+					</div>
+				</div>
+			</div>
 
-					// build scene
-					var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 300, loglevel: 3})
-									.setTween(tween)
-									.setPin("#target")
-									.addIndicators() // add indicators (requires plugin)
-									.addTo(controller);
-
-					// checkbox actions
-					$("form.loglevel input[type=checkbox]").on("change", function (e) {
-						var
-							target = $(this).attr("id") == "logcontroller" ? controller : scene,
-							level = $(this).prop("checked") ? 3 : 0;
-
-						target.loglevel(level);
-					});
-				});
-			</script>
-			<div class="block"></div>
-			<div class="block"></div>
+		</div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
 		</div>
 		<p class="copyright">
-			Copyright © 2017 Natural n' Vintage | 本質工作室
+			Copyright © 2017 Natural n' Vintage
 		</p>
 	</div>
-	<script src="js/gsap/TweenMax.min.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<!-- should be replaced with minified version when development is finished -->
-	<script src="js/jquery.scrollmagic.js"></script>
-	<!-- should be removed when development is finished -->
-	<script src="js/jquery.scrollmagic.debug.js"></script>
-	<script>
-	   // this is where our code will go
-	</script>
 </BODY>
 </HTML>
