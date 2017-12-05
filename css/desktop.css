@@ -1,3 +1,4 @@
+<style>
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @font-face {
   font-family: "HanaMinOT_otf";
@@ -188,7 +189,6 @@ nav{
 .projectcontianer-service{
   margin-top: 20px;
   margin-left: 50px;
-  margin-bottom: 40px;
   min-width: 270px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -260,6 +260,23 @@ nav{
   letter-spacing: 5px;
   color: #000;
   font-family: 'Noto Sans TC', sans-serif;
+}
+.button{
+  width: 80px;
+  font-size: 8pt;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  height: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  background-color: #333;
+  color: #fff;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
 }
 /*SERVICE*/
 

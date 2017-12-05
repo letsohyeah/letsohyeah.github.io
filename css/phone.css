@@ -139,7 +139,7 @@ nav{
 	padding: 20px;
 	font-size: 8pt;
 	font-weight: 300;
-	font-family: "HanaMin";
+	font-family: "HanaMinA";
 	letter-spacing: 2px;
 	line-height: 24px;
 	background-color: #fff;
@@ -150,7 +150,7 @@ nav{
 	margin-bottom: 30px;
 	font-size: 16pt;
 	font-weight: 100;
-	font-family: "HanaMin";
+	font-family: "HanaMinA";
 	letter-spacing: 3px;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -167,74 +167,135 @@ nav{
 
 /*SERVICE*/
 .articlecontianer-service{
-  margin-top: 30px;
-  margin-left: 15px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-          flex: 1 0 auto;
+	margin-top: 30px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+					flex: 1 0 auto;
+}
+.articlecontianer-big-service{
+	margin-top: 30px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+					flex: 1 0 auto;
+}
+.articlecontianer-small-service{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
 }
 .projectcontianer-service{
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
+	margin-top: 20px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
 	flex-wrap: wrap;
 }
 .project-service{
 	width: 33%;
 	padding-right: 20px;
-  margin-bottom: 60px;
-  overflow: hidden;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+	margin-bottom: 30px;
+	overflow: hidden;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
 }
 .title1-service{
-  margin-top: 80px;
-  margin-bottom: 40px;
-  font-size: 14pt;
-  font-weight: 300;
-  font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 5px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
+	margin-left: 15px;
+	margin-top: 40px;
+	font-size: 14pt;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 5px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+}
+.numbertitle{
+	visibility: hidden;
+	position: absolute;
+	right: 15;
+	margin-top: 30px;
+	font-size: 12pt;
+	font-weight: 300;
+	font-family: "HanaMinA";
+	letter-spacing: 3px;
+	color: #9a9a9a;
 }
 .name-service{
-  margin-top: 10px;
-  font-size: 24pt;
-  font-weight: 300;
-  line-height: 20pt;
-  letter-spacing: 0px;
-  font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 10px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
+	margin-left: 15px;
+	margin-top: 10px;
+	font-size: 24pt;
+	font-weight: 300;
+	line-height: 20pt;
+	letter-spacing: 0px;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 10px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
 }
 .descrip-service{
-  margin-top: 0px;
-  font-size: 8pt;
-  font-weight: 300;
-  font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 2px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-  color: #555;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 10px;
+	font-size: 8pt;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 2px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	color: #555;
+}
+.project-descrip-service{
+	margin-left: 15px;
+	font-size: 8pt;
+	font-weight: 100;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 2px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	color: #555;
 }
 .price-service{
-  font-size: 12pt;
-  font-weight: 400;
-  letter-spacing: 5px;
-  color: #000;
-  font-family: 'Noto Sans TC', sans-serif;
+	margin-left: 15px;
+	font-size: 14pt;
+	font-weight: 400;
+	letter-spacing: 5px;
+	color: #000;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+.button{
+	width: 80px;
+	font-size: 8pt;
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 50px;
+	height: 30px;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 2px;
+	background-color: #333;
+	color: #fff;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
 }
 /*SERVICE*/
 
@@ -256,7 +317,7 @@ nav{
 	margin-top: 50px;
 	font-size: 14pt;
 	font-weight: 100;
-	font-family: "HanaMin";
+	font-family: "HanaMinA";
 	letter-spacing: 3px;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -425,7 +486,7 @@ nav{
 	margin-top: 12px;
 	font-size: 14pt;
 	font-weight: 300;
-	font-family: "HanaMin";
+	font-family: "HanaMinA";
 	letter-spacing: 5px;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -490,10 +551,10 @@ nav{
 }
 .title1{
 	margin-left: 15px;
-	margin-top: 30px;
+	margin-top: 50px;
 	font-size: 14pt;
 	font-weight: 100;
-	font-family: "HanaMin";
+	font-family: "HanaMinA";
 	letter-spacing: 3px;
 	display: -moz-flex;
 	display: -webkit-flex;
