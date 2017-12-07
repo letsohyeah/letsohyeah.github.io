@@ -105,6 +105,9 @@ nav{
   margin-right: 150px;
   overflow: hidden;
 }
+.picbox-mobil{
+	display: none;
+}
 .articlecontianer-index{
   position: absolute;
   padding: 20px;

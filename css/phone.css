@@ -127,6 +127,9 @@ nav{
 
 /*INDEX*/
 .picbox{
+	display: none;
+}
+.picbox-mobil{
 	margin-top: 70px;
 	width: 100%;
 	overflow: hidden;
@@ -213,12 +216,12 @@ nav{
 }
 .title1-service{
 	margin-right: 15px;
-  margin-top: 30px;
-  margin-left: 15px;
-  font-size: 14pt;
-  font-weight: 300;
-  font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 3px;
+	margin-top: 30px;
+	margin-left: 15px;
+	font-size: 14pt;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 3px;
 }
 .title2-service{
 	margin-left: 15px;
