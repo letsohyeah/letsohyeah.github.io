@@ -167,7 +167,7 @@ nav{
 
 /*SERVICE*/
 .articlecontianer-service{
-	margin-top: 30px;
+	margin-top: 70px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -213,13 +213,13 @@ nav{
 	-webkit-flex-direction: column;
 					flex-direction: column;
 }
-.title1-service{
+.title2-service{
 	margin-left: 15px;
-	margin-top: 40px;
-	font-size: 14pt;
+	margin-top: 20px;
+	font-size: 12pt;
 	font-weight: 300;
-	font-family: 'Noto Sans TC', sans-serif;
-	letter-spacing: 5px;
+	font-family: "HanaMinA";
+	letter-spacing: 3px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -285,7 +285,7 @@ nav{
 	font-size: 8pt;
 	margin-top: 20px;
 	margin-left: 15px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	height: 30px;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 2px;
