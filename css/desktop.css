@@ -145,7 +145,7 @@ nav{
 /*SERVICE*/
 .articlecontianer1-service{
 margin-top: 30px;
-margin-left: 50px;
+margin-left: 20px;
 margin-right: 130px;
 max-width: 700px;
 display: -moz-flex;
@@ -161,7 +161,7 @@ display: 				 flex;
 }
 .title1-service{
   margin-top: 70px;
-  margin-left: 50px;
+  margin-left: 20px;
   font-size: 14pt;
   font-weight: 300;
   font-family: 'Noto Sans TC', sans-serif;
