@@ -140,21 +140,29 @@ nav{
 /*INDEX*/
 
 /*SERVICE*/
+.articlecontianer1-service{
+margin-top: 30px;
+margin-left: 50px;
+margin-right: 130px;
+max-width: 700px;
+display: -moz-flex;
+display: -webkit-flex;
+display: 				 flex;
+-moz-flex-direction: column;
+-webkit-flex-direction: column;
+        flex-direction: column;
+}
 .articlecontianer-service{
   margin-right: 150px;
   overflow: hidden;
 }
 .title1-service{
-  z-index: 200;
-  position: absolute;
-  right: 0;
-  margin-top: 90px;
-  margin-right: 90px;
-  font-size: 18pt;
+  margin-top: 70px;
+  margin-left: 50px;
+  font-size: 14pt;
   font-weight: 300;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 3px;
-  color: #fff;
 }
 .title2-service{
   margin-top: 20px;
@@ -163,21 +171,6 @@ nav{
   font-weight: 300;
   font-family: "HanaMinA";
   letter-spacing: 3px;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-}
-.descrip-service{
-  max-width: 510px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  font-size: 8pt;
-  font-weight: 300;
-  font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 0px;
-  line-height: 18px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
@@ -244,6 +237,80 @@ nav{
   display: 				 flex;
   justify-content: center;
   align-items: center;
+}
+.projectcontianer-service{
+  margin-top: 20px;
+  margin-left: 50px;
+  min-width: 270px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-wrap: wrap;
+}
+.project-service{
+  margin-bottom: 60px;
+  min-width: 200px;
+  overflow: hidden;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.descrip1-service{
+  max-width: 510px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 8pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  line-height: 18px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.project-descrip-service{
+  font-size: 8pt;
+  font-weight: 100;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #555;
+}
+.name-service{
+  margin-top: 10px;
+  font-size: 24pt;
+  font-weight: 300;
+  line-height: 20pt;
+  letter-spacing: 0px;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: 				 flex;
+}
+.price-service{
+  font-size: 16pt;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #000;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.descrip-service{
+  max-width: 510px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 8pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  line-height: 18px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
 }
 /*SERVICE*/
 
@@ -570,7 +637,7 @@ nav{
 .copyright{
   height: 50px;
   color: #999999;
-  margin-left: 70px;
+  margin-left: 50px;
   font-size: 12px;
   font-weight: 300;
   font-family: 'Noto Sans TC', sans-serif;
@@ -620,7 +687,3 @@ nav{
   color: #333;
   letter-spacing: 1px;
 }
-
-
-
-</style>
