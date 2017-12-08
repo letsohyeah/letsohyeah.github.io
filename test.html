@@ -29,9 +29,9 @@
 		font-family: "HanaMinA_ttf";
 		src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 	}
-	a:link{color:#000000}
-	a:active {color:#000000;}
-	a:visited {color:#000000;}
+	a:link{color:#000;}
+	a:active {color:#000;}
+	a:visited {color:#000;}
 	a{text-decoration:none}
 	* {
 				 -moz-box-sizing: border-box;
@@ -54,141 +54,197 @@
 		}
 	nav{
 		position: fixed;
-		right: 0;
-		bottom: 0;
-		padding-top: 20px;
-		width: 120px;
-		height: 310px;
-		background-color: #fff;
+		top: 0;
+		width: 100%;
+		height: 30px;
+		background-color: #222;
+		z-index: 1;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		align-items:center;
+		visibility: hidden;
 	}
 	.navlinks{
-		width: 135px;
-		direction:rtl;
-		font-size: 12pt;
-		font-weight: 400;
+		color: #fff;
+		padding-left: 7px;
+		padding-right: 7px;
+		font-size: 6pt;
+		font-weight: 300;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 2px;
-		line-height: 28px;
-		transform: scale(0.58);
-			transform-origin:0 0;
-
-			-ms-transform: scale(0.58);         /* IE 9 */
-			-ms-transform-origin:0 0;       /* IE 9 */
-
-			-webkit-transform: scale(0.58); /* Safari 和 Chrome */
-			-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-			-moz-transform: scale(0.58);        /* Firefox */
-			-moz-transform-origin:0 0;      /* Firefox */
-
-			-o-transform: scale(0.58);      /* Opera */
-			-o-transform-origin:0 0;        /* Opera */
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.logobox{
-		float: right;
-		margin-top: 25px;
-		margin-right: 40px;
-		height: 70px;
-	}
-	.navmob{
 		display: none;
 	}
+	.navmob{
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.dropdown-menu > span {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		margin-left: 10px;
+	}
+
+	.dropdown-menu > span,
+	.dropdown-menu > div {
+		cursor: pointer;
+		outline: 0;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	.dropdown-menu > ul {
+		border-top: 2px solid #000;
+		border-bottom: 2px solid #000;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		background-color: #fff;
+		font-size: 10pt;
+		font-weight: 300;
+		font-family: ‘Noto Sans TC’, sans-serif;
+		letter-spacing: 2px;
+		line-height: 40px;
+		padding-left: 15px;
+		list-style:none;
+		margin-top: 10px;
+
+		visibility: hidden;
+		transition: visibility 0.5s;
+		opacity: 0;
+	}
+
+	.dropdown-menu > span:focus ~ ul {
+		visibility: visible;
+		opacity: 1;
+	}
 	.contianer{
+		width: 100%;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
 		flex-direction: column;
-		margin-bottom: -50px;
-		min-height: 100%;
 	}
 	.bigtitle{
-		width: 28px;
-		border-right: 2px solid #000000;
 		position: absolute;
-		right: 0;
-		margin-top: 90px;
-		margin-right: 40px;
+		border-bottom: 2px solid #000000;
+		margin-top: 15px;
+		margin-left: 15px;
 		font-size: 12pt;
 		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 5px;
-		line-height: 26px;
-		-webkit-writing-mode: vertical-lr ;
-		writing-mode: vertical-lr ;
 	}
 
 	/*INDEX*/
 	.picbox{
-		height: 100vh;
-		margin-right: 150px;
-		overflow: hidden;
-	}
-	.picbox-mobil{
 		display: none;
 	}
+	.picbox-mobil{
+		margin-top: 70px;
+		width: 100%;
+		overflow: hidden;
+	}
 	.articlecontianer-index{
-		position: absolute;
+		margin-top: 0px;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 15px;
 		padding: 20px;
-		margin-top: 90px;
-		margin-left: 150px;
-		margin-right: 130px;
 		font-size: 8pt;
 		font-weight: 300;
 		font-family: "HanaMinA";
 		letter-spacing: 2px;
 		line-height: 24px;
-		background-color: #fff;
-		opacity:0.8;
 	}
-		.title1-index{
-			width: 100%;
-			margin-bottom: 20px;
-			font-size: 14pt;
-			font-weight: 100;
-			font-family: "HanaMinA";
-			letter-spacing: 3px;
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: 				 flex;
-		}
-		.imgbox-index{
-			max-width: 200px;
-			margin-top: 10px;
-			margin-bottom: 20px;
-			overflow: hidden;
-			height: auto;
-		}
+	.title1-index{
+		width: 100%;
+		margin-bottom: 30px;
+		font-size: 16pt;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.logobox-index{
+		max-width: 200px;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		overflow: hidden;
+		height: auto;
+	}
 	/*INDEX*/
 
 	/*SERVICE*/
-	.articlecontianer1-service{
-	margin-top: 30px;
-	margin-left: 20px;
-	margin-right: 130px;
-	max-width: 700px;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-					flex-direction: column;
-	}
 	.articlecontianer-service{
-		margin-right: 150px;
+		margin-top: 70px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+						flex: 1 0 auto;
+	}
+	.articlecontianer-big-service{
+		margin-top: 30px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+						flex: 1 0 auto;
+	}
+	.articlecontianer-small-service{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.projectcontianer-service{
+		margin-top: 20px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.project-service{
+		width: 33%;
+		padding-right: 20px;
+		margin-bottom: 30px;
 		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title1-service{
-		margin-top: 70px;
-		margin-left: 50px;
+		margin-right: 15px;
+		margin-top: 30px;
+		margin-left: 15px;
 		font-size: 14pt;
 		font-weight: 300;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 3px;
 	}
 	.title2-service{
+		margin-left: 15px;
 		margin-top: 20px;
-		margin-left: 20px;
-		font-size: 18pt;
+		font-size: 12pt;
 		font-weight: 300;
 		font-family: "HanaMinA";
 		letter-spacing: 3px;
@@ -196,58 +252,81 @@
 		display: -webkit-flex;
 		display: 				 flex;
 	}
-	.background1-service{
-		background-color: #fff;
+	.numbertitle{
+		visibility: hidden;
 		position: absolute;
-		right: 0;
-		width: 300px;
-		height: 200px;
-		margin-top: 100px;
-		margin-right: 150px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-			 -moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
+		right: 15;
+		margin-top: 30px;
+		font-size: 12pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		color: #9a9a9a;
 	}
-	.background2-service{
-		background-color: #fff;
-		position: absolute;
-		width: 300px;
-		height: 200px;
-		left: 10%;
-		top: 10%;
+	.name-service{
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 24pt;
+		font-weight: 300;
+		line-height: 20pt;
+		letter-spacing: 0px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 10px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
-			 -moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
 	}
-	.background3-service{
-		background-color: #fff;
-		position: absolute;
-		right: 0;
-		width: 300px;
-		height: 200px;
-		top: 10%;
-		right: 10%;
+	.descrip-service{
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
-			 -moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
+		color: #555;
+	}
+	.descrip2-service{
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
+	}
+	.project-descrip-service{
+		margin-left: 15px;
+		font-size: 8pt;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
+	}
+	.price-service{
+		margin-left: 15px;
+		font-size: 14pt;
+		font-weight: 400;
+		letter-spacing: 5px;
+		color: #000;
+		font-family: 'Noto Sans TC', sans-serif;
 	}
 	.button{
-		position: absolute;
-		right: 0;
-		bottom: 0;
 		width: 80px;
 		font-size: 8pt;
-		margin-right: -15px;
-		margin-bottom: 15px;
+		margin-top: 20px;
+		margin-left: 15px;
+		margin-bottom: 20px;
 		height: 30px;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 2px;
@@ -259,102 +338,13 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.projectcontianer-service{
-		margin-top: 20px;
-		margin-left: 50px;
-		min-width: 270px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		flex-wrap: wrap;
-	}
-	.project-service{
-		margin-bottom: 60px;
-		min-width: 200px;
-		overflow: hidden;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
-	}
-	.descrip1-service{
-		max-width: 510px;
-		margin-left: 50px;
-		margin-top: 20px;
-		margin-bottom: 10px;
-		font-size: 8pt;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 0px;
-		line-height: 18px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-	}
-	.project-descrip-service{
-		font-size: 8pt;
-		font-weight: 100;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 2px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		color: #555;
-	}
-	.name-service{
-		margin-top: 10px;
-		font-size: 24pt;
-		font-weight: 300;
-		line-height: 20pt;
-		letter-spacing: 0px;
-		font-family: 'Noto Sans TC', sans-serif;
-		display: 				 flex;
-	}
-	.price-service{
-		font-size: 16pt;
-		font-weight: 400;
-		letter-spacing: 5px;
-		color: #000;
-		font-family: 'Noto Sans TC', sans-serif;
-	}
-	.descrip-service{
-		max-width: 510px;
-		margin-left: 50px;
-		margin-top: 10px;
-		margin-bottom: 20px;
-		font-size: 8pt;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 0px;
-		line-height: 18px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-	}
-	.descrip2-service{
-		max-width: 510px;
-		margin-top: 10px;
-		margin-left: 20px;
-		margin-right: 20px;
-		margin-bottom: 20px;
-		font-size: 8pt;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 0px;
-		line-height: 18px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-	}
 	/*SERVICE*/
 
 	/*ABOUT*/
 	.articlecontianer-about{
-		margin-top: 30px;
-		margin-left: 20px;
-		margin-right: 130px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 90px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -362,12 +352,10 @@
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 						flex-direction: column;
-						flex: 1 0 auto;
 	}
 	.title1-about{
-		width: 100%;
-		margin-left: 50px;
-		margin-top: 60px;
+		margin-left: 15px;
+		margin-top: 50px;
 		font-size: 14pt;
 		font-weight: 100;
 		font-family: "HanaMinA";
@@ -377,40 +365,98 @@
 		display: 				 flex;
 	}
 	.article-about{
-		max-width: 510px;
-		margin-left: 50px;
-		margin-top: 20px;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 15px;
 		font-size: 8pt;
 		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 0px;
-		line-height: 20px;
+		line-height: 34px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
 	}
 	.imgbox-about{
-		max-width: 700px;
-		margin-top: 20px;
-		margin-left: 40px;
+		width: 100%;
+		margin-top: 30px;
 		overflow: hidden;
 		height: auto;
 	}
-	/*ABOUT/
+	.logobox-about{
+		max-width: 200px;
+		margin-left: 15px;
+		margin-top: 10px;
+		overflow: hidden;
+		height: auto;
+	}
+	/*ABOUT*/
+
+	/*WORKS*/
+	.gridcontianer-works{
+		margin-top: 90px;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.grid-works{
+		margin-top: 40px;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+	}
+	.imgbox-works{
+		width: 100%;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.name-works{
+		margin-top: 8px;
+		font-size: 10pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 5px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		color: #000;
+	}
+	.descrip-works{
+		visibility:hidden;
+		margin-top: 2px;
+		font-size: 7pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		color: #555555;
+	}
+	/*WORKS*/
 
 	/*TEAM*/
 	.gridcontianer-team{
-		margin-top: 90px;
+		margin-top: 150px;
 		margin-left: 0px;
-		margin-right: 130px;
+		margin-right: 0px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
 		flex-wrap: wrap;
 	}
 	.grid-team{
-		margin-bottom: 40px;
-		margin-left: 80px;
+		margin-top: 20px;
+		margin-left: 15px;
 		max-width: 420px;
 		height: 180px;
 		display: -moz-flex;
@@ -422,8 +468,8 @@
 		flex-direction:row;
 	}
 	.imgbox-team{
-		min-width: 100px;
-		height: 100px;
+		min-width: 70px;
+		height: 70px;
 		overflow: hidden;
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -433,6 +479,7 @@
 		width: 100%;
 		height: 100%;
 		margin-left: 20px;
+		margin-right: 15px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -464,87 +511,27 @@
 	}
 	/*TEAM*/
 
-	/*WORKS*/
-	.gridcontianer-works{
+	/*PRESS*/
+	.gridcontianer-press{
 		margin-top: 90px;
-		margin-left: 20px;
-		margin-right: 130px;
+		margin-left: 15px;
+		margin-right: 15px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
 		flex-wrap: wrap;
 	}
-	.grid-works{
-		margin-bottom: 40px;
-		margin-left: 40px;
-		min-width: 270px;
+	.grid-press{
+		border-top: 1px solid #000;
+		margin-top: 40px;
+		width: 100%;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
 		flex-direction: column;
 	}
-	.imgbox-works{
-		max-width: 330px;
-		overflow: hidden;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-	}
-	.name-works{
-		margin-top: 8px;
-		font-size: 10pt;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 5px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		justify-content:center;
-	}
-	.descrip-works{
-		visibility:hidden;
-		margin-top: 2px;
-		font-size: 7pt;
-		font-weight: 300;
-		font-family: ‘Noto Sans TC’, sans-serif;
-		letter-spacing: 1px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		justify-content:center;
-		color: #555555;
-	}
-	/*WORKS*/
-
-
-	/*PRESS*/
-	.gridcontianer-press{
-		margin-top: 90px;
-		margin-left: 20px;
-		margin-right: 130px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		flex-wrap: wrap;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
-	}
-	.grid-press{
-		border-top: 1px solid #000;
-		max-width: 700px;
-		margin-bottom: 40px;
-		margin-left: 40px;
-		min-width: 270px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
-	}
 	.name-press{
-		margin-top: 20px;
+		margin-top: 12px;
 		font-size: 14pt;
 		font-weight: 300;
 		font-family: "HanaMinA";
@@ -552,11 +539,12 @@
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
+		color: #000;
 	}
 	.descrip-press{
 		margin-top: 5px;
 		font-size: 7pt;
-		font-weight: 300;
+		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 1px;
 		display: -moz-flex;
@@ -565,10 +553,10 @@
 		color: #555555;
 	}
 	.descrip-press1{
-		margin-left: 50px;
+		margin-left: 15px;
 		margin-top: 5px;
 		font-size: 7pt;
-		font-weight: 300;
+		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 1px;
 		display: -moz-flex;
@@ -578,14 +566,13 @@
 	}
 	.article-press{
 		max-width: 510px;
-		margin-left: 20px;
 		margin-top: 50px;
 		margin-bottom: 30px;
 		font-size: 8pt;
-		font-weight: 300;
+		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 0px;
-		line-height: 20px;
+		line-height: 18px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -593,17 +580,15 @@
 	}
 	.imgbox-press{
 		max-width: 700px;
-		margin-top: 50px;
-		margin-left: 20px;
+		margin-top: 10px;
 		overflow: hidden;
 		height: auto;
 	}
 	/*PRESS*/
 
 	.articlecontianer{
-		margin-top: 30px;
-		margin-left: 20px;
-		margin-right: 130px;
+		width: 100%;
+		margin-top: 90px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -613,9 +598,8 @@
 						flex-direction: column;
 	}
 	.title1{
-		width: 100%;
-		margin-left: 50px;
-		margin-top: 60px;
+		margin-left: 15px;
+		margin-top: 70px;
 		font-size: 14pt;
 		font-weight: 100;
 		font-family: "HanaMinA";
@@ -624,13 +608,32 @@
 		display: -webkit-flex;
 		display: 				 flex;
 	}
+	.article{
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 30px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 34px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.imgbox{
+		width: 100%;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
+	}
 	.descrip{
 		max-width: 510px;
-		margin-left: 50px;
+		margin-left: 15px;
 		margin-top: 2px;
 		margin-bottom: 50px;
 		font-size: 8pt;
-		font-weight: 300;
+		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 0px;
 		line-height: 18px;
@@ -638,91 +641,22 @@
 		display: -webkit-flex;
 		display: 				 flex;
 	}
-	.article{
-		max-width: 510px;
-		margin-left: 50px;
-		margin-top: 60px;
-		margin-bottom: 20px;
-		font-size: 8pt;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 0px;
-		line-height: 20px;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-	}
-	.imgbox{
-		max-width: 700px;
-		margin-top: 10px;
-		margin-left: 40px;
-		overflow: hidden;
-		height: auto;
-	}
-	.hover figure img {
-		opacity: 1;
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
-	}
-	.hover figure:hover img {
-		opacity: .5;
-	}
+
 	.block{
 		height: 50px;
 	}
 	.copyright{
-		height: 50px;
 		color: #999999;
-		margin-left: 50px;
-		font-size: 12px;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 7pt;
 		font-weight: 300;
 		font-family: 'Noto Sans TC', sans-serif;
 		letter-spacing: 0px;
-		transform: scale(0.58);
-			transform-origin:0 0;
-
-			-ms-transform: scale(0.58);         /* IE 9 */
-			-ms-transform-origin:0 0;       /* IE 9 */
-
-			-webkit-transform: scale(0.58); /* Safari 和 Chrome */
-			-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-			-moz-transform: scale(0.58);        /* Firefox */
-			-moz-transform-origin:0 0;      /* Firefox */
-
-			-o-transform: scale(0.58);      /* Opera */
-			-o-transform-origin:0 0;        /* Opera */
 	}
-	.reveal .hidden { display: block !important; visibility: visible !important;}
-	.product:hover .reveal img { opacity: 1; }
-	.reveal { position: relative; }
-	.reveal .hidden {
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		-webkit-transition: opacity 0.3s ease-in-out;
-		-moz-transition: opacity 0.3s ease-in-out;
-		-o-transition: opacity 0.3s ease-in-out;
-		transition: opacity 0.3s ease-in-out;
-	}
-	.reveal:hover .hidden {
-		z-index: 100000;
-		opacity: 1;
-	}
-	.reveal .caption {
-		position: absolute;
-		top: 0;
-		display: table;
-		width: 100%;
-		height: 100%;
-		font: 13px/1.6 sans-serif;
-		text-transform: uppercase;
-		color: #333;
-		letter-spacing: 1px;
-	}
+
+
 
 	</style>
 </HEAD>
@@ -748,6 +682,7 @@
 		},1000)
 	</script>
 	<div class="cleanfix">
+
 
 		<!--   N   A   V   -->
 		<nav>
@@ -793,39 +728,58 @@
 		</div>
 		<!--   N   A   V   -->
 
+
 		<div class="contianer">
 			<div class="bigtitle">
-					Service
+					About
 			</div>
-
-
-			<div class="articlecontianer1-service">
-				<div class="title1">中島吧台設計製作</div>
-				<div class="descrip-service">依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份</div>
-				<div class="imgbox">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/B93Iox0.jpg?1" width="100%";>
+			<div class="articlecontianer-about">
+				<div class="logobox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/iSUuJCn.png" width="100%">
 				</div>
-				<div class="title1-service">Home Project</div>
-				<div class="descrip-service">家庭規劃方案。依需求規劃設計，不含吧台設計製作。</div>
-				<div class="projectcontianer-service">
-					<div class="project-service">
-						<div class="name-service">H1<br>-</div>
-						<div class="project-descrip-service">物件數量：13</div>
-						<div class="project-descrip-service"><br>NT$</div><p class="price-service">15萬</p>
-						<div class="project-descrip-service">建議坪數：10-20坪</div>
-					</div>
-					<div class="project-service">
-						<div class="name-service">H2<br>-</div>
-						<div class="project-descrip-service">物件數量：18</div>
-						<div class="project-descrip-service"><br>NT$</div><p class="price-service">25萬</p>
-						<div class="project-descrip-service">建議坪數：20-35坪</div>
-					</div>
-					<div class="project-service">
-						<div class="name-service">H3<br>-</div>
-						<div class="project-descrip-service">物件數量：25</div>
-						<div class="project-descrip-service"><br>NT$</div><p class="price-service">40萬</p>
-						<div class="project-descrip-service">建議坪數：35-55坪</div>
-					</div>
+				<div class="descrip">
+					 自然、原始、純粹、老物
+				</div>
+				<div class="article-about">
+					專營居家生活、商業空間整體擺設規劃，內容包含公共開放空間傢俱擺設、NV手作木工中島吧台、開放式廚房，搭配精選的歐洲進口古董家具。
+				</div>
+				<div class="imgbox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/e9qu9h6.jpg" width="100%";>
+				</div>
+				<div class="title1-about">
+					"把喜歡的美感傳達出去"
+				</div>
+				<div class="article-about">
+					是我們 Natural n' Vintage 團隊成立的初衷。<br>
+					過去幾年來，我們用雙手創作了幾個空間，<br>
+					從設計規劃到施作皆不假他人之手。<br>
+					秉持著NV一向自然、原始、純粹的風格，<br>
+					希望讓大家拋開過去非得要"裝潢"的概念，<br>
+					讓空間載體本身回歸乾淨簡單，<br>
+					再佐上我們為您搭配的歐洲經典傢俱家飾物件，<br>
+					由我們親自設計施作的木作，<br>
+					就是要讓您展現任性、自豪又絕對脫俗的居家品味。
+				</div>
+				<div class="imgbox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/aiFU8Zi.jpg" width="100%";>
+				</div>
+				<div class="imgbox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/z5wVYZJ.jpg" width="100%";>
+				</div>
+				<div class="imgbox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/lNdirlR.jpg" width="100%";>
+				</div>
+				<div class="imgbox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/akJ4R1w.jpg" width="100%";>
+				</div>
+				<div class="imgbox-about">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/DG1dhKp.jpg" width="100%";>
+				</div>
+				<div class="article-about">
+					如果您跟我們一樣不滿意市面複製貼上的各種居家風格，<br>
+					如果您跟我們一樣熱愛手作喜歡空間充滿人的溫度，<br>
+					想要讓長久以來的夢想實現在您的日日尋常生活，<br>
+					歡迎來與我們聊聊。
 				</div>
 				<div class="block"></div>
 				<div class="block"></div>
@@ -833,9 +787,7 @@
 					Copyright © 2017 Natural n' Vintage
 				</p>
 			</div>
-
 		</div>
-
 	</div>
 </BODY>
 </HTML>

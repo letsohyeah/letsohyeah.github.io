@@ -106,7 +106,7 @@ nav{
   overflow: hidden;
 }
 .picbox-mobil{
-	display: none;
+  display: none;
 }
 .articlecontianer-index{
   position: absolute;
@@ -133,7 +133,7 @@ nav{
     display: -webkit-flex;
     display: 				 flex;
   }
-  .imgbox-index{
+  .logobox-index{
     max-width: 200px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -375,6 +375,13 @@ display: 				 flex;
   max-width: 700px;
   margin-top: 20px;
   margin-left: 40px;
+  overflow: hidden;
+  height: auto;
+}
+.logobox-about{
+  max-width: 200px;
+  margin-left: 50px;
+  margin-top: 60px;
   overflow: hidden;
   height: auto;
 }
