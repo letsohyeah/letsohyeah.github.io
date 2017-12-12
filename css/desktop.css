@@ -697,7 +697,7 @@ display: 				 flex;
 
 /*Contact*/
 .block-contact{
-  height: 260px;
+  height: 50px;
 }
 .descrip-contact{
   margin-bottom: 10px;
@@ -711,11 +711,29 @@ display: 				 flex;
   display: 				 flex;
   color: #474747;
 }
+.map{
+  position: fixed;
+  margin-left: 50px;
+  width: 200px;
+  bottom: 150;
+  overflow: hidden;
+  height: auto;
+}
+.articlecontianer-contact{
+  height: 80vh;
+  margin-top: 90px;
+  margin-right: 130px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
 /*Contact*/
 
 .articlecontianer{
   margin-top: 30px;
-  margin-left: 20px;
   margin-right: 130px;
   display: -moz-flex;
   display: -webkit-flex;
