@@ -568,6 +568,111 @@ nav{
 }
 /*PRESS*/
 
+/*ITEM*/
+.articlecontianer-item{
+  height: 100vh;
+  margin-right: 130px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.imgbox1-item{
+  overflow: auto;
+  max-width: 700px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.infobox-item{
+  margin-top: 300px;
+  margin-left: 50px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.name1-item{
+  font-size: 12pt;
+  font-weight: 300;
+  font-family: "HanaMinA";
+  letter-spacing: 4px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #474747;
+}
+.descrip-item{
+  margin-top: 5px;
+  font-size: 9pt;
+  font-weight: 100;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #909090;
+}
+.pricebox-item{
+  height: 70px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  align-items: flex-end;
+}
+.price-item{
+  margin-left: 5px;
+  font-size: 18pt;
+  font-weight: 500;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 3px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #474747;
+}
+.gridcontianer-item{
+  margin-top: 90px;
+  margin-left: 20px;
+  margin-right: 130px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-wrap: wrap;
+}
+.grid-item{
+  margin-bottom: 40px;
+  margin-left: 40px;
+  min-width: 150px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgbox-item{
+  max-width: 200px;
+  overflow: hidden;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.name-item{
+  margin-top: 15px;
+  font-size: 10pt;
+  font-weight: 300;
+  font-family: "HanaMinA";
+  letter-spacing: 5px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+/*ITEM*/
+
 /*Contact*/
 .block-contact{
 	height: 30px;
