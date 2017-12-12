@@ -628,7 +628,7 @@ display: 				 flex;
   color: #474747;
 }
 .descrip-item{
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 9pt;
   font-weight: 100;
   font-family: 'Noto Sans TC', sans-serif;
@@ -646,6 +646,7 @@ display: 				 flex;
   align-items: flex-end;
 }
 .price-item{
+  margin-bottom: -4px;
   margin-left: 5px;
   font-size: 18pt;
   font-weight: 500;
