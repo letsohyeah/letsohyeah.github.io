@@ -27,7 +27,6 @@ body{
     padding: 0;
   }
 .cleanfix{
-  height: 100vh;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
