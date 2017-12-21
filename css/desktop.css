@@ -111,21 +111,18 @@ nav{
 .articlecontianer-index{
   position: absolute;
   padding: 20px;
-  margin-top: 90px;
-  margin-left: 150px;
-  margin-right: 130px;
+  margin-top: 80px;
+  margin-left: 160px;
   font-size: 8pt;
   font-weight: 300;
-  font-family: "HanaMinA";
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
   line-height: 24px;
-  background-color: #fff;
-  opacity:0.8;
 }
   .title1-index{
     width: 100%;
-    margin-bottom: 20px;
-    font-size: 14pt;
+    margin-bottom: 10px;
+    font-size: 20pt;
     font-weight: 100;
     font-family: "HanaMinA";
     letter-spacing: 3px;
@@ -241,6 +238,38 @@ display: 				 flex;
   justify-content: center;
   align-items: center;
 }
+.button-service{
+  width: 100px;
+  font-size: 8pt;
+  margin-left:50px;
+  margin-bottom: 15px;
+  height: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  background-color: #333;
+  color: #fff;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
+.button1-service{
+  width: 80px;
+  font-size: 8pt;
+  margin-left:0px;
+  margin-top: 15px;
+  height: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  background-color: #333;
+  color: #fff;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
 .projectcontianer-service{
   margin-top: 20px;
   margin-left: 50px;
@@ -276,14 +305,15 @@ display: 				 flex;
   display: 				 flex;
 }
 .project-descrip-service{
+  margin-top: 3px;
   font-size: 8pt;
   font-weight: 100;
   font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  color: #555;
+  color: #909090;
 }
 .name-service{
   margin-top: 10px;
@@ -294,12 +324,35 @@ display: 				 flex;
   font-family: 'Noto Sans TC', sans-serif;
   display: 				 flex;
 }
-.price-service{
-  font-size: 16pt;
-  font-weight: 400;
-  letter-spacing: 5px;
-  color: #000;
+.pricebox-service{
+  margin-bottom: 20px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  align-items: flex-end;
+}
+.NT-service{
+  margin-top: 10px;
+  font-size: 9pt;
+  font-weight: 100;
   font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #909090;
+}
+.price-service{
+  margin-bottom: -4px;
+  margin-left: 10px;
+  font-size: 18pt;
+  font-weight: 500;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 3px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #474747;
 }
 .descrip-service{
   max-width: 510px;
@@ -329,6 +382,20 @@ display: 				 flex;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+}
+.imgbox-service{
+  max-width: 300px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+.imgcontianer-service{
+  margin-top: 30px;
+  margin-left: 50px;
+  width: : 900px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-wrap: wrap;
 }
 /*SERVICE*/
 
@@ -627,7 +694,7 @@ display: 				 flex;
   display: 				 flex;
   color: #474747;
 }
-.descrip-item{
+.NT-item{
   margin-top: 10px;
   font-size: 9pt;
   font-weight: 100;
