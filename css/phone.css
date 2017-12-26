@@ -177,25 +177,15 @@ nav{
 					flex-direction: column;
 					flex: 1 0 auto;
 }
-.articlecontianer-big-service{
-	margin-top: 30px;
+.articlecontianer2-service{
+	width: : 900px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-					flex-direction: column;
-					flex: 1 0 auto;
-}
-.articlecontianer-small-service{
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-					flex-direction: column;
+	flex-wrap: wrap;
 }
 .projectcontianer-service{
+	margin-left: 15px;
 	margin-top: 20px;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -204,7 +194,6 @@ nav{
 }
 .project-service{
 	width: 33%;
-	padding-right: 20px;
 	margin-bottom: 30px;
 	overflow: hidden;
 	display: -moz-flex;
@@ -258,6 +247,24 @@ nav{
 	display: -webkit-flex;
 	display: 				 flex;
 }
+.pricebox-service{
+	margin-bottom: 20px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	align-items: flex-end;
+}
+.NT-service{
+	margin-top: 10px;
+	font-size: 8pt;
+	font-weight: 100;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	color: #909090;
+}
 .descrip-service{
 	margin-right: 15px;
 	margin-left: 15px;
@@ -285,7 +292,6 @@ nav{
 	color: #555;
 }
 .project-descrip-service{
-	margin-left: 15px;
 	font-size: 8pt;
 	font-weight: 100;
 	font-family: 'Noto Sans TC', sans-serif;
@@ -296,10 +302,11 @@ nav{
 	color: #555;
 }
 .price-service{
-	margin-left: 15px;
+	margin-bottom: -4px;
+	margin-left: 5px;
 	font-size: 14pt;
 	font-weight: 400;
-	letter-spacing: 5px;
+	letter-spacing: 3px;
 	color: #000;
 	font-family: 'Noto Sans TC', sans-serif;
 }
@@ -319,6 +326,118 @@ nav{
 	display: 				 flex;
 	justify-content: center;
 	align-items: center;
+}
+.button-service{
+	width: 100px;
+	font-size: 8pt;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 30px;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 2px;
+	background-color: #333;
+	color: #fff;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+}
+.button1-service{
+	width: 80px;
+	font-size: 8pt;
+	margin-left:0px;
+	margin-top: 15px;
+	height: 30px;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 2px;
+	background-color: #333;
+	color: #fff;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+}
+.imgbox-service{
+	max-width: 300px;
+	margin-right: 25px;
+	margin-bottom: 30px;
+}
+.imgcontianer-service{
+	margin-top: 30px;
+	margin-left: 20px;
+	width: : 900px;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-wrap: wrap;
+}
+.map-service{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	height: 150px;
+}
+.itemlist-service{
+	position: absolute;
+	width: 400px;
+	background-color: #fff;
+	padding: 20px;
+	border: 2px solid #474747;
+	margin-top: -250px;
+	margin-left: 120px;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 10pt;
+	line-height: 30px;
+	letter-spacing: 1px;
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+}
+.button1-service:hover .itemlist-service{
+	z-index: 1000;
+	opacity: 1;
+}
+.listcontainer-service{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: row;
+	-webkit-flex-direction: row;
+					flex-direction: row;
+	justify-content: space-between;
+}
+.itemname-service{
+	width: 60%;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+}
+.itemnum-service{
+	width: 15%;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+}
+.itemprice-service{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+}
+.totleprice-service{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: flex-end;
 }
 /*SERVICE*/
 
