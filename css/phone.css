@@ -699,7 +699,6 @@ nav{
 	flex-direction: column-reverse;
 }
 .imgbox1-item{
-	margin-bottom: 50px;
 	width: 100%;
 	display: -moz-flex;
 	display: -webkit-flex;
