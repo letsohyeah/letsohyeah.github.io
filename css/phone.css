@@ -688,7 +688,7 @@ nav{
 
 /*ITEM*/
 .articlecontianer-item{
-	margin-top: 20px;
+	margin-top: 50px;
 	margin-left: 0px;
 	margin-right: 0px;
 	display: -moz-flex;
@@ -749,7 +749,7 @@ nav{
 	margin-bottom: -4px;
 	margin-left: 5px;
 	font-size: 18pt;
-	font-weight: 500;
+	font-weight: 300;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 3px;
 	display: -moz-flex;
