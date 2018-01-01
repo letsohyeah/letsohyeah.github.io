@@ -135,9 +135,8 @@
 	}
 	.bigtitle{
 		position: absolute;
-		border-bottom: 2px solid #000000;
-		margin-top: -35px;
-		margin-left: 43%;
+		margin-top: -32px;
+		margin-left: 42%;
 		font-size: 10pt;
 		font-weight: 400;
 		font-family: 'Noto Sans TC', sans-serif;
@@ -188,7 +187,6 @@
 
 	/*SERVICE*/
 	.articlecontianer-service{
-		margin-top: -20px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -842,6 +840,7 @@
 		max-width: 270px;
 	}
 	.articlecontianer-contact{
+		margin-top: 50px;
 		width: 100%;
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -927,151 +926,96 @@
 
 	</style>
 </HEAD>
-<BODY>
-	<script>
-		jQuery('body').css('display','none');
-		jQuery(document).ready(function() {
-			jQuery('body').fadeIn();
-			jQuery('a').on('click',function(event){
-				var thetarget = this.getAttribute('target')
-				if (thetarget != "_blank"){
-					var thehref = this.getAttribute('href')
-					event.preventDefault();
-					jQuery('body').fadeOut(function(){
-						//alert(thehref)
-						window.location = thehref
-					});
-				}
-			});
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref
+				});
+			}
 		});
-		setTimeout(function(){
-			jQuery('body').fadeIn();
-		},1000)
-	</script>
-	<div class="cleanfix">
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
+<div class="cleanfix">
 
-		<!--   N   A   V   -->
-		<nav>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/about.html">About</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/service.html">Service</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/works.html">Works</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/item.html">Item</a>
-			</div>
-			<div class="navlinks">
-			 	<a href="https://letsohyeah.github.io/team.html">Team</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/press.html">Press</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/contact.html">Contact</a>
-			</div>
-			<div class="logobox">
-				<a href="https://letsohyeah.github.io/index.html"><img src="https://i.imgur.com/cwKJq2d.png" height="100%"></a>
-			</div>
-		</nav>
-
-
-
-		<div class="navmob" onclick="return true">
-			<div class="dropdown-menu">
-			  <span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
-					<div tabindex="0" onclick="return true"></div>
-				  <ul>
-						<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
-				    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
-				    <li><a href="https://letsohyeah.github.io/service.html" onclick="sampleMenu(this)">Service</a></li>
-				    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
-						<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
-						<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
-						<li><a href="https://letsohyeah.github.io/press.html" onclick="sampleMenu(this)">Press</a></li>
-						<li><a href="https://letsohyeah.github.io/contact.html" onclick="sampleMenu(this)">Contact</a></li>
-				  </ul>
-			</div>
+	<!--   N   A   V   -->
+	<nav>
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/about.html">About</a>
 		</div>
-		<!--   N   A   V   -->
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/service.html">Service</a>
+		</div>
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/works.html">Works</a>
+		</div>
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/item.html">Item</a>
+		</div>
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/team.html">Team</a>
+		</div>
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/press.html">Press</a>
+		</div>
+		<div class="navlinks">
+			<a href="https://letsohyeah.github.io/contact.html">Contact</a>
+		</div>
+		<div class="logobox">
+			<a href="https://letsohyeah.github.io/index.html"><img src="https://i.imgur.com/cwKJq2d.png" height="100%"></a>
+		</div>
+	</nav>
 
-		<div class="contianer">
-			<div class="bigtitle">
-					Works
-			</div>
-			<div class="articlecontianer">
-										<div class="title1">
-											Silhouette
-										</div>
-										<div class="descrip">
-											什麼空間在你的眼中是最美的？無庸質疑是適合你自己的空間。
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/O5bO7YD.jpg" width="100%";>
-										</div>
-										<div class="article">
-											「一個所謂近乎完美的生活空間絕對需要一個人對生活品質有某程度上不妥協的要求（這與金錢無關）然後保持開放的心胸，少一些過度放大的自我（別忘了一山還有一山高）多一點簡單、多留一些白、注重細節，還有更多對好物件的堅持態度，這些是我的觀察。」——Maite
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/LbSfdtV.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/tVq9bgO.jpg" width="100%";>
-										</div>
-										<div class="article">
-											施作中
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/lSqwvtx.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/kt7wB03.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/SSaILlG.jpg" width="100%";>
-										</div>
-										<div class="article">
-											吧台製作
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/f6ZpZKE.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/vtqTad9.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/3lyiTD3.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/Hlm0abK.jpg" width="100%";>
-										</div>
-										<div class="article">
-											有很多人情願整天去潮咖啡廳打卡，自己住的地方卻很醜陋可怕。「家」這個私密的空間，別人看不見的地方，也非常舒服有質感才是我們所要追求的。
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/oKMb2Vc.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/SQ9Wbro.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/jt6kYmD.jpg" width="100%";>
-										</div>
-										<div class="imgbox">
-											<img class="lazy img-responsive" data-original="https://i.imgur.com/lWPgtYJ.jpg" width="100%";>
-										</div>
-										<div class="block"></div>
-										<div class="block"></div>
-										<p class="copyright">
-											Copyright © 2017 Natural n' Vintage
-										</p>
-				</div>
-			</div>
+
+
+	<div class="navmob" onclick="return true">
+		<div class="dropdown-menu">
+			<span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
+				<div tabindex="0" onclick="return true"></div>
+				<ul>
+					<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
+					<li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
+					<li><a href="https://letsohyeah.github.io/service.html" onclick="sampleMenu(this)">Service</a></li>
+					<li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
+					<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
+					<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
+					<li><a href="https://letsohyeah.github.io/press.html" onclick="sampleMenu(this)">Press</a></li>
+					<li><a href="https://letsohyeah.github.io/contact.html" onclick="sampleMenu(this)">Contact</a></li>
+				</ul>
 		</div>
 	</div>
+	<!--   N   A   V   -->
+
+	<div class="contianer">
+		<div class="bigtitle">
+				Contact
+		</div>
+		<div class="articlecontianer-contact">
+			<p class="descrip-contact">工作室：新竹縣竹北市長青路207巷51號</p>
+			<p class="descrip-contact">聯絡電話：0909-689-432</p>
+			<p class="descrip-contact">Email：natural.n.vintage@gmail.com</p>
+			<p class="descrip-contact">Line：naturalnvintage</p>
+			<div class="block-contact"></div>
+			<p class="descrip-contact">Facebook：<a href="https://www.facebook.com/naturalnvintage/">Natural n Vintage</a></p>
+			<p class="descrip-contact">Instagram：<a href="https://www.instagram.com/natural.n.vintage/">@natural_n_vintage</a></p>
+		</div>
+		<div class="map-contact">
+			<img class="lazy img-responsive" data-original="https://i.imgur.com/VmS6G45.png" width="100%">
+		</div>
+</div>
+<p class="copyright">
+	Copyright © 2017 Natural n' Vintage
+</p>
 
 </BODY>
 </HTML>
