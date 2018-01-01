@@ -689,6 +689,7 @@ nav{
 
 /*ITEM*/
 .articlecontianer-item{
+	margin-top: 20px;
 	margin-left: 0px;
 	margin-right: 0px;
 	display: -moz-flex;
@@ -759,7 +760,6 @@ nav{
 	color: #474747;
 }
 .gridcontianer-item{
-	margin-top: 90px;
 	margin-left: 0px;
 	margin-right: 0px;
 	display: -moz-flex;
