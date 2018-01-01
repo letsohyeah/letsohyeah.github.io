@@ -168,6 +168,7 @@ nav{
 
 /*SERVICE*/
 .articlecontianer-service{
+	margin-top: 50px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
