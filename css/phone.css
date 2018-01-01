@@ -131,7 +131,6 @@ nav{
 	margin-right: auto;
 	right: 0;
 	left: 0;
-	height: 100vh;
 	overflow: hidden;
 	z-index: -20;
 }
