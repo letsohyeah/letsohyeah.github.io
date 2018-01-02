@@ -811,6 +811,19 @@ nav{
 	justify-content:center;
 	color: #000;
 }
+.copyright-item{
+	display: none;
+}
+.copyright-item-mobil{
+	color: #999999;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	bottom: 0;
+	font-size: 6pt;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0px;
+}
 /*ITEM*/
 
 /*Contact*/
