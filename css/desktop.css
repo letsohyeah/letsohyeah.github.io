@@ -138,15 +138,16 @@ nav{
     height: auto;
   }
   .button-index{
+    border-color: #474747;
+    border: 1px solid #474747;
+    border-radius: 3px;
     padding-left: 15px;
     width: 78px;
     font-size: 8pt;
-    margin-top: 50px;
+    margin-top: 30px;
     height: 30px;
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 2px;
-    background-color: #fff;
-    opacity: 0.7;
     color: #474747;
     white-space: nowrap;
     overflow: hidden;
@@ -279,6 +280,9 @@ display: 				 flex;
         transition: width 0.5s;
 }
 .button-service{
+  border-color: #474747;
+  border: 1px solid #474747;
+  border-radius: 3px;
   padding-left: 15px;
   width: 100px;
   font-size: 8pt;
@@ -286,8 +290,7 @@ display: 				 flex;
   height: 30px;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
-  background-color: #555;
-  color: #fff;
+  color: #474747;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -305,6 +308,9 @@ display: 				 flex;
         transition: width 0.5s;
 }
 .button1-service{
+  border-color: #474747;
+  border: 1px solid #474747;
+  border-radius: 3px;
   width: 80px;
   font-size: 8pt;
   margin-left:0px;
@@ -312,8 +318,7 @@ display: 				 flex;
   height: 30px;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 2px;
-  background-color: #555;
-  color: #fff;
+  color: #474747;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

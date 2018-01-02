@@ -165,7 +165,8 @@ nav{
 	height: auto;
 }
 .button-index{
-	width: 100px;
+	padding-left: 15px;
+	width: 80px;
 	font-size: 8pt;
 	margin-top: 50px;
 	margin-bottom: 20px;
@@ -175,10 +176,13 @@ nav{
 	background-color: #fff;
 	opacity: 0.7;
 	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 }
 /*INDEX*/
@@ -338,6 +342,9 @@ nav{
 	letter-spacing: 2px;
 	background-color: #333;
 	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -345,6 +352,7 @@ nav{
 	align-items: center;
 }
 .button-service{
+	padding-left: 15px;
 	width: 100px;
 	font-size: 8pt;
 	margin-top: 20px;
@@ -354,13 +362,17 @@ nav{
 	letter-spacing: 2px;
 	background-color: #333;
 	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 }
 .button1-service{
+	padding-left: 10px;
 	width: 80px;
 	font-size: 8pt;
 	margin-left:0px;
@@ -370,10 +382,13 @@ nav{
 	letter-spacing: 2px;
 	background-color: #333;
 	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 }
 .imgbox-service{
