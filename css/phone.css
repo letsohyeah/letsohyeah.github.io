@@ -165,6 +165,8 @@ nav{
 	height: auto;
 }
 .button-index{
+	border: 1px solid #474747;
+	border-radius: 3px;
 	padding-left: 15px;
 	width: 80px;
 	font-size: 8pt;
@@ -173,9 +175,7 @@ nav{
 	height: 30px;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 2px;
-	background-color: #fff;
-	opacity: 0.7;
-	color: #fff;
+	color: #474747;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -332,26 +332,30 @@ nav{
 	font-family: 'Noto Sans TC', sans-serif;
 }
 .button{
+	border: 1px solid #474747;
+	border-radius: 3px;
 	width: 80px;
 	font-size: 8pt;
 	margin-top: 20px;
 	margin-left: 15px;
 	margin-bottom: 20px;
+	padding-left: 15px;
 	height: 30px;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 2px;
-	background-color: #333;
-	color: #fff;
+	color: #474747;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 }
 .button-service{
+	border: 1px solid #474747;
+	border-radius: 3px;
 	padding-left: 15px;
 	width: 100px;
 	font-size: 8pt;
@@ -360,8 +364,7 @@ nav{
 	height: 30px;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 2px;
-	background-color: #333;
-	color: #fff;
+	color: #474747;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -372,6 +375,8 @@ nav{
 	align-items: center;
 }
 .button1-service{
+	border: 1px solid #474747;
+	border-radius: 3px;
 	padding-left: 10px;
 	width: 80px;
 	font-size: 8pt;
@@ -380,8 +385,7 @@ nav{
 	height: 30px;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 2px;
-	background-color: #333;
-	color: #fff;
+	color: #474747;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -411,6 +415,7 @@ nav{
 	height: 150px;
 }
 .itemlist-service{
+	border-radius: 5px;
 	position: absolute;
 	margin-top: 200px;
 	margin-left: auto;

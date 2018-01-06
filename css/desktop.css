@@ -384,6 +384,15 @@ display: 				 flex;
   display: 				 flex;
   color: #909090;
 }
+.numbertitle{
+  position: absolute;
+  left: 25px;
+  font-size: 30pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 3px;
+  color: #ddd;
+}
 .name-service{
   margin-top: 10px;
   font-size: 24pt;
