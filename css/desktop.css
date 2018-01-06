@@ -386,6 +386,7 @@ display: 				 flex;
 }
 .numbertitle{
   position: absolute;
+  margin-top: -8px;
   left: 25px;
   font-size: 30pt;
   font-weight: 300;
