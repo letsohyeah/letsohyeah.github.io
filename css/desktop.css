@@ -468,8 +468,8 @@ display: 				 flex;
   margin-bottom: 25px;
 }
 .imgcontianer-service{
-  margin-top: 30px;
   margin-left: 50px;
+  margin-bottom: 50px;
   width: : 900px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -541,6 +541,20 @@ display: 				 flex;
   display: -webkit-flex;
   display: 				 flex;
   justify-content: flex-end;
+}
+.contactbox-service{
+  border:1px solid #474747;
+  padding:10px;
+  border-radius:5px;
+  flex-direction:column;
+  font-size: 8pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  line-height: 18px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
 }
 /*SERVICE*/
 
