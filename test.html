@@ -119,29 +119,34 @@
 
 	/*INDEX*/
 	.picbox{
-	  height: 100vh;
-	  margin-right: 150px;
-	  overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-right: 120px;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
 	}
 	.picbox-mobil{
 	  display: none;
 	}
 	.articlecontianer-index{
+		width: 560px;
+		z-index: 1000;
 	  position: absolute;
-	  padding: 20px;
-	  margin-top: 70px;
+	  margin-top: 90px;
 	  margin-left: 100px;
 	  font-size: 8pt;
 	  font-weight: 300;
 	  font-family: 'Noto Sans TC', sans-serif;
 	  letter-spacing: 2px;
-	  line-height: 24px;
+		color: #474747;
 	}
 	  .title1-index{
 	    width: 100%;
-	    margin-bottom: 10px;
-	    font-size: 20pt;
-	    font-weight: 100;
+	    margin-bottom: 15px;
+	    font-size: 16pt;
+	    font-weight: 300;
 	    font-family: "HanaMinA";
 	    letter-spacing: 3px;
 	    display: -moz-flex;
@@ -183,6 +188,90 @@
 	    -webkit-transition: width 0.5s;
 	          transition: width 0.5s;
 	  }
+		.copyright-index{
+			height: 50px;
+			color: #fff;
+			margin-left: 100px;
+			font-size: 12px;
+			font-weight: 300;
+			font-family: 'Noto Sans TC', sans-serif;
+			letter-spacing: 0px;
+			transform: scale(0.58);
+				transform-origin:0 0;
+
+				-ms-transform: scale(0.58);         /* IE 9 */
+				-ms-transform-origin:0 0;       /* IE 9 */
+
+				-webkit-transform: scale(0.58); /* Safari 和 Chrome */
+				-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
+
+				-moz-transform: scale(0.58);        /* Firefox */
+				-moz-transform-origin:0 0;      /* Firefox */
+
+				-o-transform: scale(0.58);      /* Opera */
+				-o-transform-origin:0 0;        /* Opera */
+		}
+		#slide {
+		  position: relative;
+			top: 0;
+		  left: 0;
+			margin-right: 120px;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+		#slide li {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  display: block;
+		  height: 100vh;
+		  opacity: 0;
+		  visibility: hidden;
+		  transition: 0.8s;
+		}
+		#slide li:first-child {
+		  position: static;
+		}
+		#slide li.show {
+		  opacity: 1;
+		  visibility: visible;
+		}
+		#slide .prev, #slide .next {
+		  display: block;
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  cursor: pointer;
+		  transition: 0.4s;
+		  background-color: rgba(0, 0, 0, 0.12);
+		  padding: 14px 12px;
+		}
+		#slide .prev:hover, #slide .next:hover {
+		  background-color: rgba(0, 0, 0, 0.24);
+		}
+		#slide .prev:after, #slide .next:after {
+		  display: block;
+		  content: "";
+		  width: 10px;
+		  height: 10px;
+		  border-top: 2px solid #fff;
+		  border-right: 2px solid #fff;
+		}
+		#slide .prev {
+		  left: 0;
+		}
+		#slide .prev:after {
+		  transform: rotate(-135deg);
+		  margin-left: 4px;
+		}
+		#slide .next {
+		  right: 0;
+		}
+		#slide .next:after {
+		  transform: rotate(45deg);
+		  margin-right: 4px;
+		}
 	/*INDEX*/
 
 	/*SERVICE*/
@@ -403,14 +492,14 @@
 	  color: #909090;
 	}
 	.numbertitle{
-		position: absolute;
-		margin-top: -8px;
-		left: 25px;
-		font-size: 30pt;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 3px;
-		color: #ddd;
+	  position: absolute;
+	  margin-top: -8px;
+	  left: 25px;
+	  font-size: 30pt;
+	  font-weight: 300;
+	  font-family: 'Noto Sans TC', sans-serif;
+	  letter-spacing: 3px;
+	  color: #ddd;
 	}
 	.name-service{
 	  margin-top: 10px;
@@ -487,7 +576,7 @@
 	}
 	.imgcontianer-service{
 	  margin-left: 50px;
-		margin-bottom: 50px;
+	  margin-bottom: 50px;
 	  width: : 900px;
 	  display: -moz-flex;
 	  display: -webkit-flex;
@@ -561,11 +650,11 @@
 	  justify-content: flex-end;
 	}
 	.contactbox-service{
-		border:1px solid #474747;
-		padding:10px;
-		border-radius:5px;
-		flex-direction:column;
-		font-size: 8pt;
+	  border:1px solid #474747;
+	  padding:10px;
+	  border-radius:5px;
+	  flex-direction:column;
+	  font-size: 8pt;
 	  font-weight: 300;
 	  font-family: 'Noto Sans TC', sans-serif;
 	  letter-spacing: 0px;
@@ -1125,43 +1214,16 @@
 
 
 
-
-
-
-
-
 	</style>
 </HEAD>
 <BODY>
-	<script>
-		jQuery('body').css('display','none');
-		jQuery(document).ready(function() {
-			jQuery('body').fadeIn();
-			jQuery('a').on('click',function(event){
-				var thetarget = this.getAttribute('target')
-				if (thetarget != "_blank"){
-					var thehref = this.getAttribute('href')
-					event.preventDefault();
-					jQuery('body').fadeOut(function(){
-						//alert(thehref)
-						window.location = thehref
-					});
-				}
-			});
-		});
-		setTimeout(function(){
-			jQuery('body').fadeIn();
-		},1000)
-	</script>
-	<div class="cleanfix" style="-webkit-tap-highlight-color:rgba(0,0,0,0)" onclick="return true">
+
+	<div class="cleanfix">
 
 		<!--   N   A   V   -->
 		<nav>
 			<div class="navlinks">
 				<a href="https://letsohyeah.github.io/about.html">About</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/service.html">Service</a>
 			</div>
 			<div class="navlinks">
 				<a href="https://letsohyeah.github.io/works.html">Works</a>
@@ -1192,7 +1254,6 @@
 				  <ul>
 						<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
 				    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
-				    <li><a href="https://letsohyeah.github.io/service.html" onclick="sampleMenu(this)">Service</a></li>
 				    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
 						<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
 						<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
@@ -1202,162 +1263,117 @@
 			</div>
 		</div>
 		<!--   N   A   V   -->
-
 		<div class="contianer">
 			<div class="bigtitle">
-					Service
+					Index
 			</div>
-
-
-			<div class="articlecontianer1-service">
-				<div class="title1">傢俱擺設規劃</div>
-				<div class="descrip-service">我們主張："不用過度裝潢,只要將好看的傢俱適當地擺入空間,就能讓空間更酷更有味道。如果您很喜歡我們的擺設風格,又不知從何著手,ＮＶ提供了整套家具規劃的服務！我們提供規劃方案，主要以公共空間為主,為您規劃、擺設整套的傢俱,避免風格不搭問題，再以更優惠的價格為您打造最合適的空間。</div>
-				<div class="imgbox">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/58ZBzFG.jpg" width="100%";>
-				</div>
-
-				<div class="block"></div>
-				<div class="block"></div>
-
-				<div class="title1-service">
-					<div class="numbertitle">1</div>
-					聯繫
-				</div>
-				<div class="articlecontianer2-service">
-					<div class="descrip-service" style="flex-direction:column;">
-						a. 網路聯繫<br>
-						您可以在閱覽我們的網頁之後<br>
-						透過Facebook私訊或是發email給我們以下訊息<br>
-						我們會盡快跟您聯繫。<br><br>
-
-						<div class="contactbox-service">
-							姓名<br>
-							電話<br>
-							物件地址<br>
-							email<br>
-							年齡<br>
-							職業<br>
-							預算<br>
-							成員組成（例如我與老婆還有一位女兒）<br>
-							預計入住時間（例如2018/05/02）<br>
-							空間需求（例如廚房與客廳）<br>
-							空間大小（例如15坪）
-							<a href="https://letsohyeah.github.io/contact.html" class="button-service" style="color:#474747;">Contact Us　＞</a>
+			<ul id="slide">
+				<li>
+					<div class="picbox">
+						<img src="https://i.imgur.com/vNBNRvT.jpg" height="100%"/>
+					</div>
+					<div class="articlecontianer-index">
+						<div class="title1-index">
+							打造質感室內居家生活
 						</div>
+						<span>拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單。</span>
+						<a href="https://letsohyeah.github.io/about.html" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們　＞</span></a>
 					</div>
-					<div class="descrip-service" style="flex-direction:column;">
-						b. 親自來訪<br>
-						歡迎來NV工作室一趟與我們聊聊<br>
-						讓我們親自手沖一杯咖啡給喜愛我們風格的您<br>
-						工作室也有許多來自歐洲20世紀中的古董傢俱<br>
-						歡迎來與我們談談您的需求與對居家擺設的想法<br><br>
-						營業時間：週一到週五 10:30 - 20:30<br>
-						地址：長青路一段207巷51號<br>
-						電話：0909-689-432 賴賴
+				</li>
+				<li>
+					<div class="picbox">
+						<img src="https://i.imgur.com/nTWj3IN.jpg" height="100%"/>
 					</div>
-				</div>
-
-
-
-
-				<div class="title1-service">
-					<div class="numbertitle">2</div>
-					免費傢俱擺設設計
-				</div>
-				<div class="articlecontianer2-service">
-					<div class="descrip-service">
-						為了讓我們更了解您的空間設計需求與所需配合家具尺寸大小<br>
-						我們提供免費到府丈量<br>
-						竹苗區域免費，非竹苗地區酌收$2000丈量費用<br>
-						北至台北市；南至台中市，確定簽合約後全數折抵
-					</div>
-					<div class="map-service">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/PgpxdrL.png" height="100%";>
-					</div>
-				</div>
-
-
-
-				<div class="title1-service">
-					<div class="numbertitle">3</div>
-					討論設計與案件簽約
-				</div>
-				<div class="descrip-service">溝通討論您居家空間的擺設設計，確認選擇的品項外觀與數量，進行簽約。</div>
-				<div class="projectcontianer-service">
-					<div class="project-service">
-						<div class="project-descrip-service">物件數量：11</div>
-						<div class="project-descrip-service">坪數：10坪</div>
-						<div class="button1-service" style="color:#474747">
-							<span tabindex="0" onclick="return true">Item List</span>
-							<ul class="itemlist-service" style="color:#474747;">
-								<div class="listcontainer-service">
-									<div class="itemname-service">
-										PH4/3<br>
-										Danish Chair<br>
-										Dinner Table<br>
-										Arm Chair<br>
-										Tea Table<br>
-										Danish Cabinet<br>
-										Four Drawer Cabinet
-									</div>
-									<div class="itemnum-service">
-										1<br>
-										4<br>
-										1<br>
-										2<br>
-										1<br>
-										1<br>
-										1
-									</div>
-									<div class="itemprice-service">
-										NT$15,000<br>
-										NT$24,000<br>
-										NT$15,000<br>
-										NT$24,000<br>
-										NT$12,000<br>
-										NT$40,000<br>
-										NT$30,000<br>
-									</div>
-								</div>
-								<div style="border:1px solid #474747; margin-top:5px; margin-bottom:5px;"></div>
-								<div class="totleprice-service"><s>NT$163,000</s></div>
-								<div class="totleprice-service">NT$150,000</div>
-							</ul>
+					<div class="articlecontianer-index">
+						<div class="title1-index">
+							傢俱擺設規劃
 						</div>
+						<span>我們提供各種規劃方案，為您規劃、擺設<br>一次打包整套傢俱，以更優惠的價格打造最合適的空間。</span>
+						<a href="https://letsohyeah.github.io/傢俱擺設規劃.html" class="button-index" style="color:#474747;"><span style="opacity:1;">了解更多　＞</span></a>
 					</div>
-				</div>
-				<div class="imgcontianer-service">
-					<div class="imgbox-service">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/TKV3mq8.png" width="80%";>
+				</li>
+				<li>
+					<div class="picbox">
+						<img src="https://i.imgur.com/p7OeaUk.jpg" height="100%"/>
 					</div>
-					<div class="imgbox-service">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/4syVKti.png" width="100%";>
+					<div class="articlecontianer-index">
+						<div class="title1-index">
+							中島吧台設計製作
+						</div>
+						<span>依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份</span>
+						<a href="https://letsohyeah.github.io/中島吧台設計製作.html" class="button-index"><span style="opacity:1;">了解更多　＞</span></a>
 					</div>
-				</div>
-
-
-
-
-				<div class="title1-service" style="margin-top:-0px;">
-					<div class="numbertitle">4</div>
-					到府空間擺設
-				</div>
-				<div class="descrip-service">每一個設計案都是我們珍貴的經驗，這作品像是看待自己擁有另一個孩子般重視，希望您也能愛上這樣的氛圍，這些家具從包裝到運送都由我們一手包辦，擺設完成後再由您驗收。</div>
-					<div class="imgbox">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/jSupY2u.jpg" width="100%";>
+				</li>
+				<li>
+					<div class="picbox">
+						<img src="https://i.imgur.com/veNQTVU.jpg" height="100%"/>
 					</div>
-					<div class="imgbox">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/1eJhlOX.jpg" width="100%";>
+					<div class="articlecontianer-index">
+						<div class="title1-index">
+							精選歐洲古董家具
+						</div>
+						<span>舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>NV為您精心挑選北歐舊物，為空間注入靈魂。</span>
+						<a href="https://letsohyeah.github.io/item.html" class="button-index" style="color:#474747;"><span style="opacity:1;">來去逛逛　＞</span></a>
 					</div>
-				<div class="block"></div>
-				<div class="block"></div>
-				<p class="copyright">
-					Copyright © 2017 Natural n' Vintage
-				</p>
-			</div>
+				</li>
+			</ul>
+			<script>
 
+	      var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
+		    slide = document.querySelector('#slide'),
+		    items = slide.querySelectorAll('li'), // 抓取所有 img
+		    itemsCount = items.length, // 圖片總數
+		    prevBtn = document.createElement('a'), // 上一張按鈕
+		    nextBtn = document.createElement('a'), // 下一張按鈕
+		    timer = 4000, // 4 秒換圖
+		    interval = window.setInterval(showNext, timer);  // 設定循環
+
+				prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
+				nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
+				slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
+				slide.appendChild(nextBtn);
+
+				// 帶入目前要顯示第幾張圖
+				var showCurrent = function(){
+				  	var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
+				  	[].forEach.call( items, function(el){
+				    	el.classList.remove('show'); // 將所有 img 的 class="show" 移除
+				  	});
+				  	items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
+				};
+
+				function showNext(){
+					counter++; // 將 counter+1 指定下一張圖
+					showCurrent();
+				}
+
+				function showPrev(){
+					counter--; // 將 counter－1 指定上一張圖
+					showCurrent();
+				}
+
+				// 滑鼠移到 #slider 上方時，停止循環計時
+				slide.addEventListener('mouseover', function(){
+					interval = clearInterval(interval);
+				});
+
+				// 滑鼠離開 #slider 時，重新開始循環計時
+				slide.addEventListener('mouseout', function(){
+					interval = window.setInterval(showNext, timer);
+				});
+
+				// 綁定點擊上一張，下一張按鈕的事件
+				nextBtn.addEventListener('click', showNext, false);
+				prevBtn.addEventListener('click', showPrev, false);
+
+				// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
+				items[0].classList.add('show');
+				      //# sourceURL=pen.js
+			</script>
 		</div>
-
 	</div>
+	<p class="copyright-index">
+		Copyright © 2017 Natural n' Vintage
+	</p>
 </BODY>
 </HTML>

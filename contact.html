@@ -19,35 +19,12 @@
 	<TITLE> Contact - Natural n' Vantage </TITLE>
 </HEAD>
 <BODY>
-	<script>
-		jQuery('body').css('display','none');
-		jQuery(document).ready(function() {
-			jQuery('body').fadeIn();
-			jQuery('a').on('click',function(event){
-				var thetarget = this.getAttribute('target')
-				if (thetarget != "_blank"){
-					var thehref = this.getAttribute('href')
-					event.preventDefault();
-					jQuery('body').fadeOut(function(){
-						//alert(thehref)
-						window.location = thehref
-					});
-				}
-			});
-		});
-		setTimeout(function(){
-			jQuery('body').fadeIn();
-		},1000)
-	</script>
 	<div class="cleanfix">
 
 		<!--   N   A   V   -->
 		<nav>
 			<div class="navlinks">
 				<a href="https://letsohyeah.github.io/about.html">About</a>
-			</div>
-			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/service.html">Service</a>
 			</div>
 			<div class="navlinks">
 				<a href="https://letsohyeah.github.io/works.html">Works</a>
@@ -78,7 +55,6 @@
 				  <ul>
 						<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
 				    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
-				    <li><a href="https://letsohyeah.github.io/service.html" onclick="sampleMenu(this)">Service</a></li>
 				    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
 						<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
 						<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
