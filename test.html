@@ -144,19 +144,23 @@
 
 	/*INDEX*/
 	.picbox{
-		position: fixed;
+		display: none;
+	}
+	.picbox-mobil{
+		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
 		right: 0;
 		left: 0;
 		overflow: hidden;
 		z-index: -20;
+		height: 100vh;
 	}
 	.articlecontianer-index{
 		position: absolute;
 		width: 100%;
 		padding: 15px;
-		margin-top: 20%;
+		margin-top: 10%;
 		font-size: 7pt;
 		font-weight: 300;
 		font-family: "HanaMinA";
@@ -187,7 +191,7 @@
 		padding-left: 15px;
 		width: 80px;
 		font-size: 8pt;
-		margin-top: 50px;
+		margin-top: 30px;
 		margin-bottom: 20px;
 		height: 30px;
 		font-family: 'Noto Sans TC', sans-serif;
@@ -204,7 +208,7 @@
 	}
 	.copyright-index{
 		position: absolute;
-		color: #000;
+		color: #fff;
 		margin-left: 15px;
 		margin-bottom: 15px;
 		bottom: 0;
@@ -228,7 +232,7 @@
 		left: 0;
 		right: 0;
 		display: block;
-		height: 100vh;
+		height: 100%;
 		opacity: 0;
 		visibility: hidden;
 		transition: 0.8s;
@@ -1064,6 +1068,8 @@
 
 
 
+
+
 	</style>
 </HEAD>
 <BODY>
@@ -1122,11 +1128,14 @@
 					<div class="picbox">
 						<img src="https://i.imgur.com/vNBNRvT.jpg" height="100%"/>
 					</div>
+					<div class="picbox-mobil">
+						<img src="https://i.imgur.com/ZYZ902S.jpg" height="100%"/>
+					</div>
 					<div class="articlecontianer-index">
 						<div class="title1-index">
 							打造質感室內居家生活
 						</div>
-						<span>拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單。</span>
+						拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單。
 						<a href="https://letsohyeah.github.io/about.html" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們　＞</span></a>
 					</div>
 				</li>
@@ -1134,11 +1143,14 @@
 					<div class="picbox">
 						<img src="https://i.imgur.com/nTWj3IN.jpg" height="100%"/>
 					</div>
+					<div class="picbox-mobil">
+						<img src="https://i.imgur.com/f0GZx8M.jpg" height="100%"/>
+					</div>
 					<div class="articlecontianer-index">
 						<div class="title1-index">
 							傢俱擺設規劃
 						</div>
-						<span>我們提供各種規劃方案，為您規劃、擺設<br>一次打包整套傢俱，以更優惠的價格打造最合適的空間。</span>
+						我們提供各種規劃方案，為您規劃、擺設<br>一次打包整套傢俱，以更優惠的價格打造最合適的空間。
 						<a href="https://letsohyeah.github.io/傢俱擺設規劃.html" class="button-index" style="color:#474747;"><span style="opacity:1;">了解更多　＞</span></a>
 					</div>
 				</li>
@@ -1146,11 +1158,14 @@
 					<div class="picbox">
 						<img src="https://i.imgur.com/p7OeaUk.jpg" height="100%"/>
 					</div>
+					<div class="picbox-mobil">
+						<img src="https://i.imgur.com/8qqmWsA.jpg" height="100%"/>
+					</div>
 					<div class="articlecontianer-index">
 						<div class="title1-index">
 							中島吧台設計製作
 						</div>
-						<span>依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份</span>
+						依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份
 						<a href="https://letsohyeah.github.io/中島吧台設計製作.html" class="button-index"><span style="opacity:1;">了解更多　＞</span></a>
 					</div>
 				</li>
@@ -1158,11 +1173,14 @@
 					<div class="picbox">
 						<img src="https://i.imgur.com/veNQTVU.jpg" height="100%"/>
 					</div>
+					<div class="picbox-mobil">
+						<img src="https://i.imgur.com/VEr5Uwm.jpg" height="100%"/>
+					</div>
 					<div class="articlecontianer-index">
 						<div class="title1-index">
 							精選歐洲古董家具
 						</div>
-						<span>舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>NV為您精心挑選北歐舊物，為空間注入靈魂。</span>
+						舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>NV為您精心挑選北歐舊物，為空間注入靈魂。
 						<a href="https://letsohyeah.github.io/item.html" class="button-index" style="color:#474747;"><span style="opacity:1;">來去逛逛　＞</span></a>
 					</div>
 				</li>
@@ -1171,7 +1189,7 @@
 
 	      var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
 		    slide = document.querySelector('#slide'),
-		    items = slide.querySelectorAll('li'), // 抓取所有 img
+		    items = slide.querySelectorAll('li'), // 抓取所有 li
 		    itemsCount = items.length, // 圖片總數
 		    prevBtn = document.createElement('a'), // 上一張按鈕
 		    nextBtn = document.createElement('a'), // 下一張按鈕
