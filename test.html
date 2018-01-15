@@ -307,7 +307,7 @@
 	margin-top: 30px;
 	margin-left: 20px;
 	margin-right: 130px;
-	max-width: 700px;
+	max-width: 900px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -690,6 +690,48 @@
 	  display: -moz-flex;
 	  display: -webkit-flex;
 	  display: 				 flex;
+	}
+	.texturecontianer{
+		margin-top: 50px;
+		margin-left: 30px;
+		min-width: 270px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.texturebox{
+	  margin-bottom: 30px;
+	  min-width: 150px;
+	  overflow: hidden;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	  -moz-flex-direction: column;
+	  -webkit-flex-direction: column;
+	          flex-direction: column;
+		align-items: center;
+	}
+	.texture-img{
+		max-height: 100px;
+		max-width: 100px;
+		margin-bottom: 10px;
+		height: auto;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.texture-name{
+		width: 100%;
+		font-size: 10pt;
+		font-weight: 500;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+		color: #474747;
 	}
 	/*SERVICE*/
 
@@ -1248,166 +1290,135 @@
 <BODY>
 
 
-		<div class="cleanfix">
+	<div class="cleanfix">
 
-			<!--   N   A   V   -->
-			<nav>
-				<div class="navlinks">
-					<a href="https://letsohyeah.github.io/about.html">About</a>
-				</div>
-				<div class="navlinks">
-					<a href="https://letsohyeah.github.io/works.html">Works</a>
-				</div>
-				<div class="navlinks">
-					<a href="https://letsohyeah.github.io/item.html">Item</a>
-				</div>
-				<div class="navlinks">
-				 	<a href="https://letsohyeah.github.io/team.html">Team</a>
-				</div>
-				<div class="navlinks">
-					<a href="https://letsohyeah.github.io/press.html">Press</a>
-				</div>
-				<div class="navlinks">
-					<a href="https://letsohyeah.github.io/contact.html">Contact</a>
-				</div>
-				<div class="logobox">
-					<a href="https://letsohyeah.github.io/index.html"><img src="https://i.imgur.com/cwKJq2d.png" height="100%"></a>
-				</div>
-			</nav>
-
-
-
-			<div class="navmob" onclick="return true">
-				<div class="dropdown-menu">
-				  <span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
-						<div tabindex="0" onclick="return true"></div>
-					  <ul>
-							<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
-					    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
-					    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
-							<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
-							<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
-							<li><a href="https://letsohyeah.github.io/press.html" onclick="sampleMenu(this)">Press</a></li>
-							<li><a href="https://letsohyeah.github.io/contact.html" onclick="sampleMenu(this)">Contact</a></li>
-					  </ul>
-				</div>
+		<!--   N   A   V   -->
+		<nav>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/about.html">About</a>
 			</div>
-			<!--   N   A   V   -->
-			<div class="contianer">
-				<div class="bigtitle">
-						Index
-				</div>
-				<ul id="slide">
-					<li>
-						<div class="picbox" id="img1">
-							<div class="articlecontianer-index">
-								<div class="title1-index">
-									打造質感室內居家生活
-								</div>
-								拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單。
-								<a href="https://letsohyeah.github.io/about.html" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們　＞</span></a>
-							</div>
-						</div>
-					</li>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/works.html">Works</a>
+			</div>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/item.html">Item</a>
+			</div>
+			<div class="navlinks">
+			 	<a href="https://letsohyeah.github.io/team.html">Team</a>
+			</div>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/press.html">Press</a>
+			</div>
+			<div class="navlinks">
+				<a href="https://letsohyeah.github.io/contact.html">Contact</a>
+			</div>
+			<div class="logobox">
+				<a href="https://letsohyeah.github.io/index.html"><img src="https://i.imgur.com/cwKJq2d.png" height="100%"></a>
+			</div>
+		</nav>
 
 
-					<li>
-						<div class="picbox" id="img2">
-							<div class="articlecontianer-index">
-								<div class="title1-index">
-									傢俱擺設規劃
-								</div>
-								我們提供各種規劃方案，為您規劃、擺設<br>一次打包整套傢俱，以更優惠的價格打造最合適的空間。
-								<a href="https://letsohyeah.github.io/傢俱擺設規劃.html" class="button-index" style="color:#474747;"><span style="opacity:1;">了解更多　＞</span></a>
-							</div>
-						</div>
-					</li>
 
-
-					<li>
-						<div class="picbox" id="img3">
-							<div class="articlecontianer-index">
-								<div class="title1-index">
-									中島吧台設計製作
-								</div>
-								依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份
-								<a href="https://letsohyeah.github.io/中島吧台設計製作.html" class="button-index"><span style="opacity:1;">了解更多　＞</span></a>
-							</div>
-						</div>
-					</li>
-
-
-					<li>
-						<div class="picbox" id="img4">
-							<div class="articlecontianer-index">
-								<div class="title1-index">
-									精選歐洲古董家具
-								</div>
-								舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>NV為您精心挑選北歐舊物，為空間注入靈魂。
-								<a href="https://letsohyeah.github.io/item.html" class="button-index" style="color:#474747;"><span style="opacity:1;">來去逛逛　＞</span></a>
-							</div>
-						</div>
-					</li>
-
-
-				</ul>
-				<script>
-
-		      var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
-			    slide = document.querySelector('#slide'),
-			    items = slide.querySelectorAll('li'), // 抓取所有 li
-			    itemsCount = items.length, // 圖片總數
-			    prevBtn = document.createElement('a'), // 上一張按鈕
-			    nextBtn = document.createElement('a'), // 下一張按鈕
-			    timer = 4000, // 4 秒換圖
-			    interval = window.setInterval(showNext, timer);  // 設定循環
-
-					prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
-					nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
-					slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
-					slide.appendChild(nextBtn);
-
-					// 帶入目前要顯示第幾張圖
-					var showCurrent = function(){
-					  	var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
-					  	[].forEach.call( items, function(el){
-					    	el.classList.remove('show'); // 將所有 img 的 class="show" 移除
-					  	});
-					  	items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
-					};
-
-					function showNext(){
-						counter++; // 將 counter+1 指定下一張圖
-						showCurrent();
-					}
-
-					function showPrev(){
-						counter--; // 將 counter－1 指定上一張圖
-						showCurrent();
-					}
-
-					// 滑鼠移到 #slider 上方時，停止循環計時
-					slide.addEventListener('mouseover', function(){
-						interval = clearInterval(interval);
-					});
-
-					// 滑鼠離開 #slider 時，重新開始循環計時
-					slide.addEventListener('mouseout', function(){
-						interval = window.setInterval(showNext, timer);
-					});
-
-					// 綁定點擊上一張，下一張按鈕的事件
-					nextBtn.addEventListener('click', showNext, false);
-					prevBtn.addEventListener('click', showPrev, false);
-
-					// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
-					items[0].classList.add('show');
-					      //# sourceURL=pen.js
-				</script>
+		<div class="navmob" onclick="return true">
+			<div class="dropdown-menu">
+			  <span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
+					<div tabindex="0" onclick="return true"></div>
+				  <ul>
+						<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
+				    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
+				    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
+						<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
+						<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
+						<li><a href="https://letsohyeah.github.io/press.html" onclick="sampleMenu(this)">Press</a></li>
+						<li><a href="https://letsohyeah.github.io/contact.html" onclick="sampleMenu(this)">Contact</a></li>
+				  </ul>
 			</div>
 		</div>
-		<p class="copyright-index">
-			Copyright © 2017 Natural n' Vintage
-		</p>
+		<!--   N   A   V   -->
+
+		<div class="contianer">
+			<div class="bigtitle">
+					Service
+			</div>
+
+
+			<div class="articlecontianer1-service">
+				<div class="title1">中島吧台設計製作</div>
+				<div class="descrip-service">依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份</div>
+				<div class="imgbox">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/B93Iox0.jpg?1" width="100%";>
+				</div>
+				<div class="title1-service">
+					銅把手
+				</div>
+				<div class="imgbox">
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/ZFuoz1q.jpg" width="50%";>
+				</div>
+				<div class="title1-service">
+					吧台檯面
+				</div>
+				<div class="texturecontianer">
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/0q65S6G.png" width="100%";>
+							</div>
+								<div class="texture-name">大理石</div>
+						</div>
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/kUBeCC2.png" width="100%";>
+							</div>
+								<div class="texture-name">美杉</div>
+							</div>
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/DanoEec.png" width="100%";>
+							</div>
+								<div class="texture-name">烏心石</div>
+						</div>
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/lCmLuhK.png" width="100%";>
+							</div>
+								<div class="texture-name">鐵木</div>
+						</div>
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/CFaEx2V.png" width="100%";>
+							</div>
+								<div class="texture-name">非洲紫檀</div>
+						</div>
+				</div>
+				<div class="title1-service">
+					抽屜面板
+				</div>
+				<div class="texturecontianer">
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/rR0VkWE.png" width="100%";>
+							</div>
+								<div class="texture-name">台灣柳杉</div>
+						</div>
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/FxClxdV.jpg" width="100%";>
+							</div>
+								<div class="texture-name">西非柚木</div>
+							</div>
+						<div class="texturebox">
+							<div class="texture-img">
+								<img class="lazy img-responsive" data-original="https://i.imgur.com/CFaEx2V.png" width="100%";>
+							</div>
+								<div class="texture-name">非洲紫檀</div>
+						</div>
+				</div>
+				<div class="block"></div>
+				<div class="block"></div>
+				<p class="copyright">
+					Copyright © 2017 Natural n' Vintage
+				</p>
+			</div>
+		</div>
+	</div>
 </BODY>
 </HTML>
