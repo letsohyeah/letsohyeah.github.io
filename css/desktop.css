@@ -101,16 +101,43 @@ nav{
 
 /*INDEX*/
 .picbox{
+  width: calc(100vw - 120px);
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   margin-right: 120px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #474747;
 }
-.picbox-mobil{
-  display: none;
+#img1{
+   background-image: url(https://i.imgur.com/vNBNRvT.jpg);
+}
+#img2{
+   background-image: url(https://i.imgur.com/nTWj3IN.jpg);
+}
+#img3{
+   background-image: url(https://i.imgur.com/p7OeaUk.jpg);
+}
+#img4{
+   background-image: url(https://i.imgur.com/veNQTVU.jpg);
+}
+@media only screen and (max-width: 767px) {
+  #img1{
+    background-image: url(https://i.imgur.com/ZYZ902S.jpg);
+  }
+  #img2{
+     background-image: url(https://i.imgur.com/f0GZx8M.jpg);
+  }
+  #img3{
+     background-image: url(https://i.imgur.com/8qqmWsA.jpg);
+  }
+  #img4{
+     background-image: url(https://i.imgur.com/VEr5Uwm.jpg);
+  }
 }
 .articlecontianer-index{
   width: 560px;
@@ -1060,6 +1087,7 @@ display: 				 flex;
   width: 300px;
 }
 .articlecontianer-contact{
+  margin-left: 20px;
   margin-top: 90px;
   margin-right: 130px;
   display: -moz-flex;
