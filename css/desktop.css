@@ -845,6 +845,7 @@ display: 				 flex;
   letter-spacing: 3px;
 }
 .cabinet{
+  width: 300px;
   flex-direction: column;
   display: -moz-flex;
   display: -webkit-flex;
