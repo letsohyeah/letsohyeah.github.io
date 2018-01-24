@@ -820,8 +820,8 @@
 	}
 	.drawer2{
 		margin-top: 5px;
-		width: 100%;
-		height: 90px;
+		width: 100vw;
+		height: 30vw;
 		background-image: url(https://i.imgur.com/uZE34sE.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -833,8 +833,8 @@
 	}
 	.drawer3{
 		margin-top: 5px;
-		width: 100%;
-		height: 90px;
+		width: 100vw;
+		height: 30vw;
 		background-image: url(https://i.imgur.com/CnweozN.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1192,8 +1192,9 @@
 		color: #474747;
 	}
 	.gridcontianer-item{
-		margin-left: 0px;
-		margin-right: 0px;
+		margin-top: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -1201,7 +1202,7 @@
 		justify-content: space-around;
 	}
 	.grid-item{
-		margin-top: 60px;
+		margin-bottom: 60px;
 		width: 48%;
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -1216,16 +1217,69 @@
 		display: 				 flex;
 	}
 	.name-item{
-		margin-top: 15px;
-		font-size: 10pt;
+		margin-left: 10px;
+		margin-top: 10px;
+		font-size: 9pt;
 		font-weight: 400;
 		font-family: "HanaMinA";
 		letter-spacing: 5px;
+		line-height: 14pt;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
-		justify-content:center;
+		justify-content:flex-start;
 		color: #000;
+	}
+	.name-en-item{
+	  margin-left: 10px;
+	  margin-top: 10px;
+	  font-size: 9pt;
+	  font-weight: 300;
+	  font-family: 'Noto Sans TC', sans-serif;
+	  letter-spacing: 5px;
+		line-height: 14pt;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	}
+	.designer-item{
+	  margin-left: 10px;
+	  margin-top: 8px;
+	  padding: 5px;
+	  background-color: #eee;
+	  color: #474747;
+	  font-size: 12pt;
+	  font-weight: 400;
+	  letter-spacing: 3px;
+	  font-family: 'Noto Sans TC', sans-serif;
+	  display: table;
+	  transform: scale(0.5);
+	    transform-origin:0 0;
+
+	    -ms-transform: scale(0.5);         /* IE 9 */
+	    -ms-transform-origin:0 0;       /* IE 9 */
+
+	    -webkit-transform: scale(0.5); /* Safari 和 Chrome */
+	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
+
+	    -moz-transform: scale(0.5);        /* Firefox */
+	    -moz-transform-origin:0 0;      /* Firefox */
+
+	    -o-transform: scale(0.5);      /* Opera */
+	    -o-transform-origin:0 0;        /* Opera */
+	}
+	.tag-item{
+	  width: 100%;
+	  margin-left: 15px;
+	  margin-bottom: 10px;
+	  color: #474747;
+	  font-size: 10pt;
+	  font-weight: 400;
+	  letter-spacing: 3px;
+	  font-family: 'Noto Sans TC', sans-serif;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
 	}
 	.copyright-item{
 		display: none;
@@ -1356,120 +1410,11 @@
 
 
 
+
+
 	</style>
 </HEAD>
 <BODY>
-	<script type="text/javascript">
-		$(function(){
-			// 用來顯示大圖片用
-			var $showImage = $('#show-image');
-
-			// 當滑鼠移到 showbox 中的某一個超連結時
-			$('.texture-img a').click(function(){
-				// 把 #show-image 的 src 改成被移到的超連結的位置
-				//$showImage.attr('src', $(this).attr('href'));
-
-				var $this = $(this),
-					_class = $this.attr('href');
-
-				if($showImage.attr('class') != _class){
-					$showImage.stop(false, true).fadeTo(0, 0).attr('class', _class).stop(false, true).fadeTo(400, 1);
-				}
-			}).click(function(){
-				// 如果超連結被點擊時, 取消連結動作
-				return false;
-			});
-		});
-	</script>
-	<script type="text/javascript">
-		$(function(){
-			// 用來顯示大圖片用
-			var $showImage = $('#show-image2');
-
-			// 當滑鼠移到 showbox 中的某一個超連結時
-			$('.texture-img a').click(function(){
-				// 把 #show-image 的 src 改成被移到的超連結的位置
-				//$showImage.attr('src', $(this).attr('href'));
-
-				var $this = $(this),
-					_class = $this.attr('href');
-
-				if($showImage.attr('class') != _class){
-					$showImage.stop(false, true).fadeTo(0, 0).attr('class', _class).stop(false, true).fadeTo(400, 1);
-				}
-			}).click(function(){
-				// 如果超連結被點擊時, 取消連結動作
-				return false;
-			});
-		});
-	</script>
-	<script type="text/javascript">
-		$(function(){
-			// 用來顯示大圖片用
-			var $showImage = $('#show-image3');
-
-			// 當滑鼠移到 showbox 中的某一個超連結時
-			$('.texture-img2 a').click(function(){
-				// 把 #show-image 的 src 改成被移到的超連結的位置
-				//$showImage.attr('src', $(this).attr('href'));
-
-				var $this = $(this),
-					_class = $this.attr('href');
-
-				if($showImage.attr('class') != _class){
-					$showImage.stop(false, true).fadeTo(0, 0).attr('class', _class).stop(false, true).fadeTo(400, 1);
-				}
-			}).click(function(){
-				// 如果超連結被點擊時, 取消連結動作
-				return false;
-			});
-		});
-	</script>
-	<script type="text/javascript">
-		$(function(){
-			// 用來顯示大圖片用
-			var $showImage = $('#show-image4');
-
-			// 當滑鼠移到 showbox 中的某一個超連結時
-			$('.texture-img2 a').click(function(){
-				// 把 #show-image 的 src 改成被移到的超連結的位置
-				//$showImage.attr('src', $(this).attr('href'));
-
-				var $this = $(this),
-					_class = $this.attr('href');
-
-				if($showImage.attr('class') != _class){
-					$showImage.stop(false, true).fadeTo(0, 0).attr('class', _class).stop(false, true).fadeTo(400, 1);
-				}
-			}).click(function(){
-				// 如果超連結被點擊時, 取消連結動作
-				return false;
-			});
-		});
-	</script>
-	<script type="text/javascript">
-		$(function(){
-			// 用來顯示大圖片用
-			var $showImage = $('#show-image5');
-
-			// 當滑鼠移到 showbox 中的某一個超連結時
-			$('.texture-img2 a').click(function(){
-				// 把 #show-image 的 src 改成被移到的超連結的位置
-				//$showImage.attr('src', $(this).attr('href'));
-
-				var $this = $(this),
-					_class = $this.attr('href');
-
-				if($showImage.attr('class') != _class){
-					$showImage.stop(false, true).fadeTo(0, 0).attr('class', _class).stop(false, true).fadeTo(400, 1);
-				}
-			}).click(function(){
-				// 如果超連結被點擊時, 取消連結動作
-				return false;
-			});
-		});
-	</script>
-
 	<div class="cleanfix">
 
 		<!--   N   A   V   -->
@@ -1518,128 +1463,81 @@
 
 		<div class="contianer">
 			<div class="bigtitle">
-					Service
+					Item
+			</div>
+
+			<div class="gridcontianer-item">
+				<div class="tag-item">Cabinet</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/丹麥設計柚木三抽櫃.html" class="imgbox-item hover">
+								<figure>
+							 		<img class="lazy img-responsive" data-original="https://i.imgur.com/ewv5fvS.png" width="100%">
+						 		</figure>
+							</a>
+							<div class="name-item">丹麥設計柚木三抽櫃</div>
+						</div>
+						<div class="grid-item">
+							<a href="" class="imgbox-item hover">
+								<figure>
+							 		<img class="lazy img-responsive" data-original="https://i.imgur.com/RllwY9c.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">玫瑰木小櫃</div>
+							<div class="designer-item">#Lübke</div>
+						</div>
 			</div>
 
 
-			<div class="articlecontianer3-service">
-				<div class="title1">中島吧台設計製作</div>
-				<div class="descrip-service">依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份</div>
-				<div class="imgbox">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/B93Iox0.jpg?1" width="100%";>
+
+
+			<div class="gridcontianer-item">
+				<div class="tag-item">Chair</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/丹麥灰紋柚木餐椅.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/HcBzCix.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥灰紋柚木餐椅</div>
 				</div>
-				<div class="title1-service">
-					銅把手
+				<div class="grid-item">
+					<a href="" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/SrdyDOs.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-en-item">Sirocco Safari</div>
+					<div class="designer-item">#Arne Norell</div>
 				</div>
-				<div class="imgbox">
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/ZFuoz1q.jpg" width="50%";>
-				</div>
-
-
-
-
-
-
-				<div class="title1-service">
-					吧台檯面
-				</div>
-				<div class="texturecontianer">
-						<div class="texturebox">
-							<div class="texture-img">
-								<a href="table1"><img class="lazy img-responsive" data-original="https://i.imgur.com/0q65S6G.png" width="100%";></a>
-							</div>
-								<div class="texture-name">大理石</div>
-						</div>
-						<div class="texturebox">
-							<div class="texture-img">
-								<a href="table2"><img class="lazy img-responsive" data-original="https://i.imgur.com/kUBeCC2.png" width="100%";></a>
-							</div>
-								<div class="texture-name">美杉</div>
-							</div>
-						<div class="texturebox">
-							<div class="texture-img">
-								<a href="table3"><img class="lazy img-responsive" data-original="https://i.imgur.com/DanoEec.png" width="100%";></a>
-							</div>
-								<div class="texture-name">烏心石</div>
-						</div>
-						<div class="texturebox">
-							<div class="texture-img">
-								<a href="table4"><img class="lazy img-responsive" data-original="https://i.imgur.com/lCmLuhK.png" width="100%";></a>
-							</div>
-								<div class="texture-name">鐵木</div>
-						</div>
-						<div class="texturebox">
-							<div class="texture-img">
-								<a href="table5"><img class="lazy img-responsive" data-original="https://i.imgur.com/CFaEx2V.png" width="100%";></a>
-							</div>
-								<div class="texture-name">非洲紫檀</div>
-						</div>
-				</div>
-				<div class="table1" id="show-image">
-					<img src="https://i.imgur.com/GNtE3u4.png" class="oven">
-					<img src="https://i.imgur.com/EDE0gif.png" class="rag">
-					<img src="https://i.imgur.com/c0Ij749.png" class="plate">
-				</div>
-
-
-
-
-
-
-
-
-
-
-				<div class="cabinetcontianer">
-					<div class="cabinetdescrip">
-						<div class="title-cabinet">
-							抽屜面板
-						</div>
-						<div class="texturecontianer">
-								<div class="texturebox">
-									<div class="texture-img2">
-										<a href="drawer1"><img class="lazy img-responsive" data-original="https://i.imgur.com/rR0VkWE.png" width="100%";></a>
-									</div>
-										<div class="texture-name">台灣柳杉</div>
-								</div>
-								<div class="texturebox">
-									<div class="texture-img2">
-										<a href="drawer2"><img class="lazy img-responsive" data-original="https://i.imgur.com/FxClxdV.jpg" width="100%";></a>
-									</div>
-										<div class="texture-name">西非柚木</div>
-								</div>
-								<div class="texturebox">
-									<div class="texture-img2">
-										<a href="drawer3"><img class="lazy img-responsive" data-original="https://i.imgur.com/CFaEx2V.png" width="100%";></a>
-									</div>
-										<div class="texture-name">非洲紫檀</div>
-								</div>
-						</div>
-						<p class="copyright-cabinet">
-							Copyright © 2017 Natural n' Vintage
-						</p>
-					</div>
-					<div class="cabinet">
-						<div class="table1" style="height:20px; width:100%; box-shadow:-5px 10px 20px;" id="show-image2"></div>
-						<div class="cabinetbody">
-							<div class="drawercontianer">
-								<div class="drawer1" id="show-image3">
-									<img src="https://i.imgur.com/yYJteeF.png" width="50%;">
-								</div>
-								<div class="drawer1" id="show-image4">
-									<img src="https://i.imgur.com/yYJteeF.png" width="50%;">
-								</div>
-								<div class="drawer1" id="show-image5">
-									<img src="https://i.imgur.com/yYJteeF.png" width="50%;">
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
 			</div>
+
+
+
+
+			<div class="gridcontianer-item">
+				<div class="tag-item">Table</div>
+				<a href="" class="grid-item">
+					<div class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/zvzAN7v.png" width="100%">
+						</figure>
+					</div>
+					<div class="name-item">丹麥經典子母桌</div>
+				</a>
+				<a href="" class="grid-item">
+					<div class="imgbox-item hover">
+						<figure>
+				 			<img class="lazy img-responsive" data-original="https://i.imgur.com/HcBzCix.png" width="100%">
+						</figure>
+					</div>
+					<div class="name-item">丹麥灰紋柚木餐椅</div>
+				</a>
+			</div>
+			<div class="block"></div>
 		</div>
 	</div>
+		<p class="copyright">
+			Copyright © 2017 Natural n' Vintage
+		</p>
 </BODY>
 </HTML>

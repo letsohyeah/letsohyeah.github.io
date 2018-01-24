@@ -1280,7 +1280,6 @@ display: 				 flex;
   display: -webkit-flex;
   display: 				 flex;
   flex-direction: column;
-  align-items: center;
 }
 .imgbox-item{
   max-width: 200px;
@@ -1290,11 +1289,62 @@ display: 				 flex;
   display: 				 flex;
 }
 .name-item{
-  margin-top: 15px;
-  font-size: 10pt;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 9pt;
   font-weight: 300;
   font-family: "HanaMinA";
   letter-spacing: 5px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.name-en-item{
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 9pt;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 5px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.designer-item{
+  margin-left: 10px;
+  margin-top: 8px;
+  padding: 5px;
+  background-color: #eee;
+  color: #474747;
+  font-size: 12pt;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: table;
+  transform: scale(0.5);
+    transform-origin:0 0;
+
+    -ms-transform: scale(0.5);         /* IE 9 */
+    -ms-transform-origin:0 0;       /* IE 9 */
+
+    -webkit-transform: scale(0.5); /* Safari 和 Chrome */
+    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
+
+    -moz-transform: scale(0.5);        /* Firefox */
+    -moz-transform-origin:0 0;      /* Firefox */
+
+    -o-transform: scale(0.5);      /* Opera */
+    -o-transform-origin:0 0;        /* Opera */
+}
+.tag-item{
+  width: 100%;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  color: #474747;
+  font-size: 12pt;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-family: 'Noto Sans TC', sans-serif;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
