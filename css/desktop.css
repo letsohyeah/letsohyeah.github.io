@@ -1276,6 +1276,7 @@ display: 				 flex;
   margin-bottom: 40px;
   margin-left: 40px;
   min-width: 150px;
+  max-width: 200px;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;

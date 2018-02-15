@@ -135,7 +135,7 @@
 				itemsCount = items.length, // 圖片總數
 				prevBtn = document.createElement('a'), // 上一張按鈕
 				nextBtn = document.createElement('a'), // 下一張按鈕
-				timer = 4000, // 4 秒換圖
+				timer = 5000, // 5 秒換圖
 				interval = window.setInterval(showNext, timer);  // 設定循環
 
 				prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
@@ -163,14 +163,14 @@
 				}
 
 				// 滑鼠移到 #slider 上方時，停止循環計時
-				slide.addEventListener('mouseover', function(){
+				/*slide.addEventListener('mouseover', function(){
 					interval = clearInterval(interval);
 				});
 
 				// 滑鼠離開 #slider 時，重新開始循環計時
-				slide.addEventListener('mouseout', function(){
+				lide.addEventListener('mouseout', function(){
 					interval = window.setInterval(showNext, timer);
-				});
+				});*/
 
 				// 綁定點擊上一張，下一張按鈕的事件
 				nextBtn.addEventListener('click', showNext, false);
