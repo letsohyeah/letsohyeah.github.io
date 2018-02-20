@@ -33,7 +33,6 @@ body{
 		 -moz-flex-direction: column;
 	-webkit-flex-direction: column;
 					flex-direction: column;
-	background-color: #e8e7e5;
 	}
 nav{
 	position: fixed;
@@ -114,7 +113,6 @@ nav{
 	display: -webkit-flex;
 	display: 				 flex;
 	flex-direction: column;
-	background-color: #e8e7e5;
 }
 .bigtitle{
 	position: absolute;
@@ -1224,7 +1222,7 @@ nav{
 	margin-left: 10px;
 	margin-top: 8px;
 	padding: 5px;
-	background-color: #dbdbdb;
+	background-color: #eee;
 	color: #474747;
 	font-size: 12pt;
 	font-weight: 400;
