@@ -1203,12 +1203,9 @@ nav{
 	margin-top: 10px;
 	font-size: 9pt;
 	font-weight: 400;
-	font-family: "HanaMinA";
 	letter-spacing: 5px;
 	line-height: 14pt;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
+	display: table;
 	justify-content:flex-start;
 	color: #000;
 }
