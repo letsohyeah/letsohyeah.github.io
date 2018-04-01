@@ -6,7 +6,13 @@
 	<meta name="viewport" content="width=device-width">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).ready(function() {
+				$("img.lazy").lazyload({
+						effect : "fadeIn"
+				});
+		});
+	</script>
 	<TITLE> Test - Natural n' Vintage </TITLE>
 	<style>
 	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
@@ -1788,13 +1794,13 @@
 						</div>
 					</li>
 				</ul>
-			<div class="pormbox" data-parallax='{"y": -300,"smoothness": 10}'>
+			<div class="pormbox">
 				<div class="downarrow" id="keyframes move">
 				</div>
-				<div class="logobox-index">
+				<div class="logobox-index" data-parallax='{"y": -300,"smoothness": 30}'>
 					<img class="lazy img-responsive" data-original="https://i.imgur.com/iSUuJCn.png" width="100%">
 				</div>
-				<div class="porm">
+				<div class="porm" data-parallax='{"y": -300,"smoothness": 30}'>
 					一個不願在理性與感性之間妥協<br>
 					在市場、商業與量化中輕輕閉上雙眼<br>
 					只想繼續在原始夢境裡頭做夢的美好空間氛圍<br>
@@ -1915,16 +1921,10 @@
 				items[0].classList.add('show');
 							//# sourceURL=pen.js
 			</script>
-			<script src="//letsohyeah.github.io/js/jquery-2.1.3.min.js"></script>
-			<script src="//letsohyeah.github.io/js/jquery.easing.1.3.js"></script>
-			<script src="//letsohyeah.github.io/js/jquery.parallax-scroll.js"></script>
-			<script type="text/javascript" charset="utf-8">
-				$(window).ready(function() {
-						$("img.lazy").lazyload({
-								effect : "fadeIn"
-						});
-				});
-			</script>
+			<script src="https://letsohyeah.github.io/js/jquery-2.1.3.min.js"></script>
+			<script src="https://letsohyeah.github.io/js/jquery.easing.1.3.js"></script>
+			<script src="https://letsohyeah.github.io/js/jquery.parallax-scroll.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 		</div>
 	</div>
 	<p class="copyright-index">
