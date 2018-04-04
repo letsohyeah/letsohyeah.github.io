@@ -347,13 +347,13 @@
 			display: 				 flex;
 		}
 		.logobox-index{
-			margin-top: 70vh;
+			margin-top: 80vh;
 			margin-left: -2%;
 			overflow: hidden;
 			height: auto;
 		}
 		.porm{
-			margin-top: 10vh;
+			margin-top: 20vh;
 			margin-left: 15%;
 		  font-size: 0.7rem;
 		  font-weight: 300;
@@ -368,7 +368,7 @@
 			flex-direction: column;
 		}
 		.pormpic{
-			margin-top: 20vh;
+			margin-top: 30vh;
 			height: 40vh;
 			margin-left: -1%;
 			overflow: hidden;
@@ -377,7 +377,6 @@
 			display: 				 flex;
 		}
 		.pagebox{
-			height: 100vh;
 			background-color: #fff;
 			margin-right: 120px;
 			z-index: 100;
@@ -387,8 +386,8 @@
 			display: 				 flex;
 		}
 		.cardbox{
-			margin-left: 50px;
-			margin-right: 50px;
+			margin-left: 10vw;
+			margin-right: 10vw;
 			flex-direction: row;
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -409,6 +408,7 @@
 	    font-weight: 300;
 	    font-family: "HanaMinA";
 	    letter-spacing: 3px;
+			flex: 1 auto;
 	    display: -moz-flex;
 	    display: -webkit-flex;
 	    display: 				 flex;
@@ -419,28 +419,92 @@
 			padding-top: 10px;
 			padding-right: 20px;
 			flex-direction: column;
+			justify-content: space-between;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
 		}
 		.cardcontent{
-			margin-top: 50px;
 			font-size: 0.6rem;
 			font-weight: 300;
 			font-family: 'Noto Sans TC', sans-serif;
 			line-height: 1.2rem;
+			flex: 3 auto;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
 		}
 		.indextitle{
 			margin-top: 10vh;
-			margin-left: 50px;
+			margin-left: 10vw;
 			font-size: 0.6rem;
 		  font-weight: 100;
 		  font-family: 'Noto Sans TC', sans-serif;
 		  letter-spacing: 0.3rem;
 		  color: #474747;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.worksbox{
+			margin-top: 5vh;
+			margin-left: 10vw;
+			margin-right: 10vw;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.worksimg{
+			width: 40vw;
+			overflow: hidden;
+
+		}
+		.worksarticleL{
+			margin-left: 5vw;
+			width: 35vw;
+			max-width: 350px;
+			flex-direction: column;
+			justify-content: space-between;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.worksarticleR{
+			margin-right: 5vw;
+			width: 35vw;
+			max-width: 350px;
+			flex-direction: column;
+			justify-content: space-between;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+		}
+		.workstitle{
+			font-size: 1rem;
+			font-weight: 200;
+			font-family: 'Noto Sans TC', sans-serif;
+			letter-spacing: 0.5rem;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			flex: 1 auto;
+		}
+		.worksdescribe{
+			font-size: 0.7rem;
+			font-weight: 300;
+	    font-family: "HanaMinA";
+			letter-spacing: 0.35rem;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			flex: 5 auto;
+		}
+		.workscontemt{
+			font-size: 0.6rem;
+			font-weight: 300;
+			font-family: 'Noto Sans TC', sans-serif;
+			letter-spacing: 0.2rem;
+			line-height: 1.2rem;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
@@ -1855,8 +1919,8 @@
 							<div class="cardcontent">
 								想買傢俱卻不知道該怎麼挑選、擺設嗎？<br><br>我們提供各種規劃方案，為您規劃、擺設，一次打包整套傢俱，以更優惠的價格打造最合適的空間。
 							</div>
+							<div class="button-index" >了解更多　＞</div>
 						</div>
-						<div class="button-index" >了解更多　＞</div>
 					</div>
 					<div class="card">
 						<img class="lazy img-responsive" data-original="https://i.imgur.com/zpPSXvI.jpg" width="100%";>
@@ -1867,8 +1931,8 @@
 							<div class="cardcontent">
 								依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份
 							</div>
+							<div class="button-index">了解更多　＞</div>
 						</div>
-						<div class="button-index">了解更多　＞</div>
 					</div>
 					<div class="card">
 						<img class="lazy img-responsive" data-original="https://i.imgur.com/pMzoE2s.jpg" width="100%";>
@@ -1879,16 +1943,49 @@
 							<div class="cardcontent">
 								想買傢俱卻不知道該怎麼挑選、擺設嗎？<br><br>我們提供各種規劃方案，為您規劃、擺設，一次打包整套傢俱，以更優惠的價格打造最合適的空間。
 							</div>
+							<div class="button-index">了解更多　＞</div>
 						</div>
-						<div class="button-index">了解更多　＞</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="pagebox">
 				<p class="indextitle">
 					Works
 				</p>
+				<div class="worksbox">
+					<div class="worksimg">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/nQozK4l.jpg" width="100%">
+					</div>
+					<div class="worksarticleL">
+						<div class="workstitle">
+							Antik
+						</div>
+						<div class="worksdescribe">
+							私人旅宿，古董傢私與日常的美好交疊。
+						</div>
+						<div class="workscontemt">
+							繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著，歷經五十年的老房子，此刻，卻有著廢墟重生後，自在的朝氣和美麗。莫名緩慢而悠哉的魔幻時空，正隨著黑膠唱盤清亮的樂聲自大片的黑格落地窗流瀉出來，在午後的陽光中，Antik，用最美好的姿態與妳相遇…
+						</div>
+					</div>
+				</div>
+				<div class="block">
+				</div>
+				<div class="worksbox">
+					<div class="worksarticleR">
+						<div class="workstitle">
+							Antik
+						</div>
+						<div class="worksdescribe">
+							私人旅宿，古董傢私與日常的美好交疊。
+						</div>
+						<div class="workscontemt">
+							繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著，歷經五十年的老房子，此刻，卻有著廢墟重生後，自在的朝氣和美麗。莫名緩慢而悠哉的魔幻時空，正隨著黑膠唱盤清亮的樂聲自大片的黑格落地窗流瀉出來，在午後的陽光中，Antik，用最美好的姿態與妳相遇…
+						</div>
+					</div>
+					<div class="worksimg">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/nQozK4l.jpg" width="100%">
+					</div>
+				</div>
+				<div class="block">
 			</div>
 
 
