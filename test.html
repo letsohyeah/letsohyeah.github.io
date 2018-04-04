@@ -140,7 +140,7 @@
 	   background-image: url(https://i.imgur.com/p7OeaUk.jpg);
 	}
 	#img4{
-	   background-image: url(https://i.imgur.com/veNQTVU.jpg);
+	   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
 	}
 	@media only screen and (max-width: 768px) {
 	  #img1{
@@ -153,7 +153,7 @@
 	     background-image: url(https://i.imgur.com/8qqmWsA.jpg);
 	  }
 	  #img4{
-	     background-image: url(https://i.imgur.com/VEr5Uwm.jpg);
+	     background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29872346_1983824048600123_5741461631488580288_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHc2-efbouazMkNuAt2fnSM-oakFgSFRhDcPZ2NB4d5fHKqMSh91lmpCXXLCG1WTE8btOnFEdW1Y_xhoVjEKubODpRzruILtLxH4l5Z0ZOGCw&oh=f0a3b118d3af8bec3e506ebd5133f5b9&oe=5B38A8A3);
 	  }
 	}
 	.articlecontianer-index{
@@ -299,15 +299,14 @@
 	    transform: rotate(45deg);
 	    margin-right: 4px;
 	  }
-		.downarrow{
-			top: 95vh;
+		.downarrowbox{
 			position: absolute;
-			transform: rotate(135deg);
-			display: block;
-	    width: 20px;
-	    height: 20px;
-	    border-top: 3px solid #fff;
-	    border-right: 3px solid #fff;
+			top: 95vh;
+			width: calc(100% - 120px);
+			justify-content: center;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
 			-webkit-animation: 1s move;
 			-webkit-animation-duration: 1.2s;
 			-webkit-animation-timing-function: ease-in-out;
@@ -318,6 +317,15 @@
 			animation-timing-function: ease-in-out;
 			animation-direction: alternate;
 			animation-iteration-count: infinite;
+		}
+		.downarrow{
+			transform: rotate(135deg);
+			display: block;
+	    width: 20px;
+	    height: 20px;
+	    border-top: 3px solid #fff;
+	    border-right: 3px solid #fff;
+
 		}
 		@-webkit-keyframes move {
 			0% {top: 95vh;}
@@ -333,8 +341,6 @@
 			margin-top: 100vh;
 			margin-right: 120px;
 			z-index: 100;
-			flex-direction: column;
-			justify-content: center;
 			align-items: center;
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -346,13 +352,20 @@
 			height: auto;
 		}
 		.porm{
+			margin-left: 20%;
 		  font-size: 0.6rem;
 		  font-weight: 300;
 		  font-family: 'Noto Sans TC', sans-serif;
 		  letter-spacing: 0.15rem;
 			line-height: 1.5rem;
 		  color: #474747;
-			text-align: center;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: 				 flex;
+			flex-direction: column;
+		}
+		.pormpic{
+			margin-left: 20%;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: 				 flex;
@@ -1794,13 +1807,17 @@
 						</div>
 					</li>
 				</ul>
-			<div class="pormbox">
+			<div class="downarrowbox">
 				<div class="downarrow" id="keyframes move">
 				</div>
-				<div class="logobox-index" data-parallax='{"y": -300,"smoothness": 30}'>
-					<img class="lazy img-responsive" data-original="https://i.imgur.com/iSUuJCn.png" width="100%">
-				</div>
+			</div>
+			<div class="pormbox">
+
+
 				<div class="porm" data-parallax='{"y": -300,"smoothness": 30}'>
+					<div class="logobox-index">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/iSUuJCn.png" width="100%">
+					</div>
 					一個不願在理性與感性之間妥協<br>
 					在市場、商業與量化中輕輕閉上雙眼<br>
 					只想繼續在原始夢境裡頭做夢的美好空間氛圍<br>
@@ -1821,7 +1838,7 @@
 				<p class="indextitle">
 					Service
 				</p>
-				<div class="cardbox">
+				<div class="cardbox" data-parallax='{"y": 100,"smoothness": 30}'>
 					<div class="card">
 						<img class="lazy img-responsive" data-original="https://i.imgur.com/nTWj3IN.jpg" width="100%";>
 						<div class="cardcontentbox">
