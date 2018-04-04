@@ -347,17 +347,18 @@
 			display: 				 flex;
 		}
 		.logobox-index{
-			margin-top: 60vh;
+			margin-top: 70vh;
 			margin-left: -2%;
 			overflow: hidden;
 			height: auto;
 		}
 		.porm{
+			margin-top: 10vh;
 			margin-left: 15%;
-		  font-size: 0.6rem;
+		  font-size: 0.7rem;
 		  font-weight: 300;
-		  font-family: 'Noto Sans TC', sans-serif;
-		  letter-spacing: 0.15rem;
+		  font-family: "HanaMinA";
+		  letter-spacing: 0.1rem;
 			line-height: 1.5rem;
 		  color: #474747;
 			z-index: 500;
@@ -367,7 +368,7 @@
 			flex-direction: column;
 		}
 		.pormpic{
-			margin-top: 10vh;
+			margin-top: 20vh;
 			height: 40vh;
 			margin-left: -1%;
 			overflow: hidden;
@@ -1817,7 +1818,7 @@
 				</div>
 			</div>
 			<div class="pormbox">
-				<div class="porm" data-parallax='{"y": -300,"smoothness": 30}'>
+				<div class="porm" data-parallax='{"y": -500,"smoothness": 30}'>
 					一個不願在理性與感性之間妥協<br>
 					在市場、商業與量化中輕輕閉上雙眼<br>
 					只想繼續在原始夢境裡頭做夢的美好空間氛圍<br>
@@ -1833,10 +1834,10 @@
 					心舒服了<br>
 					生活 於是平衡了
 				</div>
-				<div class="pormpic" data-parallax='{"y": -200,"smoothness": 30}'>
+				<div class="pormpic" data-parallax='{"y": -400,"smoothness": 30}'>
 					<img class="lazy img-responsive" data-original="https://i.imgur.com/NEyK7vn.jpg" height="100%">
 				</div>
-				<div class="logobox-index" data-parallax='{"y": -100,"smoothness": 30}'>
+				<div class="logobox-index" data-parallax='{"y": -300,"smoothness": 30}'>
 					<img class="lazy img-responsive" data-original="https://i.imgur.com/iSUuJCn.png" width="100%">
 				</div>
 			</div>
@@ -1844,7 +1845,7 @@
 				<p class="indextitle">
 					Service
 				</p>
-				<div class="cardbox" data-parallax='{"y": 100,"smoothness": 30}'>
+				<div class="cardbox">
 					<div class="card">
 						<img class="lazy img-responsive" data-original="https://i.imgur.com/nTWj3IN.jpg" width="100%";>
 						<div class="cardcontentbox">
@@ -1899,7 +1900,7 @@
 				itemsCount = items.length, // 圖片總數
 				prevBtn = document.createElement('a'), // 上一張按鈕
 				nextBtn = document.createElement('a'), // 下一張按鈕
-				timer = 5000, // 5 秒換圖
+				timer = 7000, // 7 秒換圖
 				interval = window.setInterval(showNext, timer);  // 設定循環
 
 				prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
