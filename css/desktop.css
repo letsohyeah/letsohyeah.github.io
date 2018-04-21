@@ -117,48 +117,51 @@ nav{
    background-image: url(https://i.imgur.com/vNBNRvT.jpg);
 }
 #img2{
-   background-image: url(https://i.imgur.com/nTWj3IN.jpg);
+   background-image: url(https://i.imgur.com/SPv572r.jpg);
 }
 #img3{
-   background-image: url(https://i.imgur.com/p7OeaUk.jpg);
+   background-image: url(https://i.imgur.com/nQozK4l.jpg);
 }
 #img4{
-   background-image: url(https://i.imgur.com/veNQTVU.jpg);
+   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
 }
 @media only screen and (max-width: 768px) {
   #img1{
     background-image: url(https://i.imgur.com/ZYZ902S.jpg);
   }
   #img2{
-     background-image: url(https://i.imgur.com/f0GZx8M.jpg);
+     background-image: url(https://i.imgur.com/SPv572r.jpg);
   }
   #img3{
-     background-image: url(https://i.imgur.com/8qqmWsA.jpg);
+     background-image: url(https://i.imgur.com/nQozK4l.jpg);
   }
   #img4{
-     background-image: url(https://i.imgur.com/VEr5Uwm.jpg);
+     background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29872346_1983824048600123_5741461631488580288_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHc2-efbouazMkNuAt2fnSM-oakFgSFRhDcPZ2NB4d5fHKqMSh91lmpCXXLCG1WTE8btOnFEdW1Y_xhoVjEKubODpRzruILtLxH4l5Z0ZOGCw&oh=f0a3b118d3af8bec3e506ebd5133f5b9&oe=5B38A8A3);
   }
 }
 .articlecontianer-index{
-  max-width: 560px;
+  max-width: 400px;
   z-index: 1000;
   position: absolute;
+  padding: 20px;
   margin-top: 90px;
   margin-left: 100px;
   margin-right: 50px;
-  font-size: 8pt;
+  font-size: 0.6rem;
   font-weight: 300;
   font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 0.05rem;
   color: #474747;
+  background-color: #fff;
+  border-radius: 10px;
 }
   .title1-index{
     width: 100%;
     margin-bottom: 15px;
-    font-size: 16pt;
+    font-size: 1.2rem;
     font-weight: 300;
-    font-family: "HanaMinA";
-    letter-spacing: 3px;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.2rem;
     display: -moz-flex;
     display: -webkit-flex;
     display: 				 flex;
@@ -222,10 +225,10 @@ nav{
       -o-transform-origin:0 0;        /* Opera */
   }
   #slide {
-    position: relative;
+    width: calc(100% - 120px);
+    position: fixed;
     top: 0;
     left: 0;
-    margin-right: 120px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -281,6 +284,248 @@ nav{
   #slide .next:after {
     transform: rotate(45deg);
     margin-right: 4px;
+  }
+  .downarrowbox{
+    position: absolute;
+    top: 95vh;
+    width: calc(100% - 120px);
+    justify-content: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    -webkit-animation: 1s move;
+    -webkit-animation-duration: 1.2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    animation: 1s move;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  .downarrow{
+    transform: rotate(135deg);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+
+  }
+  @-webkit-keyframes move {
+    0% {top: 95vh;}
+    100% {top: 93vh;}
+  }
+  @keyframes move {
+    0% {top: 95vh;}
+    100% {top: 93vh;}
+  }
+  .pormbox{
+    height: 100vh;
+    background-color: #fff;
+    margin-top: 100vh;
+    margin-right: 120px;
+    z-index: 100;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .logobox-index{
+    margin-top: 80vh;
+    margin-left: -2%;
+    overflow: hidden;
+    height: auto;
+  }
+  .porm{
+    margin-top: 20vh;
+    margin-left: 15%;
+    font-size: 0.7rem;
+    font-weight: 300;
+    font-family: "HanaMinA";
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    color: #474747;
+    z-index: 500;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    flex-direction: column;
+  }
+  .pormpic{
+    margin-top: 30vh;
+    height: 40vh;
+    margin-left: -1%;
+    overflow: hidden;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .pagebox{
+    background-color: #fff;
+    margin-right: 120px;
+    z-index: 100;
+    flex-direction: column;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .cardbox{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    flex-direction: row;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .card{
+    margin-top: 5vh;
+    height: 80vh;
+    width: 33.3%;
+    flex-direction: column;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .cardtitle{
+    margin-top: 0.8rem;
+    font-size: 10pt;
+    font-weight: 300;
+    font-family: "HanaMinA";
+    letter-spacing: 3px;
+    flex: 1 auto;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .cardcontentbox{
+    height: 35vh;
+    max-width: 350px;
+    padding-top: 10px;
+    padding-right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .cardcontent{
+    font-size: 0.6rem;
+    font-weight: 300;
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.2rem;
+    flex: 3 auto;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .indextitle{
+    margin-left: 10vw;
+    font-size: 0.6rem;
+    font-weight: 100;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.3rem;
+    color: #474747;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .worksbox{
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .worksimg{
+    width: 30vw;
+    overflow: hidden;
+  }
+  .worksarticleL{
+    margin-left: 5vw;
+    width: 35vw;
+    max-width: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .worksarticleR{
+    margin-right: 5vw;
+    width: 35vw;
+    max-width: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .workstitle{
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.5rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    flex: 1 auto;
+  }
+  .worksdescribe{
+    font-size: 0.7rem;
+    font-weight: 300;
+    font-family: "HanaMinA";
+    letter-spacing: 0.35rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    flex: 5 auto;
+  }
+  .workscontemt{
+    font-size: 0.6rem;
+    font-weight: 300;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 1.2rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .block-index{
+    width: 10vw;
+  }
+  .contactbox{
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .contact-img{
+    width: 25vw;
+    overflow: hidden;
+  }
+  .contactcontemt{
+    margin-left: 5vw;
+    margin-right: 2vw;
+    width: 35vw;
+    max-width: 350px;
+    font-size: 0.6rem;
+    font-weight: 300;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 1.2rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    flex-direction: column;
+  }
+  .contact-map{
+    width: 30vw;
+    overflow: hidden;
   }
 /*INDEX*/
 
@@ -1292,10 +1537,9 @@ display: 				 flex;
 .name-item{
   margin-left: 10px;
   margin-top: 10px;
-  font-size: 0.75rem;
+  font-size: 9pt;
   font-weight: 300;
-  line-height: 1.5rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 5px;
   display: table;
 }
 #zh-item{
@@ -1317,32 +1561,6 @@ display: 				 flex;
   font-family: 'Noto Sans TC', sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  display: table;
-  transform: scale(0.5);
-    transform-origin:0 0;
-
-    -ms-transform: scale(0.5);         /* IE 9 */
-    -ms-transform-origin:0 0;       /* IE 9 */
-
-    -webkit-transform: scale(0.5); /* Safari 和 Chrome */
-    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-    -moz-transform: scale(0.5);        /* Firefox */
-    -moz-transform-origin:0 0;      /* Firefox */
-
-    -o-transform: scale(0.5);      /* Opera */
-    -o-transform-origin:0 0;        /* Opera */
-}
-.designer-item{
-  margin-left: 10px;
-  margin-top: 8px;
-  padding: 5px;
-  background-color: #eee;
-  color: #474747;
-  font-size: 12pt;
-  font-weight: 400;
-  letter-spacing: 3px;
-  font-family: 'Noto Sans TC', sans-serif;
   display: table;
   transform: scale(0.5);
     transform-origin:0 0;
