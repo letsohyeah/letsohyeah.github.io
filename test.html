@@ -15,7 +15,7 @@
 	</script>
 	<TITLE> Test - Natural n' Vintage </TITLE>
 	<style>
-	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+	@import url('https://fonts.googleapis.com/css?family=Rubik:,300,400,500i,900,900i');
 	@font-face {
 		font-family: "HanaMinOT_otf";
 		src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
@@ -202,13 +202,14 @@
 	.title1-index{
 		margin-top: 10px;
 		margin-bottom: 10px;
-		font-size: 1rem;
+		font-size: 1.1rem;
     font-weight: 300;
     font-family: 'Noto Sans TC', sans-serif;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
+		align-items: center;
 	}
 	.logobox-index{
 		max-width: 200px;
@@ -219,22 +220,37 @@
 	}
 	.button-index{
 		border: 1px solid #474747;
-		border-radius: 3px;
-		padding-left: 15px;
-		width: 80px;
-		font-size: 0.7rem;
+		border-radius: 5px;
+		width: 100px;
+		font-size: 0.6rem;
 		margin-top: 40px;
-		height: 30px;
+		height: 40px;
 		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 100;
 		letter-spacing: 2px;
-		color: #474747;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		background-color: #474747;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
+		justify-content: center;
 		align-items: center;
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+	}
+	.button-index span{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #fff;
+	}
+	.button-index:hover{
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+		background-color: rgba(0, 0, 0, 0);
+		color: #474747;
+	}
+	.button-index:hover span{
+		color: #474747;
 	}
 	.copyright-index{
 		position: fixed;
@@ -347,9 +363,8 @@
 	100% {top: 93vh;}
 }
 .pormbox{
-	height: 100vh;
 	background-color: #fff;
-	margin-top: 100vh;
+	margin-top: 20vh;
 	z-index: 100;
 	padding: 20px;
 	align-items: center;
@@ -376,6 +391,7 @@
 	flex-direction: column;
 }
 .pormpic{
+	margin-top: -5vh;
 	height: 35vh;
 	overflow: hidden;
 	display: -moz-flex;
@@ -384,7 +400,6 @@
 }
 .pagebox{
 	background-color: #fff;
-	margin-right: 120px;
 	z-index: 100;
 	flex-direction: column;
 	display: -moz-flex;
@@ -392,9 +407,6 @@
 	display: 				 flex;
 }
 .cardbox{
-	margin-left: 10vw;
-	margin-right: 10vw;
-	flex-direction: row;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -410,7 +422,7 @@
 }
 .cardtitle{
 	margin-top: 0.8rem;
-	font-size: 10pt;
+	font-size: 1rem;
 	font-weight: 300;
 	font-family: "HanaMinA";
 	letter-spacing: 3px;
@@ -420,9 +432,8 @@
 	display: 				 flex;
 }
 .cardcontentbox{
-	height: 35vh;
 	padding-top: 10px;
-	padding-right: 20px;
+	padding: 20px;
 	flex-direction: column;
 	justify-content: space-between;
 	display: -moz-flex;
@@ -440,32 +451,28 @@
 	display: 				 flex;
 }
 .indextitle{
-	margin-left: 10vw;
+	width: 100%;
 	font-size: 0.6rem;
 	font-weight: 100;
 	font-family: 'Noto Sans TC', sans-serif;
 	letter-spacing: 0.3rem;
 	color: #474747;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
+	text-align: center;
 }
 .worksbox{
 	margin-top: 5vh;
-	margin-left: 10vw;
-	margin-right: 10vw;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
+	flex-direction: column;
 }
 .worksimg{
-	width: 30vw;
+	order: 1;
 	overflow: hidden;
 }
 .worksarticleL{
-	margin-left: 5vw;
-	width: 35vw;
-	max-width: 350px;
+	padding: 20px;
+	margin-top: 15vh;
 	flex-direction: column;
 	justify-content: space-between;
 	display: -moz-flex;
@@ -473,9 +480,8 @@
 	display: 				 flex;
 }
 .worksarticleR{
-	margin-right: 5vw;
-	width: 35vw;
-	max-width: 350px;
+	padding: 20px;
+	margin-top: 15vh;
 	flex-direction: column;
 	justify-content: space-between;
 	display: -moz-flex;
@@ -493,6 +499,7 @@
 	flex: 1 auto;
 }
 .worksdescribe{
+	margin-top: 5vh;
 	font-size: 0.7rem;
 	font-weight: 300;
 	font-family: "HanaMinA";
@@ -503,6 +510,7 @@
 	flex: 5 auto;
 }
 .workscontemt{
+	margin-top: 5vh;
 	font-size: 0.6rem;
 	font-weight: 300;
 	font-family: 'Noto Sans TC', sans-serif;
@@ -517,21 +525,15 @@
 }
 .contactbox{
 	margin-top: 5vh;
-	margin-left: 10vw;
-	margin-right: 10vw;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
+	flex-direction: column;
 }
 .contact-img{
-	width: 25vw;
 	overflow: hidden;
 }
 .contactcontemt{
-	margin-left: 5vw;
-	margin-right: 2vw;
-	width: 35vw;
-	max-width: 350px;
 	font-size: 0.6rem;
 	font-weight: 300;
 	font-family: 'Noto Sans TC', sans-serif;
@@ -543,8 +545,22 @@
 	flex-direction: column;
 }
 .contact-map{
-	width: 30vw;
 	overflow: hidden;
+}
+.pressnum{
+	margin-left: 5px;
+	font-size: 0.8rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 900;
+	border-bottom: 2px solid #474747;
+	color: #474747;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
 }
 	/*INDEX*/
 
@@ -712,6 +728,9 @@
 		justify-content: flex-start;
 		align-items: center;
 	}
+	.button span{
+		color: #fff;
+	}
 	.button-service{
 		border: 1px solid #474747;
 		border-radius: 3px;
@@ -733,6 +752,9 @@
 		justify-content: flex-start;
 		align-items: center;
 	}
+	.button-service span{
+		color: #fff;
+	}
 	.button1-service{
 		border: 1px solid #474747;
 		border-radius: 3px;
@@ -753,6 +775,9 @@
 		display: 				 flex;
 		justify-content: flex-start;
 		align-items: center;
+	}
+	.button1-service span{
+		color: #fff;
 	}
 	.imgbox-service{
 		max-width: 300px;
@@ -1706,7 +1731,7 @@
 									打造質感室內居家生活
 								</div>
 								拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單。
-								<a href="https://letsohyeah.github.io/about.html" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們　＞</span></a>
+								<a href="https://letsohyeah.github.io/about.html" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們</span></a>
 							</div>
 						</div>
 					</li>
@@ -1716,11 +1741,11 @@
 						<div class="picbox" id="img2">
 							<div class="articlecontianer-index">
 								<div class="title1-index">
-									PRESS 10
+									Press<div class="pressnum">10</div>
 								</div>
 								讓古董融入每天的生活，對我來說既是環保，更是一種日常的浪漫。<br>
 								我深信質感好的東西只會越用越好看，轉身望向你長期使用的物件，
-								<a href="https://letsohyeah.github.io/Press/Press10.html" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多　＞</span></a>
+								<a href="https://letsohyeah.github.io/Press/Press10.html" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多</span></a>
 							</div>
 						</div>
 					</li>
@@ -1732,9 +1757,9 @@
 								<div class="title1-index">
 									Antik
 								</div>
-								私人旅宿，古董傢私與日常的美好交疊。<br><br>
+								「私人旅宿，古董傢私與日常的美好交疊。」<br><br>
 								繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著。
-								<a href="https://letsohyeah.github.io/antik.html" class="button-index"><span style="opacity:1;">閱讀更多　＞</span></a>
+								<a href="https://letsohyeah.github.io/antik.html" class="button-index"><span style="opacity:1;">閱讀更多</span></a>
 							</div>
 						</div>
 					</li>
@@ -1747,7 +1772,7 @@
 									精選歐洲古董家具
 								</div>
 								舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>NV為您精心挑選北歐舊物，為空間注入靈魂。
-								<a href="https://letsohyeah.github.io/item.html" class="button-index" style="color:#474747;"><span style="opacity:1;">來去逛逛　＞</span></a>
+								<a href="https://letsohyeah.github.io/item.html" class="button-index" style="color:#474747;"><span style="opacity:1;">來去逛逛</span></a>
 							</div>
 						</div>
 					</li>
@@ -1794,7 +1819,7 @@
 							<div class="cardcontent">
 								想買傢俱卻不知道該怎麼挑選、擺設嗎？<br><br>我們提供各種規劃方案，為您規劃、擺設，一次打包整套傢俱，以更優惠的價格打造最合適的空間。
 							</div>
-							<div class="button-index" >了解更多　＞</div>
+							<div class="button-index" ><span>了解更多</span></div>
 						</div>
 					</div>
 					<div class="card">
@@ -1806,7 +1831,7 @@
 							<div class="cardcontent">
 								依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份
 							</div>
-							<div class="button-index">了解更多　＞</div>
+							<div class="button-index"><span>了解更多</span></div>
 						</div>
 					</div>
 					<div class="card">
@@ -1818,7 +1843,7 @@
 							<div class="cardcontent">
 								想買傢俱卻不知道該怎麼挑選、擺設嗎？<br><br>我們提供各種規劃方案，為您規劃、擺設，一次打包整套傢俱，以更優惠的價格打造最合適的空間。
 							</div>
-							<div class="button-index">了解更多　＞</div>
+							<div class="button-index"><span>了解更多</span></div>
 						</div>
 					</div>
 				</div>
@@ -1835,7 +1860,7 @@
 							Antik
 						</div>
 						<div class="worksdescribe">
-							私人旅宿，古董傢私與日常的美好交疊。
+							「私人旅宿，古董傢私與日常的美好交疊。」
 						</div>
 						<div class="workscontemt">
 							繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著，歷經五十年的老房子，此刻，卻有著廢墟重生後，自在的朝氣和美麗。莫名緩慢而悠哉的魔幻時空，正隨著黑膠唱盤清亮的樂聲自大片的黑格落地窗流瀉出來，在午後的陽光中，Antik，用最美好的姿態與妳相遇…
@@ -1852,7 +1877,7 @@
 							Silhouette
 						</div>
 						<div class="worksdescribe">
-							什麼空間在你的眼中是最美的？無庸質疑是適合你自己的空間。
+							「什麼空間在你的眼中是最美的？無庸質疑是適合你自己的空間。」
 						</div>
 						<div class="workscontemt">
 							「一個所謂近乎完美的生活空間絕對需要一個人對生活品質有某程度上不妥協的要求（這與金錢無關）然後保持開放的心胸，少一些過度放大的自我（別忘了一山還有一山高）多一點簡單、多留一些白、注重細節，還有更多對好物件的堅持態度，這些是我的觀察。」—Maite

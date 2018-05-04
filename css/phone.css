@@ -987,6 +987,7 @@ nav{
 .imgbox-team{
 	min-width: 70px;
 	height: 70px;
+	border-radius: 100%;
 	overflow: hidden;
 	display: -moz-flex;
 	display: -webkit-flex;
