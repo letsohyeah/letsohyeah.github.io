@@ -179,12 +179,13 @@ nav{
     border-radius: 3px;
     padding-left: 15px;
     width: 78px;
-    font-size: 8pt;
+    font-size: 0.6rem;
     margin-top: 30px;
     height: 30px;
     font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 100;
     letter-spacing: 2px;
-    color: #474747;
+    background-color: #474747;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -193,13 +194,23 @@ nav{
     display: 				 flex;
     justify-content: flex-start;
     align-items: center;
-    -webkit-transition: width 0.5s;
-          transition: width 0.5s;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+  }
+  .button-index span{
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    color: #fff;
   }
   .button-index:hover{
-    width: 100px;
-    -webkit-transition: width 0.5s;
-          transition: width 0.5s;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    background-color: rgba(0, 0, 0, 0);
+    color: #474747;
+  }
+  .button-index:hover span{
+    color: #474747;
   }
   .copyright-index{
     height: 50px;
@@ -321,7 +332,7 @@ nav{
     0% {top: 95vh;}
     100% {top: 93vh;}
   }
-  .pormbox{
+  .poembox{
     height: 100vh;
     background-color: #fff;
     margin-top: 100vh;
@@ -338,7 +349,7 @@ nav{
     overflow: hidden;
     height: auto;
   }
-  .porm{
+  .poem{
     margin-top: 20vh;
     margin-left: 15%;
     font-size: 0.7rem;
@@ -353,7 +364,7 @@ nav{
     display: 				 flex;
     flex-direction: column;
   }
-  .pormpic{
+  .poempic{
     margin-top: 30vh;
     height: 40vh;
     margin-left: -1%;
@@ -526,6 +537,21 @@ nav{
   .contact-map{
     width: 30vw;
     overflow: hidden;
+  }
+  .pressnum{
+  margin-left: 5px;
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 900;
+  border-bottom: 2px solid #474747;
+  color: #474747;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
   }
 /*INDEX*/
 
