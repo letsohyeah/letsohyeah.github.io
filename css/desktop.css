@@ -544,8 +544,8 @@ nav{
   width: 1.4rem;
   height: 1.4rem;
   font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 900;
-  border-bottom: 2px solid #474747;
+  font-weight: 100;
+  border-bottom: 1px solid #474747;
   color: #474747;
   display: -moz-flex;
   display: -webkit-flex;
@@ -1432,7 +1432,6 @@ display: 				 flex;
   color: #555555;
 }
 .descrip-press1{
-  margin-left: 50px;
   margin-top: 5px;
   font-size: 7pt;
   font-weight: 300;
@@ -1441,7 +1440,37 @@ display: 				 flex;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+  align-items: baseline;
   color: #555555;
+}
+.articlecontianer-press{
+  width: calc(100% - 120px);
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bigtitle-press{
+  margin-top: 5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  font-weight: lighter;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #474747;
+}
+.title-press{
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  font-family: "HanaMinA";
+  letter-spacing: 3px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
 }
 .article-press{
   max-width: 510px;
@@ -1464,6 +1493,30 @@ display: 				 flex;
   margin-left: 20px;
   overflow: hidden;
   height: auto;
+}
+.imgbox-press1{
+  max-width: 510px;
+  margin-top: 50px;
+  overflow: hidden;
+  height: auto;
+}
+.line-press{
+  border-right: 1px solid #474747;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 3rem;
+}
+.article-press{
+  max-width: 510px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.4rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
 }
 /*PRESS*/
 
