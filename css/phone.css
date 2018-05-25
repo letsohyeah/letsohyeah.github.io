@@ -1403,7 +1403,7 @@ align-items: center;
 	background-image: url(https://i.imgur.com/YYwscDZ.jpg);
 }
 .articlecontianer-garantie{
-	margin-top: 32rem;
+	margin-top: 28rem;
 	width: 100%;
 	z-index: 1000;
 	padding: 20px;
@@ -1753,6 +1753,16 @@ align-items: center;
 	display: 				 flex;
 	color: #474747;
 }
+.price1-item{
+	margin-top: 0.3rem;
+	text-align: center;
+	width: 100%;
+	font-size: 0.65rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.15rem;
+	color: #474747;
+}
 .gridcontianer-item{
 	margin-top: 20px;
 	margin-left: 10px;
@@ -1779,14 +1789,14 @@ align-items: center;
 	display: 				 flex;
 }
 .name-item{
-	margin-left: 10px;
+	text-align: center;
+	width: 100%;
 	margin-top: 10px;
-	font-size: 9pt;
+	font-size: 0.7rem;
 	font-weight: 400;
-	letter-spacing: 5px;
+	letter-spacing: 0.2rem;
 	line-height: 14pt;
 	display: table;
-	justify-content:flex-start;
 	color: #000;
 }
 #zh-item{
