@@ -210,7 +210,6 @@ nav{
 	font-family: 'Noto Sans TC', sans-serif;
 	font-weight: 100;
 	letter-spacing: 2px;
-	background-color: #474747;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -223,7 +222,7 @@ nav{
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	color: #fff;
+	color: #474747;
 }
 .button-index:hover{
 	transition: 0.4s;
@@ -724,7 +723,7 @@ align-items: center;
 .button-service{
 	border: 1px solid #474747;
 	border-radius: 3px;
-	padding-left: 15px;
+	padding-left: 10px;
 	width: 100px;
 	font-size: 8pt;
 	margin-top: 20px;
@@ -1806,30 +1805,27 @@ align-items: center;
 	font-family: 'Noto Sans TC', sans-serif;
 }
 .designer-item{
-	margin-left: 10px;
-	margin-top: 8px;
-	padding: 5px;
-	background-color: #eee;
-	color: #474747;
-	font-size: 12pt;
+	margin-top: 0.5rem;
+	color: #909090;
+	font-size: 0.6rem;
 	font-weight: 400;
 	letter-spacing: 3px;
 	font-family: 'Noto Sans TC', sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
 	display: table;
-	transform: scale(0.5);
-		transform-origin:0 0;
-
-		-ms-transform: scale(0.5);         /* IE 9 */
-		-ms-transform-origin:0 0;       /* IE 9 */
-
-		-webkit-transform: scale(0.5); /* Safari 和 Chrome */
-		-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-		-moz-transform: scale(0.5);        /* Firefox */
-		-moz-transform-origin:0 0;      /* Firefox */
-
-		-o-transform: scale(0.5);      /* Opera */
-		-o-transform-origin:0 0;        /* Opera */
+}
+.manufacturer-item{
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	color: #909090;
+	font-size: 0.6rem;
+	font-weight: 400;
+	letter-spacing: 3px;
+	font-family: 'Noto Sans TC', sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+	display: table;
 }
 .tag-item{
 	width: 100%;
