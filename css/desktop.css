@@ -2010,6 +2010,17 @@ display: 				 flex;
 .copyright-item-mobil{
   display: none;
 }
+.tag-item {
+  width: 100%;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  color: rgb(71, 71, 71);
+  font-size: 12pt;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+}
 /*ITEM*/
 
 /*Contact*/
