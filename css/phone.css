@@ -1717,9 +1717,6 @@ align-items: center;
 	font-weight: 300;
 	font-family: "HanaMinA";
 	letter-spacing: 4px;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
 	color: #474747;
 }
 .NT-item{
