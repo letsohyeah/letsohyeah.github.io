@@ -766,7 +766,7 @@ align-items: center;
 	align-items: center;
 }
 .button1-service span{
-	color: #fff;
+	color: #474747;
 }
 .imgbox-service{
 	max-width: 300px;
@@ -831,6 +831,15 @@ align-items: center;
 					flex-direction: row;
 	justify-content: space-between;
 }
+.listcontainer-column-service{
+	margin-left: 1rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+}
 .itemname-service{
 	width: 60%;
 	display: -moz-flex;
@@ -853,6 +862,13 @@ align-items: center;
 	display: -webkit-flex;
 	display: 				 flex;
 	justify-content: flex-end;
+}
+.discount-service{
+	font-size: 0.6rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: flex-start;
 }
 .contactbox-service{
 	margin-bottom: 30px;

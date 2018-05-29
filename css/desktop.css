@@ -915,6 +915,15 @@ display: 				 flex;
           flex-direction: row;
   justify-content: space-between;
 }
+.listcontainer-column-service{
+  margin-left: 1rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
 .itemname-service{
   width: 60%;
   display: -moz-flex;
@@ -937,6 +946,13 @@ display: 				 flex;
   display: -webkit-flex;
   display: 				 flex;
   justify-content: flex-end;
+}
+.discount-service{
+  font-size: 0.6rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: flex-start;
 }
 .contactbox-service{
   border:1px solid #474747;
