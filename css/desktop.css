@@ -1829,6 +1829,20 @@ display: 				 flex;
   display: 				 flex;
   color: #555555;
 }
+.article1-press{
+  margin-left: 20px;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  line-height: 1.6em;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #555555;
+}
 .imgbox-press{
   max-width: 700px;
   margin-top: 50px;
