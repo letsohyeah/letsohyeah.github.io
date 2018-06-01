@@ -2038,6 +2038,31 @@ display: 				 flex;
   font-family: "Noto Sans TC", sans-serif;
   display: flex;
 }
+.category{
+  width: calc(100% - 190px);
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  margin-left: 60px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+}
+.buttonbox{
+  width: 500px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: space-between;
+}
+.buttonbox button{
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #fff;
+}
 /*ITEM*/
 
 /*Contact*/

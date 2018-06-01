@@ -12,6 +12,122 @@
 	<TITLE> Item - Natural n' Vantage </TITLE>
 </HEAD>
 <BODY>
+	<script>
+	function showall() {
+		var a = document.getElementById("Cabinet");
+    if (a.style.display === "none") {
+        a.style.display = "flex";
+    }
+		var b = document.getElementById("Chair");
+    if (b.style.display === "none") {
+        b.style.display = "flex";
+    }
+		var c = document.getElementById("Table");
+		if (c.style.display === "none") {
+        c.style.display = "flex";
+    }
+		var d = document.getElementById("Lighting");
+		if (d.style.display === "none") {
+        d.style.display = "flex";
+    }
+	}
+	function cabinet() {
+		var cabinet = document.getElementById("Cabinet");
+    if (cabinet.style.display === "none") {
+        cabinet.style.display = "flex";
+    }
+		var chair = document.getElementById("Chair");
+    if (chair.style.display === "flex") {
+        chair.style.display = "none";
+    } else {
+        chair.style.display = "none";
+    }
+		var table = document.getElementById("Table");
+    if (table.style.display === "flex") {
+        table.style.display = "none";
+    } else {
+        table.style.display = "none";
+    }
+		var lighting = document.getElementById("Lighting");
+    if (lighting.style.display === "flex") {
+        lighting.style.display = "none";
+    } else {
+        lighting.style.display = "none";
+    }
+	}
+	function chair() {
+		var chair = document.getElementById("Chair");
+    if (chair.style.display === "none") {
+        chair.style.display = "flex";
+    }
+		var cabinet = document.getElementById("Cabinet");
+    if (cabinet.style.display === "flex") {
+        cabinet.style.display = "none";
+    } else {
+        cabinet.style.display = "none";
+    }
+		var table = document.getElementById("Table");
+    if (table.style.display === "flex") {
+        table.style.display = "none";
+    } else {
+        table.style.display = "none";
+    }
+		var lighting = document.getElementById("Lighting");
+    if (lighting.style.display === "flex") {
+        lighting.style.display = "none";
+    } else {
+        lighting.style.display = "none";
+    }
+	}
+	function table() {
+		var table = document.getElementById("Table");
+    if (table.style.display === "none") {
+        table.style.display = "flex";
+    }
+		var cabinet = document.getElementById("Cabinet");
+    if (cabinet.style.display === "flex") {
+        cabinet.style.display = "none";
+    } else {
+        cabinet.style.display = "none";
+    }
+		var chair = document.getElementById("Chair");
+    if (chair.style.display === "flex") {
+        chair.style.display = "none";
+    } else {
+        chair.style.display = "none";
+    }
+		var lighting = document.getElementById("Lighting");
+    if (lighting.style.display === "flex") {
+        lighting.style.display = "none";
+    } else {
+        lighting.style.display = "none";
+    }
+	}
+	function lighting() {
+		var lighting = document.getElementById("Lighting");
+		if (lighting.style.display === "none") {
+				lighting.style.display = "flex";
+		}
+		var cabinet = document.getElementById("Cabinet");
+		if (cabinet.style.display === "flex") {
+				cabinet.style.display = "none";
+		} else {
+				cabinet.style.display = "none";
+		}
+		var chair = document.getElementById("Chair");
+		if (chair.style.display === "flex") {
+				chair.style.display = "none";
+		} else {
+				chair.style.display = "none";
+		}
+		var table = document.getElementById("Table");
+		if (table.style.display === "flex") {
+				table.style.display = "none";
+		} else {
+				table.style.display = "none";
+		}
+	}
+	</script>
 	<div class="cleanfix">
 
 		<!--   N   A   V   -->
@@ -66,8 +182,18 @@
 			<div class="bigtitle">
 					Item
 			</div>
+			<div class="category">
+				<div class="buttonbox">
+					<button onclick="showall()">All</button>
+					<button onclick="cabinet()">Cabinet</button>
+					<button onclick="chair()">Chair</button>
+					<button onclick="table()">Table</button>
+					<button onclick="lighting()">Lighting</button>
+				</div>
 
-			<div class="gridcontianer-item">
+			</div>
+
+			<div class="gridcontianer-item" id="Cabinet">
 				<div class="tag-item">Cabinet</div>
 						<div class="grid-item">
 							<a href="https://letsohyeah.github.io/Item/kabinett-008.html" class="imgbox-item hover">
@@ -200,7 +326,7 @@
 
 
 
-			<div class="gridcontianer-item">
+			<div class="gridcontianer-item" id="Chair">
 				<div class="tag-item">Chair</div>
 				<div class="grid-item">
 					<a href="https://letsohyeah.github.io/Item/stuhl-001.html" class="imgbox-item hover">
@@ -522,7 +648,7 @@
 
 
 
-			<div class="gridcontianer-item">
+			<div class="gridcontianer-item" id="Table">
 				<div class="tag-item">Table</div>
 				<div class="grid-item">
 					<a href="https://letsohyeah.github.io/Item/tisch-018.html" class="imgbox-item hover">
@@ -804,13 +930,11 @@
 					<div class="price1-item">13,000</div>
 				</div>
 			</div>
-			<div class="block"></div>
-		</div>
-	</div>
 
 
 
-	<div class="gridcontianer-item">
+
+	<div class="gridcontianer-item" id="Lighting">
 		<div class="tag-item">Lighting</div>
 				<div class="grid-item">
 					<a href="https://letsohyeah.github.io/Item/lampe-001.html" class="imgbox-item hover">
@@ -920,8 +1044,9 @@
 					<div class="name-item">綠色三角金屬吊燈</div>
 					<div class="price1-item">6,600</div>
 				</div>
-
+			</div>
 	</div>
+	<div class="block"></div>
 		<p class="copyright">
 			Copyright © 2017 Natural n' Vintage
 		</p>
