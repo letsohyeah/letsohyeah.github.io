@@ -934,13 +934,13 @@
 	  justify-content: space-between;
 	}
 	.listcontainer-column-service{
-		margin-left: 1rem;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-						flex-direction: column;
+	  margin-left: 1rem;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	  -moz-flex-direction: column;
+	  -webkit-flex-direction: column;
+	          flex-direction: column;
 	}
 	.itemname-service{
 	  width: 60%;
@@ -966,11 +966,11 @@
 	  justify-content: flex-end;
 	}
 	.discount-service{
-		font-size: 0.6rem;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
-		justify-content: flex-start;
+	  font-size: 0.6rem;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	  justify-content: flex-start;
 	}
 	.contactbox-service{
 	  border:1px solid #474747;
@@ -1288,8 +1288,12 @@
 	  letter-spacing: 0.1rem;
 	}
 	.elementcontianer{
+	  height: 230vh;
 	  width: calc(100vw - 120px);
-	  background-color: #e1e0de;
+	  background-position: top center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-image: url(https://i.imgur.com/6maY8Hj.jpg);
 	}
 	.elementtitle{
 	  width: 100%;
@@ -1299,7 +1303,7 @@
 	  font-family: 'Noto Sans TC', sans-serif;
 	  letter-spacing: 3rem;
 	  text-align: center;
-	  color: #474747;
+	  color: #fff;
 	}
 	.elementsubtitle{
 	  width: 100%;
@@ -1310,7 +1314,7 @@
 	  font-family: 'Noto Sans TC', sans-serif;
 	  letter-spacing: 1rem;
 	  text-align: center;
-	  color: #474747;
+	  color: #fff;
 	}
 	.marblebox{
 	  position: relative;
@@ -2050,21 +2054,32 @@
 	  font-weight: 400;
 	  letter-spacing: 3px;
 	  font-family: "Noto Sans TC", sans-serif;
-		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+	  display: flex;
 	}
 	.category{
 		width: calc(100% - 190px);
-		font-size: 0.8rem;
-	  font-weight: 400;
-	  letter-spacing: 0.1rem;
-	  font-family: "Noto Sans TC", sans-serif;
-		margin-top: 3rem;
+		margin-top: 10rem;
+		margin-bottom: 5rem;
 		margin-left: 60px;
 		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+	}
+	.buttonbox{
+		width: 500px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: space-between;
+	}
+	.buttonbox button{
+		border: none;
+		font-size: 0.8rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		font-family: "Noto Sans TC", sans-serif;
+		background-color: #fff;
 	}
 	/*ITEM*/
 
@@ -2229,30 +2244,123 @@
 
 
 
-
-
-
 	</style>
 </HEAD>
 <BODY>
 	<script>
-	function all() {
-    var x = document.getElementById("Cabinet","Chair","Table","Lighting");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+	function showall() {
+		var a = document.getElementById("Cabinet");
+    if (a.style.display === "none") {
+        a.style.display = "flex";
+    }
+		var b = document.getElementById("Chair");
+    if (b.style.display === "none") {
+        b.style.display = "flex";
+    }
+		var c = document.getElementById("Table");
+		if (c.style.display === "none") {
+        c.style.display = "flex";
+    }
+		var d = document.getElementById("Lighting");
+		if (d.style.display === "none") {
+        d.style.display = "flex";
     }
 	}
 	function cabinet() {
-    var x = document.getElementById("Cabinet");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+		var cabinet = document.getElementById("Cabinet");
+    if (cabinet.style.display === "none") {
+        cabinet.style.display = "flex";
     }
-		var y = document.getElementById("Cabinet");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+		var chair = document.getElementById("Chair");
+    if (chair.style.display === "flex") {
+        chair.style.display = "none";
     } else {
-        x.style.display = "none";
+        chair.style.display = "none";
     }
+		var table = document.getElementById("Table");
+    if (table.style.display === "flex") {
+        table.style.display = "none";
+    } else {
+        table.style.display = "none";
+    }
+		var lighting = document.getElementById("Lighting");
+    if (lighting.style.display === "flex") {
+        lighting.style.display = "none";
+    } else {
+        lighting.style.display = "none";
+    }
+	}
+	function chair() {
+		var chair = document.getElementById("Chair");
+    if (chair.style.display === "none") {
+        chair.style.display = "flex";
+    }
+		var cabinet = document.getElementById("Cabinet");
+    if (cabinet.style.display === "flex") {
+        cabinet.style.display = "none";
+    } else {
+        cabinet.style.display = "none";
+    }
+		var table = document.getElementById("Table");
+    if (table.style.display === "flex") {
+        table.style.display = "none";
+    } else {
+        table.style.display = "none";
+    }
+		var lighting = document.getElementById("Lighting");
+    if (lighting.style.display === "flex") {
+        lighting.style.display = "none";
+    } else {
+        lighting.style.display = "none";
+    }
+	}
+	function table() {
+		var table = document.getElementById("Table");
+    if (table.style.display === "none") {
+        table.style.display = "flex";
+    }
+		var cabinet = document.getElementById("Cabinet");
+    if (cabinet.style.display === "flex") {
+        cabinet.style.display = "none";
+    } else {
+        cabinet.style.display = "none";
+    }
+		var chair = document.getElementById("Chair");
+    if (chair.style.display === "flex") {
+        chair.style.display = "none";
+    } else {
+        chair.style.display = "none";
+    }
+		var lighting = document.getElementById("Lighting");
+    if (lighting.style.display === "flex") {
+        lighting.style.display = "none";
+    } else {
+        lighting.style.display = "none";
+    }
+	}
+	function lighting() {
+		var lighting = document.getElementById("Lighting");
+		if (lighting.style.display === "none") {
+				lighting.style.display = "flex";
+		}
+		var cabinet = document.getElementById("Cabinet");
+		if (cabinet.style.display === "flex") {
+				cabinet.style.display = "none";
+		} else {
+				cabinet.style.display = "none";
+		}
+		var chair = document.getElementById("Chair");
+		if (chair.style.display === "flex") {
+				chair.style.display = "none";
+		} else {
+				chair.style.display = "none";
+		}
+		var table = document.getElementById("Table");
+		if (table.style.display === "flex") {
+				table.style.display = "none";
+		} else {
+				table.style.display = "none";
+		}
 	}
 	</script>
 	<div class="cleanfix">
@@ -2310,8 +2418,13 @@
 					Item
 			</div>
 			<div class="category">
-				<button onclick="all()">all</button>
-				<button onclick="cabinet()">all</button>
+				<div class="buttonbox">
+					<button onclick="showall()">All</button>
+					<button onclick="cabinet()">Cabinet</button>
+					<button onclick="chair()">Chair</button>
+					<button onclick="table()">Table</button>
+					<button onclick="lighting()">Lighting</button>
+				</div>
 
 			</div>
 
@@ -3052,9 +3165,7 @@
 					<div class="price1-item">13,000</div>
 				</div>
 			</div>
-			<div class="block"></div>
-		</div>
-	</div>
+
 
 
 
@@ -3168,8 +3279,9 @@
 					<div class="name-item">綠色三角金屬吊燈</div>
 					<div class="price1-item">6,600</div>
 				</div>
-
+			</div>
 	</div>
+	<div class="block"></div>
 		<p class="copyright">
 			Copyright © 2017 Natural n' Vintage
 		</p>
