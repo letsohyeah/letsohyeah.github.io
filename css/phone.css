@@ -1159,6 +1159,7 @@ align-items: center;
 	display: 				 flex;
 }
 .descrip-deco{
+	margin-right: 1rem;
 	max-width: 450px;
 	margin-top: 1rem;
 	font-size: 0.6rem;
@@ -1207,7 +1208,7 @@ align-items: center;
 }
 .decoimg-deco{
 	padding: 1rem;
-	height: 50%;
+	height: 40%;
 }
 .contract{
 	margin-top: 3rem;
