@@ -642,28 +642,32 @@ nav{
         transition: width 0.5s;
 }
 .button-service{
-	border: 1px solid #474747;
-	border-radius: 3px;
-	padding-left: 10px;
-	width: 100px;
-	font-size: 8pt;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	height: 30px;
-	font-family: 'Noto Sans TC', sans-serif;
-	letter-spacing: 2px;
-	color: #474747;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
-	justify-content: flex-start;
-	align-items: center;
+  border-color: #474747;
+  border: 1px solid #474747;
+  border-radius: 3px;
+  padding-left: 13px;
+  width: 100px;
+  font-size: 8pt;
+  margin-top: 20px;
+  height: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  color: #474747;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-transition: width 0.5s;
+        transition: width 0.5s;
 }
-.button-service span{
-	color: #fff;
+.button-service:hover{
+  width: 120px;
+  -webkit-transition: width 0.5s;
+        transition: width 0.5s;
 }
 .descrip2-service{
   max-width: 510px;
