@@ -1837,6 +1837,7 @@ width: 100%;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+  align-items: center;
 }
 .imgbox1-item{
   overflow: auto;
@@ -1849,7 +1850,6 @@ width: 100%;
           flex-direction: column;
 }
 .infobox-item{
-  margin-top: 300px;
   margin-left: 50px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -1950,7 +1950,7 @@ width: 100%;
   margin-top: 2rem;
   color: #909090;
   font-size: 0.5rem;
-  font-weight: 400;
+  font-weight: 100;
   letter-spacing: 3px;
   font-family: 'Noto Sans TC', sans-serif;
   white-space: nowrap;
@@ -1962,7 +1962,7 @@ width: 100%;
   margin-bottom: 1rem;
   color: #909090;
   font-size: 0.5rem;
-  font-weight: 400;
+  font-weight: 100;
   letter-spacing: 3px;
   font-family: 'Noto Sans TC', sans-serif;
   white-space: nowrap;
