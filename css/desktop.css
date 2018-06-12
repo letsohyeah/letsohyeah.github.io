@@ -1419,7 +1419,6 @@ nav{
   position: absolute;
   top: 0;
   left: 0;
-  margin-right: 120px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1431,7 +1430,7 @@ margin: 5rem 5rem 5rem 5rem;
 width: 100%;
 }
 #slide1 li {
-  position: absolute;
+  position: static;
   top: 0;
   left: 0;
   display: block;
@@ -1486,16 +1485,22 @@ width: 100%;
   margin-right: 4px;
 }
 #imgc1{
-   background-image: url(https://i.imgur.com/vNBNRvT.jpg);
+   background-image: url(https://i.imgur.com/AA5Vrhk.jpg);
 }
 #imgc2{
-   background-image: url(https://i.imgur.com/SPv572r.jpg);
+   background-image: url(https://i.imgur.com/ArW3YMI.jpg);
 }
 #imgc3{
-   background-image: url(https://i.imgur.com/nQozK4l.jpg);
+   background-image: url(https://i.imgur.com/KDZnmIC.jpg);
 }
 #imgc4{
-   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
+   background-image: url(https://i.imgur.com/NU81AJl.jpg);
+}
+#imgc5{
+   background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31531775_2001275900188271_7034947734092120064_o.jpg?_nc_cat=0&_nc_eui2=AeEOFtiK9lKQiKeRSMlVGfuyCZBAkYtwVvEqFq8ZZ7mWm1sz3J_-v6CO9HuuAT86BIELMV7DLVyb-CxPVq_E7fXxmj7eIrhyQX-AxgRLUBrCVA&oh=232f98f062ca467f5ae9385a86d49347&oe=5BACA5DD);
+}
+#imgc6{
+   background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31945912_2001274856855042_705524158770970624_o.jpg?_nc_cat=0&_nc_eui2=AeG4GxhM_DP48y4ecpQ9bNNoKDslu-gmL7sRh1SdejZajTFmyS7EPtnCNC1sax80T-c19eDyPf1XhXCDf-7r8R1kmqtezvJW7z42q4-sGr0pRA&oh=09e8351203681c4eed7cd8730dd7b6e8&oe=5BBB8AE8);
 }
 /*CABINET*/
 
@@ -2229,5 +2234,9 @@ width: 100%;
     -moz-flex-direction: column;
     -webkit-flex-direction: column;
             flex-direction: column;
+  }
+  #slide1 {
+    height: 80vh;
+    width: calc(100% - 120px);
   }
 }

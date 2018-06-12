@@ -16,1026 +16,943 @@
 	</script>
 	<TITLE> Test - Natural n' Vintage </TITLE>
 	<style>
-	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+	@import url('https://fonts.googleapis.com/css?family=Rubik:,300,400,500i,900,900i');
 	@font-face {
-	  font-family: "HanaMinOT_otf";
-	  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
+		font-family: "HanaMinOT_otf";
+		src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
 	}
 	@font-face {
-	  font-family: "HanaMinOT_woff";
-	  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
+		font-family: "HanaMinOT_woff";
+		src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
 	}
 	@font-face {
-	  font-family: "HanaMinA_ttf";
-	  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
+		font-family: "HanaMinA_ttf";
+		src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 	}
-	a:link{color:#000000}
-	a:active {color:#000000;}
-	a:visited {color:#000000;}
+	a:link{color:#000;}
+	a:active {color:#000;}
+	a:visited {color:#000;}
 	a{text-decoration:none}
 	* {
-	       -moz-box-sizing: border-box;
-	    -webkit-box-sizing: border-box;
-	            box-sizing: border-box;
-	            margin: 0;
-	            padding: 0;
-	  }
+				 -moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+							margin: 0;
+							padding: 0;
+		}
 	body{
-	    margin: 0;
-	    padding: 0;
-	  }
+			margin: 0;
+			padding: 0;
+		}
 	.cleanfix{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	  }
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+			 -moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		}
 	nav{
-	  position: fixed;
-	  right: 0;
-	  bottom: 0;
-	  padding-top: 20px;
-	  width: 120px;
-	  height: 340px;
-	  background-color: #fff;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 30px;
+		background-color: #222;
+		z-index: 1;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		align-items:center;
+		visibility: hidden;
 	}
 	.navlinks{
-	  width: 135px;
-	  direction:rtl;
-	  font-size: 12pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  line-height: 28px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
-
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
-
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
-
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
+		color: #fff;
+		padding-left: 7px;
+		padding-right: 7px;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.logobox{
-	  float: right;
-	  margin-top: 25px;
-	  margin-right: 40px;
-	  height: 70px;
+		display: none;
 	}
 	.navmob{
-	  display: none;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.dropdown-menu > span {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		margin-left: 10px;
+	}
+
+	.dropdown-menu > span,
+	.dropdown-menu > div {
+		cursor: pointer;
+		outline: 0;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	.dropdown-menu > ul {
+		border-top: 2px solid #000;
+		border-bottom: 2px solid #000;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		background-color: #fff;
+		font-size: 10pt;
+		font-weight: 300;
+		font-family: ‘Noto Sans TC’, sans-serif;
+		letter-spacing: 2px;
+		line-height: 40px;
+		padding-left: 15px;
+		list-style:none;
+		margin-top: 10px;
+
+		visibility: hidden;
+		transition: visibility 0.5s;
+		opacity: 0;
+	}
+
+	.dropdown-menu > span:focus ~ ul {
+		visibility: visible;
+		opacity: 1;
 	}
 	.contianer{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
-	  margin-bottom: -50px;
-	  min-height: 100%;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.bigtitle{
-	  width: 28px;
-	  border-right: 2px solid #000000;
-	  position: absolute;
-	  right: 0;
-	  margin-top: 90px;
-	  margin-right: 40px;
-	  font-size: 12pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
-	  line-height: 26px;
-	  -webkit-writing-mode: vertical-lr ;
-	  writing-mode: vertical-lr ;
+		position: absolute;
+		text-align: center;
+		margin-top: -35px;
+		width: 100%;
+		font-size: 10pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 5px;
 	}
 
 	/*INDEX*/
 	.picbox{
-	  width: calc(100vw - 120px);
-	  height: 100%;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  margin-right: 120px;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-attachment: fixed;
-	  background-size: cover;
-	  background-color: #474747;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		right: 0;
+		left: 0;
+		height: 100vh;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: cover;
+		background-color: #474747;
 	}
 	#img1{
-	   background-image: url(https://i.imgur.com/vNBNRvT.jpg);
+		 background-image: url(https://i.imgur.com/vNBNRvT.jpg);
 	}
 	#img2{
-	   background-image: url(https://i.imgur.com/SPv572r.jpg);
+		 background-image: url(https://i.imgur.com/SPv572r.jpg);
 	}
 	#img3{
-	   background-image: url(https://i.imgur.com/nQozK4l.jpg);
+		 background-image: url(https://i.imgur.com/nQozK4l.jpg);
 	}
 	#img4{
-	   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
+		 background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
 	}
 	@media only screen and (max-width: 768px) {
-	  #img1{
-	    background-image: url(https://i.imgur.com/ZYZ902S.jpg);
-	  }
-	  #img2{
-	     background-image: url(https://i.imgur.com/SPv572r.jpg);
-	  }
-	  #img3{
-	     background-image: url(https://i.imgur.com/nQozK4l.jpg);
-	  }
-	  #img4{
-	     background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29872346_1983824048600123_5741461631488580288_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHc2-efbouazMkNuAt2fnSM-oakFgSFRhDcPZ2NB4d5fHKqMSh91lmpCXXLCG1WTE8btOnFEdW1Y_xhoVjEKubODpRzruILtLxH4l5Z0ZOGCw&oh=f0a3b118d3af8bec3e506ebd5133f5b9&oe=5B38A8A3);
-	  }
+		#img1{
+			background-image: url(https://i.imgur.com/ZYZ902S.jpg);
+		}
+		#img2{
+			 background-image: url(https://i.imgur.com/SPv572r.jpg);
+		}
+		#img3{
+			 background-image: url(https://i.imgur.com/nQozK4l.jpg);
+		}
+		#img4{
+			 background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29872346_1983824048600123_5741461631488580288_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHc2-efbouazMkNuAt2fnSM-oakFgSFRhDcPZ2NB4d5fHKqMSh91lmpCXXLCG1WTE8btOnFEdW1Y_xhoVjEKubODpRzruILtLxH4l5Z0ZOGCw&oh=f0a3b118d3af8bec3e506ebd5133f5b9&oe=5B38A8A3);
+		}
 	}
 	.articlecontianer-index{
-	  max-width: 400px;
-	  z-index: 1000;
-	  position: absolute;
-	  padding: 20px;
-	  margin-top: 90px;
-	  margin-left: 100px;
-	  margin-right: 50px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  color: #474747;
-	  background-color: #fff;
+		position: absolute;
+		width: 100%;
+		padding: 20px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		background: rgba(255,255,255,0.8);
 	}
-	  .title1-index{
-	    width: 100%;
-	    margin-bottom: 15px;
-	    font-size: 1.2rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .logobox-index{
-	    max-width: 200px;
-	    margin-top: 10px;
-	    margin-bottom: 20px;
-	    overflow: hidden;
-	    height: auto;
-	  }
-	  .button-index{
-	    border-color: #474747;
-	    border: 1px solid #474747;
-	    border-radius: 3px;
-	    width: 78px;
-	    font-size: 0.6rem;
-	    margin-top: 30px;
-	    height: 30px;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    font-weight: 100;
-	    letter-spacing: 2px;
-	    white-space: nowrap;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    justify-content: center;
-	    align-items: center;
-	    transition: 0.4s;
-	    -webkit-transition: 0.4s;
-	  }
-	  .button-index span{
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    color: #474747;
-	  }
-	  .button-index:hover{
-	    transition: 0.4s;
-	    -webkit-transition: 0.4s;
-	    background-color: #474747;
-	    color: #fff;
-	  }
-	  .button-index:hover span{
-	    color: #fff;
-	  }
-	  .copyright-index{
-	    height: 50px;
-	    color: #fff;
-	    margin-left: 100px;
-	    font-size: 12px;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0px;
-	    transform: scale(0.58);
-	      transform-origin:0 0;
+	.title1-index{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.1rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: center;
+	}
+	.logobox-index{
+		max-width: 200px;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		overflow: hidden;
+		height: auto;
+	}
+	.button-index{
+		border: 1px solid #474747;
+		border-radius: 5px;
+		width: 100px;
+		font-size: 0.6rem;
+		margin-top: 40px;
+		height: 40px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 100;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+	}
+	.button-index span{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
+	}
+	.button-index:hover{
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+		background-color: rgba(0, 0, 0, 0);
+		color: #474747;
+	}
+	.button-index:hover span{
+		color: #474747;
+	}
+	.copyright-index{
+		position: fixed;
+		color: #fff;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+	}
+	#slide {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+	#slide li {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		height: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.8s;
+	}
+	#slide li:first-child {
+		position: static;
+	}
+	#slide li.show {
+		opacity: 1;
+		visibility: visible;
+	}
+	#slide .prev, #slide .next {
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		transition: 0.4s;
+		background-color: rgba(0, 0, 0, 0.12);
+		padding: 14px 12px;
+	}
+	#slide .prev:hover, #slide .next:hover {
+		background-color: rgba(0, 0, 0, 0.24);
+	}
+	#slide .prev:after, #slide .next:after {
+		display: block;
+		content: "";
+		width: 10px;
+		height: 10px;
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
+	}
+	#slide .prev {
+		left: 0;
+	}
+	#slide .prev:after {
+		transform: rotate(-135deg);
+		margin-left: 4px;
+	}
+	#slide .next {
+		right: 0;
+	}
+	#slide .next:after {
+		transform: rotate(45deg);
+		margin-right: 4px;
+	}
+	.downarrowbox{
+	visibility: hidden;
+	position: absolute;
+	top: 95vh;
+	width: 100%;
+	justify-content: center;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-webkit-animation: 1s move;
+	-webkit-animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	animation: 1s move;
+	animation-duration: 1.2s;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	}
+	.downarrow{
+	transform: rotate(135deg);
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
 
-	      -ms-transform: scale(0.58);         /* IE 9 */
-	      -ms-transform-origin:0 0;       /* IE 9 */
-
-	      -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	      -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	      -moz-transform: scale(0.58);        /* Firefox */
-	      -moz-transform-origin:0 0;      /* Firefox */
-
-	      -o-transform: scale(0.58);      /* Opera */
-	      -o-transform-origin:0 0;        /* Opera */
-	  }
-	  #slide {
-	    width: calc(100% - 120px);
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    justify-content: center;
-	    align-items: center;
-	    overflow: hidden;
-	  }
-	  #slide li {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    display: block;
-	    height: 100vh;
-	    opacity: 0;
-	    visibility: hidden;
-	    transition: 0.8s;
-	  }
-	  #slide li:first-child {
-	    position: static;
-	  }
-	  #slide li.show {
-	    opacity: 1;
-	    visibility: visible;
-	  }
-	  #slide .prev, #slide .next {
-	    display: block;
-	    position: absolute;
-	    top: 50%;
-	    transform: translateY(-50%);
-	    cursor: pointer;
-	    transition: 0.4s;
-	    background-color: rgba(0, 0, 0, 0.12);
-	    padding: 14px 12px;
-	  }
-	  #slide .prev:hover, #slide .next:hover {
-	    background-color: rgba(0, 0, 0, 0.24);
-	  }
-	  #slide .prev:after, #slide .next:after {
-	    display: block;
-	    content: "";
-	    width: 10px;
-	    height: 10px;
-	    border-top: 2px solid #fff;
-	    border-right: 2px solid #fff;
-	  }
-	  #slide .prev {
-	    left: 0;
-	  }
-	  #slide .prev:after {
-	    transform: rotate(-135deg);
-	    margin-left: 4px;
-	  }
-	  #slide .next {
-	    right: 0;
-	  }
-	  #slide .next:after {
-	    transform: rotate(45deg);
-	    margin-right: 4px;
-	  }
-	  .downarrowbox{
-	    position: absolute;
-	    top: 95vh;
-	    width: calc(100% - 120px);
-	    justify-content: center;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    -webkit-animation: 1s move;
-	    -webkit-animation-duration: 1.2s;
-	    -webkit-animation-timing-function: ease-in-out;
-	    -webkit-animation-direction: alternate;
-	    -webkit-animation-iteration-count: infinite;
-	    animation: 1s move;
-	    animation-duration: 1.2s;
-	    animation-timing-function: ease-in-out;
-	    animation-direction: alternate;
-	    animation-iteration-count: infinite;
-	  }
-	  .downarrow{
-	    transform: rotate(135deg);
-	    display: block;
-	    width: 20px;
-	    height: 20px;
-	    border-top: 3px solid #fff;
-	    border-right: 3px solid #fff;
-
-	  }
-	  @-webkit-keyframes move {
-	    0% {top: 95vh;}
-	    100% {top: 93vh;}
-	  }
-	  @keyframes move {
-	    0% {top: 95vh;}
-	    100% {top: 93vh;}
-	  }
-	  .poembox{
-	    height: 100vh;
-	    background-color: #fff;
-	    margin-top: 100vh;
-	    margin-right: 120px;
-	    z-index: 100;
-	    align-items: center;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .logobox-index{
-	    margin-top: 80vh;
-	    margin-left: -2%;
-	    overflow: hidden;
-	    height: auto;
-	  }
-	  .poem{
-	    margin-top: 20vh;
-	    margin-left: 15%;
-	    font-size: 0.7rem;
-	    font-weight: 300;
-	    font-family: "HanaMinA";
-	    letter-spacing: 0.1rem;
-	    line-height: 1.5rem;
-	    color: #474747;
-	    z-index: 500;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex-direction: column;
-	  }
-	  .poempic{
-	    margin-top: 30vh;
-	    height: 40vh;
-	    margin-left: -1%;
-	    overflow: hidden;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .pagebox{
-	    background-color: #fff;
-	    margin-right: 120px;
-	    z-index: 100;
-	    flex-direction: column;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardbox{
-	    margin-left: 10vw;
-	    margin-right: 10vw;
-	    flex-direction: row;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .card{
-	    margin-top: 5vh;
-	    height: 80vh;
-	    width: 33.3%;
-	    flex-direction: column;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardtitle{
-	    margin-top: 0.8rem;
-	    font-size: 10pt;
-	    font-weight: 300;
-	    font-family: "HanaMinA";
-	    letter-spacing: 3px;
-	    flex: 1 auto;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardcontentbox{
-	    height: 35vh;
-	    max-width: 350px;
-	    padding-top: 10px;
-	    padding-right: 20px;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardcontent{
-	    font-size: 0.6rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    line-height: 1.2rem;
-	    flex: 3 auto;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .indextitle{
-	    margin-left: 10vw;
-	    font-size: 0.6rem;
-	    font-weight: 100;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.3rem;
-	    color: #474747;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .worksbox{
-	    margin-top: 5vh;
-	    margin-left: 10vw;
-	    margin-right: 10vw;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .worksimg{
-	    width: 30vw;
-	    overflow: hidden;
-	  }
-	  .worksarticleL{
-	    margin-left: 5vw;
-	    width: 35vw;
-	    max-width: 350px;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .worksarticleR{
-	    margin-right: 5vw;
-	    width: 35vw;
-	    max-width: 350px;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .workstitle{
-	    font-size: 1rem;
-	    font-weight: 200;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.5rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex: 1 auto;
-	  }
-	  .worksdescribe{
-	    font-size: 0.7rem;
-	    font-weight: 300;
-	    font-family: "HanaMinA";
-	    letter-spacing: 0.35rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex: 5 auto;
-	  }
-	  .workscontemt{
-	    font-size: 0.6rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    line-height: 1.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .block-index{
-	    width: 10vw;
-	  }
-	  .contactbox{
-	    margin-top: 5vh;
-	    margin-left: 10vw;
-	    margin-right: 10vw;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .contact-img{
-	    width: 25vw;
-	    overflow: hidden;
-	  }
-	  .contactcontemt{
-	    margin-left: 5vw;
-	    margin-right: 2vw;
-	    width: 35vw;
-	    max-width: 350px;
-	    font-size: 0.6rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    line-height: 1.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex-direction: column;
-	  }
-	  .contact-map{
-	    width: 30vw;
-	    overflow: hidden;
-	  }
-	  .pressnum{
-	    margin-top: 0.3rem;
-	    margin-left: 5px;
-	    font-size: 0.7rem;
-	    width: 1.2rem;
-	    height: 1.2rem;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    font-weight: 800;
-	    border-bottom: 0.15rem solid #474747;
-	    color: #474747;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    justify-content: center;
-	    align-items: center;
-	  }
+	}
+	@-webkit-keyframes move {
+	0% {top: 95vh;}
+	100% {top: 93vh;}
+	}
+	@keyframes move {
+	0% {top: 95vh;}
+	100% {top: 93vh;}
+	}
+	.poembox{
+	background-color: #fff;
+	margin-top: 20vh;
+	z-index: 100;
+	padding: 20px;
+	align-items: center;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.logobox-index{
+	overflow: hidden;
+	height: auto;
+	}
+	.poem{
+	font-size: 0.7rem;
+	font-weight: 300;
+	font-family: "HanaMinA";
+	letter-spacing: 0.1rem;
+	line-height: 1.5rem;
+	color: #474747;
+	z-index: 500;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.poempic{
+	margin-top: -5vh;
+	height: 35vh;
+	overflow: hidden;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.pagebox{
+	background-color: #fff;
+	z-index: 100;
+	flex-direction: column;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardbox{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.card{
+	margin-top: 5vh;
+	height: 80vh;
+	flex-direction: column;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardtitle{
+	margin-top: 0.8rem;
+	font-size: 1rem;
+	font-weight: 300;
+	font-family: "HanaMinA";
+	letter-spacing: 3px;
+	flex: 1 auto;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardcontentbox{
+	padding-top: 10px;
+	padding: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardcontent{
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	line-height: 1.2rem;
+	flex: 3 auto;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.indextitle{
+	width: 100%;
+	font-size: 0.6rem;
+	font-weight: 100;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.3rem;
+	color: #474747;
+	text-align: center;
+	}
+	.worksbox{
+	margin-top: 5vh;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.worksimg{
+	order: 1;
+	overflow: hidden;
+	}
+	.worksarticleL{
+	padding: 20px;
+	margin-top: 15vh;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.worksarticleR{
+	padding: 20px;
+	margin-top: 15vh;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.workstitle{
+	font-size: 1rem;
+	font-weight: 200;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.5rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex: 1 auto;
+	}
+	.worksdescribe{
+	margin-top: 5vh;
+	font-size: 0.7rem;
+	font-weight: 300;
+	font-family: "HanaMinA";
+	letter-spacing: 0.35rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex: 5 auto;
+	}
+	.workscontemt{
+	margin-top: 5vh;
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.2rem;
+	line-height: 1.2rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.block-index{
+	width: 10vw;
+	}
+	.contactbox{
+	margin-top: 5vh;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.contact-img{
+	margin-top: 5vh;
+	order: 3;
+	overflow: hidden;
+	}
+	.contactcontemt{
+	order: 1;
+	margin-top: 5vh;
+	margin-left: 20px;
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.2rem;
+	line-height: 1.2rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.contact-map{
+	margin-left: 20px;
+	order: 2;
+	width: 80%;
+	overflow: hidden;
+	}
+	.pressnum{
+	margin-left: 5px;
+	font-size: 0.8rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 900;
+	border-bottom: 2px solid #474747;
+	color: #474747;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+	}
 	/*INDEX*/
 
 	/*SERVICE*/
-	.articlecontianer1-service{
-	margin-top: 30px;
-	margin-left: 20px;
-	margin-right: 130px;
-	max-width: 900px;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-	        flex-direction: column;
+	.articlecontianer-service{
+		margin-top: 50px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+						flex: 1 0 auto;
 	}
 	.articlecontianer2-service{
-	  width: : 2000px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	}
-	.articlecontianer3-service{
-	margin-top: 30px;
-	margin-right: 130px;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-	        flex-direction: column;
-	}
-	.articlecontianer-service{
-	  margin-right: 150px;
-	  overflow: hidden;
-	}
-
-	.title1-service{
-	  margin-top: 70px;
-	  margin-left: 50px;
-	  font-size: 14pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	}
-	.title2-service{
-	  margin-top: 20px;
-	  margin-left: 20px;
-	  font-size: 14pt;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.background1-service{
-	  background-color: #fff;
-	  position: absolute;
-	  right: 0;
-	  width: 300px;
-	  margin-top: 100px;
-	  margin-right: 150px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	}
-	.background2-service{
-	  background-color: #fff;
-	  position: absolute;
-	  width: 300px;
-	  left: 10%;
-	  top: 10%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	}
-	.background3-service{
-	  background-color: #fff;
-	  position: absolute;
-	  right: 0;
-	  width: 300px;
-	  top: 10%;
-	  right: 10%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	}
-	.button{
-	  margin-top: 10px;
-	  margin-left: 20px;
-	  margin-bottom: 15px;
-	  border-color: #474747;
-	  border: 1px solid #474747;
-	  border-radius: 3px;
-	  padding-left: 15px;
-	  width: 78px;
-	  font-size: 8pt;
-	  margin-top: 30px;
-	  height: 30px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  color: #474747;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button:hover{
-	  width: 100px;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button-service{
-	  border-color: #474747;
-	  border: 1px solid #474747;
-	  border-radius: 3px;
-	  padding-left: 13px;
-	  width: 100px;
-	  font-size: 8pt;
-	  margin-top: 20px;
-	  height: 30px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  color: #474747;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button-service:hover{
-	  width: 120px;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button1-service{
-	  border-color: #474747;
-	  border: 1px solid #474747;
-	  border-radius: 3px;
-	  width: 80px;
-	  font-size: 8pt;
-	  margin-left:0px;
-	  margin-top: 15px;
-	  height: 30px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  color: #474747;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: center;
-	  align-items: center;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button1-service:hover{
-	  width: 100px;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.projectcontianer-service{
-	  margin-top: 20px;
-	  margin-left: 50px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-left: 15px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.project-service{
-	  margin-bottom: 60px;
-	  min-width: 200px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		width: 33%;
+		margin-bottom: 30px;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
-	.descrip1-service{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 20px;
-	  margin-bottom: 10px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+	.title1-service{
+		margin-right: 15px;
+		margin-top: 90px;
+		margin-left: 15px;
+		font-size: 14pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
 	}
-	.project-descrip-service{
-	  margin-top: 3px;
-	  font-size: 8pt;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #909090;
+	.title2-service{
+		margin-left: 15px;
+		margin-top: 20px;
+		font-size: 12pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.numbertitle{
-	  position: absolute;
-	  margin-top: -8px;
-	  left: 25px;
-	  font-size: 30pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	  color: #ddd;
+		visibility: hidden;
+		position: absolute;
+		right: 15;
+		font-size:8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		color: #9a9a9a;
 	}
 	.name-service{
-	  margin-top: 10px;
-	  font-size: 24pt;
-	  font-weight: 300;
-	  line-height: 20pt;
-	  letter-spacing: 0px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 24pt;
+		font-weight: 300;
+		line-height: 20pt;
+		letter-spacing: 0px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 10px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.pricebox-service{
-	  margin-bottom: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  align-items: flex-end;
+		margin-bottom: 20px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: flex-end;
 	}
 	.NT-service{
-	  margin-top: 10px;
-	  font-size: 9pt;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #909090;
-	}
-	.price-service{
-	  margin-bottom: -4px;
-	  margin-left: 10px;
-	  font-size: 18pt;
-	  font-weight: 500;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #909090;
 	}
 	.descrip-service{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 10px;
-	  margin-bottom: 20px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
 	}
 	.descrip2-service{
-	  max-width: 510px;
-	  margin-top: 10px;
-	  margin-left: 20px;
-	  margin-right: 20px;
-	  margin-bottom: 20px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
+	}
+	.project-descrip-service{
+		font-size: 8pt;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
+	}
+	.price-service{
+		margin-bottom: -4px;
+		margin-left: 5px;
+		font-size: 14pt;
+		font-weight: 400;
+		letter-spacing: 3px;
+		color: #000;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	.button{
+		border: 1px solid #474747;
+		border-radius: 3px;
+		width: 80px;
+		font-size: 8pt;
+		margin-top: 20px;
+		margin-left: 15px;
+		margin-bottom: 20px;
+		padding-left: 15px;
+		height: 30px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		color: #474747;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.button span{
+		color: #fff;
+	}
+	.button-service{
+		border: 1px solid #474747;
+		border-radius: 3px;
+		padding-left: 10px;
+		width: 100px;
+		font-size: 8pt;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		height: 30px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		color: #474747;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.button-service span{
+		color: #fff;
+	}
+	.button1-service{
+		border: 1px solid #474747;
+		border-radius: 3px;
+		padding-left: 10px;
+		width: 80px;
+		font-size: 8pt;
+		margin-left:0px;
+		margin-top: 15px;
+		height: 30px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		color: #474747;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.button1-service span{
+		color: #474747;
 	}
 	.imgbox-service{
-	  max-width: 300px;
-	  margin-right: 25px;
-	  margin-bottom: 25px;
+		max-width: 300px;
+		margin-right: 25px;
+		margin-bottom: 30px;
 	}
 	.imgcontianer-service{
-	  margin-left: 50px;
-	  margin-bottom: 50px;
-	  width: : 900px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-bottom: 30px;
+		margin-top: 30px;
+		margin-left: 20px;
+		width: : 900px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.map-service{
-	  margin-bottom: 10px;
-	  margin-left: 50px;
-	  height: 200px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		margin-left: 15px;
+		height: 150px;
 	}
 	.itemlist-service{
-	  position: absolute;
-	  width: 400px;
-	  background-color: #fff;
-	  padding: 20px;
-	  border: 2px solid #474747;
-	  margin-top: -250px;
-	  margin-left: 120px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  font-size: 10pt;
-	  line-height: 30px;
-	  letter-spacing: 1px;
-	  opacity: 0;
-	  z-index: -1;
-	  -webkit-transition: opacity 0.3s ease-in-out;
-	  -moz-transition: opacity 0.3s ease-in-out;
-	  -o-transition: opacity 0.3s ease-in-out;
-	  transition: opacity 0.3s ease-in-out;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		border-radius: 5px;
+		position: absolute;
+		margin-top: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff;
+		padding: 20px;
+		border: 2px solid #474747;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 10pt;
+		line-height: 30px;
+		letter-spacing: 1px;
+		opacity: 0;
+		z-index: -1;
+		-webkit-transition: opacity 0.3s ease-in-out;
+		-moz-transition: opacity 0.3s ease-in-out;
+		-o-transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
-	.button1-service:hover .itemlist-service{
-	  z-index: 1000;
-	  opacity: 1;
+	.button1-service > span:focus ~ ul{
+		z-index: 1000;
+		opacity: 1;
 	}
 	.listcontainer-service{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: row;
-	  -webkit-flex-direction: row;
-	          flex-direction: row;
-	  justify-content: space-between;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: row;
+		-webkit-flex-direction: row;
+						flex-direction: row;
+		justify-content: space-between;
 	}
 	.listcontainer-column-service{
-	  margin-left: 1rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.itemname-service{
-	  width: 60%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 60%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.itemnum-service{
-	  width: 15%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 15%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.itemprice-service{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.totleprice-service{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: flex-end;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-end;
 	}
 	.discount-service{
-	  font-size: 0.6rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: flex-start;
+		font-size: 0.6rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
 	}
 	.contactbox-service{
-	  border:1px solid #474747;
-	  padding:10px;
-	  border-radius:5px;
-	  flex-direction:column;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-bottom: 30px;
+		border:1px solid #474747;
+		padding:10px;
+		border-radius:5px;
+		flex-direction:column;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.texturecontianer{
-	  margin-top: 20px;
-	  margin-left: 40px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-top: 20px;
+		margin-left: 5px;
+		min-width: 270px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.texturebox{
-	  margin-bottom: 30px;
-	  min-width: 80px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	  align-items: center;
+		margin-bottom: 30px;
+		min-width: 80px;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		align-items: center;
 	}
 	.texture-img{
-	  max-height: 50px;
-	  max-width: 50px;
-	  margin-bottom: 10px;
-	  height: auto;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		max-height: 50px;
+		max-width: 50px;
+		margin-bottom: 10px;
+		height: auto;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.texture-img2{
-	  max-height: 50px;
-	  max-width: 50px;
-	  margin-bottom: 10px;
-	  height: auto;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		max-height: 50px;
+		max-width: 50px;
+		margin-bottom: 10px;
+		height: auto;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.texture-name{
-	  width: 100%;
-	  font-size: 10pt;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: center;
-	  color: #474747;
+		width: 100%;
+		font-size: 10pt;
+		font-weight: 500;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+		color: #474747;
 	}
 	/*https://i.imgur.com/qeDJAkh.jpg 大理石*/
 	/*https://i.imgur.com/OQsG894.jpg 美杉*/
@@ -1043,548 +960,663 @@
 	/*https://i.imgur.com/P6gbd0z.jpg 鐵木*/
 	/*https://i.imgur.com/CnweozN.jpg 非洲紫檀*/
 	.table1{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/qeDJAkh.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/qeDJAkh.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table2{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/OQsG894.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/OQsG894.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table3{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/siJCxL9.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/siJCxL9.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table4{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/P6gbd0z.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/P6gbd0z.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table5{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/CnweozN.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/CnweozN.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.oven{
-	  position: relative;
-	  top: 20%;
-	  margin-left: 40px;
-	  height: 70%;
+		display: none;
+		position: relative;
+		top: 20%;
+		margin-left: 40px;
+		height: 70%;
 	}
 	.rag{
-	  position: relative;
-	  top: 50%;
-	  margin-left: 50px;
-	  height: 40%;
+		position: relative;
+		top: 50%;
+		margin-left: 50px;
+		height: 40%;
 	}
 	.plate{
-	  position: relative;
-	  top: 40%;
-	  margin-left: 20px;
-	  height: 50%;
+		position: relative;
+		top: 40%;
+		margin-left: 20px;
+		height: 50%;
 	}
 	.cabinetcontianer{
-	  margin-top: 100px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: row-reverse;
-	  justify-content: flex-end;
+		margin-top: 100px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.cabinetdescrip{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.cabinet{
-	  width: 300px;
-	  flex-direction: column;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		flex-direction: column;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: center;
 	}
 	.cabinetbody{
-	  z-index: -1000;
-	  box-shadow: 0px 0px 50px;
-	  width: 278px;
-	  flex-wrap: nowrap;
-	  background-color: #141414;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		z-index: -1000;
+		box-shadow: 0px 0px 50px;
+		width: 100%;
+		flex-wrap: nowrap;
+		background-color: #141414;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawercontianer{
-	  width: 280px;
-	  flex-direction: column;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100;
+		flex-direction: column;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawer1{
-	  margin-top: 5px;
-	  width: 100%;
-	  height: 90px;
-	  background-image: url(https://i.imgur.com/MvF9RzL.png);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  justify-content: center;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 5px;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(https://i.imgur.com/MvF9RzL.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawer2{
-	  margin-top: 5px;
-	  width: 100%;
-	  height: 90px;
-	  background-image: url(https://i.imgur.com/uZE34sE.png);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  justify-content: center;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 5px;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(https://i.imgur.com/uZE34sE.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawer3{
-	  margin-top: 5px;
-	  width: 100%;
-	  height: 90px;
-	  background-image: url(https://i.imgur.com/CnweozN.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  justify-content: center;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 5px;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(https://i.imgur.com/CnweozN.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawerside{
-	  height: 285px;
-	  width: 10px;
-	  margin-left: 3px;
-	  background-color: #ddd;
+		height: 285px;
+		width: 10px;
+		margin-left: 3px;
+		background-color: #ddd;
 	}
 	.copyright-cabinet{
-	  margin-top: 110px;
-	  color: #999;
-	  margin-left: 50px;
-	  font-size: 12px;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
+		display: none;
+		bottom: 0;
+		color: #999;
+		margin-left: 50px;
+		font-size: 12px;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		transform: scale(0.58);
+			transform-origin:0 0;
 
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
+			-ms-transform: scale(0.58);         /* IE 9 */
+			-ms-transform-origin:0 0;       /* IE 9 */
 
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
+			-webkit-transform: scale(0.58); /* Safari 和 Chrome */
+			-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
 
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
+			-moz-transform: scale(0.58);        /* Firefox */
+			-moz-transform-origin:0 0;      /* Firefox */
 
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
+			-o-transform: scale(0.58);      /* Opera */
+			-o-transform-origin:0 0;        /* Opera */
 	}
 	/*SERVICE*/
 
+	/*DECO*/
+	.picbox-deco{
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/aAzSXz5.jpg);
+		justify-content: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.title-deco{
+		font-size: 1.2rem;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 0.2rem;
+		line-height: 2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.descrip-deco{
+		margin-right: 1rem;
+		max-width: 450px;
+		margin-top: 1rem;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 1.2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.twinbox-deco{
+		width: 100%;
+		min-height: 100vh;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.contactbox-deco{
+		margin-top: 1rem;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.contactdetalls{
+		max-width: 300px;
+		padding: 1rem;
+		margin-top: 3rem;
+		border: 1px solid #000;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.imgbox-deco{
+		max-width: 450px;
+	}
+	.decoimg-deco{
+		padding: 1rem;
+		height: 40%;
+	}
+	.contract{
+		margin-top: 3rem;
+		border: 1px solid #000;
+		width: 100%;
+		height: auto;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.itembox{
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: space-between;
+	}
+	.itemlist{
+		font-size: 0.8rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.garantie-deco{
+		margin-top: 3rem;
+		max-width: 400px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+
+	/*DECO*/
 
 	/*CABINET*/
 	.picbox-cabinet{
-	  position: absolute;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  margin-right: 120px;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-image: url(https://i.imgur.com/PIwHaZy.jpg);
+		width: 100vw;
+		height: calc(100vh - 50px);
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/BzH8dHe.jpg);
 	}
 	.articlecontianer-cabinet{
-	  max-width: 430px;
-	  z-index: 1000;
-	  position: absolute;
-	  padding: 50px;
-	  left: 55vw;
-	  top: 75vh;
-	  margin-right: 150px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
-	  background-color: #fff;
+		position: absolute;
+		bottom: -5rem;
+		width: 100vw;
+		z-index: 1000;
+		padding: 30px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
+		background-color: #fff;
 	}
 	.toptitle-cabinet{
-	  margin-bottom: 0.2rem;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  line-height: 1rem;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.1rem;
+		margin-bottom: 0.2rem;
+		font-size: 0.7rem;
+		font-weight: 300;
+		line-height: 1rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
 	}
 	.title-cabinet{
-	  margin-bottom: 0.5rem;
-	  font-size: 1.5rem;
-	  font-weight: 300;
-	  line-height: 2rem;
-	  font-family: "HanaMinA";
-	  letter-spacing: 0.5rem;
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2rem;
+		font-family: "HanaMinA";
+		letter-spacing: 0.5rem;
 	}
 	.subtitle-cabinet{
-	  margin-bottom: 3rem;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.1rem;
+		margin-bottom: 3rem;
+		font-size: 0.7rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
 	}
 	.elementcontianer{
-	  height: 230vh;
-	  width: calc(100vw - 120px);
-	  background-position: top center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-image: url(https://i.imgur.com/6maY8Hj.jpg);
+		width: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(https://i.imgur.com/6maY8Hj.jpg);
 	}
 	.elementtitle{
-	  width: 100%;
-	  margin-top: 170vh;
-	  font-size: 1rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3rem;
-	  text-align: center;
-	  color: #fff;
+		width: 100%;
+		margin-top: 50vh;
+		font-size: 0.8rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1.2rem;
+		text-align: center;
+		color: #fff;
 	}
 	.elementsubtitle{
-	  width: 100%;
-	  margin-top: 2rem;
-	  margin-bottom: 50vh;
-	  font-size: 0.5rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1rem;
-	  text-align: center;
-	  color: #fff;
+		width: 100%;
+		margin-top: 2rem;
+		margin-bottom: 50vh;
+		font-size: 0.5rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.7rem;
+		text-align: center;
+		color: #fff;
 	}
 	.marblebox{
-	  position: relative;
-	  padding: 80px;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/fFYXq6I.jpg);
+		position: relative;
+		padding: 80px;
+		width: 100vw;
+		height: 100vh;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/2MOZ5wx.jpg);
 	}
 	.bigtitlebox-cabinet{
-	  z-index: 100;
-	  margin-left: calc(100% - 2rem);
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		z-index: 100;
+		margin-left: calc(100% - 2rem);
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.bigtitleboxL-cabinet{
-	  z-index: 100;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		z-index: 100;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.bigtitle-cabinet{
-	  margin-bottom: 2rem;
-	  font-size: 1.2rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.3rem;
-	  line-height: 1.5rem;
-	  -webkit-writing-mode: vertical-rl ;
-	  writing-mode: vertical-rl ;
+		margin-bottom: 2rem;
+		font-size: 1.2rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.3rem;
+		line-height: 1.5rem;
+		-webkit-writing-mode: vertical-rl ;
+		writing-mode: vertical-rl ;
 	}
 	.bigtitle-cn{
-	  font-size: 1.5rem;
-	  font-family: "HanaMinA";
+		font-size: 1.5rem;
+		font-family: "HanaMinA";
 	}
 	.bigtitle-cn-sub{
-	  margin-top: 0.2rem;
-	  font-size: 0.5rem;
-	  letter-spacing: 0.15rem;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 0.2rem;
+		font-size: 0.5rem;
+		letter-spacing: 0.15rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.bottomcolor-marble{
-	  margin-left: calc(100vw - 17rem);
-	  position: absolute;
-	  background-color: #fff;
-	  width: 1.5rem;
-	  height: 11rem;
+		right: 3rem;
+		position: absolute;
+		background-color: #fff;
+		width: 1.5rem;
+		height: 11rem;
 	}
 	.bottomcolor-copper{
-	  margin-left: calc(50vw - 12.9rem);
-	  position: absolute;
-	  background-color: #995b4a;
-	  width: 1.5rem;
-	  height: 11rem;
+		right: 3rem;
+		position: absolute;
+		background-color: #995b4a;
+		width: 1.5rem;
+		height: 11rem;
 	}
 	.bottomcolor-wood{
-	  margin-left: calc(50vw - 13.3rem);
-	  position: absolute;
-	  background-color: #515151;
-	  width: 1.5rem;
-	  height: 9.5rem;
+		right: 3rem;
+		position: absolute;
+		background-color: #515151;
+		width: 1.5rem;
+		height: 9.5rem;
 	}
 	.bottomline{
-	  font-size: 1.2rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.5rem;
-	  -webkit-writing-mode: vertical-rl ;
-	  writing-mode: vertical-rl ;
+		font-size: 1.2rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.5rem;
+		-webkit-writing-mode: vertical-rl ;
+		writing-mode: vertical-rl ;
 	}
 	.twinbox{
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100vw;
+		height: 200vh;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.twinbox-copper{
-	  position: absolute;
-	  padding: 80px;
-	  bottom: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 40%;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		position: absolute;
+		padding: 20px;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 40%;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.copperbox{
-	  z-index: 1000;
-	  position: relative;
-	  padding: 80px;
-	  width: 50%;
-	  height: 100%;
-	  top: 0;
-	  left: 0;
-	  background-color: #b16850;
+		z-index: 1000;
+		position: relative;
+		padding: 80px;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: #b16850;
 	}
 	.woodbox{
-	  position: relative;
-	  padding: 80px;
-	  width: 50%;
-	  height: 100%;
-	  top: 0;
-	  left: 0;
-	  background-color: #2b2b2b;
+		position: relative;
+		padding: 80px;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: #2b2b2b;
 	}
 	.articlecontianer-marble{
-	  position: absolute;
-	  right: 12%;
-	  bottom:25%;
-	  max-width: 270px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
+		margin-right: 10%;
+		position: absolute;
+		left: 10%;
+		bottom:25%;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
 	}
 	.articlecontianer-copper{
-	  margin-left: 4rem;
-	  max-width: 230px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #fff;
+		margin-left: 2rem;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #fff;
 	}
 	.title-marble{
-	  margin-bottom: 2rem;
-	  font-size: 1.5rem;
-	  font-weight: 300;
-	  line-height: 2rem;
-	  font-family: "HanaMinA";
-	  letter-spacing: 0.3rem;
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2rem;
+		font-family: "HanaMinA";
+		letter-spacing: 0.3rem;
 	}
 	.img-copper{
-	  position:absolute;
-	  left: 0;
-	  top: 4rem;
-	  margin-right: 120px;
-	  max-width: 400px;
-	  overflow: hidden;
+		position:absolute;
+		left: 0;
+		top: 4rem;
+		margin-right: 100px;
+		overflow: hidden;
 	}
 	.img-wood{
-	  position:absolute;
-	  left: 0;
-	  top: 5rem;
-	  margin-right: 120px;
-	  max-width: 450px;
-	  overflow: hidden;
+		position:absolute;
+		left: 0;
+		top: 5rem;
+		margin-right: 100px;
+		overflow: hidden;
 	}
 	.img-garantie{
-	  min-width: 100px;
-	  overflow: hidden;
+		min-width: 50px;
+		overflow: hidden;
 	}
 	.handle{
-	  max-width: 50px;
-	  overflow: hidden;
+		max-width: 50px;
+		overflow: hidden;
 	}
 	.picbox1-cabinet{
-	  margin-bottom: 1rem;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/S0roCCv.jpg);
+		margin-bottom: 1rem;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/S0roCCv.jpg);
 	}
 	.picbox2-cabinet{
-	  margin-bottom: 1rem;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/CjpEdpL.jpg);
+		margin-bottom: 1rem;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/CjpEdpL.jpg);
 	}
 	.picbox3-cabinet{
-	  position: relative;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/YYwscDZ.jpg);
+		padding: 0.5rem;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/YYwscDZ.jpg);
 	}
 	.articlecontianer-garantie{
-	  max-width: 450px;
-	  z-index: 1000;
-	  position: absolute;
-	  padding: 50px;
-	  right: 5rem;
-	  bottom: 2rem;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
-	  background-color: #fff;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 28rem;
+		width: 100%;
+		z-index: 1000;
+		padding: 20px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
+		background-color: #fff;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.text-garantie{
-	  margin-left: 2rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title-garantie{
-	  margin-bottom: 1.5rem;
-	  font-size: 1rem;
-	  font-weight: 300;
-	  line-height: 1rem;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.1rem;
+		margin-bottom: 1.5rem;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
 	}
 	.imgbox-cabinet{
-		width: 100%;
+	  width: 100%;
 	  height: 100%;
 	  position: absolute;
 	  top: 0;
 	  left: 0;
-	  margin-right: 120px;
 	  background-position: center center;
 	  background-repeat: no-repeat;
 	  background-size: cover;
 	  background-color: #474747;
 	}
 	#slide1 {
-  position: relative;
-	margin: 5rem 5rem 5rem 5rem;
-  width: 100%;
+		margin-top: 2rem;
+		height: 100%;
+		position: relative;
+		width: 100%;
 	}
 	#slide1 li {
-	  position: absolute;
+	  position: static;
 	  top: 0;
 	  left: 0;
 	  display: block;
@@ -1639,723 +1671,645 @@
 	  margin-right: 4px;
 	}
 	#imgc1{
-	   background-image: url(https://i.imgur.com/vNBNRvT.jpg);
+	   background-image: url(https://i.imgur.com/AA5Vrhk.jpg);
 	}
 	#imgc2{
-	   background-image: url(https://i.imgur.com/SPv572r.jpg);
+	   background-image: url(https://i.imgur.com/ArW3YMI.jpg);
 	}
 	#imgc3{
-	   background-image: url(https://i.imgur.com/nQozK4l.jpg);
+	   background-image: url(https://i.imgur.com/KDZnmIC.jpg);
 	}
 	#imgc4{
-	   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
+	   background-image: url(https://i.imgur.com/NU81AJl.jpg);
+	}
+	#imgc5{
+	   background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31531775_2001275900188271_7034947734092120064_o.jpg?_nc_cat=0&_nc_eui2=AeEOFtiK9lKQiKeRSMlVGfuyCZBAkYtwVvEqFq8ZZ7mWm1sz3J_-v6CO9HuuAT86BIELMV7DLVyb-CxPVq_E7fXxmj7eIrhyQX-AxgRLUBrCVA&oh=232f98f062ca467f5ae9385a86d49347&oe=5BACA5DD);
+	}
+	#imgc6{
+	   background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31945912_2001274856855042_705524158770970624_o.jpg?_nc_cat=0&_nc_eui2=AeG4GxhM_DP48y4ecpQ9bNNoKDslu-gmL7sRh1SdejZajTFmyS7EPtnCNC1sax80T-c19eDyPf1XhXCDf-7r8R1kmqtezvJW7z42q4-sGr0pRA&oh=09e8351203681c4eed7cd8730dd7b6e8&oe=5BBB8AE8);
 	}
 	/*CABINET*/
 
-
 	/*ABOUT*/
 	.articlecontianer-about{
-	  margin-top: 30px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	          flex: 1 0 auto;
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title1-about{
-	  width: 100%;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  font-size: 14pt;
-	  font-weight: 100;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-top: 50px;
+		font-size: 14pt;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.article-about{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 20px;
-	  font-size: 8pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 15px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 34px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.imgbox-about{
-	  max-width: 700px;
-	  margin-top: 20px;
-	  margin-left: 40px;
-	  overflow: hidden;
-	  height: auto;
+		width: 100%;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
 	}
 	.logobox-about{
-	  max-width: 200px;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  overflow: hidden;
-	  height: auto;
+		max-width: 200px;
+		margin-left: 15px;
+		margin-top: 10px;
+		overflow: hidden;
+		height: auto;
 	}
-	/*ABOUT/
-
-	/*TEAM*/
-	.gridcontianer-team{
-	  margin-top: 90px;
-	  margin-left: 0px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	}
-	.grid-team{
-	  margin-bottom: 40px;
-	  margin-left: 80px;
-	  max-width: 420px;
-	  height: 180px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-align-items: flex-start;
-	  -webkit-align-items: flex-start;
-	          align-items: flex-start;
-	  flex-direction:row;
-	}
-	.imgbox-team{
-	  min-width: 100px;
-	  height: 100px;
-	  border-radius: 100%;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.articlecontianer-team{
-	  width: 100%;
-	  height: 100%;
-	  margin-left: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	}
-	.name-team{
-	  width: 100%;
-	  font-size: 16pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.descrip-team{
-	  margin-top: 10px;
-	  font-size: 7pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	/*TEAM*/
+	/*ABOUT*/
 
 	/*WORKS*/
 	.gridcontianer-works{
-	  margin-top: 90px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.grid-works{
-	  margin-bottom: 40px;
-	  margin-left: 40px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
+		margin-top: 40px;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.imgbox-works{
-	  max-width: 330px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100%;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.name-works{
-	  margin-top: 8px;
-	  font-size: 10pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content:center;
+		margin-top: 8px;
+		font-size: 10pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 5px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		color: #000;
 	}
 	.descrip-works{
-	  visibility:hidden;
-	  margin-top: 2px;
-	  font-size: 7pt;
-	  font-weight: 300;
-	  font-family: ‘Noto Sans TC’, sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content:center;
-	  color: #555555;
+		visibility:hidden;
+		margin-top: 2px;
+		font-size: 7pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		color: #555555;
 	}
 	/*WORKS*/
 
+	/*TEAM*/
+	.gridcontianer-team{
+		width: 100vw;
+		margin-top: 40px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.grid-team{
+		width: 100%;
+		padding: 30px;
+		margin-top: 5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+			 -moz-align-items: flex-start;
+		-webkit-align-items: flex-start;
+						align-items: flex-start;
+			 -moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		align-items: center;
+	}
+	.imgbox-team{
+		border-radius: 100%;
+		min-width: 100px;
+		height: 100px;
+		margin-bottom: 2rem;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.articlecontianer-team{
+		width: 100%;
+		max-width: 350px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.name-team{
+		width: 100%;
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
+		text-align: center;
+	}
+	.descrip-team{
+		margin-top: 1rem;
+		font-size: 0.7rem;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		line-height: 1.2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	/*TEAM*/
 
 	/*PRESS*/
 	.gridcontianer-press{
-	  margin-top: 90px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 15px;
+		margin-right: 15px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.grid-press{
-	  border-top: 1px solid #000;
-	  max-width: 700px;
-	  margin-bottom: 40px;
-	  margin-left: 40px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		border-top: 1px solid #000;
+		margin-top: 40px;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.name-press{
-	  margin-top: 20px;
-	  font-size: 14pt;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 5px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 12px;
+		font-size: 14pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 5px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #000;
 	}
 	.descrip-press{
-	  margin-top: 5px;
-	  font-size: 7pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #555555;
+		margin-top: 5px;
+		font-size: 7pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555555;
 	}
 	.descrip-press1{
-	  margin-top: 5px;
-	  font-size: 7pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  align-items: baseline;
-	  color: #555555;
+		margin-top: 5px;
+		font-size: 7pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: baseline;
+		color: #555555;
 	}
 	.articlecontianer-press{
-	  width: calc(100% - 120px);
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
-	  align-items: center;
-	}
-	.bigtitle-press{
-	  margin-top: 5rem;
-	  font-size: 0.8rem;
-	  letter-spacing: 0.05rem;
-	  font-weight: lighter;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
-	}
-	.title-press{
-	  margin-top: 2rem;
-	  font-size: 1.3rem;
-	  font-weight: 100;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.article-press{
-	  max-width: 510px;
-	  margin-left: 20px;
-	  margin-top: 50px;
-	  margin-bottom: 30px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #555555;
+		width: 100vw;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.article1-press{
-	  margin-left: 20px;
-	  margin-top: 2rem;
-	  margin-bottom: 0rem;
-	  font-size: 0.7rem;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 1.6em;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #555555;
-	}
-	.imgbox-press{
-	  max-width: 700px;
-	  margin-top: 50px;
-	  margin-left: 20px;
-	  overflow: hidden;
-	  height: auto;
-	}
-	.imgbox-press1{
-	  max-width: 510px;
-	  margin-top: 50px;
-	  overflow: hidden;
-	  height: auto;
-	}
-	.line-press{
-	  border-right: 1px solid #474747;
-	  margin-top: 1rem;
-	  margin-bottom: 1rem;
-	  height: 3rem;
+		margin-top: 1rem;
+		margin-bottom: 0rem;
+		font-size: 0.6rem;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555555;
 	}
 	.article-press{
-	  max-width: 510px;
-	  margin-top: 60px;
-	  margin-bottom: 20px;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  line-height: 1.4rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		max-width: 510px;
+		padding: 50px;
+		margin-bottom: 30px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555555;
+	}
+	.imgbox-press{
+		max-width: 700px;
+		margin-top: 10px;
+		overflow: hidden;
+		height: auto;
+	}
+	.imgbox-press1{
+		max-width: 510px;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
+	}
+	.line-press{
+		border-right: 1px solid #474747;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		height: 3rem;
+	}
+	.bigtitle-press{
+		margin-top: 5rem;
+		font-size: 0.8rem;
+		letter-spacing: 0.05rem;
+		font-weight: lighter;
+		font-family: 'Noto Sans TC', sans-serif;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
+	}
+	.title-press{
+		margin-top: 1rem;
+		font-size: 1.3rem;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	/*PRESS*/
 
 	/*ITEM*/
 	.articlecontianer-item{
-	  height: 100vh;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
 	}
 	.imgbox1-item{
-	  overflow: auto;
-	  max-width: 700px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.infobox-item{
-	  margin-top: 300px;
-	  margin-left: 50px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 50px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.name1-item{
-	  font-size: 12pt;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 4px;
-	  color: #474747;
+		font-size: 12pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 4px;
+		color: #474747;
 	}
 	.NT-item{
-	  margin-top: 10px;
-	  font-size: 9pt;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #909090;
+		margin-top: 10px;
+		font-size: 9pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #777;
 	}
 	.pricebox-item{
-	  height: 70px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  align-items: flex-end;
+		height: 70px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: flex-end;
 	}
 	.price-item{
-	  margin-bottom: -4px;
-	  margin-left: 5px;
-	  font-size: 18pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
+		margin-bottom: -4px;
+		margin-left: 5px;
+		font-size: 18pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
 	}
 	.price1-item{
-	  width: 100%;
-	  text-align: center;
-	  margin-top: 0.5rem;
-	  font-size: 0.65em;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.15rem;
-	  color: #474747;
+		margin-top: 0.3rem;
+		text-align: center;
+		width: 100%;
+		font-size: 0.65rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.15rem;
+		color: #474747;
 	}
 	.gridcontianer-item{
-	  margin-top: 90px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-top: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	.grid-item{
-	  margin-bottom: 40px;
-	  margin-left: 40px;
-	  min-width: 150px;
-	  max-width: 200px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
+		margin-bottom: 60px;
+		width: 49%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.imgbox-item{
-	  max-width: 200px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100%;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.name-item{
-	  width: 100%;
-	  text-align: center;
-	  margin-top: 10px;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  letter-spacing: 0.2rem;
-	  display: table;
+		text-align: center;
+		width: 100%;
+		margin-top: 10px;
+		font-size: 0.7rem;
+		font-weight: 400;
+		letter-spacing: 0.2rem;
+		line-height: 14pt;
+		display: table;
+		color: #000;
 	}
 	#zh-item{
-	  font-family: "HanaMinA";
+		font-family: "HanaMinA";
 	}
 	#en-item{
-	  font-family: 'Noto Sans TC', sans-serif;
+		font-family: 'Noto Sans TC', sans-serif;
 	}
 	.designer-item{
-	  margin-top: 2rem;
-	  color: #909090;
-	  font-size: 0.5rem;
-	  font-weight: 400;
-	  letter-spacing: 3px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  display: table;
+		margin-top: 2rem;
+		color: #909090;
+		font-size: 0.6rem;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-family: 'Noto Sans TC', sans-serif;
+		white-space: nowrap;
+		overflow: hidden;
+		display: table;
 	}
 	.manufacturer-item{
-	  margin-top: 0.5rem;
-	  margin-bottom: 1rem;
-	  color: #909090;
-	  font-size: 0.5rem;
-	  font-weight: 400;
-	  letter-spacing: 3px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  display: table;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		color: #909090;
+		font-size: 0.6rem;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-family: 'Noto Sans TC', sans-serif;
+		white-space: nowrap;
+		overflow: hidden;
+		display: table;
+	}
+	.tag-item{
+		width: 100%;
+		margin-left: 15px;
+		margin-bottom: 10px;
+		color: #474747;
+		font-size: 10pt;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-family: 'Noto Sans TC', sans-serif;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.copyright-item{
-	  height: 50px;
-	  color: #999999;
-	  margin-left: 50px;
-	  font-size: 12px;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
-
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
-
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
-
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
+		display: none;
 	}
 	.copyright-item-mobil{
-	  display: none;
-	}
-	.tag-item {
-	  width: 100%;
-	  margin-left: 40px;
-	  margin-bottom: 30px;
-	  color: rgb(71, 71, 71);
-	  font-size: 12pt;
-	  font-weight: 400;
-	  letter-spacing: 3px;
-	  font-family: "Noto Sans TC", sans-serif;
-	  display: flex;
+		color: #999999;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
 	}
 	.category{
-	  width: calc(100% - 190px);
-	  margin-top: 10rem;
-	  margin-bottom: 5rem;
-	  margin-left: 60px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: center;
+		width: 100%;
+		padding: 1rem;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
 	}
 	.buttonbox{
-	  width: 500px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: space-between;
+		width: 350px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: space-between;
 	}
 	.buttonbox button{
-	  border: none;
-	  font-size: 0.8rem;
-	  font-weight: 400;
-	  letter-spacing: 0.1rem;
-	  font-family: "Noto Sans TC", sans-serif;
-	  background-color: #fff;
+		border: none;
+		font-size: 0.7rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		font-family: "Noto Sans TC", sans-serif;
+		background-color: #fff;
 	}
 	/*ITEM*/
 
 	/*Contact*/
 	.block-contact{
-	  height: 50px;
+		height: 60px;
 	}
 	.descrip-contact{
-	  margin-bottom: 10px;
-	  margin-left: 50px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
+		margin-bottom: 10px;
+		margin-left: 15px;
+		margin-right: 15px;
+		font-size: 8pt;
+		font-weight: 500;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
 	}
 	.map-contact{
-	  position: absolute;
-	  bottom: 0px;
-	  margin-bottom: 120px;
-	  margin-left: 50px;
-	  width: 300px;
+		bottom: 0px;
+		margin-top: 100px;
+		margin-bottom: 120px;
+		margin-left: 15px;
+		margin-right: 15px;
+		max-width: 270px;
 	}
 	.articlecontianer-contact{
-	  margin-left: 20px;
-	  margin-top: 90px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-top: 50px;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	/*Contact*/
 
 	.articlecontianer{
-	  margin-top: 30px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title1{
-	  width: 100%;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  font-size: 14pt;
-	  font-weight: 100;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.descrip{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 2px;
-	  margin-bottom: 50px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-top: 70px;
+		font-size: 14pt;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.article{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  margin-bottom: 20px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 30px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 34px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.imgbox{
-	  max-width: 700px;
-	  margin-top: 10px;
-	  margin-left: 40px;
-	  overflow: hidden;
-	  height: auto;
+		width: 100%;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
 	}
-	.hover figure img {
-	  opacity: 1;
-	  -webkit-transition: .3s ease-in-out;
-	  transition: .3s ease-in-out;
+	.descrip{
+		max-width: 510px;
+		margin-left: 15px;
+		margin-top: 2px;
+		margin-bottom: 50px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
-	.hover figure:hover img {
-	  opacity: .5;
-	}
+
 	.block{
-	  height: 50px;
+		height: 50px;
 	}
 	.copyright{
-	  height: 50px;
-	  color: #999999;
-	  margin-left: 50px;
-	  font-size: 12px;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
-
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
-
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
-
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
-	}
-	.reveal .hidden { display: block !important; visibility: visible !important;}
-	.product:hover .reveal img { opacity: 1; }
-	.reveal { position: relative; }
-	.reveal .hidden {
-	  position: absolute;
-	  z-index: -1;
-	  top: 0;
-	  width: 100%;
-	  height: 100%;
-	  opacity: 0;
-	  -webkit-transition: opacity 0.3s ease-in-out;
-	  -moz-transition: opacity 0.3s ease-in-out;
-	  -o-transition: opacity 0.3s ease-in-out;
-	  transition: opacity 0.3s ease-in-out;
-	}
-	.reveal:hover .hidden {
-	  z-index: 100000;
-	  opacity: 1;
-	}
-	.reveal .caption {
-	  position: absolute;
-	  top: 0;
-	  display: table;
-	  width: 100%;
-	  height: 100%;
-	  color: #333;
-	  letter-spacing: 1px;
+		color: #999999;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
 	}
 	.box{
-		width: calc(100vw - 120px);
-		height: 100vh;
+		margin-top: 2rem;
+		width: 100vw;
 		top: 0;
 		left: 0;
 		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.lefttitle{
-
+		align-items: baseline;
 		font-size: 1.2rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.2rem;
-	  line-height: 2rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.2rem;
+		line-height: 2rem;
 		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.lefttitlebar{
 		margin-top: 0.2rem;
@@ -2363,19 +2317,21 @@
 		height: 0.5rem;
 		background-color: #474747;
 		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.lefrtitlebox{
-		margin-left: 5rem;
-		margin-top: 5rem;
+		margin-left: 1rem;
+		margin-top: 1rem;
 		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -webkit-flex;
+		display: 				 flex;
 		-moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
+
+
 
 
 
@@ -2440,199 +2396,214 @@
 			<div class="bigtitle">
 					Serivce
 			</div>
-			<div class="picbox-cabinet"></div>
-			<div class="articlecontianer-cabinet" data-parallax='{"y": 200,"smoothness": 30}'>
-				<div class="toptitle-cabinet">
-					Ｇemurrihi
-				</div>
-				<div class="title-cabinet">
-					中島吧檯
-				</div>
-				<div class="subtitle-cabinet">
-					「不突兀、不搶眼，恰如其份」
-				</div>
-				依照您的需求，量身打造最適合空間氛圍的中島吧台。實木與石材的自然元素組成，呈現出原始且經典的空間美感，耐看更耐用。
-			</div>
-			<div class="elementcontianer">
-				<div class="elementtitle"  data-parallax='{"y": -300,"smoothness": 30}'>
-					ELEMENTS
-				</div>
-				<div class="elementsubtitle" data-parallax='{"y": -300,"smoothness": 30}'>
-					自然風格的細節　歲月之美
+			<div class="picbox-deco">
+				<div class="lefrtitlebox">
+					<div class="title-deco">傢俱擺設規劃</div>
+					<div class="descrip-deco">我們主張："不用過度裝潢，只要將好看的傢俱適當地擺入空間，就能讓空間更酷更有味道。 如果您很喜歡我們的擺設風格，又不知從何著手，ＮＶ提供了整套家具規劃的服務！我們提供規劃方案，主要以公共空間為主，為您規劃、擺設整套的傢俱，避免風格不搭問題，再以更優惠的價格為您打造最合適的空間。</div>
 				</div>
 			</div>
-				<div class="marblebox">
-					<div class="bottomcolor-marble"></div>
-					<div class="bigtitlebox-cabinet" data-parallax='{"from-scroll": 1200 ,"y": 70,"smoothness": 30}'>
-						<div class="bottomline">－</div>
-						<div class="bigtitleboxL-cabinet">
-							<div class="bigtitle-cabinet">
-								MARBLE
-							</div>
-							<div class="bigtitle-cn">
-								岩
-							</div>
-							<div class="bigtitle-cn-sub">
-								Yán
-							</div>
-						</div>
-					</div>
-					<div class="articlecontianer-marble">
-						<div class="title-marble">
-							大理石面板
-						</div>
-						客製化大理石材或是整體木料的吧台檯面，徹底展現居家個人風格。
-					</div>
+			<div class="box">
+				<div class="lefrtitlebox">
+					<div class="lefttitle">CONTACT<br>US</div>
+					<div class="lefttitlebar"></div>
 				</div>
-			<div class="twinbox">
-				<div class="copperbox">
-					<div class="bottomcolor-copper"></div>
-					<div class="bigtitlebox-cabinet" data-parallax='{"from-scroll": 1650 ,"y": 70,"smoothness": 30}'>
-						<div class="bottomline" style="color: #fff;">－</div>
-						<div class="bigtitleboxL-cabinet" style="color: #fff;">
-							<div class="bigtitle-cabinet">
-								COPPER
-							</div>
-							<div class="bigtitle-cn">
-								銅
-							</div>
-							<div class="bigtitle-cn-sub">
-								Tóng
+				<div class="twinbox-deco">
+					<div class="contactbox-deco">
+						<div class="lefttitle" style="font-size:1rem;"><span style="font-size:0.7rem;">a.</span>網路聯繫</div>
+						<div class="descrip-deco">
+							您可以在閱覽我們的網頁之後<br>
+							透過Facebook私訊或是發email給我們以下訊息<br>
+							我們會盡快跟您聯繫。
+						</div>
+						<div class="contactdetalls">
+							<div class="lefttitle">Contact<br>Detalls</div>
+							<div class="descrip-deco">
+								姓名<br>
+								電話<br>
+								物件地址<br>
+								email<br>
+								年齡<br>
+								職業<br>
+								預算<br>
+								成員組成（例如我與老婆還有一位女兒）<br>
+								預計入住時間（例如2018/05/02）<br>
+								空間需求（例如廚房與客廳）<br>
+								空間大小（例如15坪）
 							</div>
 						</div>
 					</div>
-					<div class="img-copper">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/cqo9On8.png" width="100%">
-					</div>
-					<div class="twinbox-copper">
-						<div class="handle">
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/6jYGmj8.png" width="100%">
+					<div class="contactbox-deco">
+						<div class="lefttitle" style="font-size:1rem;"><span style="font-size:0.7rem;">b.</span>親自來訪<span style="font-size:0.7rem;">（預約參觀）</span></div>
+						<div class="descrip-deco">
+							歡迎來NV工作室一趟與我們聊聊<br>
+							讓我們親自手沖一杯咖啡給喜愛我們風格的您<br>
+							工作室也有許多來自歐洲20世紀中的古董傢俱<br>
+							歡迎來與我們談談您的需求與對居家擺設的想法
 						</div>
-						<div class="articlecontianer-copper">
-							<div class="title-marble">
-								紅銅把手
-							</div>
-								使用細緻的紅銅把手，與溫暖的木料相互搭配，呈現吧台一致的好質感。
+						<div class="descrip-deco" style="margin-bottom:3rem;">
+							地址：竹北市長青路一段207巷51號
+						</div>
+						<div class="imgbox-deco">
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/OVHoW8F.png" width="100%";>
 						</div>
 					</div>
 				</div>
-				<div class="woodbox">
-					<div class="bottomcolor-wood"></div>
-					<div class="bigtitlebox-cabinet" data-parallax='{"from-scroll": 1650 ,"y": 70,"smoothness": 30}'>
-						<div class="bottomline" style="color: #fff;">－</div>
-						<div class="bigtitleboxL-cabinet" style="color: #fff;">
-							<div class="bigtitle-cabinet">
-								WOOD
-							</div>
-							<div class="bigtitle-cn">
-								木
-							</div>
-							<div class="bigtitle-cn-sub">
-								Mù
-							</div>
+			</div>
+
+			<div class="box">
+				<div class="lefrtitlebox">
+					<div class="lefttitle">MEASURING</div>
+					<div class="lefttitlebar"></div>
+				</div>
+				<div class="twinbox-deco">
+					<div class="contactbox-deco" style="justify-content:flex-end;">
+						<div class="lefttitle" style="font-size:1rem;" data-parallax='{"from-scroll": 1500 ,"y": -500,"smoothness": 30}'>到府丈量</div>
+						<div class="descrip-deco" data-parallax='{"from-scroll": 1500 ,"y": -500,"smoothness": 30}'>
+							為了讓我們更了解您的空間設計需求與所需配合家具尺寸大小<br>
+							我們提供免費到府丈量<br>
+							竹苗區域免費，非竹苗地區酌收$2000丈量費用<br>
+							北至台北市、南至台中市，確定簽合約後全數折抵
 						</div>
 					</div>
-					<div class="img-wood">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/aZP1yRy.png" width="100%">
+					<div class="contactbox-deco" style="justify-content:flex-end;">
+						<div class="imgbox-deco" >
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/EJ6YXvE.png" width="60%";>
+						</div>
 					</div>
-					<div class="twinbox-copper">
-						<div class="articlecontianer-copper">
-							<div class="title-marble">
-								實木面板
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="lefrtitlebox">
+					<div class="lefttitle">DESIGN</div>
+					<div class="lefttitlebar"></div>
+				</div>
+				<div class="twinbox-deco">
+					<div class="contactbox-deco">
+						<div class="lefttitle" style="font-size:1rem;">竹北公寓：小客廳</div>
+						<div class="descrip-deco">
+							物件數量：11<br>
+							坪數：10坪
+						</div>
+						<div class="descrip-deco" style="margin-top:3rem;">
+							一個70cm高的餐桌，在小客廳裡它可以是用餐的空
+							間。也可以是工作空間，緊鄰窗戶，白天透過自然光，
+							在餐桌上進行活動。
+						</div>
+						<div class="imgbox-deco" style="max-width:200px; margin-top:1rem;">
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/32LVHxf.png" width="100%";>
+						</div>
+						<div class="descrip-deco">
+							在另一個空間製造出製造出一個較悠閒的空間，利用
+							單人沙發，配上40cm高的咖啡桌，配上一杯咖啡與小
+							說，這裡頓時能變成您放鬆心情的居心地。
+						</div>
+					</div>
+					<div class="contactbox-deco" style="justify-content:flex-end;">
+						<div class="imgbox-deco" style="margin-bottom:5rem;">
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/4syVKti.png" width="100%";>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="lefrtitlebox">
+					<div class="lefttitle">CONTRACT</div>
+					<div class="lefttitlebar"></div>
+				</div>
+				<div class="twinbox-deco">
+					<div class="contactbox-deco">
+						<div class="lefttitle" style="font-size:1rem;">討論設計與案件簽約</div>
+						<div class="descrip-deco">
+							溝通討論您居家空間的擺設設計，確認選擇的品項外觀與數量，進行簽約。
+						</div>
+						<div class="contract">
+							<div class="itembox">
+								<div class="itemlist">
+									<p>PH4/3</p>
+									<p>Danish Chair</p>
+									<p>Dinner Table</p>
+									<p>Arm Chair</p>
+									<p>Tea Table</p>
+									<p>Danish Cabinet</p>
+									<p>Four Drawer Cabinet</p>
+
+								</div>
+								<div class="itemlist">
+									<p>1</p>
+									<p>4</p>
+									<p>1</p>
+									<p>2</p>
+									<p>1</p>
+									<p>1</p>
+									<p>1</p>
+								</div>
+								<div class="itemlist">
+									<p>NT$12,000</p>
+									<p>NT$24,000</p>
+									<p>NT$20,000</p>
+									<p>NT$26,000</p>
+									<p>NT$18,000</p>
+									<p>NT$35,000</p>
+									<p>NT$20,000</p>
+								</div>
 							</div>
-								不上色、不上漆處理，讓即使是相同的木料，都有著自己獨特的美感與自然語言。
+							<div style="border-top:1px solid #000;margin-bottom:1rem;margin-top:1rem;"></div>
+							<div class="itembox">
+								<div class="itemlist" style="font-size:0.6rem;line-height:1rem;">
+									<p>滿15萬扣5000</p>
+									<p>滿20萬扣7500</p>
+									<p>滿30萬扣10000</p>
+								</div>
+								<div class="itemlist">
+									<s>NT$155,000</s>
+									<p>NT$150,000</p>
+								</div>
+							</div>
+							<div class="garantie-deco">
+								<div class="img-garantie">
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/ydv7UYT.png" width="100%">
+								</div>
+								<div class="text-garantie">
+									<div class="title-garantie">NV一年保固</div>
+								Natural n’ Vintage提供一年保固，保固期間若有任何非人為損壞，
+								皆提供到府維修服務，讓您安心使用。
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="box">
 				<div class="lefrtitlebox">
-					<div class="lefttitle">OVERVIWE</div>
+					<div class="lefttitle">DECORATE</div>
 					<div class="lefttitlebar"></div>
 				</div>
-				<ul id="slide1">
-					<li>
-						<div class="imgbox-cabinet" id="imgc1"></div>
-					</li>
-
-
-					<li>
-						<div class="imgbox-cabinet" id="imgc2"></div>
-					</li>
-
-
-					<li>
-						<div class="imgbox-cabinet" id="imgc3"></div>
-					</li>
-
-
-					<li>
-						<div class="imgbox-cabinet" id="imgc4"></div>
-					</li>
-				</ul>
-
+				<div class="twinbox-deco">
+					<div class="contactbox-deco" style="justify-content:center;">
+						<div class="lefttitle" style="font-size:1rem;">到府空間擺設</div>
+						<div class="descrip-deco">
+							每一個設計案都是我們珍貴的經驗，這作品像是看待自己擁有另一個孩子般重視，希望您也能愛上這樣的氛圍， 家具項目與品項確認後，這些家具從包裝到運送都由我們一手包辦，擺設完成後即可體驗NV舒適空間。
+						</div>
+					</div>
+					<div class="contactbox-deco" style="padding:0;">
+						<div class="decoimg-deco">
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/Wg2yDj4.png" height="100%">
+						</div>
+						<div class="decoimg-deco" >
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/SN6xZM9.png" height="100%">
+						</div>
+					</div>
+				</div>
 			</div>
-			<script>
-			var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
-			slide = document.querySelector('#slide1'),
-			items = slide.querySelectorAll('li'), // 抓取所有 li
-			itemsCount = items.length, // 圖片總數
-			prevBtn = document.createElement('a'), // 上一張按鈕
-			nextBtn = document.createElement('a'), // 下一張按鈕
-			timer = 7000, // 7 秒換圖
-			interval = window.setInterval(showNext, timer);  // 設定循環
-
-			prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
-			nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
-			slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
-			slide.appendChild(nextBtn);
-
-			// 帶入目前要顯示第幾張圖
-			var showCurrent = function(){
-					var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
-					[].forEach.call( items, function(el){
-						el.classList.remove('show'); // 將所有 img 的 class="show" 移除
-					});
-					items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
-			};
-
-			function showNext(){
-				counter++; // 將 counter+1 指定下一張圖
-				showCurrent();
-			}
-
-			function showPrev(){
-				counter--; // 將 counter－1 指定上一張圖
-				showCurrent();
-			}
-
-			// 滑鼠移到 #slider 上方時，停止循環計時
-			/*slide.addEventListener('mouseover', function(){
-				interval = clearInterval(interval);
-			});
-
-			// 滑鼠離開 #slider 時，重新開始循環計時
-			lide.addEventListener('mouseout', function(){
-				interval = window.setInterval(showNext, timer);
-			});*/
-
-			// 綁定點擊上一張，下一張按鈕的事件
-			nextBtn.addEventListener('click', showNext, false);
-			prevBtn.addEventListener('click', showPrev, false);
-
-			// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
-			items[0].classList.add('show');
-						//# sourceURL=pen.js
-
-
-			</script>
 			<script src="https://letsohyeah.github.io/js/jquery-2.1.3.min.js"></script>
 			<script src="https://letsohyeah.github.io/js/jquery.easing.1.3.js"></script>
 			<script src="https://letsohyeah.github.io/js/jquery.parallax-scroll.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 		</div>
 	</div>
-	<p class="copyright-index">
+	<p class="copyright">
 		Copyright © 2017 Natural n' Vintage
 	</p>
 </BODY>
