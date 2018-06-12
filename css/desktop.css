@@ -1837,7 +1837,6 @@ width: 100%;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  align-items: center;
 }
 .imgbox1-item{
   overflow: auto;
@@ -1850,6 +1849,7 @@ width: 100%;
           flex-direction: column;
 }
 .infobox-item{
+  margin-top: 30vh;
   margin-left: 50px;
   display: -moz-flex;
   display: -webkit-flex;
