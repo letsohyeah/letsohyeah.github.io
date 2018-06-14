@@ -1839,7 +1839,7 @@ width: 100%;
   display: 				 flex;
 }
 .imgbox1-item{
-  overflow: auto;
+  flex: 1.5;
   max-width: 700px;
   display: -moz-flex;
   display: -webkit-flex;
@@ -1849,7 +1849,14 @@ width: 100%;
           flex-direction: column;
 }
 .infobox-item{
-  margin-top: 30vh;
+  flex: 1;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  align-items: center;
+}
+.info-item{
+  position: fixed;
   margin-left: 50px;
   display: -moz-flex;
   display: -webkit-flex;
