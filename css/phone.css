@@ -1850,8 +1850,7 @@ align-items: center;
 	flex-wrap: wrap;
 }
 .grid-press{
-	border-top: 1px solid #000;
-	margin-top: 40px;
+	margin-top: 5rem;
 	width: 100%;
 	display: -moz-flex;
 	display: -webkit-flex;

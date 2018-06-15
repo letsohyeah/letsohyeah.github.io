@@ -1694,9 +1694,8 @@ width: 100%;
           flex-direction: column;
 }
 .grid-press{
-  border-top: 1px solid #000;
   max-width: 700px;
-  margin-bottom: 40px;
+  margin-bottom: 8rem;
   margin-left: 40px;
   min-width: 270px;
   display: -moz-flex;
@@ -1784,7 +1783,6 @@ width: 100%;
   color: #555555;
 }
 .article1-press{
-  margin-left: 20px;
   margin-top: 2rem;
   margin-bottom: 0rem;
   font-size: 0.7rem;
@@ -1800,7 +1798,6 @@ width: 100%;
 .imgbox-press{
   max-width: 700px;
   margin-top: 50px;
-  margin-left: 20px;
   overflow: hidden;
   height: auto;
 }
