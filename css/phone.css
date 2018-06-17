@@ -395,7 +395,7 @@ flex-direction: column;
 }
 .card{
 margin-top: 5vh;
-height: 80vh;
+height: auto;
 flex-direction: column;
 display: -moz-flex;
 display: -webkit-flex;
@@ -432,6 +432,7 @@ display: -webkit-flex;
 display: 				 flex;
 }
 .indextitle{
+margin-top: 5rem;
 width: 100%;
 font-size: 0.6rem;
 font-weight: 100;
@@ -441,7 +442,7 @@ color: #474747;
 text-align: center;
 }
 .worksbox{
-margin-top: 5vh;
+margin-top: 3rem;
 display: -moz-flex;
 display: -webkit-flex;
 display: 				 flex;
@@ -512,7 +513,7 @@ display: 				 flex;
 flex-direction: column;
 }
 .contact-img{
-margin-top: 5vh;
+margin-top: 5rem;
 order: 3;
 overflow: hidden;
 }
@@ -531,6 +532,7 @@ display: 				 flex;
 flex-direction: column;
 }
 .contact-map{
+margin-top: 5rem;
 margin-left: 20px;
 order: 2;
 width: 80%;

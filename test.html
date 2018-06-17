@@ -413,7 +413,7 @@
 	}
 	.card{
 	margin-top: 5vh;
-	height: 80vh;
+	height: auto;
 	flex-direction: column;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -450,6 +450,7 @@
 	display: 				 flex;
 	}
 	.indextitle{
+	margin-top: 5rem;
 	width: 100%;
 	font-size: 0.6rem;
 	font-weight: 100;
@@ -459,7 +460,7 @@
 	text-align: center;
 	}
 	.worksbox{
-	margin-top: 5vh;
+	margin-top: 3rem;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -530,7 +531,7 @@
 	flex-direction: column;
 	}
 	.contact-img{
-	margin-top: 5vh;
+	margin-top: 5rem;
 	order: 3;
 	overflow: hidden;
 	}
@@ -549,6 +550,7 @@
 	flex-direction: column;
 	}
 	.contact-map{
+	margin-top: 5rem;
 	margin-left: 20px;
 	order: 2;
 	width: 80%;
@@ -2339,13 +2341,10 @@
 
 
 
-
-
 	</style>
 </HEAD>
 <BODY>
 	<div class="cleanfix">
-
 
 		<!--   N   A   V   -->
 		<nav>
@@ -2362,7 +2361,7 @@
 				<a href="https://letsohyeah.github.io/item.html">Item</a>
 			</div>
 			<div class="navlinks">
-			 	<a href="https://letsohyeah.github.io/team.html">Team</a>
+				<a href="https://letsohyeah.github.io/team.html">Team</a>
 			</div>
 			<div class="navlinks">
 				<a href="https://letsohyeah.github.io/press.html">Press</a>
@@ -2379,181 +2378,277 @@
 
 		<div class="navmob" onclick="return true">
 			<div class="dropdown-menu">
-			  <span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
+				<span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
 					<div tabindex="0" onclick="return true"></div>
-				  <ul>
+					<ul>
 						<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
-				    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
+						<li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
 						<li><a href="https://letsohyeah.github.io/service.html" onclick="sampleMenu(this)">Service</a></li>
-				    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
+						<li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
 						<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
 						<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
 						<li><a href="https://letsohyeah.github.io/press.html" onclick="sampleMenu(this)">Press</a></li>
 						<li><a href="https://letsohyeah.github.io/contact.html" onclick="sampleMenu(this)">Contact</a></li>
-				  </ul>
+					</ul>
 			</div>
 		</div>
 		<!--   N   A   V   -->
-
-
 		<div class="contianer">
 			<div class="bigtitle">
-					Press
+					Index
 			</div>
-			<div class="gridcontianer-press">
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press11.html" class="name-press">環遊世界的古董旅行</a>
-							<div class="descrip-press">6/08/2018</div>
-							<div class="descrip-press">Maite</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/34746423_2018445458471315_4499350942642077696_o.jpg?_nc_cat=0&oh=cd3a67bd11dd3a9af7b6edb05ba2f360&oe=5BB35E3F" width="100%";>
-							</div>
-							<div class="article1-press">
-								我是個喜歡飛到地球彼端，做一些我在家裡也會做的一些微不足道小小事的怪人。像個儀式般，一到陌生的房間，我會打開電腦先放自己喜歡的音樂流瀉整個空間，床邊擺上那本在飛機上還沒讀完的書，把廚房我需要用的器具找出來洗乾淨，並擺放在我喜歡的位置，清空我的行李箱推到最角落，一切就好像這趟旅行從來沒有發生過。⋯⋯
-							</div>
-						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press10.html" class="name-press">我的古董哲學</a>
-							<div class="descrip-press">4/17/2018</div>
-							<div class="descrip-press">Maite</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/SPv572r.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								讓古董融入每天的生活，對我來說既是環保，更是一種日常的浪漫。<br>
-								我深信質感好的東西只會越用越好看，轉身望向你長期使用的物件，<br>
-								小的如皮夾、眼鏡、愛用的杯盤食器，<br>
-								大一些的像是你家的餐桌、開的車，這些大大小小的物件，都代表著你的個人風格。<br>
-								它們在你的使用下折舊，沾染上歲月更迭的痕跡，也映照出專屬於你的樣子。⋯⋯
+				<ul id="slide">
+					<li>
+						<div class="picbox" id="img1">
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									打造質感室內居家生活
+								</div>
+								拋開過去非得要"裝潢"的概念，讓空間載體本身回歸乾淨簡單。
+								<a href="https://letsohyeah.github.io/about.html" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們</span></a>
 							</div>
 						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press09.html" class="name-press">舊物:垃圾與寶藏的一線之隔</a>
-							<div class="descrip-press">4/30/2013</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/RHehCIQ.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								我想這是一個很有趣的話題<br>
-								因為支持(喜歡)的人與不支持(不喜歡)的人，立場都很明顯<br>
-								<br>
-								我想把它描述成一種味道(像臭豆腐，榴槤好了)<br>
-								那是一種味道<br>
-								有的人聞到這樣的味道<br>
-								是不排斥的而是喜歡的⋯⋯
+					</li>
+
+
+					<li>
+						<div class="picbox" id="img2">
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									Press 11
+								</div>
+								我是個喜歡飛到地球彼端，做一些我在家裡也會做的一些微不足道小小事的怪人。
+								<a href="https://letsohyeah.github.io/Press/Press11.html" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多</span></a>
 							</div>
 						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press08.html" class="name-press">遺失的美好</a>
-							<div class="descrip-press">3/8/2012</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/JWhbouV.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								我牙痛了，發現我智齒蛀牙了，<br>
-								這牙痛像是時光隧道開關的按鈕被打開，讓我回到了過去那年，<br>
-								讓我回想起上一次牙痛已經是國中國小時期了，當時我可是蛀牙高手！<br>
-								因為口中幾乎每一顆牙齒都是蛀牙！⋯⋯
-							</div>
-						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press07.html" class="name-press">客廳裡的電視</a>
-							<div class="descrip-press">1/26/2012</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/QAgbynG.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								電腦裡的時間還未更新設定。<br>
-								那是台北的時間。你們，睡了。<br>
-								看著電腦裡的一些資訊，我還是些微的感受到一些年味⋯⋯
+					</li>
+
+
+					<li>
+						<div class="picbox" id="img3">
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									Antik
+								</div>
+								「私人旅宿，古董傢私與日常的美好交疊。」<br><br>
+								繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著。
+								<a href="https://letsohyeah.github.io/antik.html" class="button-index"><span style="opacity:1;">閱讀更多</span></a>
 							</div>
 						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press06.html" class="name-press">老木</a>
-							<div class="descrip-press">4/12/2016</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/Sbxx7yK.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								這老木地板一運回家就閒置了三四個月，<br>
-								因為這不是一個人有辦法解決的事，<br>
-								這種老木地板處理起來就是費事工⋯⋯
-							</div>
-						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press05.html" class="name-press">夢行者</a>
-							<div class="descrip-press">1/3/2012</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/2ndcYH5.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								在這兒。 <br>
-								彷彿回到孩童時期的規律生活，<br>
-								早上騎自行車去學校，<br>
-								下班回家自己煮個東西吃，吃飽了。<br>
-								玩一玩樂高，看一看電視，之後就想睡覺了⋯⋯
+					</li>
+
+
+					<li>
+						<div class="picbox" id="img4">
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									精選歐洲古董家具
+								</div>
+								舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>NV為您精心挑選北歐舊物，為空間注入靈魂。
+								<a href="https://letsohyeah.github.io/item.html" class="button-index" style="color:#474747;"><span style="opacity:1;">來去逛逛</span></a>
 							</div>
 						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press04.html" class="name-press">蚤市趕集</a>
-							<div class="descrip-press">10/15/2017</div>
-							<div class="descrip-press">Shelly</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/YXnYEzd.jpg" width="100%";>
+					</li>
+				</ul>
+			<div class="downarrowbox">
+				<div class="downarrow" id="keyframes move">
+				</div>
+			</div>
+			<div class="poembox">
+				<div class="poem" data-parallax='{"y": -500,"smoothness": 30}'>
+					一個不願在理性與感性之間妥協<br>
+					在市場、商業與量化中輕輕閉上雙眼<br>
+					只想繼續在原始夢境裡頭做夢的美好空間氛圍<br>
+					<br>
+					以自然元素與物件本質做為導引<br>
+					散發出雋永且獨特的靈魂感居家風格<br>
+					極具溫度手工打造的木料傢俱<br>
+					充滿質感的生活道具<br>
+					環遊世界後，終於飄洋過海到你身邊的老物件<br>
+					褪去多餘的人工裝飾<br>
+					回歸內心深處多年來所嚮往的那份簡單<br>
+					視覺輕鬆了<br>
+					心舒服了<br>
+					生活 於是平衡了
+				</div>
+				<div class="poempic" data-parallax='{"y": -400,"smoothness": 30}'>
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/NEyK7vn.jpg" height="100%">
+				</div>
+				<div class="logobox-index" data-parallax='{"y": -300,"smoothness": 30}'>
+					<img class="lazy img-responsive" data-original="https://i.imgur.com/iSUuJCn.png" width="100%">
+				</div>
+			</div>
+			<div class="pagebox">
+				<p class="indextitle">
+					Service
+				</p>
+				<div class="cardbox">
+					<div class="card">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/nTWj3IN.jpg" width="100%";>
+						<div class="cardcontentbox">
+							<div class="cardtitle">
+								傢俱擺設規劃
 							</div>
-							<div class="article1-press">
-								對蚤市的熱愛<br>
-								和對旅行的熱愛<br>
-								兩者是相輔相成的⋯⋯
+							<div class="cardcontent">
+								想買傢俱卻不知道該怎麼挑選、擺設嗎？<br><br>我們提供各種規劃方案，為您規劃、擺設，一次打包整套傢俱，以更優惠的價格打造最合適的空間。
 							</div>
-						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press03.html" class="name-press">多一點擔當與付出</a>
-							<div class="descrip-press">11/15/2016</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="article1-press">
-								11月的氣候是多麼讓人可以接受，<br>
-								剛好的日照熱輻射，汗水的量與蒸發對流熱傳量都配合得恰當，<br>
-								只想多花點時間投入在這環境裡活動，<br>
-								也希望一年四季都是11月的氣候⋯⋯
-							</div>
-						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press02.html" class="name-press">老Golf</a>
-							<div class="descrip-press">3/22/2017</div>
-							<div class="descrip-press">GiGi</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/pG7Gr6E.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								這幾年剛出社會，遇到一些人事物的一些想法，<br>
-								多數人在這現實的社會裡，多是用名利在衡量一個人的高低與成就。<br>
-								就像囚犯入獄前在一面刻劃身高的牆上拍照似的，<br>
-								身高臉孔一覽無遺，只是刻劃數值都改成年薪數字與頭銜罷了⋯⋯
-							</div>
-						</div>
-						<div class="grid-press">
-							<a href="https://letsohyeah.github.io/Press/Press01.html" class="name-press">Natural n' Vintage—起源</a>
-							<div class="descrip-press">10/15/2017</div>
-							<div class="descrip-press">GiGi、Maite</div>
-							<div class="imgbox-press">
-								<img class="lazy img-responsive" data-original="https://i.imgur.com/7mInOvP.jpg" width="100%";>
-							</div>
-							<div class="article1-press">
-								每個人心中，都會有一個理想的家的樣子。步入婚姻之前，長期以來走遍世界各地，關於家的各種想法，在我們腦海中不斷重覆更新著，一直到終於擁有自己的家，這個我們決定要做為此生在台灣這片土地上唯一的庇護所，我們過去種種對家的期待與想像，才得以由平面化為立體，用雙手付諸實踐⋯⋯
-							</div>
+							<a href="http://naturalnvintage.com/deco.html" class="button-index" ><span>了解更多</span></a>
 						</div>
 					</div>
+					<div class="card">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/zpPSXvI.jpg" width="100%";>
+						<div class="cardcontentbox">
+							<div class="cardtitle">
+								中島吧台設計製作
+							</div>
+							<div class="cardcontent">
+								依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份
+							</div>
+							<a href="http://naturalnvintage.com/cabinet.html" class="button-index"><span>了解更多</span></a>
+						</div>
+					</div>
+					<div class="card">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/pMzoE2s.jpg" width="100%";>
+						<div class="cardcontentbox">
+							<div class="cardtitle">
+								精選歐洲古董家具
+							</div>
+							<div class="cardcontent">
+								舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>
+								NV為您精心挑選北歐舊物，為空間注入靈魂。
+							</div>
+							<a href="http://naturalnvintage.com/item.html" class="button-index"><span>了解更多</span></a>
+						</div>
+					</div>
+				</div>
+
+				<p class="indextitle">
+					Works
+				</p>
+				<div class="worksbox">
+					<div class="worksimg" data-parallax='{ "from-scroll": 2000 ,"y": -100,"smoothness": 30}'>
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/nQozK4l.jpg" width="100%">
+					</div>
+					<div class="worksarticleL" data-parallax='{"from-scroll": 2000 ,"y": -200,"smoothness": 30}'>
+						<div class="workstitle">
+							Antik
+						</div>
+						<div class="worksdescribe">
+							「私人旅宿，古董傢私與日常的美好交疊。」
+						</div>
+						<div class="workscontemt">
+							繞過了嘉義文化路熱鬧的街區，幾棟老布行與舊家居，隱身在舊市場內的Antik，靜靜地佇立著，歷經五十年的老房子，此刻，卻有著廢墟重生後，自在的朝氣和美麗。莫名緩慢而悠哉的魔幻時空，正隨著黑膠唱盤清亮的樂聲自大片的黑格落地窗流瀉出來，在午後的陽光中，Antik，用最美好的姿態與妳相遇…
+						</div>
+					</div>
+					<div class="block-index"></div>
+				</div>
+				<div class="block">
+				</div>
+				<div class="worksbox">
+					<div class="block-index"></div>
+					<div class="worksarticleR" data-parallax='{ "from-scroll": 2000 ,"y": -200,"smoothness": 30}'>
+						<div class="workstitle">
+							Silhouette
+						</div>
+						<div class="worksdescribe">
+							「什麼空間在你的眼中是最美的？無庸質疑是適合你自己的空間。」
+						</div>
+						<div class="workscontemt">
+							「一個所謂近乎完美的生活空間絕對需要一個人對生活品質有某程度上不妥協的要求（這與金錢無關）然後保持開放的心胸，少一些過度放大的自我（別忘了一山還有一山高）多一點簡單、多留一些白、注重細節，還有更多對好物件的堅持態度，這些是我的觀察。」—Maite
+						</div>
+					</div>
+					<div class="worksimg" data-parallax='{ "from-scroll": 2000 ,"y": -100,"smoothness": 30}'>
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/O5bO7YD.jpg" width="100%">
+					</div>
+				</div>
+				<div class="block"></div>
+				<div class="block"></div>
+				<p class="indextitle">
+					Contact
+				</p>
+				<div class="contactbox">
 					<div class="block"></div>
-					<p class="copyright">
-						Copyright © 2017 Natural n' Vintage
-					</p>
+					<div class="contact-img">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/lSp2vAn.jpg" width="100%">
+					</div>
+					<div class="contactcontemt">
+						<p>工作室預約參觀：<br>至少於一日前私訊預約。
+														另外因工作室空間有限，如果您想看的是大型家具或想要了解居家佈置和訂製吧台的部分，也希望提前告訴我們，讓我們為您安排。</p>
+						<div class="block-contact"></div>
+						<p>Email：natural.n.vintage@gmail.com</p>
+						<p>Facebook：<a href="https://www.facebook.com/naturalnvintage/">Natural n Vintage</a></p>
+						<p>Instagram：<a href="https://www.instagram.com/natural_n_vintage/">@natural_n_vintage</a></p>
+					</div>
+					<div class="contact-map">
+						<img class="lazy img-responsive" data-original="https://i.imgur.com/VmS6G45.png" width="100%">
+					</div>
+				</div>
+				<div class="block"></div>
+				<div class="block"></div>
 			</div>
+
+
+			<script>
+
+				var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
+				slide = document.querySelector('#slide'),
+				items = slide.querySelectorAll('li'), // 抓取所有 li
+				itemsCount = items.length, // 圖片總數
+				prevBtn = document.createElement('a'), // 上一張按鈕
+				nextBtn = document.createElement('a'), // 下一張按鈕
+				timer = 7000, // 7 秒換圖
+				interval = window.setInterval(showNext, timer);  // 設定循環
+
+				prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
+				nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
+				slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
+				slide.appendChild(nextBtn);
+
+				// 帶入目前要顯示第幾張圖
+				var showCurrent = function(){
+						var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
+						[].forEach.call( items, function(el){
+							el.classList.remove('show'); // 將所有 img 的 class="show" 移除
+						});
+						items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
+				};
+
+				function showNext(){
+					counter++; // 將 counter+1 指定下一張圖
+					showCurrent();
+				}
+
+				function showPrev(){
+					counter--; // 將 counter－1 指定上一張圖
+					showCurrent();
+				}
+
+				// 滑鼠移到 #slider 上方時，停止循環計時
+				/*slide.addEventListener('mouseover', function(){
+					interval = clearInterval(interval);
+				});
+
+				// 滑鼠離開 #slider 時，重新開始循環計時
+				lide.addEventListener('mouseout', function(){
+					interval = window.setInterval(showNext, timer);
+				});*/
+
+				// 綁定點擊上一張，下一張按鈕的事件
+				nextBtn.addEventListener('click', showNext, false);
+				prevBtn.addEventListener('click', showPrev, false);
+
+				// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
+				items[0].classList.add('show');
+							//# sourceURL=pen.js
+			</script>
+			<script src="https://letsohyeah.github.io/js/jquery-2.1.3.min.js"></script>
+			<script src="https://letsohyeah.github.io/js/jquery.easing.1.3.js"></script>
+			<script src="https://letsohyeah.github.io/js/jquery.parallax-scroll.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 		</div>
+	</div>
+	<p class="copyright-index">
+		Copyright © 2017 Natural n' Vintage
+	</p>
 </BODY>
 </HTML>
