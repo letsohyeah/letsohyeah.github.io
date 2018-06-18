@@ -2313,3 +2313,11 @@ align-items: center;
 	-webkit-flex-direction: column;
 					flex-direction: column;
 }
+.title-info{
+	margin-left: 15px;
+	margin-bottom: 2rem;
+	font-size: 1rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.2rem;
+}

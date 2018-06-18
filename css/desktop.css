@@ -2244,3 +2244,12 @@ width: 100%;
     width: calc(100% - 120px);
   }
 }
+.title-info{
+  margin-top: 4rem;
+  margin-left: 50px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.2rem;
+}
