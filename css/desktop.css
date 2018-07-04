@@ -399,8 +399,8 @@ nav{
   .cardtitle{
     margin-top: 0.8rem;
     font-size: 10pt;
-    font-weight: 300;
-    font-family: "HanaMinA";
+    font-weight: 500;
+    font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 3px;
     flex: 1 auto;
     display: -moz-flex;
