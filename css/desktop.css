@@ -2049,6 +2049,20 @@ width: 100%;
   font-family: "Noto Sans TC", sans-serif;
   background-color: #fff;
 }
+.newtag{
+  text-align: center;
+  z-index: 100;
+  margin-top: 1rem;
+  margin-left: -0.5rem;
+  color: #fff;
+  padding: 0.2rem;
+  position: absolute;
+  background-color: #c9836d;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  font-family: "Noto Sans TC", sans-serif;
+}
 /*ITEM*/
 
 /*Contact*/

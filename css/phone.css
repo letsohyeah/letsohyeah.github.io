@@ -2169,6 +2169,20 @@ align-items: center;
 	font-family: "Noto Sans TC", sans-serif;
 	background-color: #fff;
 }
+.newtag{
+	text-align: center;
+	z-index: 100;
+	margin-top: 0.6rem;
+	margin-left: -0.2rem;
+	color: #fff;
+	padding: 0.2rem;
+	position: absolute;
+	background-color: #c9836d;
+	font-size: 0.5rem;
+	font-weight: 400;
+	letter-spacing: 0.2rem;
+	font-family: "Noto Sans TC", sans-serif;
+}
 /*ITEM*/
 
 /*Contact*/
