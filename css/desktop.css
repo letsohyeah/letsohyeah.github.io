@@ -117,26 +117,26 @@ nav{
    background-image: url(https://i.imgur.com/vNBNRvT.jpg);
 }
 #img2{
-   background-image: url(https://scontent.ftpe3-1.fna.fbcdn.net/v/t1.0-9/34863365_2023210104661517_6867815038887919616_n.jpg?_nc_cat=0&oh=460730fd3962af0f23cc01f728ab10f9&oe=5BA66868);
+   background-image: url(https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/34746423_2018445458471315_4499350942642077696_o.jpg?_nc_cat=0&oh=cd3a67bd11dd3a9af7b6edb05ba2f360&oe=5BB35E3F);
 }
 #img3{
    background-image: url(https://i.imgur.com/nQozK4l.jpg);
 }
 #img4{
-   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&oh=538812c9c50714e8a9d33d15212d6bd5&oe=5BABB67B);
+   background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHHgABquxGhvI3rQvbsgxPCJ8bYKZFM-YKyyLA_4KBI4cg6mihQQABAIvLgEKtnhURWVRu50XOA0y90KeoDgysnXT_WCANs8cl3Yx__onJ1-w&oh=addda616bd012e7e551c02e6b96752c6&oe=5B350F7B);
 }
 @media only screen and (max-width: 768px) {
   #img1{
     background-image: url(https://i.imgur.com/ZYZ902S.jpg);
   }
   #img2{
-     background-image: url(https://scontent.ftpe3-1.fna.fbcdn.net/v/t1.0-9/34863365_2023210104661517_6867815038887919616_n.jpg?_nc_cat=0&oh=460730fd3962af0f23cc01f728ab10f9&oe=5BA66868);
+     background-image: url(https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/34746423_2018445458471315_4499350942642077696_o.jpg?_nc_cat=0&oh=cd3a67bd11dd3a9af7b6edb05ba2f360&oe=5BB35E3F);
   }
   #img3{
      background-image: url(https://i.imgur.com/nQozK4l.jpg);
   }
   #img4{
-     background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29749429_1983824261933435_5688311204819957662_o.jpg?_nc_cat=0&oh=538812c9c50714e8a9d33d15212d6bd5&oe=5BABB67B);
+     background-image: url(https://scontent.ftpe3-2.fna.fbcdn.net/v/t31.0-8/29872346_1983824048600123_5741461631488580288_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHc2-efbouazMkNuAt2fnSM-oakFgSFRhDcPZ2NB4d5fHKqMSh91lmpCXXLCG1WTE8btOnFEdW1Y_xhoVjEKubODpRzruILtLxH4l5Z0ZOGCw&oh=f0a3b118d3af8bec3e506ebd5133f5b9&oe=5B38A8A3);
   }
 }
 .articlecontianer-index{
@@ -382,24 +382,48 @@ nav{
   .cardbox{
     margin-left: 10vw;
     margin-right: 10vw;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
     flex-direction: row;
     display: -moz-flex;
     display: -webkit-flex;
     display: 				 flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+            flex-direction: column;
   }
-  .card{
-    margin-top: 5vh;
-    height: 80vh;
-    width: 33.3%;
+  .cardL{
+    margin-bottom: 5rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    align-items: center;
+  }
+  .cardR{
+    margin-bottom: 5rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .cardimg{
+    width: 60%;
+  }
+  .cardcontentbox{
+    padding-right: 2rem;
+    padding-left: 4rem;
+    height: 30%;
+    width: 40%;
     flex-direction: column;
+    justify-content: space-between;
     display: -moz-flex;
     display: -webkit-flex;
     display: 				 flex;
   }
   .cardtitle{
-    margin-top: 0.8rem;
-    font-size: 10pt;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 300;
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 3px;
     flex: 1 auto;
@@ -407,22 +431,12 @@ nav{
     display: -webkit-flex;
     display: 				 flex;
   }
-  .cardcontentbox{
-    height: 35vh;
-    max-width: 350px;
-    padding-top: 10px;
-    padding-right: 20px;
-    flex-direction: column;
-    justify-content: space-between;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: 				 flex;
-  }
   .cardcontent{
+    max-width: 300px;
     font-size: 0.6rem;
     font-weight: 300;
     font-family: 'Noto Sans TC', sans-serif;
-    line-height: 1.2rem;
+    line-height: 1rem;
     flex: 3 auto;
     display: -moz-flex;
     display: -webkit-flex;
@@ -2244,6 +2258,7 @@ width: 100%;
     width: calc(100% - 120px);
   }
 }
+
 .title-info{
   margin-top: 4rem;
   margin-left: 50px;
