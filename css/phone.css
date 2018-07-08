@@ -562,6 +562,12 @@ align-items: center;
 /*INDEX*/
 
 /*SERVICE*/
+.cardbox-service{
+display: -moz-flex;
+display: -webkit-flex;
+display: 				 flex;
+flex-direction: column;
+}
 .articlecontianer-service{
 	margin-top: 50px;
 	display: -moz-flex;

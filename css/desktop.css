@@ -413,7 +413,7 @@ nav{
   .cardcontentbox{
     padding-right: 2rem;
     padding-left: 4rem;
-    height: 30%;
+    min-height: 15rem;
     width: 40%;
     flex-direction: column;
     justify-content: space-between;
@@ -568,6 +568,20 @@ nav{
 /*INDEX*/
 
 /*SERVICE*/
+.cardbox-service{
+  width: calc(100vw - 120px);
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 6rem;
+  margin-bottom: 5rem;
+  flex-direction: row;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
 .articlecontianer-service{
   margin-right: 150px;
   overflow: hidden;
