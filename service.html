@@ -36,6 +36,13 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).ready(function() {
+				$("img.lazy").lazyload({
+						effect : "fadeIn"
+				});
+		});
+	</script>
 	<TITLE> Service - Natural n' Vantage </TITLE>
 </HEAD>
 <BODY>
@@ -139,8 +146,7 @@
 				</div>
 			</div>
 		</div>
-		</div>
-		<p class="copyright" style="color:white;">
+		<p class="copyright">
 			Copyright © 2017 Natural n' Vintage
 		</p>
 	</div>
