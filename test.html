@@ -161,7 +161,7 @@
 		 background-image: url(https://i.imgur.com/vNBNRvT.jpg);
 	}
 	#img2{
-		 background-image: url(https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/34746423_2018445458471315_4499350942642077696_o.jpg?_nc_cat=0&oh=cd3a67bd11dd3a9af7b6edb05ba2f360&oe=5BB35E3F);
+		 background-image: url(https://scontent.ftpe3-1.fna.fbcdn.net/v/t1.0-9/34863365_2023210104661517_6867815038887919616_n.jpg?_nc_cat=0&oh=460730fd3962af0f23cc01f728ab10f9&oe=5BA66868);
 	}
 	#img3{
 		 background-image: url(https://i.imgur.com/nQozK4l.jpg);
@@ -174,7 +174,7 @@
 			background-image: url(https://i.imgur.com/ZYZ902S.jpg);
 		}
 		#img2{
-			 background-image: url(https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/34746423_2018445458471315_4499350942642077696_o.jpg?_nc_cat=0&oh=cd3a67bd11dd3a9af7b6edb05ba2f360&oe=5BB35E3F);
+			 background-image: url(https://scontent.ftpe3-1.fna.fbcdn.net/v/t1.0-9/34863365_2023210104661517_6867815038887919616_n.jpg?_nc_cat=0&oh=460730fd3962af0f23cc01f728ab10f9&oe=5BA66868);
 		}
 		#img3{
 			 background-image: url(https://i.imgur.com/nQozK4l.jpg);
@@ -2207,6 +2207,27 @@
 		letter-spacing: 0.2rem;
 		font-family: "Noto Sans TC", sans-serif;
 	}
+	.bannerbox{
+		margin-top: -3rem;
+		margin-bottom: 2rem;
+		width: 100%;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+	}
+	.banner{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		line-height: 2rem;
+		font-size: 1.4rem;
+	  font-weight: 800;
+	  letter-spacing: 0.4rem;
+	  font-family: "Noto Sans TC", sans-serif;
+	  color: #e5765c;
+	}
 	/*ITEM*/
 
 	/*Contact*/
@@ -2369,11 +2390,183 @@
 
 
 
-
-
 	</style>
 </HEAD>
 <BODY>
+	<script>
+	function showall() {
+		var a = document.getElementById("Cabinet");
+		if (a.style.display === "none") {
+				a.style.display = "flex";
+		}
+		var b = document.getElementById("Chair");
+		if (b.style.display === "none") {
+				b.style.display = "flex";
+		}
+		var c = document.getElementById("Table");
+		if (c.style.display === "none") {
+				c.style.display = "flex";
+		}
+		var d = document.getElementById("Lighting");
+		if (d.style.display === "none") {
+				d.style.display = "flex";
+		}
+		var e = document.getElementById("Antiques");
+		if (e.style.display === "none") {
+				e.style.display = "flex";
+		}
+	}
+	function cabinet() {
+		var a = document.getElementById("Cabinet");
+		if (a.style.display === "none") {
+				a.style.display = "flex";
+		}
+		var b = document.getElementById("Chair");
+		if (b.style.display === "flex") {
+				b.style.display = "none";
+		} else {
+				b.style.display = "none";
+		}
+		var c = document.getElementById("Table");
+		if (c.style.display === "flex") {
+				c.style.display = "none";
+		} else {
+				c.style.display = "none";
+		}
+		var d = document.getElementById("Lighting");
+		if (d.style.display === "flex") {
+				d.style.display = "none";
+		} else {
+				d.style.display = "none";
+		}
+		var e = document.getElementById("Antiques");
+		if (e.style.display === "flex") {
+				e.style.display = "none";
+		} else {
+				e.style.display = "none";
+		}
+	}
+	function chair() {
+		var a = document.getElementById("Chair");
+		if (a.style.display === "none") {
+				a.style.display = "flex";
+		}
+		var b = document.getElementById("Cabinet");
+		if (b.style.display === "flex") {
+				b.style.display = "none";
+		} else {
+				b.style.display = "none";
+		}
+		var c = document.getElementById("Table");
+		if (c.style.display === "flex") {
+				c.style.display = "none";
+		} else {
+				c.style.display = "none";
+		}
+		var d = document.getElementById("Lighting");
+		if (d.style.display === "flex") {
+				d.style.display = "none";
+		} else {
+				d.style.display = "none";
+		}
+		var e = document.getElementById("Antiques");
+		if (e.style.display === "flex") {
+				e.style.display = "none";
+		} else {
+				e.style.display = "none";
+		}
+	}
+	function table() {
+		var a = document.getElementById("Table");
+		if (a.style.display === "none") {
+				a.style.display = "flex";
+		}
+		var b = document.getElementById("Cabinet");
+		if (b.style.display === "flex") {
+				b.style.display = "none";
+		} else {
+				b.style.display = "none";
+		}
+		var c = document.getElementById("Chair");
+		if (c.style.display === "flex") {
+				c.style.display = "none";
+		} else {
+				c.style.display = "none";
+		}
+		var d = document.getElementById("Lighting");
+		if (d.style.display === "flex") {
+				d.style.display = "none";
+		} else {
+				d.style.display = "none";
+		}
+		var e = document.getElementById("Antiques");
+		if (e.style.display === "flex") {
+				e.style.display = "none";
+		} else {
+				e.style.display = "none";
+		}
+	}
+	function lighting() {
+		var a = document.getElementById("Lighting");
+		if (a.style.display === "none") {
+				a.style.display = "flex";
+		}
+		var b = document.getElementById("Cabinet");
+		if (b.style.display === "flex") {
+				b.style.display = "none";
+		} else {
+				b.style.display = "none";
+		}
+		var c = document.getElementById("Chair");
+		if (c.style.display === "flex") {
+				c.style.display = "none";
+		} else {
+				c.style.display = "none";
+		}
+		var d = document.getElementById("Table");
+		if (d.style.display === "flex") {
+				d.style.display = "none";
+		} else {
+				d.style.display = "none";
+		}
+		var e = document.getElementById("Antiques");
+		if (e.style.display === "flex") {
+				e.style.display = "none";
+		} else {
+				e.style.display = "none";
+		}
+	}
+	function antiques() {
+		var a = document.getElementById("Antiques");
+		if (a.style.display === "none") {
+				a.style.display = "flex";
+		}
+		var b = document.getElementById("Cabinet");
+		if (b.style.display === "flex") {
+				b.style.display = "none";
+		} else {
+				b.style.display = "none";
+		}
+		var c = document.getElementById("Chair");
+		if (c.style.display === "flex") {
+				c.style.display = "none";
+		} else {
+				c.style.display = "none";
+		}
+		var d = document.getElementById("Table");
+		if (d.style.display === "flex") {
+				d.style.display = "none";
+		} else {
+				d.style.display = "none";
+		}
+		var e = document.getElementById("Lighting");
+		if (e.style.display === "flex") {
+				e.style.display = "none";
+		} else {
+				e.style.display = "none";
+		}
+	}
+	</script>
 	<div class="cleanfix">
 
 		<!--   N   A   V   -->
@@ -2426,58 +2619,1300 @@
 
 		<div class="contianer">
 			<div class="bigtitle">
-					Service
+					Item
 			</div>
-			<div class="cardbox-service">
-				<div class="cardL">
-					<div class="cardimg">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/KolBwrB.jpg" width="100%";>
-					</div>
-					<div class="cardcontentbox">
-						<div class="cardtitle">
-							傢俱擺設規劃
-						</div>
-						<div class="cardcontent">
-							想買傢俱卻不知道該怎麼挑選、擺設嗎？<br><br>我們提供各種規劃方案，為您規劃、擺設，一次打包整套傢俱，以更優惠的價格打造最合適的空間。
-						</div>
-						<a href="http://naturalnvintage.com/deco.html" class="button-index" ><span>了解更多</span></a>
-					</div>
-				</div>
-				<div class="cardR">
-					<div class="cardimg">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/odt7K4y.jpg" width="100%";>
-					</div>
-					<div class="cardcontentbox">
-						<div class="cardtitle">
-							中島吧台設計製作
-						</div>
-						<div class="cardcontent">
-							依您的需求，量身打造最適合空間氛圍的中島吧台。<br>不突兀、不搶眼，恰如其份
-						</div>
-						<a href="http://naturalnvintage.com/cabinet.html" class="button-index"><span>了解更多</span></a>
-					</div>
-				</div>
-				<div class="cardL">
-					<div class="cardimg">
-						<img class="lazy img-responsive" data-original="https://i.imgur.com/tfAQNuH.jpg" width="100%";>
-					</div>
-					<div class="cardcontentbox">
-						<div class="cardtitle">
-							精選歐洲古董家具
-						</div>
-						<div class="cardcontent">
-							舊物散發出一種帶著感情的味道，那樣的韻味是沒辦法馬上被創造出來的，像是附有靈魂般的物品。<br>
-							NV為您精心挑選北歐舊物，為空間注入靈魂。
-						</div>
-						<a href="http://naturalnvintage.com/item.html" class="button-index"><span>了解更多</span></a>
-					</div>
+			<div class="category">
+				<div class="buttonbox">
+					<button onclick="showall()">All</button>
+					<button onclick="cabinet()">Cabinet</button>
+					<button onclick="chair()">Chair</button>
+					<button onclick="table()">Table</button>
+					<button onclick="lighting()">Lighting</button>
+					<button onclick="antiques()">Antiques</button>
 				</div>
 			</div>
-		</div>
-		</div>
-		<p class="copyright" style="color:white;">
+
+			<div class="bannerbox" style="display:none;">
+				<div class="banner">
+					New Antiques Pt.1 online !
+				</div>
+			</div>
+
+			<div class="gridcontianer-item" id="Cabinet">
+				<div class="tag-item">Cabinet</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-014.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/vkq2zgO.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國多用途長邊櫃</div>
+							<div class="price1-item">28,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-015.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/e9NwXyf.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國組合式上下櫃</div>
+							<div class="price1-item">23,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-017.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/uDzzuif.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥六層抽櫃</div>
+							<div class="price1-item">22,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-018.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/YqGt7ou.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥五層抽櫃</div>
+							<div class="price1-item">20,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-019.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/FBxTYL6.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥經典多功能高櫃</div>
+							<div class="price1-item">35,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-020.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/cY4rqVW.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國上下式高櫃</div>
+							<div class="price1-item">27,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-021.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/pMdI2vb.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國書桌型高櫃</div>
+							<div class="price1-item">25,000</div>
+						</div>
+						<div class="grid-item">
+							<div class="newtag">NEW</div>
+							<a href="https://letsohyeah.github.io/Item/kabinett-025.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/oYE90vM.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國乳白色古董木頭掛櫃</div>
+							<div class="price1-item">3,900</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-001.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/fW2t21z.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國實木四角方櫃</div>
+							<div class="price1-item">9,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-002.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/IyqekZ6.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國圓弧設計五抽櫃</div>
+							<div class="price1-item">15,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-003.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/ewv5fvS.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥設計柚木三抽櫃</div>
+							<div class="price1-item">15,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-004.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/RllwY9c.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">玫瑰木小櫃</div>
+							<div class="price1-item">11,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-005.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/W1OHB2s.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國單抽可掀式推車櫃</div>
+							<div class="price1-item">5,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-006.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/6XcYBNT.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國可延展經典實木櫃</div>
+							<div class="price1-item">19,500</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-007.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/rkOTJBC.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國設計金邊矮櫃</div>
+							<div class="price1-item">11,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-010.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/E70G57N.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥六層抽櫃</div>
+							<div class="price1-item">18,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-011.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/O6EfRsW.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥高櫃</div>
+							<div class="price1-item">40,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-012.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/p1oigV4.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥玻璃高櫃</div>
+							<div class="price1-item">36,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/德國實木文件櫃.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/j7ZHKIf.png" width="100%" >
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國實木文件櫃</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-009.html" class="imgbox-item hover"  style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/IEJUUBs.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥六層抽櫃</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-013.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/5CAXY2R.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥經典寫字桌</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-016.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/NRTiXED.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">丹麥五層抽櫃 </div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/kabinett-008.html" class="imgbox-item hover"  style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/NFQ6eFM.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item" id="zh-item">德國設計<span id="en-item">60s</span>金屬腳長櫃</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+			</div>
+
+
+
+
+			<div class="gridcontianer-item" id="Chair">
+				<div class="tag-item">Chair</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/stuhl-035.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/JDjDF6U.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">德國旋轉沙發椅 紅棕兩色</div>
+					<div class="price1-item">各8,500</div>
+				</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/stuhl-036.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/FLyrYhv.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥實木扶手沙發椅<span id="en-item">KOMFORT EASY CHAIRS-1960s</span></div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/stuhl-037.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/csMy3uv.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">德國皮質旋轉椅</div>
+					<div class="price1-item">13,000</div>
+				</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/stuhl-038.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/23sUwfI.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">法國小學生椅</div>
+					<div class="price1-item">3,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-001.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/uHfbz5p.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">柚木橘色絨面<span id="en-item">476A</span>經典餐椅</div>
+					<div class="price1-item">8,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-002.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/kk3xGvU.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木絨面高腳椅/吧台椅</div>
+					<div class="price1-item">4,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-003.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/5EawreX.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木黑色高腳椅/吧台椅</div>
+					<div class="price1-item">4,200</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-004.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/AgetqSh.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木<span id="en-item">x</span>金屬經典餐椅</div>
+					<div class="price1-item">4,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-005.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/FhEUVWS.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國白色餐椅</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-006.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/Ihdrrwj.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木黑色皮質高扶手椅</div>
+					<div class="price1-item">9,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-008.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/zDqfrzd.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥藍色椅面<span id="en-item">70s</span>山毛櫸經典餐椅</div>
+					<div class="price1-item">4,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-009.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/46Nz9hL.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木<span id="en-item">x</span>金屬可延伸旋轉辦公椅</div>
+					<div class="price1-item">12,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-010.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/EatLmeW.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item"><span id="en-item">Armin Wirth</span>瑞士木夾板折疊椅 經典原木色</div>
+					<div class="price1-item">9,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-011.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/PGpRzQE.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國包浩斯經典藍色金屬旋轉椅</div>
+					<div class="price1-item">2,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-012.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/F7Rf1Vt.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國<span id="en-item">Thur-Op-Seat Chair</span>曲木餐椅<span id="en-item">60s</span></div>
+					<div class="price1-item">4,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-013.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/59B4q8u.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥設計師款餐椅</div>
+					<div class="price1-item">6,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-014.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/HcBzCix.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥灰紋柚木餐椅</div>
+					<div class="price1-item">6,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-015.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/pMYfEif.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國綠色絨布扶手沙發椅</div>
+					<div class="price1-item">7,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-016.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/FgKbcbD.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥咖啡色皮質餐椅</div>
+					<div class="price1-item">6,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-017.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/qsXAtLr.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國設計咖啡色絨面餐椅</div>
+					<div class="price1-item">3,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-018.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/5cvPkHF.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item"><span id="en-item">Erik Buch</span>丹麥柚木黑色皮面餐椅</div>
+					<div class="price1-item">6,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-019.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/hxlQOyS.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥設計芥末綠餐椅</div>
+					<div class="price1-item">4,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-020.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/Sd5NGO2.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國設計<span id="en-item">60s</span>柚木橘色絨面<span id="en-item">476A</span>經典餐椅</div>
+					<div class="price1-item">8,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-021.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/SrdyDOs.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item"id="en-item">Sirocco Safari</div>
+					<div class="price1-item">38,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-022.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/MIsGalX.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">5,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-024.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/4hSj8AA.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">5,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-026.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/99eiJAE.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">6,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-027.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/bRKDt4m.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-028.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/WB3sd43.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">7,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-029.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/l6AIOdA.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">6,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-030.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/70TqnSS.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">6,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-031.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/H01WpoN.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">7,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-032.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/IMVoqVv.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-034.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/35SwM1t.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">6,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/Lr1S57t.png" width="100%" style="opacity:0.3;">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木小學生椅</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-033.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/YTvPSRs.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-023.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/ytzaHYu.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-007.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/EG7w4bv.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國可旋轉實木工程師椅</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/stuhl-025.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/H7Xw8bZ.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="gridcontianer-item" id="Table">
+				<div class="tag-item">Table</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/tisch-032.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/wS6LgNN.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國經典咖啡桌</div>
+					<div class="price1-item">15,000</div>
+				</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/tisch-033.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/Xp2mIXt.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥柚木方形抽屜桌</div>
+					<div class="price1-item">16,000</div>
+				</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/tisch-034.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/sHrQfKz.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">西德老PFAFF輪腳縫紉桌(附鑰匙)</div>
+					<div class="price1-item">14,000</div>
+				</div>
+				<div class="grid-item">
+					<div class="newtag">NEW</div>
+					<a href="https://letsohyeah.github.io/Item/tisch-037.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/fhWwmP7.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">玻璃面實木方桌</div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-020.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/hb3Y7nu.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典書桌</div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-021.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/2ImVBX5.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典書桌</div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-022.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/l6GZTgr.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典書桌</div>
+					<div class="price1-item">21,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-023.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/RGdYZny.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典書桌</div>
+					<div class="price1-item">21,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-024.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/aFF7Y6l.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典書桌</div>
+					<div class="price1-item">22,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-025.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/L1pqAUh.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-026.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/dcxi9R4.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
+					<div class="price1-item">19,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-027.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/FbS2U3p.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
+					<div class="price1-item">19,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-028.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/N6sFCxe.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-029.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/LbHcbe3.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
+					<div class="price1-item">21,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-030.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/pVFtHVI.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典化妝桌</div>
+					<div class="price1-item">26,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-031.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/pQWPfhc.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典可延伸餐桌</div>
+					<div class="price1-item">20,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-019.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/CUBCZXe.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">玻璃面實木圓桌</div>
+					<div class="price1-item">26,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-017.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/66wPWPx.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國餐車桌</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-014.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/lIlBdzg.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國實木可延展長桌</div>
+					<div class="price1-item">26,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-013.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/erqFbIJ.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典層板推車</div>
+					<div class="price1-item">12,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-010.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/IEg8seR.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國餐車桌</div>
+					<div class="price1-item">12,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-009.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/cp8Bq01.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國餐車桌</div>
+					<div class="price1-item">7,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-008.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/N6QyvHP.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥方型輪腳邊桌</div>
+					<div class="price1-item">13,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-004.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/YL9r4UY.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國經典黑色檯面雜誌架/小桌</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-002.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/J1Vk8bE.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">瑞典品牌單抽設計實木桌</div>
+					<div class="price1-item">7,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-001.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/RS4mRbD.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國子母桌</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-011.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/f6WyJZx.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國書報架小邊桌</div>
+					<div class="price1-item">7,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-015.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/Yur98Ig.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">巴西玫瑰木多用途小方桌</div>
+					<div class="price1-item">18,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-016.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/y30Yz7u.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥柚木方形抽屜桌</div>
+					<div class="price1-item">13,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-003.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/IoYgS06.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國藤編桌腳高腳圓桌</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-007.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/zvzAN7v.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥經典子母桌</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-006.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/r89R4K1.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">丹麥<span id="en-item">I</span>型桌腳子母桌</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-018.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/91QKf83.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item"><span id="en-item">Hans J. Wegner</span>橡木實木書桌（附鑰匙）</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/pfUywNw.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國灰粉色大理石紋三角邊桌</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/tisch-005.html" class="imgbox-item hover" style="opacity:0.3;">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/LZ51BKH.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item" id="zh-item">德國經典綠色檯面雜誌架/小桌</div>
+					<div class="price1-item">Sold out</div>
+				</div>
+			</div>
+
+
+
+
+	<div class="gridcontianer-item" id="Lighting">
+		<div class="tag-item">Lighting</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-001.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/M5kIaeX.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">德國黑色老工業燈罩</div>
+					<div class="price1-item">8,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-002.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/fvtd6wU.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">法國芥黃色檯燈</div>
+					<div class="price1-item">3,500</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-003.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/ouxMHkN.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計師吊燈</div>
+					<div class="price1-item">5,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-004.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/M7dfBLt.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item"><span id="en-item">PH3/4 Pendant Lamp</span>白色金屬吊燈</div>
+					<div class="price1-item">12,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-005.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/ifzDjAU.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計銀色金屬吊燈</div>
+					<div class="price1-item">12,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-006.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/v3STr5N.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計金屬白色吊燈</div>
+					<div class="price1-item">11,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-007.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/6XCRlsH.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計金屬白色吊燈</div>
+					<div class="price1-item">10,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-008.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/kIDeUYg.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計金屬白色吊燈</div>
+					<div class="price1-item">11,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-009.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/PBrbgfK.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計金屬白色吊燈</div>
+					<div class="price1-item">11,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-010.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/3ikuCyk.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">咖啡色大型金屬吊燈</div>
+					<div class="price1-item">12,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-011.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/0MDUb1o.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">丹麥設計金屬白色吊燈</div>
+					<div class="price1-item">10,000</div>
+				</div>
+				<div class="grid-item">
+					<a href="https://letsohyeah.github.io/Item/lampe-012.html" class="imgbox-item hover">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://i.imgur.com/glN6qHU.png" width="100%">
+						</figure>
+					</a>
+					<div class="name-item">綠色三角金屬吊燈</div>
+					<div class="price1-item">6,500</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="gridcontianer-item" id="Antiques">
+				<div class="tag-item">Antiques</div>
+						<div class="grid-item">
+							<div class="newtag">HOT</div>
+							<a href="https://letsohyeah.github.io/Item/sonstiges-026.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/u38vCq4.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">歐洲童趣金屬雙面造型人偶立牌</div>
+							<div class="price1-item">680</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-004.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/hJ7ZHlC.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國老掛勾</div>
+							<div class="price1-item">4,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-006.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/0DBFYYP.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國深灰綠色大木箱</div>
+							<div class="price1-item">8,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-007.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/otAo4GZ.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國老音箱（不分售）</div>
+							<div class="price1-item">7,800</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-008.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/rYgEOYX.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國深藍綠色大木箱</div>
+							<div class="price1-item">12,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-009.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/7R32Gzk.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董老木梯</div>
+							<div class="price1-item">5,500</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-010.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/zGvAnIW.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國<span id="en-item">WECK</span>紅色琺瑯牛奶桶</div>
+							<div class="price1-item">3,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-011.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/4LPUATx.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董乳白色磅秤</div>
+							<div class="price1-item">13,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-012.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/meAcj4I.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董縫紉箱</div>
+							<div class="price1-item">8,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-013.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/WRjliPx.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國玻璃大蒸餾瓶附籐籃</div>
+							<div class="price1-item">6,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-014.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/8XtjAwO.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董工業鐵籃</div>
+							<div class="price1-item">4,500</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-015.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/OYi9Mpx.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董圓形掛鏡</div>
+							<div class="price1-item">3,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-017.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/Meqr4yw.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">丹麥設計金屬雜誌架</div>
+							<div class="price1-item">3,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-018.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/8QGYZan.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董鹿頭畫作</div>
+							<div class="price1-item">3,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-019.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/YV9tLbc.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">北美古董女孩畫作</div>
+							<div class="price1-item">5,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-020.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/voRHamA.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">丹麥古董風景畫作</div>
+							<div class="price1-item">3,000</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-021.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/h1fyhsi.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董宗教畫作</div>
+							<div class="price1-item">3,200</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-022.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/qDahRYT.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董風景畫作</div>
+							<div class="price1-item">1,800</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-023.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/Hr6EVTY.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董乳白色風景畫作</div>
+							<div class="price1-item">2,800</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-024.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/ty59hHl.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董棕綠色風景畫作</div>
+							<div class="price1-item">2,600</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-025.html" class="imgbox-item hover">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/R7rO2U9.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國古董風景畫作</div>
+							<div class="price1-item">1,800</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-016.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/8dYCrSq.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">丹麥設計皮質雜誌架</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/bCzjugo.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國老掛勾</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-001.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/lGyTRAB.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">德國<span id="en-item">Lübeck</span>絕美老木箱</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-002.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/OYRPDiD.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">荷蘭精品<span id="en-item">Brabantia</span>多用途儲物桶/垃圾桶</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+						<div class="grid-item">
+							<a href="https://letsohyeah.github.io/Item/sonstiges-003.html" class="imgbox-item hover" style="opacity:0.3;">
+								<figure>
+									<img class="lazy img-responsive" data-original="https://i.imgur.com/MMQpUqB.png" width="100%">
+								</figure>
+							</a>
+							<div class="name-item">深綠色鐵箱/保險箱</div>
+							<div class="price1-item">Sold out</div>
+						</div>
+			</div>
+	</div>
+	<div class="block"></div>
+		<p class="copyright">
 			Copyright © 2017 Natural n' Vintage
 		</p>
-	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).ready(function() {
+				$("img.lazy").lazyload({
+						effect : "fadeIn"
+				});
+		});
+	</script>
 </BODY>
 </HTML>

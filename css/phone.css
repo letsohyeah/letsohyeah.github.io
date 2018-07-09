@@ -2189,6 +2189,27 @@ flex-direction: column;
 	letter-spacing: 0.2rem;
 	font-family: "Noto Sans TC", sans-serif;
 }
+.bannerbox{
+	margin-top: -3rem;
+	margin-bottom: 2rem;
+	width: 100%;
+	padding: 1rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+}
+.banner{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	line-height: 2rem;
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: 0.4rem;
+	font-family: "Noto Sans TC", sans-serif;
+	color: #e5765c;
+}
 /*ITEM*/
 
 /*Contact*/
