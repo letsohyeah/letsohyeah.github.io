@@ -2089,6 +2089,7 @@ width: 100%;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+  line-height: 2.2rem;
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: 0.4rem;
