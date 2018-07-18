@@ -2061,8 +2061,7 @@ flex-direction: column;
 }
 .gridcontianer-item{
 	margin-top: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding: 0.5rem;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -2127,7 +2126,7 @@ flex-direction: column;
 .tag-item{
 	width: 100%;
 	margin-left: 15px;
-	margin-bottom: 10px;
+	margin-bottom: 2rem;
 	color: #474747;
 	font-size: 10pt;
 	font-weight: 400;
@@ -2183,7 +2182,7 @@ flex-direction: column;
 	color: #fff;
 	padding: 0.2rem;
 	position: absolute;
-	background-color: #c9836d;
+	background-color: #e5765c;
 	font-size: 0.5rem;
 	font-weight: 400;
 	letter-spacing: 0.2rem;
@@ -2203,12 +2202,25 @@ flex-direction: column;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
-	line-height: 2rem;
+	line-height: 2.4rem;
 	font-size: 1.4rem;
 	font-weight: 800;
-	letter-spacing: 0.4rem;
+	letter-spacing: 0.2rem;
 	font-family: "Noto Sans TC", sans-serif;
 	color: #e5765c;
+}
+.bannertag{
+	margin-bottom: 40px;
+	width: 49%;
+	height: 45.5vw;
+	padding: 1rem;
+	color: #fff;
+	background-color: #e5765c;
+	font-size: 1.2rem;
+	font-weight: 400;
+	letter-spacing: 3px;
+	line-height: 2rem;
+	font-family: "Noto Sans TC", sans-serif;
 }
 /*ITEM*/
 
