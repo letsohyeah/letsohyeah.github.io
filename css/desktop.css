@@ -2076,7 +2076,7 @@ width: 100%;
   background-color: #e5765c;
   font-size: 0.5rem;
   font-weight: 400;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   font-family: "Noto Sans TC", sans-serif;
 }
 .bannerbox{
@@ -2094,7 +2094,7 @@ width: 100%;
   line-height: 2.2rem;
   font-size: 1.4rem;
   font-weight: 800;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
   font-family: "Noto Sans TC", sans-serif;
   color: #e5765c;
 }
@@ -2107,7 +2107,7 @@ width: 100%;
   background-color: #e5765c;
   font-size: 1.2rem;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 0.1rem;
   line-height: 2rem;
   font-family: "Noto Sans TC", sans-serif;
   margin-bottom: 40px;
