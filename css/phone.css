@@ -2013,6 +2013,7 @@ flex-direction: column;
 					flex-direction: column;
 }
 .name1-item{
+	margin-top: 0.4rem;
 	font-size: 12pt;
 	font-weight: 300;
 	font-family: "HanaMinA";
@@ -2020,7 +2021,7 @@ flex-direction: column;
 	color: #474747;
 }
 .NT-item{
-	margin-top: 10px;
+	margin-top: 0.6rem;
 	font-size: 9pt;
 	font-weight: 300;
 	font-family: 'Noto Sans TC', sans-serif;

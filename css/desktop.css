@@ -1891,6 +1891,7 @@ width: 100%;
           flex-direction: column;
 }
 .name1-item{
+  margin-top: 0.4rem;
   font-size: 12pt;
   font-weight: 300;
   font-family: "HanaMinA";
@@ -1898,7 +1899,7 @@ width: 100%;
   color: #474747;
 }
 .NT-item{
-  margin-top: 10px;
+  margin-top: 0.7rem;
   font-size: 9pt;
   font-weight: 100;
   font-family: 'Noto Sans TC', sans-serif;
@@ -2073,7 +2074,7 @@ width: 100%;
   color: #fff;
   padding: 0.2rem;
   position: absolute;
-  background-color: #e5765c;
+  background-color: #888842;
   font-size: 0.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
@@ -2096,7 +2097,7 @@ width: 100%;
   font-weight: 800;
   letter-spacing: 0.1rem;
   font-family: "Noto Sans TC", sans-serif;
-  color: #e5765c;
+  color: #888842;
 }
 .bannertag{
   width: 100%;
@@ -2104,7 +2105,7 @@ width: 100%;
   margin-top: 40px;
   padding: 1rem;
   color: #fff;
-  background-color: #e5765c;
+  background-color: #888842;
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
