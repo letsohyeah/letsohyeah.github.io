@@ -2538,11 +2538,12 @@
 				e.style.display = "none";
 		}
 	}
-	function con(){
-		var x = location.search
-		if (x = '?id=01') {
-			antiques()
-		}
+	if (location.search == "?id=05") {
+		docment.getbyelementbyid("Antiques").style.display="flex";
+		docment.getbyelementbyid("Cabinet").style.display="none";
+		docment.getbyelementbyid("Chair").style.display="none";
+		docment.getbyelementbyid("Table").style.display="none";
+		docment.getbyelementbyid("Lighting").style.display="none";
 	}
 
 	</script>
