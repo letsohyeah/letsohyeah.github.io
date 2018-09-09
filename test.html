@@ -2538,13 +2538,8 @@
 				e.style.display = "none";
 		}
 	}
-	if (location.search == "?id=05") {
-		docment.getbyelementbyid("Antiques").style.display="flex";
-		docment.getbyelementbyid("Cabinet").style.display="none";
-		docment.getbyelementbyid("Chair").style.display="none";
-		docment.getbyelementbyid("Table").style.display="none";
-		docment.getbyelementbyid("Lighting").style.display="none";
-	}
+
+
 
 	</script>
 	<div class="cleanfix">
@@ -4298,6 +4293,38 @@
 						effect : "fadeIn"
 				});
 		});
+	</script>
+	<script>
+	var url=window.location.toString(); //取得當前網址
+	var str=""; //參數中等號左邊的值
+	var str_value=""; //參數中等號右邊的值
+ 	if(url.indexOf("?")!=-1){
+ 	//如果網址有"?"符號
+ 	var ary=url.split("?")[1].split("&");
+	//取得"?"右邊網址後利用"&"分割字串存入ary陣列 ["a=1","b=2","c=3"]
+		 for(var i in ary){
+		 //取得陣列長度去跑迴圈，如:網址有三個參數，則會跑三次
+			 str=ary[i].split("=")[0];
+			 //取得參數"="左邊的值存入str變數中
+			 if (str == "c") {
+			 //若str等於想要抓取參數 如:page
+				 str_value = ary[i].split("=")[1];
+			 //取得b等號右邊的值並經過中文轉碼後存入str_value
+				}
+		 }
+		}
+	 //alert(str_value);
+	 if (str_value=="cabinet"){
+				cabinet()
+	 } else if (str_value=="chair"){
+				chair()
+	 } else if (str_value=="table"){
+				table()
+	 } else if (str_value=="lighting"){
+				lighting()
+	 } else if (str_value=="antiques"){
+				antiques()
+	 }
 	</script>
 </BODY>
 </HTML>
