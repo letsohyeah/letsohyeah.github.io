@@ -2223,6 +2223,16 @@ flex-direction: column;
 	line-height: 2rem;
 	font-family: "Noto Sans TC", sans-serif;
 }
+.back-item{
+	margin-top: -2rem;
+	margin-left:5px;
+	margin-bottom: 3rem;
+	font-size: 0.8rem;
+	font-weight: 100;
+	letter-spacing: 0.1rem;
+	line-height: 2rem;
+	font-family: "Noto Sans TC", sans-serif;
+}
 /*ITEM*/
 
 /*Contact*/

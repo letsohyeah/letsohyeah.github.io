@@ -16,770 +16,957 @@
 	</script>
 	<TITLE> Test - Natural n' Vintage </TITLE>
 	<style>
-	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+	@import url('https://fonts.googleapis.com/css?family=Rubik:,300,400,500i,900,900i');
 	@font-face {
-	  font-family: "HanaMinOT_otf";
-	  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
+		font-family: "HanaMinOT_otf";
+		src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
 	}
 	@font-face {
-	  font-family: "HanaMinOT_woff";
-	  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
+		font-family: "HanaMinOT_woff";
+		src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
 	}
 	@font-face {
-	  font-family: "HanaMinA_ttf";
-	  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
+		font-family: "HanaMinA_ttf";
+		src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 	}
-	a:link{color:#000000}
-	a:active {color:#000000;}
-	a:visited {color:#000000;}
+	a:link{color:#000;}
+	a:active {color:#000;}
+	a:visited {color:#000;}
 	a{text-decoration:none}
 	* {
-	       -moz-box-sizing: border-box;
-	    -webkit-box-sizing: border-box;
-	            box-sizing: border-box;
-	            margin: 0;
-	            padding: 0;
-	  }
+				 -moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+							box-sizing: border-box;
+							margin: 0;
+							padding: 0;
+		}
 	body{
-	    margin: 0;
-	    padding: 0;
-	  }
+			margin: 0;
+			padding: 0;
+		}
 	.cleanfix{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	  }
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+			 -moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		}
 	nav{
-	  position: fixed;
-	  right: 0;
-	  bottom: 0;
-	  padding-top: 20px;
-	  width: 120px;
-	  height: 340px;
-	  background-color: #fff;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 30px;
+		background-color: #222;
+		z-index: 1;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		align-items:center;
+		visibility: hidden;
 	}
 	.navlinks{
-	  width: 135px;
-	  direction:rtl;
-	  font-size: 12pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  line-height: 28px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
-
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
-
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
-
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
+		color: #fff;
+		padding-left: 7px;
+		padding-right: 7px;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.logobox{
-	  float: right;
-	  margin-top: 25px;
-	  margin-right: 40px;
-	  height: 70px;
+		display: none;
 	}
 	.navmob{
-	  display: none;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.dropdown-menu > span {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		margin-left: 10px;
+	}
+
+	.dropdown-menu > span,
+	.dropdown-menu > div {
+		cursor: pointer;
+		outline: 0;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	.dropdown-menu > ul {
+		border-top: 2px solid #000;
+		border-bottom: 2px solid #000;
+		width: 100%;
+		position: absolute;
+		z-index: 100000;
+		background-color: #fff;
+		font-size: 10pt;
+		font-weight: 300;
+		font-family: ‘Noto Sans TC’, sans-serif;
+		letter-spacing: 2px;
+		line-height: 40px;
+		padding-left: 15px;
+		list-style:none;
+		margin-top: 10px;
+
+		visibility: hidden;
+		transition: visibility 0.5s;
+		opacity: 0;
+	}
+
+	.dropdown-menu > span:focus ~ ul {
+		visibility: visible;
+		opacity: 1;
 	}
 	.contianer{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
-	  margin-bottom: -50px;
-	  min-height: 100%;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.bigtitle{
-	  width: 28px;
-	  border-right: 2px solid #000000;
-	  position: absolute;
-	  right: 0;
-	  margin-top: 90px;
-	  margin-right: 40px;
-	  font-size: 12pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
-	  line-height: 26px;
-	  -webkit-writing-mode: vertical-lr ;
-	  writing-mode: vertical-lr ;
+		position: absolute;
+		text-align: center;
+		margin-top: -35px;
+		width: 100%;
+		font-size: 10pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 5px;
 	}
 
 	/*INDEX*/
 	.picbox{
-	  width: calc(100vw - 120px);
-	  height: 100%;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  margin-right: 120px;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-attachment: fixed;
-	  background-size: cover;
-	  background-color: #474747;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		right: 0;
+		left: 0;
+		height: calc(100vh - 50px);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-size: cover;
+		background-color: #474747;
 	}
 	#img1{
-	   background-image: url(https://i.imgur.com/vNBNRvT.jpg);
+		 background-image: url(https://i.imgur.com/vNBNRvT.jpg);
 	}
 	#img2{
-	   background-image: url(https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/38624509_2078829509099576_1816520602110918656_o.jpg?_nc_cat=0&oh=92cf726a0948490185c308033bb22d34&oe=5C020D64);
+		 background-image: url(https://imgur.com/W6p1gVi.jpg);
 	}
 	#img3{
-	   background-image: url(https://i.imgur.com/nQozK4l.jpg);
+		 background-image: url(https://i.imgur.com/nQozK4l.jpg);
 	}
 	#img4{
-	   background-image: url(https://scontent.ftpe11-1.fna.fbcdn.net/v/t1.0-9/36611288_2042445886071272_1681828254454906880_o.jpg?_nc_cat=0&oh=6748ef2afdd6b79291893290fe8bc493&oe=5BD7DA73);
+		 background-image: url(https://scontent.ftpe11-1.fna.fbcdn.net/v/t1.0-9/36611288_2042445886071272_1681828254454906880_o.jpg?_nc_cat=0&oh=6748ef2afdd6b79291893290fe8bc493&oe=5BD7DA73);
 	}
 	@media only screen and (max-width: 768px) {
-	  #img1{
-	    background-image: url(https://i.imgur.com/ZYZ902S.jpg);
-	  }
-	  #img2{
-	     background-image: url(https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/38624509_2078829509099576_1816520602110918656_o.jpg?_nc_cat=0&oh=92cf726a0948490185c308033bb22d34&oe=5C020D64);
-	  }
-	  #img3{
-	     background-image: url(https://i.imgur.com/nQozK4l.jpg);
-	  }
-	  #img4{
-	     background-image: url(https://scontent.ftpe11-1.fna.fbcdn.net/v/t1.0-9/36611288_2042445886071272_1681828254454906880_o.jpg?_nc_cat=0&oh=6748ef2afdd6b79291893290fe8bc493&oe=5BD7DA73);
-	  }
+		#img1{
+			background-image: url(https://i.imgur.com/ZYZ902S.jpg);
+		}
+		#img2{
+			 background-image: url(https://imgur.com/W6p1gVi.jpg);
+		}
+		#img3{
+			 background-image: url(https://i.imgur.com/nQozK4l.jpg);
+		}
+		#img4{
+			 background-image: url(https://scontent.ftpe11-1.fna.fbcdn.net/v/t1.0-9/36611288_2042445886071272_1681828254454906880_o.jpg?_nc_cat=0&oh=6748ef2afdd6b79291893290fe8bc493&oe=5BD7DA73);
+		}
 	}
 	.articlecontianer-index{
-	  max-width: 400px;
-	  z-index: 1000;
-	  position: absolute;
-	  padding: 20px;
-	  margin-top: 90px;
-	  margin-left: 100px;
-	  margin-right: 50px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  color: #474747;
-	  background-color: #fff;
+		position: absolute;
+		width: 100%;
+		padding: 20px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		background: rgba(255,255,255,0.8);
 	}
-	  .title1-index{
-	    width: 100%;
-	    margin-bottom: 15px;
-	    font-size: 1.2rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .logobox-index{
-	    max-width: 200px;
-	    margin-top: 10px;
-	    margin-bottom: 20px;
-	    overflow: hidden;
-	    height: auto;
-	  }
-	  .button-index{
-	    border-color: #474747;
-	    border: 1px solid #474747;
-	    border-radius: 3px;
-	    width: 78px;
-	    font-size: 0.6rem;
-	    margin-top: 30px;
-	    height: 30px;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    font-weight: 100;
-	    letter-spacing: 2px;
-	    white-space: nowrap;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    justify-content: center;
-	    align-items: center;
-	    transition: 0.4s;
-	    -webkit-transition: 0.4s;
-	  }
-	  .button-index span{
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    color: #474747;
-	  }
-	  .button-index:hover{
-	    transition: 0.4s;
-	    -webkit-transition: 0.4s;
-	    background-color: #474747;
-	    color: #fff;
-	  }
-	  .button-index:hover span{
-	    color: #fff;
-	  }
-	  .copyright-index{
-	    height: 50px;
-	    color: #fff;
-	    margin-left: 100px;
-	    font-size: 12px;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0px;
-	    transform: scale(0.58);
-	      transform-origin:0 0;
+	.title1-index{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 1.1rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: center;
+	}
+	.logobox-index{
+		max-width: 200px;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		overflow: hidden;
+		height: auto;
+	}
+	.button-index{
+		border: 1px solid #474747;
+		border-radius: 5px;
+		width: 100px;
+		font-size: 0.6rem;
+		margin-top: 40px;
+		height: 40px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 100;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+	}
+	.button-index span{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
+	}
+	.button-index:hover{
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+		background-color: rgba(0, 0, 0, 0);
+		color: #474747;
+	}
+	.button-index:hover span{
+		color: #474747;
+	}
+	.copyright-index{
+		position: fixed;
+		color: #fff;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+	}
+	#slide {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+	#slide li {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		height: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.8s;
+	}
+	#slide li:first-child {
+		position: static;
+	}
+	#slide li.show {
+		opacity: 1;
+		visibility: visible;
+	}
+	#slide .prev, #slide .next {
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		transition: 0.4s;
+		background-color: rgba(0, 0, 0, 0.12);
+		padding: 14px 12px;
+	}
+	#slide .prev:hover, #slide .next:hover {
+		background-color: rgba(0, 0, 0, 0.24);
+	}
+	#slide .prev:after, #slide .next:after {
+		display: block;
+		content: "";
+		width: 10px;
+		height: 10px;
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
+	}
+	#slide .prev {
+		left: 0;
+	}
+	#slide .prev:after {
+		transform: rotate(-135deg);
+		margin-left: 4px;
+	}
+	#slide .next {
+		right: 0;
+	}
+	#slide .next:after {
+		transform: rotate(45deg);
+		margin-right: 4px;
+	}
+	.downarrowbox{
+	visibility: hidden;
+	position: absolute;
+	top: 95vh;
+	width: 100%;
+	justify-content: center;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-webkit-animation: 1s move;
+	-webkit-animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	animation: 1s move;
+	animation-duration: 1.2s;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	}
+	.downarrow{
+	transform: rotate(135deg);
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
 
-	      -ms-transform: scale(0.58);         /* IE 9 */
-	      -ms-transform-origin:0 0;       /* IE 9 */
-
-	      -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	      -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	      -moz-transform: scale(0.58);        /* Firefox */
-	      -moz-transform-origin:0 0;      /* Firefox */
-
-	      -o-transform: scale(0.58);      /* Opera */
-	      -o-transform-origin:0 0;        /* Opera */
-	  }
-	  #slide {
-	    width: calc(100% - 120px);
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    justify-content: center;
-	    align-items: center;
-	    overflow: hidden;
-	  }
-	  #slide li {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    display: block;
-	    height: 100vh;
-	    opacity: 0;
-	    visibility: hidden;
-	    transition: 0.8s;
-	  }
-	  #slide li:first-child {
-	    position: static;
-	  }
-	  #slide li.show {
-	    opacity: 1;
-	    visibility: visible;
-	  }
-	  #slide .prev, #slide .next {
-	    display: block;
-	    position: absolute;
-	    top: 50%;
-	    transform: translateY(-50%);
-	    cursor: pointer;
-	    transition: 0.4s;
-	    background-color: rgba(0, 0, 0, 0.12);
-	    padding: 14px 12px;
-	  }
-	  #slide .prev:hover, #slide .next:hover {
-	    background-color: rgba(0, 0, 0, 0.24);
-	  }
-	  #slide .prev:after, #slide .next:after {
-	    display: block;
-	    content: "";
-	    width: 10px;
-	    height: 10px;
-	    border-top: 2px solid #fff;
-	    border-right: 2px solid #fff;
-	  }
-	  #slide .prev {
-	    left: 0;
-	  }
-	  #slide .prev:after {
-	    transform: rotate(-135deg);
-	    margin-left: 4px;
-	  }
-	  #slide .next {
-	    right: 0;
-	  }
-	  #slide .next:after {
-	    transform: rotate(45deg);
-	    margin-right: 4px;
-	  }
-	  .downarrowbox{
-	    position: absolute;
-	    top: 95vh;
-	    width: calc(100% - 120px);
-	    justify-content: center;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    -webkit-animation: 1s move;
-	    -webkit-animation-duration: 1.2s;
-	    -webkit-animation-timing-function: ease-in-out;
-	    -webkit-animation-direction: alternate;
-	    -webkit-animation-iteration-count: infinite;
-	    animation: 1s move;
-	    animation-duration: 1.2s;
-	    animation-timing-function: ease-in-out;
-	    animation-direction: alternate;
-	    animation-iteration-count: infinite;
-	  }
-	  .downarrow{
-	    transform: rotate(135deg);
-	    display: block;
-	    width: 20px;
-	    height: 20px;
-	    border-top: 3px solid #fff;
-	    border-right: 3px solid #fff;
-
-	  }
-	  @-webkit-keyframes move {
-	    0% {top: 95vh;}
-	    100% {top: 93vh;}
-	  }
-	  @keyframes move {
-	    0% {top: 95vh;}
-	    100% {top: 93vh;}
-	  }
-	  .poembox{
-	    height: 100vh;
-	    background-color: #fff;
-	    margin-top: 100vh;
-	    margin-right: 120px;
-	    z-index: 100;
-	    align-items: center;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .logobox-index{
-	    margin-top: 80vh;
-	    margin-left: -2%;
-	    overflow: hidden;
-	    height: auto;
-	  }
-	  .poem{
-	    margin-top: 20vh;
-	    margin-left: 15%;
-	    font-size: 0.7rem;
-	    font-weight: 300;
-	    font-family: "HanaMinA";
-	    letter-spacing: 0.1rem;
-	    line-height: 1.5rem;
-	    color: #474747;
-	    z-index: 500;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex-direction: column;
-	  }
-	  .poempic{
-	    margin-top: 30vh;
-	    height: 40vh;
-	    margin-left: -1%;
-	    overflow: hidden;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .pagebox{
-	    background-color: #fff;
-	    margin-right: 120px;
-	    z-index: 100;
-	    flex-direction: column;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardbox{
-	    margin-left: 10vw;
-	    margin-right: 10vw;
-	    margin-top: 3rem;
-	    margin-bottom: 5rem;
-	    flex-direction: row;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    -moz-flex-direction: column;
-	    -webkit-flex-direction: column;
-	            flex-direction: column;
-	  }
-	  .cardL{
-	    margin-bottom: 5rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    align-items: center;
-	  }
-	  .cardR{
-	    margin-bottom: 5rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    align-items: center;
-	    flex-direction: row-reverse;
-	  }
-	  .cardimg{
-	    width: 60%;
-	  }
-	  .cardcontentbox{
-	    padding-right: 2rem;
-	    padding-left: 4rem;
-	    min-height: 15rem;
-	    width: 40%;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardtitle{
-	    font-size: 1rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 3px;
-	    flex: 1 auto;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .cardcontent{
-	    max-width: 300px;
-	    font-size: 0.6rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    line-height: 1rem;
-	    flex: 3 auto;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .indextitle{
-	    margin-left: 10vw;
-	    font-size: 0.6rem;
-	    font-weight: 100;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.3rem;
-	    color: #474747;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .worksbox{
-	    margin-top: 5vh;
-	    margin-left: 10vw;
-	    margin-right: 10vw;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .worksimg{
-	    width: 30vw;
-	    overflow: hidden;
-	  }
-	  .worksarticleL{
-	    margin-left: 5vw;
-	    width: 35vw;
-	    max-width: 350px;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .worksarticleR{
-	    margin-right: 5vw;
-	    width: 35vw;
-	    max-width: 350px;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .workstitle{
-	    font-size: 1rem;
-	    font-weight: 200;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.5rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex: 1 auto;
-	  }
-	  .worksdescribe{
-	    font-size: 0.7rem;
-	    font-weight: 300;
-	    font-family: "HanaMinA";
-	    letter-spacing: 0.35rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex: 5 auto;
-	  }
-	  .workscontemt{
-	    font-size: 0.6rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    line-height: 1.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .block-index{
-	    width: 10vw;
-	  }
-	  .contactbox{
-	    margin-top: 5vh;
-	    margin-left: 10vw;
-	    margin-right: 10vw;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .contact-img{
-	    width: 25vw;
-	    overflow: hidden;
-	  }
-	  .contactcontemt{
-	    margin-left: 5vw;
-	    margin-right: 2vw;
-	    width: 35vw;
-	    max-width: 350px;
-	    font-size: 0.6rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    line-height: 1.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    flex-direction: column;
-	  }
-	  .contact-map{
-	    width: 30vw;
-	    overflow: hidden;
-	  }
-	  .pressnum{
-	    margin-top: 0.3rem;
-	    margin-left: 5px;
-	    font-size: 0.7rem;
-	    width: 1.2rem;
-	    height: 1.2rem;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    font-weight: 800;
-	    border-bottom: 0.15rem solid #474747;
-	    color: #474747;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    justify-content: center;
-	    align-items: center;
-	  }
+	}
+	@-webkit-keyframes move {
+	0% {top: 95vh;}
+	100% {top: 93vh;}
+	}
+	@keyframes move {
+	0% {top: 95vh;}
+	100% {top: 93vh;}
+	}
+	.poembox{
+	background-color: #fff;
+	margin-top: 20vh;
+	z-index: 100;
+	padding: 20px;
+	align-items: center;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.logobox-index{
+	overflow: hidden;
+	height: auto;
+	}
+	.poem{
+	font-size: 0.7rem;
+	font-weight: 300;
+	font-family: "HanaMinA";
+	letter-spacing: 0.1rem;
+	line-height: 1.5rem;
+	color: #474747;
+	z-index: 500;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.poempic{
+	margin-top: -5vh;
+	height: 35vh;
+	overflow: hidden;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.pagebox{
+	background-color: #fff;
+	z-index: 100;
+	flex-direction: column;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardbox{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.cardR{
+	margin-top: 5vh;
+	height: auto;
+	flex-direction: column;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardL{
+	margin-top: 5vh;
+	height: auto;
+	flex-direction: column;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardtitle{
+	margin-top: 0.8rem;
+	font-size: 1rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 3px;
+	flex: 1 auto;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardcontentbox{
+	padding-top: 10px;
+	padding: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.cardcontent{
+	margin-top: 1rem;
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	line-height: 1.2rem;
+	flex: 3 auto;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.indextitle{
+	margin-top: 7rem;
+	width: 100%;
+	font-size: 0.6rem;
+	font-weight: 100;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.3rem;
+	color: #474747;
+	text-align: center;
+	}
+	.worksbox{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.worksimg{
+	order: 1;
+	overflow: hidden;
+	}
+	.worksarticleL{
+	padding: 20px;
+	margin-top: 1rem;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.worksarticleR{
+	padding: 20px;
+	margin-top: 0rem;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.workstitle{
+	font-size: 1rem;
+	font-weight: 200;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.5rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex: 1 auto;
+	}
+	.worksdescribe{
+	margin-top: 5vh;
+	font-size: 0.7rem;
+	font-weight: 300;
+	font-family: "HanaMinA";
+	letter-spacing: 0.35rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex: 5 auto;
+	}
+	.workscontemt{
+	margin-top: 5vh;
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.2rem;
+	line-height: 1.2rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	}
+	.block-index{
+	width: 10vw;
+	}
+	.contactbox{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.contact-img{
+	margin-top: 5rem;
+	order: 3;
+	overflow: hidden;
+	}
+	.contactcontemt{
+	order: 1;
+	margin-left: 20px;
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.2rem;
+	line-height: 1.2rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
+	}
+	.contact-map{
+	margin-top: 5rem;
+	margin-left: 20px;
+	order: 2;
+	width: 80%;
+	overflow: hidden;
+	}
+	.pressnum{
+	margin-left: 5px;
+	font-size: 0.8rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-weight: 900;
+	border-bottom: 2px solid #474747;
+	color: #474747;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+	}
 	/*INDEX*/
 
 	/*SERVICE*/
 	.cardbox-service{
-	  width: calc(100vw - 120px);
-	  padding-left: 10vw;
-	  padding-right: 10vw;
-	  padding-top: 6rem;
-	  margin-bottom: 5rem;
-	  flex-direction: row;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-direction: column;
 	}
 	.articlecontianer-service{
-	  margin-right: 150px;
-	  overflow: hidden;
+		margin-top: 50px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+						flex: 1 0 auto;
+	}
+	.articlecontianer2-service{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.projectcontianer-service{
+		margin-left: 15px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.project-service{
+		width: 33%;
+		margin-bottom: 30px;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.title1-service{
+		margin-right: 15px;
+		margin-top: 90px;
+		margin-left: 15px;
+		font-size: 14pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
 	}
 	.title2-service{
-	  margin-top: 20px;
-	  margin-left: 20px;
-	  font-size: 14pt;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-top: 20px;
+		font-size: 12pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
-	.background1-service{
-	  background-color: #fff;
-	  position: absolute;
-	  right: 0;
-	  width: 300px;
-	  margin-top: 100px;
-	  margin-right: 150px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+	.numbertitle{
+		visibility: hidden;
+		position: absolute;
+		right: 15;
+		font-size:8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		color: #9a9a9a;
 	}
-	.background2-service{
-	  background-color: #fff;
-	  position: absolute;
-	  width: 300px;
-	  left: 10%;
-	  top: 10%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+	.name-service{
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 24pt;
+		font-weight: 300;
+		line-height: 20pt;
+		letter-spacing: 0px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 10px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
-	.background3-service{
-	  background-color: #fff;
-	  position: absolute;
-	  right: 0;
-	  width: 300px;
-	  top: 10%;
-	  right: 10%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+	.pricebox-service{
+		margin-bottom: 20px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: flex-end;
 	}
-	.button{
-	  margin-top: 10px;
-	  margin-left: 20px;
-	  margin-bottom: 15px;
-	  border-color: #474747;
-	  border: 1px solid #474747;
-	  border-radius: 3px;
-	  padding-left: 15px;
-	  width: 78px;
-	  font-size: 8pt;
-	  margin-top: 30px;
-	  height: 30px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  color: #474747;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
+	.NT-service{
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #909090;
 	}
-	.button:hover{
-	  width: 100px;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button-service{
-	  border-color: #474747;
-	  border: 1px solid #474747;
-	  border-radius: 3px;
-	  padding-left: 13px;
-	  width: 100px;
-	  font-size: 8pt;
-	  margin-top: 20px;
-	  height: 30px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  color: #474747;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: flex-start;
-	  align-items: center;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
-	}
-	.button-service:hover{
-	  width: 120px;
-	  -webkit-transition: width 0.5s;
-	        transition: width 0.5s;
+	.descrip-service{
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
 	}
 	.descrip2-service{
-	  max-width: 510px;
-	  margin-top: 10px;
-	  margin-left: 20px;
-	  margin-right: 20px;
-	  margin-bottom: 20px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
+	}
+	.project-descrip-service{
+		font-size: 8pt;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555;
+	}
+	.price-service{
+		margin-bottom: -4px;
+		margin-left: 5px;
+		font-size: 14pt;
+		font-weight: 400;
+		letter-spacing: 3px;
+		color: #000;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	.button{
+		border: 1px solid #474747;
+		border-radius: 3px;
+		width: 80px;
+		font-size: 8pt;
+		margin-top: 20px;
+		margin-left: 15px;
+		margin-bottom: 20px;
+		padding-left: 15px;
+		height: 30px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		color: #474747;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.button span{
+		color: #fff;
+	}
+	.button-service{
+		border: 1px solid #474747;
+		border-radius: 3px;
+		padding-left: 10px;
+		width: 100px;
+		font-size: 8pt;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		height: 30px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		color: #474747;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.button-service span{
+		color: #fff;
+	}
+	.button1-service{
+		border: 1px solid #474747;
+		border-radius: 3px;
+		padding-left: 10px;
+		width: 80px;
+		font-size: 8pt;
+		margin-left:0px;
+		margin-top: 15px;
+		height: 30px;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		color: #474747;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.button1-service span{
+		color: #474747;
+	}
+	.imgbox-service{
+		max-width: 300px;
+		margin-right: 25px;
+		margin-bottom: 30px;
+	}
+	.imgcontianer-service{
+		margin-bottom: 30px;
+		margin-top: 30px;
+		margin-left: 20px;
+		width: : 900px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.map-service{
+		margin-top: 20px;
+		margin-bottom: 10px;
+		margin-left: 15px;
+		height: 150px;
+	}
+	.itemlist-service{
+		border-radius: 5px;
+		position: absolute;
+		margin-top: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff;
+		padding: 20px;
+		border: 2px solid #474747;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 10pt;
+		line-height: 30px;
+		letter-spacing: 1px;
+		opacity: 0;
+		z-index: -1;
+		-webkit-transition: opacity 0.3s ease-in-out;
+		-moz-transition: opacity 0.3s ease-in-out;
+		-o-transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.button1-service > span:focus ~ ul{
+		z-index: 1000;
+		opacity: 1;
+	}
+	.listcontainer-service{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: row;
+		-webkit-flex-direction: row;
+						flex-direction: row;
+		justify-content: space-between;
+	}
+	.listcontainer-column-service{
+		margin-left: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.itemname-service{
+		width: 60%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.itemnum-service{
+		width: 15%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.itemprice-service{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.totleprice-service{
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-end;
+	}
+	.discount-service{
+		font-size: 0.6rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: flex-start;
+	}
+	.contactbox-service{
+		margin-bottom: 30px;
+		border:1px solid #474747;
+		padding:10px;
+		border-radius:5px;
+		flex-direction:column;
+		font-size: 8pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.texturecontianer{
-	  margin-top: 20px;
-	  margin-left: 40px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-top: 20px;
+		margin-left: 5px;
+		min-width: 270px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.texturebox{
-	  margin-bottom: 30px;
-	  min-width: 80px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	  align-items: center;
+		margin-bottom: 30px;
+		min-width: 80px;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		align-items: center;
 	}
 	.texture-img{
-	  max-height: 50px;
-	  max-width: 50px;
-	  margin-bottom: 10px;
-	  height: auto;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		max-height: 50px;
+		max-width: 50px;
+		margin-bottom: 10px;
+		height: auto;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.texture-img2{
-	  max-height: 50px;
-	  max-width: 50px;
-	  margin-bottom: 10px;
-	  height: auto;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		max-height: 50px;
+		max-width: 50px;
+		margin-bottom: 10px;
+		height: auto;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.texture-name{
-	  width: 100%;
-	  font-size: 10pt;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: center;
-	  color: #474747;
+		width: 100%;
+		font-size: 10pt;
+		font-weight: 500;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
+		color: #474747;
 	}
 	/*https://i.imgur.com/qeDJAkh.jpg 大理石*/
 	/*https://i.imgur.com/OQsG894.jpg 美杉*/
@@ -787,1576 +974,1442 @@
 	/*https://i.imgur.com/P6gbd0z.jpg 鐵木*/
 	/*https://i.imgur.com/CnweozN.jpg 非洲紫檀*/
 	.table1{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/qeDJAkh.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/qeDJAkh.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table2{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/OQsG894.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/OQsG894.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table3{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/siJCxL9.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/siJCxL9.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table4{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/P6gbd0z.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/P6gbd0z.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.table5{
-	  box-shadow: 1px -1px 15px;
-	  max-width: 1200px;
-	  margin-top:20px;
-	  height: 400px;
-	  background-image: url(https://i.imgur.com/CnweozN.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		box-shadow: 1px -1px 15px;
+		max-width: 1200px;
+		margin-top:20px;
+		height: 300px;
+		background-image: url(https://i.imgur.com/CnweozN.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.oven{
-	  position: relative;
-	  top: 20%;
-	  margin-left: 40px;
-	  height: 70%;
+		display: none;
+		position: relative;
+		top: 20%;
+		margin-left: 40px;
+		height: 70%;
 	}
 	.rag{
-	  position: relative;
-	  top: 50%;
-	  margin-left: 50px;
-	  height: 40%;
+		position: relative;
+		top: 50%;
+		margin-left: 50px;
+		height: 40%;
 	}
 	.plate{
-	  position: relative;
-	  top: 40%;
-	  margin-left: 20px;
-	  height: 50%;
+		position: relative;
+		top: 40%;
+		margin-left: 20px;
+		height: 50%;
 	}
 	.cabinetcontianer{
-	  margin-top: 100px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: row-reverse;
-	  justify-content: flex-end;
+		margin-top: 100px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.cabinetdescrip{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.cabinet{
-	  width: 300px;
-	  flex-direction: column;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		flex-direction: column;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: center;
 	}
 	.cabinetbody{
-	  z-index: -1000;
-	  box-shadow: 0px 0px 50px;
-	  width: 278px;
-	  flex-wrap: nowrap;
-	  background-color: #141414;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		z-index: -1000;
+		box-shadow: 0px 0px 50px;
+		width: 100%;
+		flex-wrap: nowrap;
+		background-color: #141414;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawercontianer{
-	  width: 280px;
-	  flex-direction: column;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100;
+		flex-direction: column;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawer1{
-	  margin-top: 5px;
-	  width: 100%;
-	  height: 90px;
-	  background-image: url(https://i.imgur.com/MvF9RzL.png);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  justify-content: center;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 5px;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(https://i.imgur.com/MvF9RzL.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawer2{
-	  margin-top: 5px;
-	  width: 100%;
-	  height: 90px;
-	  background-image: url(https://i.imgur.com/uZE34sE.png);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  justify-content: center;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 5px;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(https://i.imgur.com/uZE34sE.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawer3{
-	  margin-top: 5px;
-	  width: 100%;
-	  height: 90px;
-	  background-image: url(https://i.imgur.com/CnweozN.jpg);
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  justify-content: center;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 5px;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(https://i.imgur.com/CnweozN.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.drawerside{
-	  height: 285px;
-	  width: 10px;
-	  margin-left: 3px;
-	  background-color: #ddd;
+		height: 285px;
+		width: 10px;
+		margin-left: 3px;
+		background-color: #ddd;
 	}
 	.copyright-cabinet{
-	  margin-top: 110px;
-	  color: #999;
-	  margin-left: 50px;
-	  font-size: 12px;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
+		display: none;
+		bottom: 0;
+		color: #999;
+		margin-left: 50px;
+		font-size: 12px;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		transform: scale(0.58);
+			transform-origin:0 0;
 
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
+			-ms-transform: scale(0.58);         /* IE 9 */
+			-ms-transform-origin:0 0;       /* IE 9 */
 
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
+			-webkit-transform: scale(0.58); /* Safari 和 Chrome */
+			-webkit-transform-origin:0 0;   /* Safari 和 Chrome */
 
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
+			-moz-transform: scale(0.58);        /* Firefox */
+			-moz-transform-origin:0 0;      /* Firefox */
 
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
+			-o-transform: scale(0.58);      /* Opera */
+			-o-transform-origin:0 0;        /* Opera */
 	}
 	/*SERVICE*/
 
-
 	/*DECO*/
 	.picbox-deco{
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  margin-right: 120px;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-image: url(https://i.imgur.com/aAzSXz5.jpg);
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/aAzSXz5.jpg);
+		justify-content: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.title-deco{
-	  font-size: 1.2rem;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 0.2rem;
-	  line-height: 2rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		font-size: 1.2rem;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 0.2rem;
+		line-height: 2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.descrip-deco{
-	  max-width: 450px;
-	  margin-top: 1rem;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 1.2rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-right: 1rem;
+		max-width: 450px;
+		margin-top: 1rem;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 1.2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.twinbox-deco{
-	  width: 100%;
-	  padding-top: 8rem;
-	  padding-bottom: 5rem;
-	  justify-content: space-around;
-	  min-height: 100vh;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100%;
+		min-height: 100vh;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.contactbox-deco{
-	  padding: 1rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-top: 1rem;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.contactdetalls{
-	  width: 300px;
-	  padding: 1rem;
-	  margin-top: 3rem;
-	  border: 1px solid #000;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		max-width: 300px;
+		padding: 1rem;
+		margin-top: 3rem;
+		border: 1px solid #000;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.imgbox-deco{
-	  max-width: 450px;
+		max-width: 450px;
 	}
 	.decoimg-deco{
-	  padding: 1rem;
-	  height: 40%;
+		padding: 1rem;
+		height: 40%;
 	}
 	.contract{
-	  margin-top: 3rem;
-	  border: 1px solid #000;
-	  width: 600px;
-	  min-width: 300px;
-	  padding: 1rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-top: 3rem;
+		border: 1px solid #000;
+		width: 100%;
+		height: auto;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.itembox{
-	  width: 100%;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: space-between;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: space-between;
 	}
 	.itemlist{
-	  font-size: 1rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 2rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		font-size: 0.8rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.garantie-deco{
-	  margin-top: 3rem;
-	  max-width: 400px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-
-	@media only screen and (max-width: 865px) {
-	  .twinbox-deco{
-	    height: auto;
-	    padding-left: 5rem;
-	    padding-top: 0rem;
-	    padding-bottom: 3rem;
-	    -moz-flex-direction: column;
-	    -webkit-flex-direction: column;
-	            flex-direction: column;
-	  }
-	  .contactbox-deco{
-	    padding: 0rem;
-	    margin-top: 5rem;
-	  }
-	  .contract{
-	    margin-right: 1rem;
-	    margin-bottom: 3rem;
-	    width: 100%;
-	  }
-	  .decoimg-deco{
-	    padding: 0rem;
-	    margin-bottom: 1rem;
-	    height: 35%;
-	  }
+		margin-top: 3rem;
+		max-width: 400px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 
 	/*DECO*/
 
 	/*CABINET*/
 	.picbox-cabinet{
-	  position: absolute;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  margin-right: 120px;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-image: url(https://i.imgur.com/PIwHaZy.jpg);
+		width: 100vw;
+		height: calc(100vh - 50px);
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/BzH8dHe.jpg);
 	}
 	.articlecontianer-cabinet{
-	  max-width: 430px;
-	  z-index: 1000;
-	  position: absolute;
-	  padding: 50px;
-	  left: 55vw;
-	  top: 75vh;
-	  margin-right: 150px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
-	  background-color: #fff;
+		position: absolute;
+		bottom: -5rem;
+		width: 100vw;
+		z-index: 1000;
+		padding: 30px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
+		background-color: #fff;
 	}
 	.toptitle-cabinet{
-	  margin-bottom: 0.2rem;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  line-height: 1rem;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.1rem;
+		margin-bottom: 0.2rem;
+		font-size: 0.7rem;
+		font-weight: 300;
+		line-height: 1rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
 	}
 	.title-cabinet{
-	  margin-bottom: 0.5rem;
-	  font-size: 1.5rem;
-	  font-weight: 300;
-	  line-height: 2rem;
-	  font-family: "HanaMinA";
-	  letter-spacing: 0.5rem;
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2rem;
+		font-family: "HanaMinA";
+		letter-spacing: 0.5rem;
 	}
 	.subtitle-cabinet{
-	  margin-bottom: 3rem;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.1rem;
+		margin-bottom: 3rem;
+		font-size: 0.7rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
 	}
 	.elementcontianer{
-	  height: 230vh;
-	  width: calc(100vw - 120px);
-	  background-position: top center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-image: url(https://i.imgur.com/6maY8Hj.jpg);
+		width: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(https://i.imgur.com/6maY8Hj.jpg);
 	}
 	.elementtitle{
-	  width: 100%;
-	  margin-top: 170vh;
-	  font-size: 1rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3rem;
-	  text-align: center;
-	  color: #fff;
+		width: 100%;
+		margin-top: 50vh;
+		font-size: 0.8rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1.2rem;
+		text-align: center;
+		color: #fff;
 	}
 	.elementsubtitle{
-	  width: 100%;
-	  margin-top: 2rem;
-	  margin-bottom: 50vh;
-	  font-size: 0.5rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1rem;
-	  text-align: center;
-	  color: #fff;
+		width: 100%;
+		margin-top: 2rem;
+		margin-bottom: 50vh;
+		font-size: 0.5rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.7rem;
+		text-align: center;
+		color: #fff;
 	}
 	.marblebox{
-	  position: relative;
-	  padding: 80px;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/fFYXq6I.jpg);
+		position: relative;
+		padding: 80px;
+		width: 100vw;
+		height: 100vh;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/2MOZ5wx.jpg);
 	}
 	.bigtitlebox-cabinet{
-	  z-index: 100;
-	  margin-left: calc(100% - 2rem);
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		z-index: 100;
+		margin-left: calc(100% - 2rem);
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.bigtitleboxL-cabinet{
-	  z-index: 100;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		z-index: 100;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.bigtitle-cabinet{
-	  margin-bottom: 2rem;
-	  font-size: 1.2rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.3rem;
-	  line-height: 1.5rem;
-	  -webkit-writing-mode: vertical-rl ;
-	  writing-mode: vertical-rl ;
+		margin-bottom: 2rem;
+		font-size: 1.2rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.3rem;
+		line-height: 1.5rem;
+		-webkit-writing-mode: vertical-rl ;
+		writing-mode: vertical-rl ;
 	}
 	.bigtitle-cn{
-	  font-size: 1.5rem;
-	  font-family: "HanaMinA";
+		font-size: 1.5rem;
+		font-family: "HanaMinA";
 	}
 	.bigtitle-cn-sub{
-	  margin-top: 0.2rem;
-	  font-size: 0.5rem;
-	  letter-spacing: 0.15rem;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 0.2rem;
+		font-size: 0.5rem;
+		letter-spacing: 0.15rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.bottomcolor-marble{
-	  margin-left: calc(100vw - 17rem);
-	  position: absolute;
-	  background-color: #fff;
-	  width: 1.5rem;
-	  height: 11rem;
+		right: 3rem;
+		position: absolute;
+		background-color: #fff;
+		width: 1.5rem;
+		height: 11rem;
 	}
 	.bottomcolor-copper{
-	  margin-left: calc(50vw - 12.9rem);
-	  position: absolute;
-	  background-color: #995b4a;
-	  width: 1.5rem;
-	  height: 11rem;
+		right: 3rem;
+		position: absolute;
+		background-color: #995b4a;
+		width: 1.5rem;
+		height: 11rem;
 	}
 	.bottomcolor-wood{
-	  margin-left: calc(50vw - 13.3rem);
-	  position: absolute;
-	  background-color: #515151;
-	  width: 1.5rem;
-	  height: 9.5rem;
+		right: 3rem;
+		position: absolute;
+		background-color: #515151;
+		width: 1.5rem;
+		height: 9.5rem;
 	}
 	.bottomline{
-	  font-size: 1.2rem;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.5rem;
-	  -webkit-writing-mode: vertical-rl ;
-	  writing-mode: vertical-rl ;
+		font-size: 1.2rem;
+		font-weight: 100;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.5rem;
+		-webkit-writing-mode: vertical-rl ;
+		writing-mode: vertical-rl ;
 	}
 	.twinbox{
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100vw;
+		height: 200vh;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.twinbox-copper{
-	  position: absolute;
-	  padding: 80px;
-	  bottom: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 40%;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		position: absolute;
+		padding: 20px;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 40%;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.copperbox{
-	  z-index: 1000;
-	  position: relative;
-	  padding: 80px;
-	  width: 50%;
-	  height: 100%;
-	  top: 0;
-	  left: 0;
-	  background-color: #b16850;
+		z-index: 1000;
+		position: relative;
+		padding: 80px;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: #b16850;
 	}
 	.woodbox{
-	  position: relative;
-	  padding: 80px;
-	  width: 50%;
-	  height: 100%;
-	  top: 0;
-	  left: 0;
-	  background-color: #2b2b2b;
+		position: relative;
+		padding: 80px;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: #2b2b2b;
 	}
 	.articlecontianer-marble{
-	  position: absolute;
-	  right: 12%;
-	  bottom:25%;
-	  max-width: 270px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
+		margin-right: 10%;
+		position: absolute;
+		left: 10%;
+		bottom:25%;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
 	}
 	.articlecontianer-copper{
-	  margin-left: 4rem;
-	  max-width: 230px;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #fff;
+		margin-left: 2rem;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #fff;
 	}
 	.title-marble{
-	  margin-bottom: 2rem;
-	  font-size: 1.5rem;
-	  font-weight: 300;
-	  line-height: 2rem;
-	  font-family: "HanaMinA";
-	  letter-spacing: 0.3rem;
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 2rem;
+		font-family: "HanaMinA";
+		letter-spacing: 0.3rem;
 	}
 	.img-copper{
-	  position:absolute;
-	  left: 0;
-	  top: 4rem;
-	  margin-right: 120px;
-	  max-width: 400px;
-	  overflow: hidden;
+		position:absolute;
+		left: 0;
+		top: 4rem;
+		margin-right: 100px;
+		overflow: hidden;
 	}
 	.img-wood{
-	  position:absolute;
-	  left: 0;
-	  top: 5rem;
-	  margin-right: 120px;
-	  max-width: 450px;
-	  overflow: hidden;
+		position:absolute;
+		left: 0;
+		top: 5rem;
+		margin-right: 100px;
+		overflow: hidden;
 	}
 	.img-garantie{
-	  min-width: 100px;
-	  overflow: hidden;
+		min-width: 50px;
+		overflow: hidden;
 	}
 	.handle{
-	  max-width: 50px;
-	  overflow: hidden;
+		max-width: 50px;
+		overflow: hidden;
 	}
 	.picbox1-cabinet{
-	  margin-bottom: 1rem;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/S0roCCv.jpg);
+		margin-bottom: 1rem;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/S0roCCv.jpg);
 	}
 	.picbox2-cabinet{
-	  margin-bottom: 1rem;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/CjpEdpL.jpg);
+		margin-bottom: 1rem;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/CjpEdpL.jpg);
 	}
 	.picbox3-cabinet{
-	  position: relative;
-	  width: calc(100vw - 120px);
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
-	  background-attachment: fixed;
-	  background-image: url(https://i.imgur.com/YYwscDZ.jpg);
+		padding: 0.5rem;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
+		background-image: url(https://i.imgur.com/YYwscDZ.jpg);
 	}
 	.articlecontianer-garantie{
-	  max-width: 450px;
-	  z-index: 1000;
-	  position: absolute;
-	  padding: 50px;
-	  right: 5rem;
-	  bottom: 2rem;
-	  font-size: 0.6rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
-	  line-height: 1rem;
-	  color: #474747;
-	  background-color: #fff;
-	  align-items: center;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 28rem;
+		width: 100%;
+		z-index: 1000;
+		padding: 20px;
+		font-size: 0.6rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.05rem;
+		line-height: 1rem;
+		color: #474747;
+		background-color: #fff;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.text-garantie{
-	  margin-left: 2rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title-garantie{
-	  margin-bottom: 1.5rem;
-	  font-size: 1rem;
-	  font-weight: 300;
-	  line-height: 1rem;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.1rem;
+		margin-bottom: 1.5rem;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
 	}
 	.imgbox-cabinet{
-	  width: 100%;
-	  height: 100%;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-color: #474747;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #474747;
 	}
 	#slide1 {
-	position: relative;
-	margin: 5rem 5rem 5rem 5rem;
-	width: 100%;
+		margin-top: 2rem;
+		height: 100%;
+		position: relative;
+		width: 100%;
 	}
 	#slide1 li {
-	  position: static;
-	  top: 0;
-	  left: 0;
-	  display: block;
-	  width: 100%;
-	  opacity: 0;
-	  visibility: hidden;
-	  transition: 0.8s;
+		position: static;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.8s;
 	}
 	#slide1 li:first-child {
-	  position: static;
+		position: static;
 	}
 	#slide1 li.show {
-	  opacity: 1;
-	  visibility: visible;
+		opacity: 1;
+		visibility: visible;
 	}
 	#slide1 .prev, #slide1 .next {
-	  display: block;
-	  position: absolute;
-	  top: 50%;
-	  -webkit-transform: translateY(-50%);
-	          transform: translateY(-50%);
-	  cursor: pointer;
-	  transition: 0.4s;
-	  background-color: rgba(0, 0, 0, 0.12);
-	  padding: 14px 12px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+						transform: translateY(-50%);
+		cursor: pointer;
+		transition: 0.4s;
+		background-color: rgba(0, 0, 0, 0.12);
+		padding: 14px 12px;
 	}
 	#slide1 .prev:hover, #slide1 .next:hover {
-	  background-color: rgba(0, 0, 0, 0.24);
+		background-color: rgba(0, 0, 0, 0.24);
 	}
 	#slide1 .prev:after, #slide1 .next:after {
-	  display: block;
-	  content: "";
-	  width: 10px;
-	  height: 10px;
-	  border-top: 2px solid #fff;
-	  border-right: 2px solid #fff;
+		display: block;
+		content: "";
+		width: 10px;
+		height: 10px;
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
 	}
 	#slide1 .prev {
-	  left: 0;
+		left: 0;
 	}
 	#slide1 .prev:after {
-	  -webkit-transform: rotate(-135deg);
-	          transform: rotate(-135deg);
-	  margin-left: 4px;
+		-webkit-transform: rotate(-135deg);
+						transform: rotate(-135deg);
+		margin-left: 4px;
 	}
 	#slide1 .next {
-	  right: 0;
+		right: 0;
 	}
 	#slide1 .next:after {
-	  -webkit-transform: rotate(45deg);
-	          transform: rotate(45deg);
-	  margin-right: 4px;
+		-webkit-transform: rotate(45deg);
+						transform: rotate(45deg);
+		margin-right: 4px;
 	}
 	#imgc1{
-	   background-image: url(https://i.imgur.com/AA5Vrhk.jpg);
+		 background-image: url(https://i.imgur.com/AA5Vrhk.jpg);
 	}
 	#imgc2{
-	   background-image: url(https://i.imgur.com/ArW3YMI.jpg);
+		 background-image: url(https://i.imgur.com/ArW3YMI.jpg);
 	}
 	#imgc3{
-	   background-image: url(https://i.imgur.com/KDZnmIC.jpg);
+		 background-image: url(https://i.imgur.com/KDZnmIC.jpg);
 	}
 	#imgc4{
-	   background-image: url(https://i.imgur.com/NU81AJl.jpg);
+		 background-image: url(https://i.imgur.com/NU81AJl.jpg);
 	}
 	#imgc5{
-	   background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31531775_2001275900188271_7034947734092120064_o.jpg?_nc_cat=0&_nc_eui2=AeEOFtiK9lKQiKeRSMlVGfuyCZBAkYtwVvEqFq8ZZ7mWm1sz3J_-v6CO9HuuAT86BIELMV7DLVyb-CxPVq_E7fXxmj7eIrhyQX-AxgRLUBrCVA&oh=232f98f062ca467f5ae9385a86d49347&oe=5BACA5DD);
+		 background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31531775_2001275900188271_7034947734092120064_o.jpg?_nc_cat=0&_nc_eui2=AeEOFtiK9lKQiKeRSMlVGfuyCZBAkYtwVvEqFq8ZZ7mWm1sz3J_-v6CO9HuuAT86BIELMV7DLVyb-CxPVq_E7fXxmj7eIrhyQX-AxgRLUBrCVA&oh=232f98f062ca467f5ae9385a86d49347&oe=5BACA5DD);
 	}
 	#imgc6{
-	   background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31945912_2001274856855042_705524158770970624_o.jpg?_nc_cat=0&_nc_eui2=AeG4GxhM_DP48y4ecpQ9bNNoKDslu-gmL7sRh1SdejZajTFmyS7EPtnCNC1sax80T-c19eDyPf1XhXCDf-7r8R1kmqtezvJW7z42q4-sGr0pRA&oh=09e8351203681c4eed7cd8730dd7b6e8&oe=5BBB8AE8);
+		 background-image: url(https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/31945912_2001274856855042_705524158770970624_o.jpg?_nc_cat=0&_nc_eui2=AeG4GxhM_DP48y4ecpQ9bNNoKDslu-gmL7sRh1SdejZajTFmyS7EPtnCNC1sax80T-c19eDyPf1XhXCDf-7r8R1kmqtezvJW7z42q4-sGr0pRA&oh=09e8351203681c4eed7cd8730dd7b6e8&oe=5BBB8AE8);
 	}
 	/*CABINET*/
 
-
 	/*ABOUT*/
 	.articlecontianer-about{
-	  margin-top: 30px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	          flex: 1 0 auto;
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title1-about{
-	  width: 100%;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  font-size: 14pt;
-	  font-weight: 100;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-top: 50px;
+		font-size: 14pt;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.article-about{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 20px;
-	  font-size: 8pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 15px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 34px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.imgbox-about{
-	  max-width: 700px;
-	  margin-top: 20px;
-	  margin-left: 40px;
-	  overflow: hidden;
-	  height: auto;
+		width: 100%;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
 	}
 	.logobox-about{
-	  max-width: 200px;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  overflow: hidden;
-	  height: auto;
+		max-width: 200px;
+		margin-left: 15px;
+		margin-top: 10px;
+		overflow: hidden;
+		height: auto;
 	}
-	/*ABOUT/
-
-	/*TEAM*/
-	.gridcontianer-team{
-	  margin-top: 90px;
-	  margin-left: 0px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	}
-	.grid-team{
-	  margin-bottom: 40px;
-	  margin-left: 80px;
-	  max-width: 420px;
-	  height: 180px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	     -moz-align-items: flex-start;
-	  -webkit-align-items: flex-start;
-	          align-items: flex-start;
-	  flex-direction:row;
-	}
-	.imgbox-team{
-	  min-width: 100px;
-	  height: 100px;
-	  border-radius: 100%;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.articlecontianer-team{
-	  width: 100%;
-	  height: 100%;
-	  margin-left: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
-	}
-	.name-team{
-	  width: 100%;
-	  font-size: 16pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.descrip-team{
-	  margin-top: 10px;
-	  font-size: 7pt;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	/*TEAM*/
+	/*ABOUT*/
 
 	/*WORKS*/
 	.gridcontianer-works{
-	  margin-top: 90px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.grid-works{
-	  margin-bottom: 40px;
-	  margin-left: 40px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
+		margin-top: 40px;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.imgbox-works{
-	  max-width: 330px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100%;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.name-works{
-	  margin-top: 8px;
-	  font-size: 10pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 5px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content:center;
+		margin-top: 8px;
+		font-size: 10pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 5px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		color: #000;
 	}
 	.descrip-works{
-	  visibility:hidden;
-	  margin-top: 2px;
-	  font-size: 7pt;
-	  font-weight: 300;
-	  font-family: ‘Noto Sans TC’, sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content:center;
-	  color: #555555;
+		visibility:hidden;
+		margin-top: 2px;
+		font-size: 7pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content:center;
+		color: #555555;
 	}
 	/*WORKS*/
 
+	/*TEAM*/
+	.gridcontianer-team{
+		width: 100vw;
+		margin-top: 40px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+	}
+	.grid-team{
+		width: 100%;
+		padding: 30px;
+		margin-top: 5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+			 -moz-align-items: flex-start;
+		-webkit-align-items: flex-start;
+						align-items: flex-start;
+			 -moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+		align-items: center;
+	}
+	.imgbox-team{
+		border-radius: 100%;
+		min-width: 100px;
+		height: 100px;
+		margin-bottom: 2rem;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.articlecontianer-team{
+		width: 100%;
+		max-width: 350px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
+	}
+	.name-team{
+		width: 100%;
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
+		text-align: center;
+	}
+	.descrip-team{
+		margin-top: 1rem;
+		font-size: 0.7rem;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		line-height: 1.2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	/*TEAM*/
 
 	/*PRESS*/
 	.gridcontianer-press{
-	  margin-top: 90px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 15px;
+		margin-right: 15px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
 	}
 	.grid-press{
-	  max-width: 700px;
-	  margin-bottom: 8rem;
-	  margin-left: 40px;
-	  min-width: 270px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-top: 5rem;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.name-press{
-	  margin-top: 20px;
-	  font-size: 14pt;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 5px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 12px;
+		font-size: 14pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 5px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #000;
 	}
 	.descrip-press{
-	  margin-top: 5px;
-	  font-size: 7pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #555555;
+		margin-top: 5px;
+		font-size: 7pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555555;
 	}
 	.descrip-press1{
-	  margin-top: 5px;
-	  font-size: 7pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 1px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  align-items: baseline;
-	  color: #555555;
+		margin-top: 5px;
+		font-size: 7pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 1px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: baseline;
+		color: #555555;
 	}
 	.articlecontianer-press{
-	  width: calc(100% - 120px);
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
-	  align-items: center;
-	}
-	.bigtitle-press{
-	  margin-top: 5rem;
-	  font-size: 0.8rem;
-	  letter-spacing: 0.05rem;
-	  font-weight: lighter;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
-	}
-	.title-press{
-	  margin-top: 2rem;
-	  font-size: 1.3rem;
-	  font-weight: 100;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.article-press{
-	  max-width: 510px;
-	  margin-left: 20px;
-	  margin-top: 50px;
-	  margin-bottom: 30px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #555555;
+		width: 100vw;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	.article1-press{
-	  margin-top: 2rem;
-	  margin-bottom: 0rem;
-	  font-size: 0.7rem;
-	  font-weight: 400;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 1.6em;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #555555;
-	}
-	.imgbox-press{
-	  max-width: 700px;
-	  margin-top: 50px;
-	  overflow: hidden;
-	  height: auto;
-	}
-	.imgbox-press1{
-	  max-width: 510px;
-	  margin-top: 50px;
-	  overflow: hidden;
-	  height: auto;
-	}
-	.line-press{
-	  border-right: 1px solid #474747;
-	  margin-top: 1rem;
-	  margin-bottom: 1rem;
-	  height: 3rem;
+		margin-top: 1rem;
+		margin-bottom: 0rem;
+		font-size: 0.6rem;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555555;
 	}
 	.article-press{
-	  max-width: 510px;
-	  margin-top: 60px;
-	  margin-bottom: 20px;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  line-height: 1.4rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		max-width: 510px;
+		padding: 50px;
+		margin-bottom: 30px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #555555;
+	}
+	.imgbox-press{
+		max-width: 700px;
+		margin-top: 10px;
+		overflow: hidden;
+		height: auto;
+	}
+	.imgbox-press1{
+		max-width: 510px;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
+	}
+	.line-press{
+		border-right: 1px solid #474747;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		height: 3rem;
+	}
+	.bigtitle-press{
+		margin-top: 5rem;
+		font-size: 0.8rem;
+		letter-spacing: 0.05rem;
+		font-weight: lighter;
+		font-family: 'Noto Sans TC', sans-serif;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
+	}
+	.title-press{
+		margin-top: 1rem;
+		font-size: 1.3rem;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	/*PRESS*/
 
 	/*ITEM*/
 	.articlecontianer-item{
-	  height: 100vh;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 50px;
+		margin-left: 0px;
+		margin-right: 0px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
 	}
 	.imgbox1-item{
-	  flex: 1.5;
-	  max-width: 700px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.infobox-item{
-	  flex: 1;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  align-items: center;
-	}
-	.info-item{
-	  position: fixed;
-	  margin-left: 50px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 50px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.name1-item{
-	  margin-top: 0.4rem;
-	  font-size: 12pt;
-	  font-weight: 300;
-	  font-family: "HanaMinA";
-	  letter-spacing: 4px;
-	  color: #474747;
+		margin-top: 0.4rem;
+		font-size: 12pt;
+		font-weight: 300;
+		font-family: "HanaMinA";
+		letter-spacing: 4px;
+		color: #474747;
 	}
 	.NT-item{
-	  margin-top: 0.7rem;
-	  font-size: 9pt;
-	  font-weight: 100;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #909090;
+		margin-top: 0.6rem;
+		font-size: 9pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #777;
 	}
 	.pricebox-item{
-	  height: 70px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  align-items: flex-end;
+		height: 70px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		align-items: flex-end;
 	}
 	.price-item{
-	  margin-bottom: -4px;
-	  margin-left: 5px;
-	  font-size: 18pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
+		margin-bottom: -4px;
+		margin-left: 5px;
+		font-size: 18pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
 	}
 	.price1-item{
-	  width: 100%;
-	  text-align: center;
-	  margin-top: 0.5rem;
-	  font-size: 0.65em;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.15rem;
-	  color: #474747;
+		margin-top: 0.3rem;
+		text-align: center;
+		width: 100%;
+		font-size: 0.65rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.15rem;
+		color: #474747;
 	}
 	.gridcontianer-item{
-	  margin-top: 90px;
-	  margin-left: 20px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
+		margin-top: 20px;
+		padding: 0.5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	.grid-item{
-	  margin-top: 40px;
-	  margin-bottom: 40px;
-	  margin-left: 40px;
-	  min-width: 150px;
-	  max-width: 200px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
+		margin-bottom: 60px;
+		width: 49%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
 	.imgbox-item{
-	  max-width: 200px;
-	  overflow: hidden;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		width: 100%;
+		overflow: hidden;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.name-item{
-	  width: 100%;
-	  text-align: center;
-	  margin-top: 10px;
-	  font-size: 0.7rem;
-	  font-weight: 300;
-	  letter-spacing: 0.2rem;
-	  display: table;
+		text-align: center;
+		width: 100%;
+		margin-top: 10px;
+		font-size: 0.7rem;
+		font-weight: 400;
+		letter-spacing: 0.2rem;
+		line-height: 14pt;
+		display: table;
+		color: #000;
 	}
 	#zh-item{
-	  font-family: "HanaMinA";
+		font-family: "HanaMinA";
 	}
 	#en-item{
-	  font-family: 'Noto Sans TC', sans-serif;
+		font-family: 'Noto Sans TC', sans-serif;
 	}
 	.designer-item{
-	  margin-top: 2rem;
-	  color: #909090;
-	  font-size: 0.5rem;
-	  font-weight: 100;
-	  letter-spacing: 3px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  display: table;
+		margin-top: 2rem;
+		color: #909090;
+		font-size: 0.6rem;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-family: 'Noto Sans TC', sans-serif;
+		white-space: nowrap;
+		overflow: hidden;
+		display: table;
 	}
 	.manufacturer-item{
-	  margin-top: 0.5rem;
-	  margin-bottom: 1rem;
-	  color: #909090;
-	  font-size: 0.5rem;
-	  font-weight: 100;
-	  letter-spacing: 3px;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  display: table;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		color: #909090;
+		font-size: 0.6rem;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-family: 'Noto Sans TC', sans-serif;
+		white-space: nowrap;
+		overflow: hidden;
+		display: table;
+	}
+	.tag-item{
+		width: 100%;
+		margin-left: 15px;
+		margin-bottom: 2rem;
+		color: #474747;
+		font-size: 10pt;
+		font-weight: 400;
+		letter-spacing: 3px;
+		font-family: 'Noto Sans TC', sans-serif;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.copyright-item{
-	  height: 50px;
-	  color: #999999;
-	  margin-left: 50px;
-	  font-size: 12px;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
-
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
-
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
-
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
+		display: none;
 	}
 	.copyright-item-mobil{
-	  display: none;
-	}
-	.tag-item {
-	  width: 100%;
-	  margin-left: 40px;
-	  margin-top: 30px;
-	  margin-bottom: 30px;
-	  color: rgb(71, 71, 71);
-	  font-size: 12pt;
-	  font-weight: 400;
-	  letter-spacing: 3px;
-	  font-family: "Noto Sans TC", sans-serif;
-	  display: flex;
+		color: #999999;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
 	}
 	.category{
-	  width: calc(100% - 190px);
-	  margin-top: 10rem;
-	  margin-bottom: 5rem;
-	  margin-left: 60px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: center;
+		width: 100%;
+		padding: 1rem;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
 	}
 	.buttonbox{
-	  width: 500px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: space-between;
+		width: 350px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: space-between;
 	}
 	.buttonbox button{
-	  border: none;
-	  font-size: 0.8rem;
-	  font-weight: 400;
-	  letter-spacing: 0.1rem;
-	  font-family: "Noto Sans TC", sans-serif;
-	  background-color: #fff;
+		border: none;
+		font-size: 0.7rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		font-family: "Noto Sans TC", sans-serif;
+		background-color: #fff;
 	}
 	.newtag{
-	  text-align: center;
-	  z-index: 100;
-	  margin-top: 1rem;
-	  margin-left: -0.5rem;
-	  color: #fff;
-	  padding: 0.2rem;
-	  position: absolute;
-	  background-color: #888842;
-	  font-size: 0.5rem;
-	  font-weight: 400;
-	  letter-spacing: 0.1rem;
-	  font-family: "Noto Sans TC", sans-serif;
+		text-align: center;
+		z-index: 100;
+		margin-top: 0.6rem;
+		margin-left: -0.2rem;
+		color: #fff;
+		padding: 0.2rem;
+		position: absolute;
+		background-color: #e5765c;
+		font-size: 0.5rem;
+		font-weight: 400;
+		letter-spacing: 0.2rem;
+		font-family: "Noto Sans TC", sans-serif;
 	}
 	.bannerbox{
-	  width: calc(100% - 190px);
-	  margin-left: 60px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  justify-content: center;
+		margin-top: -3rem;
+		margin-bottom: 2rem;
+		width: 100%;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		justify-content: center;
 	}
 	.banner{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  line-height: 2.2rem;
-	  font-size: 1.4rem;
-	  font-weight: 800;
-	  letter-spacing: 0.1rem;
-	  font-family: "Noto Sans TC", sans-serif;
-	  color: #888842;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		line-height: 2.4rem;
+		font-size: 1.4rem;
+		font-weight: 800;
+		letter-spacing: 0.2rem;
+		font-family: "Noto Sans TC", sans-serif;
+		color: #e5765c;
 	}
 	.bannertag{
-	  width: 100%;
-	  max-height: 200px;
-	  margin-top: 40px;
-	  padding: 1rem;
-	  color: #fff;
-	  background-color: #888842;
-	  font-size: 1.2rem;
-	  font-weight: 400;
+		margin-bottom: 40px;
+		width: 49%;
+		height: 45.5vw;
+		padding: 1rem;
+		color: #fff;
+		background-color: #e5765c;
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: 3px;
+		line-height: 2rem;
+		font-family: "Noto Sans TC", sans-serif;
+	}
+	.back-item{
+		margin-top: -2rem;
+	  margin-left:5px;
+		margin-bottom: 3rem;
+	  font-size: 0.8rem;
+	  font-weight: 100;
 	  letter-spacing: 0.1rem;
 	  line-height: 2rem;
 	  font-family: "Noto Sans TC", sans-serif;
-	  margin-bottom: 40px;
-	  margin-left: 40px;
-	  min-width: 150px;
-	  max-width: 200px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-direction: column;
 	}
 	/*ITEM*/
 
 	/*Contact*/
 	.block-contact{
-	  height: 50px;
+		height: 60px;
 	}
 	.descrip-contact{
-	  margin-bottom: 10px;
-	  margin-left: 50px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 2px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  color: #474747;
+		margin-bottom: 10px;
+		margin-left: 15px;
+		margin-right: 15px;
+		font-size: 8pt;
+		font-weight: 500;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 2px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		color: #474747;
 	}
 	.map-contact{
-	  position: absolute;
-	  bottom: 0px;
-	  margin-bottom: 120px;
-	  margin-left: 50px;
-	  width: 300px;
+		bottom: 0px;
+		margin-top: 100px;
+		margin-bottom: 120px;
+		margin-left: 15px;
+		margin-right: 15px;
+		max-width: 270px;
 	}
 	.articlecontianer-contact{
-	  margin-left: 20px;
-	  margin-top: 90px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-top: 50px;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	/*Contact*/
 
 	.articlecontianer{
-	  margin-top: 30px;
-	  margin-right: 130px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  flex-wrap: wrap;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-wrap: wrap;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.title1{
-	  width: 100%;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  font-size: 14pt;
-	  font-weight: 100;
-	  font-family: "HanaMinA";
-	  letter-spacing: 3px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.descrip{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 2px;
-	  margin-bottom: 50px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 18px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-top: 70px;
+		font-size: 14pt;
+		font-weight: 100;
+		font-family: "HanaMinA";
+		letter-spacing: 3px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.article{
-	  max-width: 510px;
-	  margin-left: 50px;
-	  margin-top: 60px;
-	  margin-bottom: 20px;
-	  font-size: 8pt;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  line-height: 20px;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-top: 30px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 34px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.imgbox{
-	  max-width: 700px;
-	  margin-top: 10px;
-	  margin-left: 40px;
-	  overflow: hidden;
-	  height: auto;
+		width: 100%;
+		margin-top: 30px;
+		overflow: hidden;
+		height: auto;
 	}
-	.hover figure img {
-	  opacity: 1;
-	  -webkit-transition: .3s ease-in-out;
-	  transition: .3s ease-in-out;
+	.descrip{
+		max-width: 510px;
+		margin-left: 15px;
+		margin-top: 2px;
+		margin-bottom: 50px;
+		font-size: 8pt;
+		font-weight: 400;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
+		line-height: 18px;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
-	.hover figure:hover img {
-	  opacity: .5;
-	}
+
 	.block{
-	  height: 50px;
+		height: 50px;
 	}
 	.copyright{
-	  height: 50px;
-	  color: #999999;
-	  margin-left: 50px;
-	  font-size: 12px;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0px;
-	  transform: scale(0.58);
-	    transform-origin:0 0;
-
-	    -ms-transform: scale(0.58);         /* IE 9 */
-	    -ms-transform-origin:0 0;       /* IE 9 */
-
-	    -webkit-transform: scale(0.58); /* Safari 和 Chrome */
-	    -webkit-transform-origin:0 0;   /* Safari 和 Chrome */
-
-	    -moz-transform: scale(0.58);        /* Firefox */
-	    -moz-transform-origin:0 0;      /* Firefox */
-
-	    -o-transform: scale(0.58);      /* Opera */
-	    -o-transform-origin:0 0;        /* Opera */
-	}
-	.reveal .hidden { display: block !important; visibility: visible !important;}
-	.product:hover .reveal img { opacity: 1; }
-	.reveal { position: relative; }
-	.reveal .hidden {
-	  position: absolute;
-	  z-index: -1;
-	  top: 0;
-	  width: 100%;
-	  height: 100%;
-	  opacity: 0;
-	  -webkit-transition: opacity 0.3s ease-in-out;
-	  -moz-transition: opacity 0.3s ease-in-out;
-	  -o-transition: opacity 0.3s ease-in-out;
-	  transition: opacity 0.3s ease-in-out;
-	}
-	.reveal:hover .hidden {
-	  z-index: 100000;
-	  opacity: 1;
-	}
-	.reveal .caption {
-	  position: absolute;
-	  top: 0;
-	  display: table;
-	  width: 100%;
-	  height: 100%;
-	  color: #333;
-	  letter-spacing: 1px;
+		color: #999999;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		bottom: 0;
+		font-size: 6pt;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0px;
 	}
 	.box{
-	  width: calc(100vw - 120px);
-	  height: auto;
-	  top: 0;
-	  left: 0;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 2rem;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
 	.lefttitle{
-	  align-items: baseline;
-	  font-size: 1.2rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.2rem;
-	  line-height: 2rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		align-items: baseline;
+		font-size: 1.2rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.2rem;
+		line-height: 2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.lefttitlebar{
-	  margin-top: 0.2rem;
-	  width: 2rem;
-	  height: 0.5rem;
-	  background-color: #474747;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		margin-top: 0.2rem;
+		width: 2rem;
+		height: 0.5rem;
+		background-color: #474747;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 	}
 	.lefrtitlebox{
-	  margin-left: 5rem;
-	  margin-top: 5rem;
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	  -moz-flex-direction: column;
-	  -webkit-flex-direction: column;
-	          flex-direction: column;
+		margin-left: 1rem;
+		margin-top: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+						flex-direction: column;
 	}
-	@media only screen and (max-width: 865px) {
-	  .box{
-	    height: auto;
-	    -moz-flex-direction: column;
-	    -webkit-flex-direction: column;
-	            flex-direction: column;
-	  }
-	  #slide1 {
-	    height: 80vh;
-	    width: calc(100% - 120px);
-	  }
+	.title-info{
+		margin-left: 15px;
+		margin-bottom: 2rem;
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.2rem;
 	}
 
-	.title-info{
-	  margin-top: 4rem;
-	  margin-left: 50px;
-	  margin-bottom: 2rem;
-	  font-size: 1rem;
-	  font-weight: 300;
-	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.2rem;
-	}
 
 
 
@@ -2365,183 +2418,6 @@
 	</style>
 </HEAD>
 <BODY>
-	<script>
-	function showall() {
-		var a = document.getElementById("Cabinet");
-		if (a.style.display === "none") {
-				a.style.display = "flex";
-		}
-		var b = document.getElementById("Chair");
-		if (b.style.display === "none") {
-				b.style.display = "flex";
-		}
-		var c = document.getElementById("Table");
-		if (c.style.display === "none") {
-				c.style.display = "flex";
-		}
-		var d = document.getElementById("Lighting");
-		if (d.style.display === "none") {
-				d.style.display = "flex";
-		}
-		var e = document.getElementById("Antiques");
-		if (e.style.display === "none") {
-				e.style.display = "flex";
-		}
-	}
-	function cabinet() {
-		var a = document.getElementById("Cabinet");
-		if (a.style.display === "none") {
-				a.style.display = "flex";
-		}
-		var b = document.getElementById("Chair");
-		if (b.style.display === "flex") {
-				b.style.display = "none";
-		} else {
-				b.style.display = "none";
-		}
-		var c = document.getElementById("Table");
-		if (c.style.display === "flex") {
-				c.style.display = "none";
-		} else {
-				c.style.display = "none";
-		}
-		var d = document.getElementById("Lighting");
-		if (d.style.display === "flex") {
-				d.style.display = "none";
-		} else {
-				d.style.display = "none";
-		}
-		var e = document.getElementById("Antiques");
-		if (e.style.display === "flex") {
-				e.style.display = "none";
-		} else {
-				e.style.display = "none";
-		}
-	}
-	function chair() {
-		var a = document.getElementById("Chair");
-		if (a.style.display === "none") {
-				a.style.display = "flex";
-		}
-		var b = document.getElementById("Cabinet");
-		if (b.style.display === "flex") {
-				b.style.display = "none";
-		} else {
-				b.style.display = "none";
-		}
-		var c = document.getElementById("Table");
-		if (c.style.display === "flex") {
-				c.style.display = "none";
-		} else {
-				c.style.display = "none";
-		}
-		var d = document.getElementById("Lighting");
-		if (d.style.display === "flex") {
-				d.style.display = "none";
-		} else {
-				d.style.display = "none";
-		}
-		var e = document.getElementById("Antiques");
-		if (e.style.display === "flex") {
-				e.style.display = "none";
-		} else {
-				e.style.display = "none";
-		}
-	}
-	function table() {
-		var a = document.getElementById("Table");
-		if (a.style.display === "none") {
-				a.style.display = "flex";
-		}
-		var b = document.getElementById("Cabinet");
-		if (b.style.display === "flex") {
-				b.style.display = "none";
-		} else {
-				b.style.display = "none";
-		}
-		var c = document.getElementById("Chair");
-		if (c.style.display === "flex") {
-				c.style.display = "none";
-		} else {
-				c.style.display = "none";
-		}
-		var d = document.getElementById("Lighting");
-		if (d.style.display === "flex") {
-				d.style.display = "none";
-		} else {
-				d.style.display = "none";
-		}
-		var e = document.getElementById("Antiques");
-		if (e.style.display === "flex") {
-				e.style.display = "none";
-		} else {
-				e.style.display = "none";
-		}
-	}
-	function lighting() {
-		var a = document.getElementById("Lighting");
-		if (a.style.display === "none") {
-				a.style.display = "flex";
-		}
-		var b = document.getElementById("Cabinet");
-		if (b.style.display === "flex") {
-				b.style.display = "none";
-		} else {
-				b.style.display = "none";
-		}
-		var c = document.getElementById("Chair");
-		if (c.style.display === "flex") {
-				c.style.display = "none";
-		} else {
-				c.style.display = "none";
-		}
-		var d = document.getElementById("Table");
-		if (d.style.display === "flex") {
-				d.style.display = "none";
-		} else {
-				d.style.display = "none";
-		}
-		var e = document.getElementById("Antiques");
-		if (e.style.display === "flex") {
-				e.style.display = "none";
-		} else {
-				e.style.display = "none";
-		}
-	}
-	function antiques() {
-		var a = document.getElementById("Antiques");
-		if (a.style.display === "none") {
-				a.style.display = "flex";
-		}
-		var b = document.getElementById("Cabinet");
-		if (b.style.display === "flex") {
-				b.style.display = "none";
-		} else {
-				b.style.display = "none";
-		}
-		var c = document.getElementById("Chair");
-		if (c.style.display === "flex") {
-				c.style.display = "none";
-		} else {
-				c.style.display = "none";
-		}
-		var d = document.getElementById("Table");
-		if (d.style.display === "flex") {
-				d.style.display = "none";
-		} else {
-				d.style.display = "none";
-		}
-		var e = document.getElementById("Lighting");
-		if (e.style.display === "flex") {
-				e.style.display = "none";
-		} else {
-				e.style.display = "none";
-		}
-	}
-
-
-
-	</script>
 	<div class="cleanfix">
 
 		<!--   N   A   V   -->
@@ -2559,7 +2435,7 @@
 				<a href="https://letsohyeah.github.io/item.html">Item</a>
 			</div>
 			<div class="navlinks">
-				<a href="https://letsohyeah.github.io/team.html">Team</a>
+			 	<a href="https://letsohyeah.github.io/team.html">Team</a>
 			</div>
 			<div class="navlinks">
 				<a href="https://letsohyeah.github.io/press.html">Press</a>
@@ -2576,18 +2452,18 @@
 
 		<div class="navmob" onclick="return true">
 			<div class="dropdown-menu">
-				<span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
+			  <span tabindex="0" onclick="return true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ic_menu_48px.svg/120px-Ic_menu_48px.svg.png" height="30px";></span>
 					<div tabindex="0" onclick="return true"></div>
-					<ul>
+				  <ul>
 						<li><a href="https://letsohyeah.github.io/index.html" onclick="sampleMenu(this)">Index</a></li>
-						<li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
+				    <li><a href="https://letsohyeah.github.io/about.html" onclick="sampleMenu(this)">About</a></li>
 						<li><a href="https://letsohyeah.github.io/service.html" onclick="sampleMenu(this)">Service</a></li>
-						<li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
+				    <li><a href="https://letsohyeah.github.io/works.html" onclick="sampleMenu(this)">Works</a></li>
 						<li><a href="https://letsohyeah.github.io/item.html" onclick="sampleMenu(this)">Item</a></li>
 						<li><a href="https://letsohyeah.github.io/team.html" onclick="sampleMenu(this)">Team</a></li>
 						<li><a href="https://letsohyeah.github.io/press.html" onclick="sampleMenu(this)">Press</a></li>
 						<li><a href="https://letsohyeah.github.io/contact.html" onclick="sampleMenu(this)">Contact</a></li>
-					</ul>
+				  </ul>
 			</div>
 		</div>
 		<!--   N   A   V   -->
@@ -2596,1735 +2472,37 @@
 			<div class="bigtitle">
 					Item
 			</div>
-			<div class="category">
-				<div class="buttonbox">
-					<button onclick="showall()">All</button>
-					<button onclick="cabinet()">Cabinet</button>
-					<button onclick="chair()">Chair</button>
-					<button onclick="table()">Table</button>
-					<button onclick="lighting()">Lighting</button>
-					<button onclick="antiques()">Antiques</button>
+			<div class="articlecontianer-item">
+				<div class="imgbox1-item">
+					<img src="https://i.imgur.com/9SiiEGF.jpg" width="100%">
+					<img src="https://i.imgur.com/rZzfWYU.jpg" width="100%">
+					<img src="https://i.imgur.com/Y6bxENX.jpg" width="100%">
+					<img src="https://i.imgur.com/Wo8tTUA.jpg" width="100%">
+					<img src="https://i.imgur.com/Xszlq63.jpg" width="100%">
 				</div>
+				<div class="infobox-item">
+					<a class="back-item" href="http://naturalnvintage.com/item.html?c=chair">< Chair</a>
+					<div class="info-item">
+						<div class="NT-item" style="font-size:0.6rem;">sonstiges-041</div>
+						<div class="name1-item">德國琥珀色古董油壺</div>
+						<div class="pricebox-item">
+							<div class="NT-item">NT$</div>
+							<div class="price-item">Sold out</div>
+						</div>
+						<div class="NT-item">H23 x D11 x W18 cm</div>
+						<div class="NT-item">剩餘數量：0</div>
+						<a href="https://letsohyeah.github.io/contact.html" class="button-service" style="margin-top:40px; color:#474747;">Contact Us　＞</a>
+						<a href="https://letsohyeah.github.io/info.html" class="NT-item" style="font-size:0.6rem; color:#909090">－購買須知</a>
+					</div>
+					<p class="copyright-item" style="position:fixed; bottom:-15px;">
+						Copyright © 2017 Natural n' Vintage
+					</p>
+				</div>
+				<p class="copyright-item-mobil" style="color:white; position:fixed; bottom:0;">
+					Copyright © 2017 Natural n' Vintage
+				</p>
 			</div>
-
-			<div class="gridcontianer-item" id="Cabinet">
-				<div class="tag-item">Cabinet</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/kabinett-025.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/OwacJKi.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國上下式高櫃</div>
-							<div class="price1-item">25,000</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/kabinett-026.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/0COJ6Uk.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥經典六層抽櫃</div>
-							<div class="price1-item">20,000</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/kabinett-014.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/vkq2zgO.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國多用途長邊櫃</div>
-							<div class="price1-item">28,000</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/kabinett-015.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/e9NwXyf.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國組合式上下櫃</div>
-							<div class="price1-item">23,000</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/kabinett-017.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/uDzzuif.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥六層抽櫃</div>
-							<div class="price1-item">22,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-018.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/YqGt7ou.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥五層抽櫃</div>
-							<div class="price1-item">20,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-019.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/FBxTYL6.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥經典多功能高櫃</div>
-							<div class="price1-item">35,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-020.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/cY4rqVW.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國上下式高櫃</div>
-							<div class="price1-item">27,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-021.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/pMdI2vb.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國書桌型高櫃</div>
-							<div class="price1-item">25,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-001.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/fW2t21z.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國實木四角方櫃</div>
-							<div class="price1-item">9,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-003.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/ewv5fvS.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥設計柚木三抽櫃</div>
-							<div class="price1-item">15,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-004.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/RllwY9c.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">玫瑰木小櫃</div>
-							<div class="price1-item">11,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-005.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/W1OHB2s.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國單抽可掀式推車櫃</div>
-							<div class="price1-item">5,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-006.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/6XcYBNT.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國可延展經典實木櫃</div>
-							<div class="price1-item">19,500</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-007.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/rkOTJBC.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國設計金邊矮櫃</div>
-							<div class="price1-item">11,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-010.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/E70G57N.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥六層抽櫃</div>
-							<div class="price1-item">18,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-011.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/O6EfRsW.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥高櫃</div>
-							<div class="price1-item">40,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-012.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/p1oigV4.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥玻璃高櫃</div>
-							<div class="price1-item">36,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-002.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/IyqekZ6.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國圓弧設計五抽櫃</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/德國實木文件櫃.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/j7ZHKIf.png" width="100%" >
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國實木文件櫃</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-009.html" class="imgbox-item hover"  style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/IEJUUBs.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥六層抽櫃</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-013.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/5CAXY2R.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥經典寫字桌</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-016.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/NRTiXED.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">丹麥五層抽櫃 </div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/kabinett-008.html" class="imgbox-item hover"  style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/NFQ6eFM.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國設計<span id="en-item">60s</span>金屬腳長櫃</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-			</div>
-
-
-
-
-			<div class="gridcontianer-item" id="Chair">
-				<div class="tag-item">Chair</div>
-				<div class="grid-item">
-					<div class="newtag">NEW</div>
-					<a href="https://letsohyeah.github.io/Item/stuhl-037.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/csMy3uv.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">德國皮質旋轉椅</div>
-					<div class="price1-item">13,000</div>
-				</div>
-				<div class="grid-item">
-					<div class="newtag">NEW</div>
-					<a href="https://letsohyeah.github.io/Item/stuhl-038.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/23sUwfI.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">法國小學生椅</div>
-					<div class="price1-item">3,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-001.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/uHfbz5p.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">柚木橘色絨面<span id="en-item">476A</span>經典餐椅</div>
-					<div class="price1-item">8,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-002.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/kk3xGvU.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木絨面高腳椅/吧台椅</div>
-					<div class="price1-item">4,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-003.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/5EawreX.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木黑色高腳椅/吧台椅</div>
-					<div class="price1-item">4,200</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-004.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/AgetqSh.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木<span id="en-item">x</span>金屬經典餐椅</div>
-					<div class="price1-item">4,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-005.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/FhEUVWS.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國白色餐椅</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-006.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/Ihdrrwj.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木黑色皮質高扶手椅</div>
-					<div class="price1-item">9,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-008.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/zDqfrzd.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥藍色椅面<span id="en-item">70s</span>山毛櫸經典餐椅</div>
-					<div class="price1-item">4,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-009.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/46Nz9hL.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木<span id="en-item">x</span>金屬可延伸旋轉辦公椅</div>
-					<div class="price1-item">12,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-010.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/EatLmeW.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item"><span id="en-item">Armin Wirth</span>瑞士木夾板折疊椅 經典原木色</div>
-					<div class="price1-item">9,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-011.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/PGpRzQE.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國包浩斯經典藍色金屬旋轉椅</div>
-					<div class="price1-item">2,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-012.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/F7Rf1Vt.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國<span id="en-item">Thur-Op-Seat Chair</span>曲木餐椅<span id="en-item">60s</span></div>
-					<div class="price1-item">4,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-013.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/59B4q8u.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥設計師款餐椅</div>
-					<div class="price1-item">6,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-014.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/HcBzCix.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥灰紋柚木餐椅</div>
-					<div class="price1-item">6,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-015.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/pMYfEif.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國綠色絨布扶手沙發椅</div>
-					<div class="price1-item">7,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-016.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/FgKbcbD.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥咖啡色皮質餐椅</div>
-					<div class="price1-item">6,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-017.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/qsXAtLr.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國設計咖啡色絨面餐椅</div>
-					<div class="price1-item">3,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-020.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/Sd5NGO2.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國設計<span id="en-item">60s</span>柚木橘色絨面<span id="en-item">476A</span>經典餐椅</div>
-					<div class="price1-item">8,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-021.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/SrdyDOs.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item"id="en-item">Sirocco Safari</div>
-					<div class="price1-item">38,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-022.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/MIsGalX.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">5,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-024.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/4hSj8AA.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">5,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-026.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/99eiJAE.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">6,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-027.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/bRKDt4m.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-028.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/WB3sd43.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">7,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-029.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/l6AIOdA.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">6,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-031.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/H01WpoN.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">50s</span>餐椅</div>
-					<div class="price1-item">7,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-032.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/IMVoqVv.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-034.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/35SwM1t.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">6,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-019.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/hxlQOyS.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥設計芥末綠餐椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/Lr1S57t.png" width="100%" style="opacity:0.3;">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木小學生椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-033.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/YTvPSRs.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-023.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/ytzaHYu.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-007.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/EG7w4bv.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國可旋轉實木工程師椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-025.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/H7Xw8bZ.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計<span id="en-item">60s</span>餐椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-035.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/JDjDF6U.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">德國旋轉沙發椅 紅棕兩色</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-036.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/FLyrYhv.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥實木扶手沙發椅<span id="en-item">KOMFORT EASY CHAIRS-1960s</span></div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-030.html" class="imgbox-item hover"  style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/70TqnSS.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item"><span id="en-item">Oak</span>橡木皮餐椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/stuhl-018.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/5cvPkHF.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item"><span id="en-item">Erik Buch</span>丹麥柚木黑色皮面餐椅</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-			</div>
-
-
-
-
-			<div class="gridcontianer-item" id="Table">
-				<div class="tag-item">Table</div>
-				<div class="grid-item">
-					<div class="newtag">NEW</div>
-					<a href="https://letsohyeah.github.io/Item/tisch-032.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/wS6LgNN.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國經典咖啡桌</div>
-					<div class="price1-item">15,000</div>
-				</div>
-				<div class="grid-item">
-					<div class="newtag">NEW</div>
-					<a href="https://letsohyeah.github.io/Item/tisch-033.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/Xp2mIXt.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國經典特殊桌腳設計咖啡桌</div>
-					<div class="price1-item">16,000</div>
-				</div>
-				<div class="grid-item">
-					<div class="newtag">NEW</div>
-					<a href="https://letsohyeah.github.io/Item/tisch-034.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/sHrQfKz.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">西德老PFAFF輪腳縫紉桌(附鑰匙)</div>
-					<div class="price1-item">16,000</div>
-				</div>
-				<div class="grid-item">
-					<div class="newtag">NEW</div>
-					<a href="https://letsohyeah.github.io/Item/tisch-037.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/fhWwmP7.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">玻璃面實木方桌</div>
-					<div class="price1-item">20,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-020.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/hb3Y7nu.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典書桌</div>
-					<div class="price1-item">20,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-021.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/2ImVBX5.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典書桌</div>
-					<div class="price1-item">20,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-022.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/l6GZTgr.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典書桌</div>
-					<div class="price1-item">21,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-024.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/aFF7Y6l.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典書桌</div>
-					<div class="price1-item">22,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-025.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/L1pqAUh.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
-					<div class="price1-item">20,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-026.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/dcxi9R4.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
-					<div class="price1-item">19,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-027.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/FbS2U3p.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
-					<div class="price1-item">19,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-028.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/N6sFCxe.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
-					<div class="price1-item">20,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-030.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/pVFtHVI.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典化妝桌</div>
-					<div class="price1-item">26,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-019.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/CUBCZXe.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">玻璃面實木圓桌</div>
-					<div class="price1-item">26,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-017.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/66wPWPx.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國餐車桌</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-014.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/lIlBdzg.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國實木可延展長桌</div>
-					<div class="price1-item">26,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-013.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/erqFbIJ.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典層板推車</div>
-					<div class="price1-item">12,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-010.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/IEg8seR.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國餐車桌</div>
-					<div class="price1-item">12,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-008.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/N6QyvHP.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥方型輪腳邊桌</div>
-					<div class="price1-item">13,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-004.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/YL9r4UY.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國經典黑色檯面雜誌架/小桌</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-002.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/J1Vk8bE.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">瑞典品牌單抽設計實木桌</div>
-					<div class="price1-item">7,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-001.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/RS4mRbD.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國子母桌</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-011.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/f6WyJZx.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國書報架小邊桌</div>
-					<div class="price1-item">7,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-015.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/Yur98Ig.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">巴西玫瑰木多用途小方桌</div>
-					<div class="price1-item">18,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-016.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/y30Yz7u.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥柚木方形抽屜桌</div>
-					<div class="price1-item">13,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-029.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/LbHcbe3.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典咖啡桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-035.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/zvzAN7v.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典子母桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-009.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/cp8Bq01.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國餐車桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-023.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/RGdYZny.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典書桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-031.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/pQWPfhc.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥經典可延伸餐桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-003.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/IoYgS06.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國藤編桌腳高腳圓桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-006.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/r89R4K1.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">丹麥<span id="en-item">I</span>型桌腳子母桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-018.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/91QKf83.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item"><span id="en-item">Hans J. Wegner</span>橡木實木書桌（附鑰匙）</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/pfUywNw.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國灰粉色大理石紋三角邊桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/tisch-005.html" class="imgbox-item hover" style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/LZ51BKH.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item" id="zh-item">德國經典綠色檯面雜誌架/小桌</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-			</div>
-
-
-
-
-	<div class="gridcontianer-item" id="Lighting">
-		<div class="tag-item">Lighting</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-001.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/M5kIaeX.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">德國黑色老工業燈罩</div>
-					<div class="price1-item">8,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-003.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/ouxMHkN.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計師吊燈</div>
-					<div class="price1-item">5,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-004.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/M7dfBLt.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item"><span id="en-item">PH4/3 Pendant Lamp</span>白色金屬吊燈</div>
-					<div class="price1-item">12,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-006.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/v3STr5N.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計金屬白色吊燈</div>
-					<div class="price1-item">11,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-007.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/6XCRlsH.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計金屬白色吊燈</div>
-					<div class="price1-item">10,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-008.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/kIDeUYg.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計金屬白色吊燈</div>
-					<div class="price1-item">11,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-009.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/PBrbgfK.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計金屬白色吊燈</div>
-					<div class="price1-item">11,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-010.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/3ikuCyk.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">咖啡色大型金屬吊燈</div>
-					<div class="price1-item">12,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-011.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/0MDUb1o.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計金屬白色吊燈</div>
-					<div class="price1-item">10,000</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-012.html" class="imgbox-item hover">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/glN6qHU.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">綠色三角金屬吊燈</div>
-					<div class="price1-item">6,500</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-002.html" class="imgbox-item hover"  style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/fvtd6wU.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">法國芥黃色檯燈</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-				<div class="grid-item">
-					<a href="https://letsohyeah.github.io/Item/lampe-005.html" class="imgbox-item hover"  style="opacity:0.3;">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://i.imgur.com/ifzDjAU.png" width="100%">
-						</figure>
-					</a>
-					<div class="name-item">丹麥設計銀色金屬吊燈</div>
-					<div class="price1-item">Sold out</div>
-				</div>
-			</div>
-
-
-
-			<div class="gridcontianer-item" id="Antiques">
-						<div class="tag-item">Antiques</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-052.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/1HXTgKw.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">法國古董把手</div>
-							<div class="price1-item">800</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-053.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/dhZ62dP.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥古董點心盤</div>
-							<div class="price1-item">2,200</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-054.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/3FbNEDQ.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董木製點心盤</div>
-							<div class="price1-item">3,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-055.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/lWZQ79x.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">早期灰色老燈罩</div>
-							<div class="price1-item">600</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-057.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/wT1zeOv.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">法國里昂暖燈</div>
-							<div class="price1-item">3,800</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-059.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/eyUHSyg.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董金屬野餐盒</div>
-							<div class="price1-item">2,800</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-060.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/0xJCYho.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">英國古董奶油刀叉</div>
-							<div class="price1-item">350/件</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-061.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/yJYNj5T.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">法國銅製面板</div>
-							<div class="price1-item">500/件</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-062.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/uZeOVcm.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">歐洲古董餐具</div>
-							<div class="price1-item">350/件</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-063.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/qPTBTeM.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">法國古董縫紉木盒</div>
-							<div class="price1-item">5,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-064.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Uwpbmb0.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董磅秤</div>
-							<div class="price1-item">4,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-065.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/pLPpiKf.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">早期船用天秤</div>
-							<div class="price1-item">4,000</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-067.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Gca9mWH.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董燭台</div>
-							<div class="price1-item">650</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-068.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Chrt0ys.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">京都古玻璃啤酒杯</div>
-							<div class="price1-item">500/2只</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-069.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/HLcSeTC.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國<span id="en-item">WMF</span>古董餐具組</div>
-							<div class="price1-item">3,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-070.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/gfbHxAv.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥古董雕花銀湯匙</div>
-							<div class="price1-item">680/件</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-029.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/4gRBzTv.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">美國古董釘書機</div>
-							<div class="price1-item">1,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-030.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/aFUYU63.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董<span id="en-item">PFAFF</span>縫紉盒</div>
-							<div class="price1-item">1,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-033.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/AcsOmQw.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">美國古董削鉛筆機</div>
-							<div class="price1-item">1,980</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-034.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/f8h5yG4.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥三頭燭台</div>
-							<div class="price1-item">2,800</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-035.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/RwfoTsB.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董玻璃油燈</div>
-							<div class="price1-item">1,200</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-036.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/FqyaZah.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古銅萬用容器（中）</div>
-							<div class="price1-item">1,800</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-037.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/vsdknz3.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古銅萬用容器（小）</div>
-							<div class="price1-item">1,200</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-038.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/tcCN97Z.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">日本古董顯微鏡</div>
-							<div class="price1-item">2,000</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-039.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Dc0DhKR.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">日本古董木工組</div>
-							<div class="price1-item">1,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-040.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/SKRH6l1.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">京都古董船長木雕件</div>
-							<div class="price1-item">1,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-041.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/VLOoL96.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國琥珀色古董油壺</div>
-							<div class="price1-item">1,500</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-044.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/iFKBPSq.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥古董雕花湯匙</div>
-							<div class="price1-item">1,100/組</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-045.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/9olNrWc.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董圓湯匙</div>
-							<div class="price1-item">1,250/組</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-046.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/940KK0L.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董木製桿麵棍</div>
-							<div class="price1-item">1,200/支</div>
-						</div>
-						<div class="grid-item">
-							<div class="newtag">NEW</div>
-							<a href="https://letsohyeah.github.io/Item/sonstiges-048.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/9PMAcdn.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董金屬門把</div>
-							<div class="price1-item">2,500</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-043.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/oYE90vM.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item" id="zh-item">德國乳白色古董木頭掛櫃</div>
-							<div class="price1-item">3,900</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-026.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/u38vCq4.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">歐洲童趣金屬雙面造型人偶立牌</div>
-							<div class="price1-item">680</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-004.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/hJ7ZHlC.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國老掛勾</div>
-							<div class="price1-item">4,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-006.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/0DBFYYP.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國深灰綠色大木箱</div>
-							<div class="price1-item">8,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-007.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/otAo4GZ.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國老音箱（不分售）</div>
-							<div class="price1-item">7,800</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-008.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/rYgEOYX.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國深藍綠色大木箱</div>
-							<div class="price1-item">12,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-009.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/7R32Gzk.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董老木梯</div>
-							<div class="price1-item">5,500</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-010.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/zGvAnIW.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國<span id="en-item">WECK</span>紅色琺瑯牛奶桶</div>
-							<div class="price1-item">3,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-011.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/4LPUATx.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董乳白色磅秤</div>
-							<div class="price1-item">13,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-012.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/meAcj4I.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董縫紉箱</div>
-							<div class="price1-item">8,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-013.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/WRjliPx.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國玻璃大蒸餾瓶附籐籃</div>
-							<div class="price1-item">6,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-014.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/8XtjAwO.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董工業鐵籃</div>
-							<div class="price1-item">4,500</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-017.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Meqr4yw.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥設計金屬雜誌架</div>
-							<div class="price1-item">3,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-018.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/8QGYZan.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董鹿頭畫作</div>
-							<div class="price1-item">3,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-019.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/YV9tLbc.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">北美古董女孩畫作</div>
-							<div class="price1-item">5,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-020.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/voRHamA.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥古董風景畫作</div>
-							<div class="price1-item">3,000</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-021.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/h1fyhsi.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董宗教畫作</div>
-							<div class="price1-item">3,200</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-022.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/qDahRYT.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董風景畫作</div>
-							<div class="price1-item">1,800</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-023.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Hr6EVTY.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董乳白色風景畫作</div>
-							<div class="price1-item">2,800</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-024.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/ty59hHl.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董棕綠色風景畫作</div>
-							<div class="price1-item">2,600</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-025.html" class="imgbox-item hover">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/R7rO2U9.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董風景畫作</div>
-							<div class="price1-item">1,800</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-031.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/ZJSlcvH.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">瑞典品牌<span id="en-item">Sagaform</span>橡木球玻璃瓶</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-016.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/8dYCrSq.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥設計皮質雜誌架</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/bCzjugo.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國老掛勾</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-001.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/lGyTRAB.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國<span id="en-item">Lübeck</span>絕美老木箱</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-002.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/OYRPDiD.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">荷蘭精品<span id="en-item">Brabantia</span>多用途儲物桶/垃圾桶</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-003.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/MMQpUqB.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">深綠色鐵箱/保險箱</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-049.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/8FO5o5H.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">美國古董五金件</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-047.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/2zlVihJ.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">美國古董銅製萬用籃</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-042.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/8Nr0YO3.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">法國古董時鐘</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-050.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/2CVW5j0.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">奧地利陶瓷簍空麵包籃（大）</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-051.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/AqUaVKI.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">奧地利陶瓷簍空麵包籃（小）</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-056.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Y1yVLUo.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國鐵製檯燈</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-066.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/m81TY26.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國雕花點心夾</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-032.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/bzTlG3B.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">丹麥設計品牌<span id="en-item">ZONE</span>燭台</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-058.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/Zk1w81y.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董地球儀</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-						<div class="grid-item">
-							<a href="https://letsohyeah.github.io/Item/sonstiges-015.html" class="imgbox-item hover" style="opacity:0.3;">
-								<figure>
-									<img class="lazy img-responsive" data-original="https://i.imgur.com/OYi9Mpx.png" width="100%">
-								</figure>
-							</a>
-							<div class="name-item">德國古董圓形掛鏡</div>
-							<div class="price1-item">Sold out</div>
-						</div>
-			</div>
+		</div>
 	</div>
-	<div class="block"></div>
-		<p class="copyright">
-			Copyright © 2017 Natural n' Vintage
-		</p>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
-	<script type="text/javascript" charset="utf-8">
-		$(window).ready(function() {
-				$("img.lazy").lazyload({
-						effect : "fadeIn"
-				});
-		});
-	</script>
-	<script>
-	var url=window.location.toString(); //取得當前網址
-	var str=""; //參數中等號左邊的值
-	var str_value=""; //參數中等號右邊的值
- 	if(url.indexOf("?")!=-1){
- 	//如果網址有"?"符號
- 	var ary=url.split("?")[1].split("&");
-	//取得"?"右邊網址後利用"&"分割字串存入ary陣列 ["a=1","b=2","c=3"]
-		 for(var i in ary){
-		 //取得陣列長度去跑迴圈，如:網址有三個參數，則會跑三次
-			 str=ary[i].split("=")[0];
-			 //取得參數"="左邊的值存入str變數中
-			 if (str == "c") {
-			 //若str等於想要抓取參數 如:page
-				 str_value = ary[i].split("=")[1];
-			 //取得b等號右邊的值並經過中文轉碼後存入str_value
-				}
-		 }
-		}
-	 //alert(str_value);
-	 if (str_value=="cabinet"){
-				cabinet()
-	 } else if (str_value=="chair"){
-				chair()
-	 } else if (str_value=="table"){
-				table()
-	 } else if (str_value=="lighting"){
-				lighting()
-	 } else if (str_value=="antiques"){
-				antiques()
-	 }
-	</script>
 </BODY>
 </HTML>
