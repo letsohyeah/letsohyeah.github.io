@@ -1543,14 +1543,14 @@
 		 * @fires {@link Scene.change}, if the duration changed
 		 * @fires {@link Scene.shift}, if the duration changed
 		 *
-		 * @param {boolean} [suppressEvents=false] - If true the shift event will be suppressed.
+		 * @param {boolean} [supblogEvents=false] - If true the shift event will be supbloged.
 		 * @private
 		 */
-		var updateDuration = function (suppressEvents) {
+		var updateDuration = function (supblogEvents) {
 			// update duration
 			if (_durationUpdateMethod) {
 				var varname = "duration";
-				if (changeOption(varname, _durationUpdateMethod.call(Scene)) && !suppressEvents) { // set
+				if (changeOption(varname, _durationUpdateMethod.call(Scene)) && !supblogEvents) { // set
 					Scene.trigger("change", {
 						what: varname,
 						newval: _options[varname]
@@ -1571,10 +1571,10 @@
 		 * 
 		 * @fires {@link Scene.shift}, if the position changed
 		 *
-		 * @param {boolean} [suppressEvents=false] - If true the shift event will be suppressed.
+		 * @param {boolean} [supblogEvents=false] - If true the shift event will be supbloged.
 		 * @private
 		 */
-		var updateTriggerElementPosition = function (suppressEvents) {
+		var updateTriggerElementPosition = function (supblogEvents) {
 			var
 			elementPos = 0,
 				telem = _options.triggerElement;
@@ -1599,7 +1599,7 @@
 			}
 			var changed = elementPos != _triggerPos;
 			_triggerPos = elementPos;
-			if (changed && !suppressEvents) {
+			if (changed && !supblogEvents) {
 				Scene.trigger("shift", {
 					reason: "triggerElementPosition"
 				});

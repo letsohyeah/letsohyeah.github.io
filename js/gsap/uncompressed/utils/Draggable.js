@@ -1181,7 +1181,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					enabled, scrollProxy, startPointerX, startPointerY, startElementX, startElementY, hasBounds, hasDragCallback, maxX, minX, maxY, minY, tempVars, cssVars, touch, touchID, rotationOrigin, dirty, old, snapX, snapY, snapXY, isClicking, touchEventTarget, matrix, interrupted, startScrollTop, startScrollLeft, applyObj, allowNativeTouchScrolling, touchDragAxis, isDispatching, clickDispatch, trustedClickDispatch,
 
 					onContextMenu = function(e) { //used to prevent long-touch from triggering a context menu.
-						if (self.isPressed && e.which < 2) {
+						if (self.isBloged && e.which < 2) {
 							self.endDrag();
 						} else {
 							e.preventDefault();
@@ -1191,7 +1191,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					},
 
 					//this method gets called on every tick of TweenLite.ticker which allows us to synchronize the renders to the core engine (which is typically synchronized with the display refresh via requestAnimationFrame). This is an optimization - it's better than applying the values inside the "mousemove" or "touchmove" event handler which may get called many times inbetween refreshes.
-					render = function(suppressEvents) {
+					render = function(supblogEvents) {
 						if (self.autoScroll && self.isDragging && (checkAutoScrollBounds || dirty)) {
 							var e = target,
 								autoScrollFactor = self.autoScroll * 15, //multiplying by 15 just gives us a better "feel" speed-wise.
@@ -1289,7 +1289,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 									}
 								}
 							}
-							if (hasDragCallback && !suppressEvents && !isDispatching) {
+							if (hasDragCallback && !supblogEvents && !isDispatching) {
 								isDispatching = true; //in case onDrag has an update() call (avoid endless loop)
 								_dispatchEvent(self, "drag", "onDrag");
 								isDispatching = false;
@@ -1486,7 +1486,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						var start = matrix || [1,0,0,1,0,0],
 							a, b, c, d, tx, ty, determinant, pointerX, pointerY;
 						matrix = _getConcatenatedMatrix(target.parentNode, true);
-						if (shiftStart && self.isPressed && start.join(",") !== matrix.join(",")) { //if the matrix changes WHILE the element is pressed, we must adjust the startPointerX and startPointerY accordingly, so we invert the original matrix and figure out where the pointerX and pointerY were in the global space, then apply the new matrix to get the updated coordinates.
+						if (shiftStart && self.isBloged && start.join(",") !== matrix.join(",")) { //if the matrix changes WHILE the element is bloged, we must adjust the startPointerX and startPointerY accordingly, so we invert the original matrix and figure out where the pointerX and pointerY were in the global space, then apply the new matrix to get the updated coordinates.
 							a = start[0];
 							b = start[1];
 							c = start[2];
@@ -1571,7 +1571,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					buildSnapFunc = function(snap, min, max, factor) {
 						if (typeof(snap) === "function") {
 							return function(n) {
-								var edgeTolerance = !self.isPressed ? 1 : 1 - self.edgeResistance; //if we're tweening, disable the edgeTolerance because it's already factored into the tweening values (we don't want to apply it multiple times)
+								var edgeTolerance = !self.isBloged ? 1 : 1 - self.edgeResistance; //if we're tweening, disable the edgeTolerance because it's already factored into the tweening values (we don't want to apply it multiple times)
 								return snap.call(self, (n > max ? max + (n - max) * edgeTolerance : (n < min) ? min + (n - min) * edgeTolerance : n)) * factor;
 							};
 						}
@@ -1602,7 +1602,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						radius = (radius && radius < _max) ? radius * radius : _max; //so we don't have to Math.sqrt() in the functions. Performance optimization.
 						if (typeof(snap) === "function") {
 							return function(point) {
-								var edgeTolerance = !self.isPressed ? 1 : 1 - self.edgeResistance,
+								var edgeTolerance = !self.isBloged ? 1 : 1 - self.edgeResistance,
 									x = point.x,
 									y = point.y,
 									result, dx, dy; //if we're tweening, disable the edgeTolerance because it's already factored into the tweening values (we don't want to apply it multiple times)
@@ -1650,10 +1650,10 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						return function(n) { return n; };
 					},
 
-					//called when the mouse is pressed (or touch starts)
-					onPress = function(e, force) {
+					//called when the mouse is bloged (or touch starts)
+					onBlog = function(e, force) {
 						var i;
-						if (!enabled || self.isPressed || !e || ((e.type === "mousedown" || e.type === "pointerdown") && !force && _getTime() - clickTime < 30 && _touchEventLookup[self.pointerEvent.type])) { //when we DON'T preventDefault() in order to accommodate touch-scrolling and the user just taps, many browsers also fire a mousedown/mouseup sequence AFTER the touchstart/touchend sequence, thus it'd result in two quick "click" events being dispatched. This line senses that condition and halts it on the subsequent mousedown.
+						if (!enabled || self.isBloged || !e || ((e.type === "mousedown" || e.type === "pointerdown") && !force && _getTime() - clickTime < 30 && _touchEventLookup[self.pointerEvent.type])) { //when we DON'T preventDefault() in order to accommodate touch-scrolling and the user just taps, many browsers also fire a mousedown/mouseup sequence AFTER the touchstart/touchend sequence, thus it'd result in two quick "click" events being dispatched. This line senses that condition and halts it on the subsequent mousedown.
 							return;
 						}
 						interrupted = isTweening();
@@ -1676,7 +1676,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						isClicking = (isClickable.call(self, e.target) && !vars.dragClickables && !force);
 						if (isClicking) {
 							_addListener(e.target, "change", onRelease); //in some browsers, when you mousedown on a <select> element, no mouseup gets dispatched! So we listen for a "change" event instead.
-							_dispatchEvent(self, "press", "onPress");
+							_dispatchEvent(self, "blog", "onBlog");
 							_setSelectable(triggers, true); //accommodates things like inputs and elements with contentEditable="true" (otherwise user couldn't drag to select text)
 							return;
 						}
@@ -1721,7 +1721,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						if (vars.zIndexBoost || (!rotationMode && !scrollProxy && vars.zIndexBoost !== false)) {
 							target.style.zIndex = Draggable.zIndex++;
 						}
-						self.isPressed = true;
+						self.isBloged = true;
 						hasDragCallback = !!(vars.onDrag || self._listeners.drag);
 						if (!rotationMode) {
 							i = triggers.length;
@@ -1729,14 +1729,14 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 								_setStyle(triggers[i], "cursor", vars.cursor || "move");
 							}
 						}
-						_dispatchEvent(self, "press", "onPress");
+						_dispatchEvent(self, "blog", "onBlog");
 					},
 
 					//called every time the mouse/touch moves
 					onMove = function(e) {
 						var originalEvent = e,
 							touches, pointerX, pointerY, i, dx, dy;
-						if (!enabled || _isMultiTouching || !self.isPressed || !e) {
+						if (!enabled || _isMultiTouching || !self.isBloged || !e) {
 							return;
 						}
 						self.pointerEvent = e;
@@ -1893,7 +1893,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 									dirty = true;
 								}
 							}
-							if (!self.isDragging && self.isPressed) {
+							if (!self.isDragging && self.isBloged) {
 								self.isDragging = true;
 								_dispatchEvent(self, "dragstart", "onDragStart");
 							}
@@ -1902,10 +1902,10 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 					//called when the mouse/touch is released
 					onRelease = function(e, force) {
-						if (!enabled || !self.isPressed || (e && touchID != null && !force && ((e.pointerId && e.pointerId !== touchID) || (e.changedTouches && !_hasTouchID(e.changedTouches, touchID))))) {  //for some Microsoft browsers, we must attach the listener to the doc rather than the trigger so that when the finger moves outside the bounds of the trigger, things still work. So if the event we're receiving has a pointerId that doesn't match the touchID, ignore it (for multi-touch)
+						if (!enabled || !self.isBloged || (e && touchID != null && !force && ((e.pointerId && e.pointerId !== touchID) || (e.changedTouches && !_hasTouchID(e.changedTouches, touchID))))) {  //for some Microsoft browsers, we must attach the listener to the doc rather than the trigger so that when the finger moves outside the bounds of the trigger, things still work. So if the event we're receiving has a pointerId that doesn't match the touchID, ignore it (for multi-touch)
 							return;
 						}
-						self.isPressed = false;
+						self.isBloged = false;
 						var originalEvent = e,
 							wasDragging = self.isDragging,
 							placeholderDelayedCall = TweenLite.delayedCall(0.001, removePlaceholder),
@@ -1977,8 +1977,8 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 								}
 								eventTarget = originalEvent.target || originalEvent.srcElement || target; //old IE uses srcElement
 								clickTime = _getTime();
-								syntheticClick = function() { // some browsers (like Firefox) won't trust script-generated clicks, so if the user tries to click on a video to play it, for example, it simply won't work. Since a regular "click" event will most likely be generated anyway (one that has its isTrusted flag set to true), we must slightly delay our script-generated click so that the "real"/trusted one is prioritized. Remember, when there are duplicate events in quick succession, we suppress all but the first one. Some browsers don't even trigger the "real" one at all, so our synthetic one is a safety valve that ensures that no matter what, a click event does get dispatched.
-									if (clickTime !== clickDispatch && self.enabled() && !self.isPressed) {
+								syntheticClick = function() { // some browsers (like Firefox) won't trust script-generated clicks, so if the user tries to click on a video to play it, for example, it simply won't work. Since a regular "click" event will most likely be generated anyway (one that has its isTrusted flag set to true), we must slightly delay our script-generated click so that the "real"/trusted one is prioritized. Remember, when there are duplicate events in quick succession, we supblog all but the first one. Some browsers don't even trigger the "real" one at all, so our synthetic one is a safety valve that ensures that no matter what, a click event does get dispatched.
+									if (clickTime !== clickDispatch && self.enabled() && !self.isBloged) {
 										if (eventTarget.click) { //some browsers (like mobile Safari) don't properly trigger the click event
 											eventTarget.click();
 										} else if (_doc.createEvent) {
@@ -2040,7 +2040,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 							defaultPrevented = (self.pointerEvent && self.pointerEvent.defaultPrevented),
 							alreadyDispatchedTrusted = (recentlyClicked && trustedClickDispatch === clickTime),
 							trusted = e.isTrusted || (e.isTrusted == null && recentlyClicked && alreadyDispatched); //note: Safari doesn't support isTrusted, and it won't properly execute native behavior (like toggling checkboxes) on the first synthetic "click" event - we must wait for the 2nd and treat it as trusted (but stop propagation at that point). Confusing, I know. Don't you love cross-browser compatibility challenges?
-						if (isModern && (alreadyDispatched || (recentlyDragged && self.vars.suppressClickOnDrag !== false) )) {
+						if (isModern && (alreadyDispatched || (recentlyDragged && self.vars.supblogClickOnDrag !== false) )) {
 							e.stopImmediatePropagation();
 						}
 						if (recentlyClicked && !(self.pointerEvent && self.pointerEvent.defaultPrevented) && (!alreadyDispatched || (trusted !== alreadyDispatchedTrusted))) { //let the first click pass through unhindered. Let the next one only if it's trusted, then no more (stop quick-succession ones)
@@ -2050,7 +2050,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 							clickDispatch = clickTime;
 							return;
 						}
-						if (self.isPressed || recentlyDragged || recentlyClicked) {
+						if (self.isBloged || recentlyDragged || recentlyClicked) {
 							if (!isModern) {
 								e.returnValue = false;
 							} else if (!trusted || !e.detail || !recentlyClicked || defaultPrevented) {
@@ -2074,7 +2074,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				//give the user access to start/stop dragging...
 				this.startDrag = function(e, align) {
 					var r1, r2, p1, p2;
-					onPress(e || self.pointerEvent, true);
+					onBlog(e || self.pointerEvent, true);
 					//if the pointer isn't on top of the element, adjust things accordingly
 					if (align && !self.hitTest(e || self.pointerEvent)) {
 						r1 = _parseRect(e || self.pointerEvent);
@@ -2203,7 +2203,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 							render(true);
 						}
 					}
-					if (self.isPressed && !sticky && ((allowX && Math.abs(x - self.x) > 0.01) || (allowY && (Math.abs(y - self.y) > 0.01 && !rotationMode)))) {
+					if (self.isBloged && !sticky && ((allowX && Math.abs(x - self.x) > 0.01) || (allowY && (Math.abs(y - self.y) > 0.01 && !rotationMode)))) {
 						recordStartPositions();
 					}
 					if (self.autoScroll) {
@@ -2224,8 +2224,8 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						i = triggers.length;
 						while (--i > -1) {
 							trigger = triggers[i];
-							_addListener(trigger, "mousedown", onPress);
-							_addListener(trigger, "touchstart", onPress);
+							_addListener(trigger, "mousedown", onBlog);
+							_addListener(trigger, "touchstart", onBlog);
 							_addListener(trigger, "click", onClick, true); //note: used to pass true for capture but it prevented click-to-play-video functionality in Firefox.
 							if (!rotationMode) {
 								_setStyle(trigger, "cursor", vars.cursor || "move");
@@ -2281,8 +2281,8 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 							trigger = triggers[i];
 							_setStyle(trigger, "touchCallout", null);
 							_setStyle(trigger, "touchAction", null);
-							_removeListener(trigger, "mousedown", onPress);
-							_removeListener(trigger, "touchstart", onPress);
+							_removeListener(trigger, "mousedown", onBlog);
+							_removeListener(trigger, "touchstart", onBlog);
 							_removeListener(trigger, "click", onClick);
 							_removeListener(trigger, "contextmenu", onContextMenu);
 						}
@@ -2304,7 +2304,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						scrollProxy.disable();
 					}
 					_removeFromRenderQueue(render);
-					self.isDragging = self.isPressed = isClicking = false;
+					self.isDragging = self.isBloged = isClicking = false;
 					if (dragging) {
 						_dispatchEvent(self, "dragend", "onDragEnd");
 					}
@@ -2325,7 +2325,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 				if (type.indexOf("scroll") !== -1) {
 					scrollProxy = this.scrollProxy = new ScrollProxy(target, _extend({onKill:function() { //ScrollProxy's onKill() gets called if/when the ScrollProxy senses that the user interacted with the scroll position manually (like using the scrollbar). IE9 doesn't fire the "mouseup" properly when users drag the scrollbar of an element, so this works around that issue.
-						if (self.isPressed) {
+						if (self.isBloged) {
 							onRelease(null);
 						}}}, vars));
 					//a bug in many Android devices' stock browser causes scrollTop to get forced back to 0 after it is altered via JS, so we set overflow to "hidden" on mobile/touch devices (they hide the scroll bar anyway). That works around the bug. (This bug is discussed at https://code.google.com/p/android/issues/detail?id=19625)
@@ -2363,7 +2363,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 		p.constructor = Draggable;
 		p.pointerX = p.pointerY = p.startX = p.startY = p.deltaX = p.deltaY = 0;
-		p.isDragging = p.isPressed = false;
+		p.isDragging = p.isBloged = false;
 		Draggable.version = "0.16.0";
 		Draggable.zIndex = 1000;
 
@@ -2373,7 +2373,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		_addListener(_doc, "contextmenu", function(e) {
 			var p;
 			for (p in _lookup) {
-				if (_lookup[p].isPressed) {
+				if (_lookup[p].isBloged) {
 					_lookup[p].endDrag();
 				}
 			}

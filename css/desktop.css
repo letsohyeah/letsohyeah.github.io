@@ -549,7 +549,7 @@ nav{
     width: 30vw;
     overflow: hidden;
   }
-  .pressnum{
+  .blognum{
     margin-top: 0.3rem;
     margin-left: 5px;
     font-size: 0.7rem;
@@ -1708,8 +1708,8 @@ width: 100%;
 /*WORKS*/
 
 
-/*PRESS*/
-.gridcontianer-press{
+/*blog*/
+.gridcontianer-blog{
   margin-top: 90px;
   margin-left: 20px;
   margin-right: 130px;
@@ -1721,7 +1721,7 @@ width: 100%;
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.grid-press{
+.grid-blog{
   max-width: 700px;
   margin-bottom: 8rem;
   margin-left: 40px;
@@ -1733,7 +1733,7 @@ width: 100%;
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.name-press{
+.name-blog{
   margin-top: 20px;
   font-size: 14pt;
   font-weight: 300;
@@ -1743,7 +1743,7 @@ width: 100%;
   display: -webkit-flex;
   display: 				 flex;
 }
-.descrip-press{
+.descrip-blog{
   margin-top: 5px;
   font-size: 7pt;
   font-weight: 300;
@@ -1754,7 +1754,7 @@ width: 100%;
   display: 				 flex;
   color: #555555;
 }
-.descrip-press1{
+.descrip-blog1{
   margin-top: 5px;
   font-size: 7pt;
   font-weight: 300;
@@ -1766,7 +1766,7 @@ width: 100%;
   align-items: baseline;
   color: #555555;
 }
-.articlecontianer-press{
+.articlecontianer-blog{
   width: calc(100% - 120px);
   display: -moz-flex;
   display: -webkit-flex;
@@ -1774,7 +1774,7 @@ width: 100%;
   flex-direction: column;
   align-items: center;
 }
-.bigtitle-press{
+.bigtitle-blog{
   margin-top: 5rem;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
@@ -1785,7 +1785,7 @@ width: 100%;
   display: 				 flex;
   color: #474747;
 }
-.title-press{
+.title-blog{
   margin-top: 2rem;
   font-size: 1.3rem;
   font-weight: 100;
@@ -1795,7 +1795,7 @@ width: 100%;
   display: -webkit-flex;
   display: 				 flex;
 }
-.article-press{
+.article-blog{
   max-width: 510px;
   margin-left: 20px;
   margin-top: 50px;
@@ -1810,7 +1810,7 @@ width: 100%;
   display: 				 flex;
   color: #555555;
 }
-.article1-press{
+.article1-blog{
   margin-top: 2rem;
   margin-bottom: 0rem;
   font-size: 0.7rem;
@@ -1823,25 +1823,25 @@ width: 100%;
   display: 				 flex;
   color: #555555;
 }
-.imgbox-press{
+.imgbox-blog{
   max-width: 700px;
   margin-top: 50px;
   overflow: hidden;
   height: auto;
 }
-.imgbox-press1{
+.imgbox-blog1{
   max-width: 510px;
   margin-top: 50px;
   overflow: hidden;
   height: auto;
 }
-.line-press{
+.line-blog{
   border-right: 1px solid #474747;
   margin-top: 1rem;
   margin-bottom: 1rem;
   height: 3rem;
 }
-.article-press{
+.article-blog{
   max-width: 510px;
   margin-top: 60px;
   margin-bottom: 20px;
@@ -1853,7 +1853,7 @@ width: 100%;
   display: -webkit-flex;
   display: 				 flex;
 }
-/*PRESS*/
+/*blog*/
 
 /*ITEM*/
 .articlecontianer-item{
