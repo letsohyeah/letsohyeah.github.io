@@ -40,6 +40,12 @@
 <BODY>
 	<script>
 	function showall() {
+		document.getElementById("showallbt").style.color = "#e5765c";
+		document.getElementById("cabinetbt").style.color = "black";
+		document.getElementById("chairbt").style.color = "black";
+		document.getElementById("tablebt").style.color = "black";
+		document.getElementById("lightingbt").style.color = "black";
+		document.getElementById("antiquesbt").style.color = "black";
 		var a = document.getElementById("Cabinet");
 		if (a.style.display === "none") {
 				a.style.display = "flex";
@@ -60,8 +66,16 @@
 		if (e.style.display === "none") {
 				e.style.display = "flex";
 		}
+		scroll(0, 1);
+		scroll(0, -1);
 	}
 	function cabinet() {
+		document.getElementById("showallbt").style.color = "black";
+		document.getElementById("cabinetbt").style.color = "#e5765c";
+		document.getElementById("chairbt").style.color = "black";
+		document.getElementById("tablebt").style.color = "black";
+		document.getElementById("lightingbt").style.color = "black";
+		document.getElementById("antiquesbt").style.color = "black";
 		var a = document.getElementById("Cabinet");
 		if (a.style.display === "none") {
 				a.style.display = "flex";
@@ -90,8 +104,16 @@
 		} else {
 				e.style.display = "none";
 		}
+		scroll(0, 1);
+		scroll(0, -1);
 	}
 	function chair() {
+		document.getElementById("showallbt").style.color = "black";
+		document.getElementById("cabinetbt").style.color = "black";
+		document.getElementById("chairbt").style.color = "#e5765c";
+		document.getElementById("tablebt").style.color = "black";
+		document.getElementById("lightingbt").style.color = "black";
+		document.getElementById("antiquesbt").style.color = "black";
 		var a = document.getElementById("Chair");
 		if (a.style.display === "none") {
 				a.style.display = "flex";
@@ -120,8 +142,16 @@
 		} else {
 				e.style.display = "none";
 		}
+		scroll(0, 1);
+		scroll(0, -1);
 	}
 	function table() {
+		document.getElementById("showallbt").style.color = "black";
+		document.getElementById("cabinetbt").style.color = "black";
+		document.getElementById("chairbt").style.color = "black";
+		document.getElementById("tablebt").style.color = "#e5765c";
+		document.getElementById("lightingbt").style.color = "black";
+		document.getElementById("antiquesbt").style.color = "black";
 		var a = document.getElementById("Table");
 		if (a.style.display === "none") {
 				a.style.display = "flex";
@@ -150,8 +180,16 @@
 		} else {
 				e.style.display = "none";
 		}
+		scroll(0, 1);
+		scroll(0, -1);
 	}
 	function lighting() {
+		document.getElementById("showallbt").style.color = "black";
+		document.getElementById("cabinetbt").style.color = "black";
+		document.getElementById("chairbt").style.color = "black";
+		document.getElementById("tablebt").style.color = "black";
+		document.getElementById("lightingbt").style.color = "#e5765c";
+		document.getElementById("antiquesbt").style.color = "black";
 		var a = document.getElementById("Lighting");
 		if (a.style.display === "none") {
 				a.style.display = "flex";
@@ -180,8 +218,16 @@
 		} else {
 				e.style.display = "none";
 		}
+		scroll(0, 1);
+		scroll(0, -1);
 	}
 	function antiques() {
+		document.getElementById("showallbt").style.color = "black";
+		document.getElementById("cabinetbt").style.color = "black";
+		document.getElementById("chairbt").style.color = "black";
+		document.getElementById("tablebt").style.color = "black";
+		document.getElementById("lightingbt").style.color = "black";
+		document.getElementById("antiquesbt").style.color = "#e5765c";
 		var a = document.getElementById("Antiques");
 		if (a.style.display === "none") {
 				a.style.display = "flex";
@@ -210,6 +256,8 @@
 		} else {
 				e.style.display = "none";
 		}
+		scroll(0, 1);
+		scroll(0, -1);
 	}
 	</script>
 	<div class="cleanfix">
@@ -268,12 +316,12 @@
 			</div>
 			<div class="category">
 				<div class="buttonbox">
-					<button onclick="showall()">All</button>
-					<button onclick="cabinet()">Cabinet</button>
-					<button onclick="chair()">Chair</button>
-					<button onclick="table()">Table</button>
-					<button onclick="lighting()">Lighting</button>
-					<button onclick="antiques()">Antiques</button>
+					<button onclick="showall()" id="showallbt" style="color:#e5765c;">All</button>
+					<button onclick="cabinet()" id="cabinetbt">Cabinet</button>
+					<button onclick="chair()" id="chairbt">Chair</button>
+					<button onclick="table()" id="tablebt">Table</button>
+					<button onclick="lighting()" id="lightingbt">Lighting</button>
+					<button onclick="antiques()" id="antiquesbt">Antiques</button>
 				</div>
 			</div>
 
