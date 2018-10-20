@@ -86,7 +86,7 @@ nav{
 .bigtitle{
   width: 28px;
   border-right: 2px solid #000000;
-  position: absolute;
+  position: fixed;
   right: 0;
   margin-top: 90px;
   margin-right: 40px;
@@ -2156,7 +2156,6 @@ width: 100%;
   width: 300px;
 }
 .articlecontianer-contact{
-  margin-left: 20px;
   margin-top: 90px;
   margin-right: 130px;
   display: -moz-flex;
@@ -2165,6 +2164,153 @@ width: 100%;
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
           flex-direction: column;
+}
+.studiobox{
+  width: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://imgur.com/y6WlASM.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #474747;
+  justify-content: space-between;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.silhouettebox{
+  width: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://imgur.com/7ORYpfI.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #474747;
+  justify-content: space-between;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.logobox-contact{
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 4rem;
+}
+.twinbox-contact{
+  width: calc(100vw - 120px);
+  height: 100vh;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.articlecontianer-studio-twin{
+  height: 40%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.articlecontianer-silhouette{
+  padding-left: 50px;
+  padding-right: 10px;
+  height: 40%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.articlecontianer-studio{
+  width: 50%;
+  padding-left: 50px;
+  padding-right: 10px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.title-contact{
+  margin-bottom: 3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.2rem;
+  line-height: 18px;
+}
+.descrip-studio{
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0px;
+  line-height: 1.4rem;
+}
+.info-title-studio{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.1rem;
+}
+.info-studio{
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 100;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .twinbox-contact{
+    width: calc(100vw - 120px);
+    height: 200vh;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+  }
+  .studiobox{
+    height: 100vh;
+    width: calc(100vw - 120px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://imgur.com/y6WlASM.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #474747;
+    justify-content: space-between;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+  }
+  .silhouettebox{
+    height: 100vh;
+    width: calc(100vw - 120px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://imgur.com/7ORYpfI.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #474747;
+    justify-content: space-between;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+  }
+
 }
 /*Contact*/
 
