@@ -2130,6 +2130,10 @@ width: 100%;
   line-height: 2rem;
   font-family: "Noto Sans TC", sans-serif;
 }
+.logobox-item{
+  height: 2rem;
+  margin-top: 0.5rem;
+}
 /*ITEM*/
 
 /*Contact*/
