@@ -143,7 +143,7 @@ nav{
 	 background-image: url(https://i.imgur.com/vNBNRvT.jpg);
 }
 #img2{
-	 background-image: url(https://imgur.com/TrndYUW.jpg);
+	 background-image: url(https://imgur.com/kqERTzc.jpg);
 }
 #img3{
 	 background-image: url(https://i.imgur.com/nQozK4l.jpg);
@@ -156,7 +156,7 @@ nav{
 		background-image: url(https://i.imgur.com/ZYZ902S.jpg);
 	}
 	#img2{
-		 background-image: url(https://imgur.com/TrndYUW.jpg);
+		 background-image: url(https://imgur.com/kqERTzc.jpg);
 	}
 	#img3{
 		 background-image: url(https://i.imgur.com/nQozK4l.jpg);
@@ -1978,6 +1978,8 @@ flex-direction: column;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
+	text-align: center;
+	padding: 20px;
 }
 /*blog*/
 
