@@ -2236,8 +2236,8 @@ flex-direction: column;
 	font-family: "Noto Sans TC", sans-serif;
 }
 .logobox-item{
-  height: 2rem;
-  margin-top: 0.5rem;
+	height: 2rem;
+	margin-top: 0.5rem;
 }
 /*ITEM*/
 
@@ -2261,10 +2261,9 @@ flex-direction: column;
 .map-contact{
 	bottom: 0px;
 	margin-top: 100px;
-	margin-bottom: 120px;
+	margin-bottom: 1rem;
 	margin-left: 15px;
 	margin-right: 15px;
-	max-width: 270px;
 }
 .articlecontianer-contact{
 	margin-top: 50px;
@@ -2319,8 +2318,6 @@ flex-direction: column;
 					flex-direction: column;
 }
 .articlecontianer-studio{
-	padding-left: 20px;
-	padding-right: 10px;
 	padding-bottom: 1rem;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -2333,6 +2330,16 @@ flex-direction: column;
 	padding-left: 20px;
 	padding-right: 10px;
 	padding-bottom: 3rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+}
+.content-studio{
+	margin-left: 20px;
+	margin-right: 10px;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -2375,7 +2382,7 @@ flex-direction: column;
 .logobox-contact{
 	margin-top: 50px;
 	margin-left: 20px;
-	height: 4rem;
+	height: 2.5rem;
 	margin-bottom: 7rem;
 }
 /*Contact*/
