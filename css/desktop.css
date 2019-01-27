@@ -1740,7 +1740,7 @@ width: 100%;
 .box1-space{
   width: clac ( 100vw -130px );
   height: 100vh;
-  padding-left: 25vw;
+  padding-left: 23vw;
   padding-right: 8vw;
   display: -moz-flex;
   display: -webkit-flex;
