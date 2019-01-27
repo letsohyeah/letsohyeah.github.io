@@ -1698,6 +1698,7 @@ width: 100%;
   margin-top: 50vh;
 }
 .descrip-space{
+  max-width: 250px;
   margin-top: 2rem;
   font-size: 0.6rem;
   font-weight: 300;
@@ -1740,7 +1741,7 @@ width: 100%;
 .box1-space{
   width: clac ( 100vw -130px );
   height: 100vh;
-  padding-left: 23vw;
+  padding-left: 20vw;
   padding-right: 8vw;
   display: -moz-flex;
   display: -webkit-flex;
