@@ -1692,18 +1692,108 @@ width: 100%;
   display: 				 flex;
   justify-content:center;
 }
-.descrip-works{
-  visibility:hidden;
-  margin-top: 2px;
-  font-size: 7pt;
+.textcontianer{
+  position: absolute;
+  margin-left: 8vw;
+  margin-top: 50vh;
+}
+.descrip-space{
+  margin-top: 2rem;
+  font-size: 0.6rem;
   font-weight: 300;
-  font-family: ‘Noto Sans TC’, sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 1px;
+  line-height: 0.9rem;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  justify-content:center;
-  color: #555555;
+  color: #474849;
+}
+.title-space{
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.5rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  color: #474849;
+}
+.imgbox1-space{
+  min-width: 550px;
+  overflow: hidden;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgbox-space{
+  margin-bottom: 2rem;
+  overflow: hidden;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1-space{
+  width: clac ( 100vw -130px );
+  height: 100vh;
+  padding-left: 25vw;
+  padding-right: 8vw;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-space{
+  width: clac ( 100vw -130px );
+  padding-left: 8vw;
+  padding-right: 8vw;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.spacecontianer{
+  margin-right: 130px;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-wrap: wrap;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .box1-space{
+    width: clac ( 100vw -130px );
+    height: 70vh;
+    padding-left: 18vw;
+    padding-right: 8vw;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    justify-content: center;
+    align-items: center;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+  }
+  .imgbox1-space{
+    min-width: auto;
+  }
+  .textcontianer{
+    position: relative;
+    margin-left: 8vw;
+    margin-top: 12vh;
+  }
 }
 /*WORKS*/
 

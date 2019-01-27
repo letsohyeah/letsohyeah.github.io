@@ -1787,6 +1787,77 @@ flex-direction: column;
 	justify-content:center;
 	color: #555555;
 }
+.textcontianer{
+	position: absolute;
+	margin-left: 8vw;
+	margin-top: 15vh;
+}
+.descrip-space{
+	margin-top: 2rem;
+	font-size: 0.6rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 1px;
+	line-height: 0.9rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	color: #474849;
+}
+.title-space{
+	font-size: 1.2rem;
+	font-weight: 300;
+	font-family: 'Noto Sans TC', sans-serif;
+	letter-spacing: 0.5rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	color: #474849;
+}
+.imgbox1-space{
+	margin-top: 30vh;
+	overflow: hidden;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+}
+.imgbox-space{
+	margin-bottom: 2rem;
+	overflow: hidden;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+}
+.box1-space{
+	height: 100vh;
+	padding-left: 8vw;
+	padding-right: 8vw;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+}
+.box-space{
+	width: 100vw;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+}
+.spacecontianer{
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	flex-wrap: wrap;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+}
 /*WORKS*/
 
 /*TEAM*/
