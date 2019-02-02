@@ -1858,6 +1858,37 @@ flex-direction: column;
 	-webkit-flex-direction: column;
 					flex-direction: column;
 }
+.boxLR-space{
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+					flex-direction: column;
+}
+.boxL-space{
+	width: 100%;
+	margin-bottom: 3rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+}
+.boxR-space{
+	width: 100%;
+	margin-bottom: 3rem;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
+	justify-content: center;
+	align-items: center;
+}
 /*WORKS*/
 
 /*TEAM*/
