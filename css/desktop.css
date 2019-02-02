@@ -1762,6 +1762,35 @@ width: 100%;
   -webkit-flex-direction: column;
           flex-direction: column;
 }
+.boxLR-space{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxL-space{
+  width: 100%;
+  margin-right: 0.5rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxR-space{
+  width: 100%;
+  margin-left: 0.5rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+}
 .spacecontianer{
   margin-right: 130px;
   display: -moz-flex;
