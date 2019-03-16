@@ -1825,6 +1825,16 @@ width: 100%;
     margin-top: 12vh;
   }
 }
+.descrip-space1{
+  margin-top: 0.2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.1rem;
+  color: #888;
+}
 /*WORKS*/
 
 
