@@ -271,10 +271,10 @@
 	/*INDEX*/
 	@media only screen and (max-width: 736px) {
 		.left{
-			height: 120vh;
+			height: auto;
 		}
 	  .cleanfix{
-			hyphens: auto;
+			height: auto;
 	    -moz-flex-direction: column;
 	    -webkit-flex-direction: column;
 	            flex-direction: column;
@@ -290,16 +290,8 @@
 	  }
 		.picbox{
 		  width: 100vw;
-		  height: 100vh;
+		  height: 150vh;
 		  position: absolute;
-		  background-position: center center;
-		  background-repeat: no-repeat;
-		  background-attachment: fixed;
-		  background-size: cover;
-		  background-color: #474747;
-			display: -moz-flex;
-		  display: -webkit-flex;
-		  display: 				 flex;
 		}
 		.articlecontianer-index{
 			padding: 2rem;
@@ -312,8 +304,25 @@
 			width: 100%;
 		}
 		#slide .prev, #slide .next {
-	    top: 60%;
+	    top: 30%;
 	  }
+		.contianer{
+			height: 150vh;
+		}
+		.buttonbox{
+			position: relative;
+			margin-top: 10rem;
+			bottom: 2rem;
+		}
+		.lefrtitlebox{
+			margin-top: 2rem;
+		}
+		#img1{
+		   background-image: url(https://imgur.com/X8Q6pBO.jpg);
+		}
+		#img2{
+		   background-image: url(https://imgur.com/QDBViOR.jpg);
+		}
 	}
 
 
@@ -332,7 +341,7 @@
 				<img src="https://imgur.com/BqRxrFX.png" height="100%">
 			</div>
 			<p class="enname">
-				<span style="font-size:0.6rem; line-height:1.2rem;">National United University</span><br>
+				<span style="font-size:0.6rem; line-height:1.2rem;">National United University,</span><br>
 				Department of Chinese Language<br>
 				and Literature
 			</p>
