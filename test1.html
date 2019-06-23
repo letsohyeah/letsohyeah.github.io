@@ -1,0 +1,501 @@
+<HTML lang="zh">
+<HEAD>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="viewport" content="width=device-width">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).ready(function() {
+				$("img.lazy").lazyload({
+						effect : "fadeIn"
+				});
+		});
+	</script>
+	<TITLE> Test - Natural n' Vintage </TITLE>
+	<style>
+	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+	@font-face {
+	  font-family: "HanaMinOT_otf";
+	  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
+	}
+	@font-face {
+	  font-family: "HanaMinOT_woff";
+	  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
+	}
+	@font-face {
+	  font-family: "HanaMinA_ttf";
+	  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
+	}
+	a:link{color:#000000}
+	a:active {color:#000000;}
+	a:visited {color:#000000;}
+	a{text-decoration:none}
+	* {
+	       -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	            box-sizing: border-box;
+	            margin: 0;
+	            padding: 0;
+	  }
+	body{
+	    margin: 0;
+	    padding: 0;
+	  }
+	.cleanfix{
+		width: 100vw;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+		flex-direction:row-reverse;
+	  }
+	.left{
+		padding: 50px;
+		width: 400px;
+		height: 100vh;
+		display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+		flex-direction: column;
+	}
+	p{
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	.enname{
+		font-size: 0.8rem;
+	}
+	.logobox{
+	  margin-top: 10vh;
+		margin-bottom: 1rem;
+	  height: 60px;
+	}
+	.contianer{
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	}
+	.lefrtitlebox{
+		float: right;
+		margin-right: calc( 1.3rem - 30px ) ;
+		margin-top: 4rem;
+		font-size: 1.4rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+		letter-spacing: 0.1rem;
+		line-height: 2.2rem;
+		writing-mode: vertical-rl;
+	}
+	.buttonbox{
+		position: absolute;
+		bottom: 4rem;
+		margin-top: 5rem;
+	}
+	.button{
+		padding: 0.5rem;
+		background-color: #EEE;
+		margin-right: 1.5rem;
+		font-size: 1rem;
+		font-weight: 300;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	.button:hover {
+		transition: 0.4s;
+		-webkit-transition: 0.4s;
+		background-color: #474747;
+		color: #fff;
+	}
+
+	/*INDEX*/
+	.picbox{
+	  width: calc(100vw - 400px);
+	  height: 100%;
+	  position: absolute;
+	  margin-right: 120px;
+	  background-position: center center;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	  background-color: #474747;
+		display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	}
+
+	#img0{
+	   background-image: url(http://sf1.loxa.edu.tw/094509/web_pic/news/1080622-1653-01.jpg);
+		 animation: ripple 14s infinite;
+		 animation-timing-function:ease-in-out;
+	}
+
+	#img1{
+	   background-image: url(http://sf1.loxa.edu.tw/094509/web_pic/news/1080620-2215-04.jpg);
+		 animation: ripple 14s infinite;
+		 animation-timing-function:ease-in-out;
+	}
+	#img2{
+	   background-image: url(http://sf1.loxa.edu.tw/094509/web_pic/news/1080611-2134-01.jpg);
+		 animation: ripple 14s infinite;
+		 animation-timing-function:ease-in-out;
+	}
+
+	#img3{
+	   background-image: url(http://sf1.loxa.edu.tw/094509/web_pic/news/1080619-2110-0.jpg);
+		 animation: ripple 14s infinite;
+		 animation-timing-function:ease-in-out;
+	}
+	.articlecontianer-index{
+	  max-width: 400px;
+	  z-index: 10000;
+	  position: absolute;
+	  padding: 2rem;
+		padding-left: 4rem;
+	  font-size: 0.8rem;
+	  font-weight: 300;
+	  font-family: 'Noto Sans TC', sans-serif;
+	  letter-spacing: 0.05rem;
+	  color: #474747;
+	  background-color: #fff;
+	}
+	  .title1-index{
+	    width: 100%;
+	    margin-bottom: 15px;
+	    font-size: 1.1rem;
+	    font-weight: 300;
+	    font-family: 'Noto Sans TC', sans-serif;
+	    letter-spacing: 0.05rem;
+	    display: -moz-flex;
+	    display: -webkit-flex;
+	    display: 				 flex;
+	  }
+	  .button-index{
+			float: right;
+	    width: 78px;
+	    font-size: 0.6rem;
+	    margin-top: 1rem;
+	    height: 30px;
+	    font-family: 'Noto Sans TC', sans-serif;
+	    font-weight: 100;
+	    letter-spacing: 2px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -moz-flex;
+	    display: -webkit-flex;
+	    display: 				 flex;
+	    justify-content: center;
+	    align-items: center;
+	    transition: 0.4s;
+	    -webkit-transition: 0.4s;
+	  }
+	  .button-index span{
+	    display: -moz-flex;
+	    display: -webkit-flex;
+	    display: 				 flex;
+	    color: #474747;
+	  }
+	  .button-index:hover{
+	    transition: 0.4s;
+	    -webkit-transition: 0.4s;
+	    background-color: #474747;
+	    color: #fff;
+	  }
+	  .button-index:hover span{
+	    color: #fff;
+	  }
+		.mobbox{
+			margin-left: 2rem;
+			display: -moz-flex;
+		  display: -webkit-flex;
+		  display: 				 flex;
+			flex-direction: column;
+		}
+	  #slide {
+	    width: calc(100% - 400px);
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    justify-content: center;
+	    align-items: center;
+	    overflow: hidden;
+	  }
+	  #slide li {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    display: block;
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: 0.8s;
+	  }
+	  #slide li:first-child {
+	    position: static;
+	  }
+	  #slide li.show {
+	    opacity: 1;
+	    visibility: visible;
+	  }
+	  #slide .prev, #slide .next {
+	    display: block;
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    cursor: pointer;
+	    transition: 0.4s;
+	    background-color: rgba(0, 0, 0, 0.12);
+	    padding: 14px 12px;
+	  }
+	  #slide .prev:hover, #slide .next:hover {
+	    background-color: rgba(0, 0, 0, 0.24);
+	  }
+	  #slide .prev:after, #slide .next:after {
+	    display: block;
+	    content: "";
+	    width: 10px;
+	    height: 10px;
+	    border-top: 2px solid #fff;
+	    border-right: 2px solid #fff;
+	  }
+	  #slide .prev {
+	    left: 0;
+	  }
+	  #slide .prev:after {
+	    transform: rotate(-135deg);
+	    margin-left: 4px;
+	  }
+	  #slide .next {
+	    right: 0;
+	  }
+	  #slide .next:after {
+	    transform: rotate(45deg);
+	    margin-right: 4px;
+	  }
+	/*INDEX*/
+	@media only screen and (max-width: 736px) {
+		.leftmob{
+			height: 300px;
+		}
+	  .cleanfix{
+			align-items: center;
+			height: auto;
+	    -moz-flex-direction: column;
+	    -webkit-flex-direction: column;
+	            flex-direction: column;
+	  }
+		#slide {
+			height: 110vw;
+			position: relative;
+	    width: 100vw;
+	    bottom: 0;
+	    left: 0;
+	  }
+		.picbox{
+		  width: 100vw;
+		  height: 60vw;
+		  position: absolute;
+			background-attachment: scroll;
+		}
+		.articlecontianer-index{
+			z-index: 10000000;
+			padding: 1rem;
+			bottom: -200px;
+			max-width: 100vw;
+			position: absolute;
+			margin-right: 0px;
+		}
+		.left{
+			display: none;
+		}
+		.leftmob{
+			-moz-flex-direction: row-reverse;
+	    -webkit-flex-direction: row-reverse;
+	            flex-direction: row-reverse;
+		}
+		.lefrtitlebox{
+			margin-right: 2rem;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+		#slide .prev, #slide .next {
+	    top: 25%;
+	  }
+		.contianer{
+			height: auto;
+		}
+		.buttonbox{
+			position: relative;
+			margin-top: 10rem;
+			bottom: 2rem;
+		}
+		.lefrtitlebox{
+			margin-top: 2rem;
+		}
+		.logobox{
+			margin-top: 50px;
+		}
+
+	}
+	.picbox:hover div a{
+		color: #ce3a3a;
+	}
+	.morebox{
+		justify-content: center;
+		padding: 1rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		width: 80vw;
+		background-color: #c26957;
+		font-size: 1rem;
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+
+
+
+
+	</style>
+</HEAD>
+<BODY>
+	<div class="cleanfix">
+		<div class="contianer">
+				<ul id="slide">
+
+						<li>
+							<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6013&page=1&Work=View&NowMainId=&NowSubId=">
+							<div class="picbox">
+								<div class="picbox" id="img0"></div>
+								<div class="articlecontianer-index">
+									<div class="title1-index">
+										賀！<br>
+										　本校榮獲107學年度補救教學訪視計畫特優學校
+									</div>
+									　　褒忠國中對於補救教學的用心向來是不遺餘力，為的就是讓學生能夠用心學習，透過國、英、數三科學業上的基本要求，並且貫徹減C的最終目標，厚植國家競爭力。此次補救教學訪視計畫獲得特優的殊榮，係全體教職員工上下一心所努力的成果，請家長將孩子放心地交給本校，不問程度如何，只問是否用心？讓我們一同努力，開創孩子更美好的未來。
+									<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6013&page=1&Work=View&NowMainId=&NowSubId="  target="_blank" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多 →</span></a>
+								</div>
+							</div>
+						</a>
+					</li>
+
+
+
+					<li>
+						<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6013&page=1&Work=View&NowMainId=&NowSubId=">
+						<div class="picbox">
+							<div class="picbox" id="img1"></div>
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									孩子的創意與藝才展現<br>
+									　於第49屆畢典嶄露頭角
+								</div>
+								　　雲林縣立褒忠國民中學於108年6月17日上午10時，舉辦「第49屆畢業典禮」，典禮一開始由本屆畢業生以拋擲排球、揮舞鍋鏟以及舞動民俗，呈現多元學習的情況。接下來由第一屆五月花樂團帶來的歌舞，以美妙的嗓音，令在場與會的嘉賓聽得如癡如醉。校長陳昭龍表示，本校強調多元學習、適性發展，並舉在場的氣球布置為例，全都由畢業生親自布置，完全不假手他人。
+								<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6013&page=1&Work=View&NowMainId=&NowSubId="  target="_blank" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多 →</span></a>
+							</div>
+						</div>
+					</a>
+					</li>
+
+
+					<li>
+						<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6004&page=1&Work=View&NowMainId=&NowSubId=">
+						<div class="picbox">
+							<div class="picbox" id="img2"></div>
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									｜108教育會考｜<br>
+									　班班都有好成績
+								</div>
+								賀！本校108年國中教育會考林若蕎同學，榮獲2A2B++作文五級分。<br/>
+								林若蕎 A+,A,2B++,B+<br/>
+曾尹歆 3B++,2B+、胡喬欣 B++,2B+,2B、陳昕逸 2B++,3B+<br/>
+108學年度是特招放榜，褒中學子捷報頻傳，繼實用技能學程分發成績亮眼外，特招成績也不遑多讓：許旻堃　國立虎農　畜保科、蔡奇宏　國立北農　電機科、曾冠誌　國立北農　農機科、蔡佩臻　國立北農　畜保科、許濃昇　國立北農　農機科
+								<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6004&page=1&Work=View&NowMainId=&NowSubId="  target="_blank" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多 →</span></a>
+							</div>
+						</div>
+					</a>
+					</li>
+
+										<li>
+											<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6004&page=1&Work=View&NowMainId=&NowSubId=">
+						<div class="picbox">
+							<div class="picbox" id="img3"></div>
+							<div class="articlecontianer-index">
+								<div class="title1-index">
+									恭喜第49屆畢業生林若蕎、呂和桔同學<br>
+									榮獲縣長獎殊榮
+								</div>
+								恭喜第49屆畢業生301林若蕎與302呂和桔兩位同學榮獲縣長獎，與兩位受獎同學及家長在受獎會場前合影。
+								<a href="http://www.loxa.edu.tw/schoolweb/view/index.php?WebID=927&schnum=094509&MainType=0&SubType=101&MainMenuId=69454&SubMenuId=69453&DataId=6014&page=1&Work=View&NowMainId=&NowSubId="  target="_blank" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多 →</span></a>
+							</div>
+						</div>
+					</a>
+					</li>
+
+
+
+
+
+			<script>
+
+				var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
+				slide = document.querySelector('#slide'),
+				items = slide.querySelectorAll('li'), // 抓取所有 li
+				itemsCount = items.length, // 圖片總數
+				prevBtn = document.createElement('a'), // 上一張按鈕
+				nextBtn = document.createElement('a'), // 下一張按鈕
+				timer = 7000, // 7 秒換圖
+				interval = window.setInterval(showNext, timer);  // 設定循環
+
+				prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
+				nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
+				slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
+				slide.appendChild(nextBtn);
+
+				// 帶入目前要顯示第幾張圖
+				var showCurrent = function(){
+						var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
+						[].forEach.call( items, function(el){
+							el.classList.remove('show'); // 將所有 img 的 class="show" 移除
+						});
+						items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
+				};
+
+				function showNext(){
+					counter++; // 將 counter+1 指定下一張圖
+					showCurrent();
+				}
+
+				function showPrev(){
+					counter--; // 將 counter－1 指定上一張圖
+					showCurrent();
+				}
+
+				// 滑鼠移到 #slider 上方時，停止循環計時
+				/*slide.addEventListener('mouseover', function(){
+					interval = clearInterval(interval);
+				});
+
+				// 滑鼠離開 #slider 時，重新開始循環計時
+				lide.addEventListener('mouseout', function(){
+					interval = window.setInterval(showNext, timer);
+				});*/
+
+				// 綁定點擊上一張，下一張按鈕的事件
+				nextBtn.addEventListener('click', showNext, false);
+				prevBtn.addEventListener('click', showPrev, false);
+
+				// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
+				items[0].classList.add('show');
+							//# sourceURL=pen.js
+			</script>
+			<script src="http://naturalnvintage.com/js/jquery-2.1.3.min.js"></script>
+			<script src="http://naturalnvintage.com/js/jquery.easing.1.3.js"></script>
+			<script src="http://naturalnvintage.com/js/jquery.parallax-scroll.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	</div>
+	<div class="morebox">
+		<a href="http://www.loxa.edu.tw/schoolweb.html?webId=927">更多的校園焦點</a>
+	</div>
+</div>
+</BODY>
+</HTML>
