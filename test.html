@@ -1,12 +1,12 @@
-<HTML lang="zh">
-<HEAD>
+<html lang="zh">
+<head>
 	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta name="viewport" content="width=device-width">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		$(window).ready(function() {
 				$("img.lazy").lazyload({
@@ -14,7 +14,7 @@
 				});
 		});
 	</script>
-	<TITLE> Test - Natural n' Vintage </TITLE>
+	<title> Test - Natural n' Vintage </title>
 	<style>
 	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 	@font-face {
@@ -29,10 +29,19 @@
 	  font-family: "HanaMinA_ttf";
 	  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
 	}
-	a:link{color:#000000}
-	a:active {color:#000000;}
-	a:visited {color:#000000;}
+	a:link{color:#474849}
+	a:active {color:#474849;}
+	a:visited {color:#474849;}
 	a{text-decoration:none}
+	button{
+		border: none;
+		background: none;
+		text-align: left;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 0.8rem;
+		line-height: 1.4rem;
+		letter-spacing: 0.1rem;
+	}
 	* {
 	       -moz-box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
@@ -43,446 +52,670 @@
 	body{
 	    margin: 0;
 	    padding: 0;
+			overflow: hidden;
 	  }
+	.loadingbox{
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+		position: absolute;
+		background-color: #474849;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1000;
+	}
 	.cleanfix{
 		width: 100vw;
 	  display: -moz-flex;
 	  display: -webkit-flex;
 	  display: 				 flex;
-		flex-direction:row-reverse;
+		background-color: #474849;
 	  }
-	.left{
-		padding: 50px;
-		width: 400px;
-		height: 100vh;
-		display: -moz-flex;
+  .leftbox{
+		border-radius: 2rem;
+    height: 100vh;
+    width: 61.3vh;
+    display: -moz-flex;
 	  display: -webkit-flex;
 	  display: 				 flex;
+    -moz-flex-directio: column:
+    -webkit-flex-direction: column;
+       flex-direction: column;
+  }
+	.rightbox{
+		border-radius: 2rem;
+		border-left: 1px solid #474849;
+		background-color: #e2ded7;
+    height: 100vh;
+		width: calc(100vw - 61.3vh);
+    display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+    -moz-flex-directio: column:
+    -webkit-flex-direction: column;
+       flex-direction: column;
+  }
+  .topbox{
+    height: calc(100vh - 61.3vh);
+    width: 100%;
+		border-radius: 2rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+  }
+  .logobox{
+    min-width:  calc(100vh - 61.3vh);
+    height: 100%;
+    border: 1px solid #474849;
+		background-color: #e2ded7;
+		border-radius: 2rem;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbox{
+    width: 100%;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    -moz-flex-directio: column:
+    -webkit-flex-direction: column;
+       flex-direction: column;
+  }
+  nav{
+		height: calc(61.3vh - 38.7vh);
+    padding: 2rem;
+    border-bottom: 1px solid #474849;
+		border-radius: 2rem;
+		background-color: #e2ded7;
+    font-family: 'Noto Sans TC', sans-serif;
+		font-size: 0.8rem;
+		line-height: 1.4rem;
+		letter-spacing: 0.1rem;
+    display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+    -moz-flex-directio: column:
+    -webkit-flex-direction: column;
+       flex-direction: column;
+    justify-content: center;
+  }
+  .titlebox{
+    font-family: 'Noto Sans TC', sans-serif;
+		font-size: 1.4rem;
+    font-weight: 800;
+		letter-spacing: 0.2rem;
+    height: calc(38.7vh - 22.6vh);
+    display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+    justify-content: center;
+    align-items: center;
+		border-bottom: 1px solid #474849;
+		background-color: #e2ded7;
+		border-radius: 2rem;
+  }
+	.titlebar{
+		width: 8rem;
+		height: 2rem;
+		position: absolute;
+		background-color: #e2ded7;
+		transform: scaleX(0)
+	}
+	.move-title{
+		animation: 0.5s move-title ease-in-out ;
+		transform-origin: right center;
+	}
+	@keyframes move-title {
+		0% { transform: scaleX(0) }
+  	35% { transform: scaleX(1) }
+		65% { transform: scaleX(1) }
+		100% { transform: scaleX(0) }
+	}
+	.textA , .textW , .textC{
+		display: none;
+	}
+	.textA.showtitle{
+		display: flex;
+	}
+	.textW.showtitle{
+		display: flex;
+	}
+	.textC.showtitle{
+		display: flex;
+	}
+
+	/*About*/
+	.infobox-about{
+		position: absolute;
+		height: calc(100vh - 38.7vh);
+		width: 61.3vh;
+		bottom: 0;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		border-radius: 2rem;
+		background-color: #e2ded7;
+		transform: translateY(100%);
+		transition: 0.3s ease-in-out;
+		z-index: 1;
+	}
+	.infobox-about.viwe{
+		transform: translateY(0%);
+		z-index: 100;
+	}
+	.rightbox.about{
+		overflow: scroll;
+		right: 0;
+		position: absolute;
+		padding: 5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: 0.3s ease-in-out;
+		z-index: 1;
+	}
+	.rightbox.about.viwe{
+		transform: translateX(0);
+		z-index = 100;
+	}
+	.titlebox-skills{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 500;
+		letter-spacing: 0.1rem;
+		width: 100%;
+		text-align: right;
+		margin-bottom: 4rem;
+	}
+	.skillsgrid{
+		width: 100%;
+		margin-bottom: 4rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.skillsbox{
+		width: 100%;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 1rem;
+		font-weight: 500;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
 		flex-direction: column;
 	}
-	p{
+	.skillstitle{
+		margin-left: 4rem;
+		text-align: right;
 		font-family: 'Noto Sans TC', sans-serif;
-	}
-	.enname{
-		font-size: 0.8rem;
-	}
-	.logobox{
-	  margin-top: 10vh;
-		margin-bottom: 1rem;
-	  height: 60px;
-	}
-	.contianer{
-	  display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
-	}
-	.lefrtitlebox{
-		float: right;
-		margin-right: calc( 1.3rem - 30px ) ;
-		margin-top: 4rem;
-		font-size: 1.4rem;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
-		letter-spacing: 0.1rem;
-		line-height: 2.2rem;
-		writing-mode: vertical-rl;
-	}
-	.buttonbox{
-		position: absolute;
-		bottom: 4rem;
-	}
-	.button{
-		padding: 0.5rem;
-		background-color: #EEE;
-		margin-right: 1.5rem;
 		font-size: 1rem;
-		font-weight: 300;
-		font-family: 'Noto Sans TC', sans-serif;
+		font-weight: 500;
+		letter-spacing: 0.1rem;
 	}
-	.button:hover {
-		transition: 0.4s;
-		-webkit-transition: 0.4s;
-		background-color: #474747;
-		color: #fff;
-	}
-
-	/*INDEX*/
-	.picbox{
-	  width: calc(100vw - 400px);
-	  height: 100%;
-	  position: absolute;
-	  margin-right: 120px;
-	  background-position: center center;
-	  background-repeat: no-repeat;
-	  background-attachment: fixed;
-	  background-size: cover;
-	  background-color: #474747;
+	.typebox{
+		width: 100%;
+		margin-bottom: 1.2rem;
 		display: -moz-flex;
-	  display: -webkit-flex;
-	  display: 				 flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
 	}
-	#img1{
-	   background-image: url(https://imgur.com/T1K54rO.jpg);
-		 animation: ripple 14s infinite;
-		 animation-timing-function:ease-in-out;
+	.bar{
+		margin-right: 0.3rem;
+		width: 100%;
+		margin-top: 0.5rem;
+		height: 1.2rem;
+		background-color: #474849;
+		border-radius: 0.4rem;
 	}
-	#img2{
-	   background-image: url(https://imgur.com/pzBmV8y.jpg);
-		 animation: ripple 14s infinite;
-		 animation-timing-function:ease-in-out;
+	.move{
+		animation: 1.8s move ease-in-out ;
+		transform-origin:left center;
 	}
-	@keyframes ripple{
-	  0%{
-	    transform: scale(1);
-	  }
+	@keyframes move {
+		0% { transform: scaleX(0)}
+		20%	{ transform: scaleX(0)}
+		65% { transform: scaleX(80%) }
+  	100% { transform: scaleX(100%) }
+	}
+	.barbox{
+		width: 100%;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction:  row;
+		line-height: 2.1rem;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 500;
+		letter-spacing: 0rem;
+	}
+	/*About*/
 
-	  100%{
-	    transform: scale(1.2);
-	  }
+
+  /*WORKS*/
+	.infobox-works{
+		padding: 0.6rem;
+    overflow: scroll;
+    flex-wrap: wrap;
+		justify-content: space-around;
+		position: absolute;
+		height: calc(100vh - 38.7vh);
+		width: 61.3vh;
+		bottom: 0;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		border-radius: 2rem;
+		background-color: #e2ded7;
+		transform: translateY(100%);
+		transition: 0.3s ease-in-out;
+		z-index: 1;
 	}
-	.articlecontianer-index{
-		bottom: 3rem;
-	  max-width: 400px;
-	  z-index: 10000;
-	  position: absolute;
-	  padding: 2rem;
-		padding-left: 4rem;
-	  margin-right: 50px;
-	  font-size: 0.6rem;
+	.infobox-works.viwe{
+		transform: translateY(0%);
+		z-index: 100;
+	}
+	.rightbox.works{
+		right: 0;
+		position: absolute;
+		padding: 5rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: 0.3s ease-in-out;
+		z-index: 1;
+	}
+	.rightbox.works.viwe{
+		transform: translateX(0);
+		z-index : 100;
+	}
+  .grid-works{
+		margin-top: 1rem;
+		width: 40%;
+    min-width: 150px;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+    flex-direction: column;
+  }
+  .imgbox-works{
+    overflow: hidden;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: 				 flex;
+		border-radius: 1rem;
+  }
+  .name-works{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    display: table;
+  }
+	.date-works{
+	  width: 100%;
+	  text-align: center;
+	  margin-top: 0.5rem;
+	  font-size: 0.65rem;
 	  font-weight: 300;
 	  font-family: 'Noto Sans TC', sans-serif;
-	  letter-spacing: 0.05rem;
+	  letter-spacing: 0.15rem;
 	  color: #474747;
-	  background-color: #fff;
 	}
-	  .title1-index{
-	    width: 100%;
-	    margin-bottom: 15px;
-	    font-size: 1.2rem;
-	    font-weight: 300;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    letter-spacing: 0.2rem;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	  }
-	  .button-index{
-			float: right;
-	    width: 78px;
-	    font-size: 0.6rem;
-	    margin-top: 30px;
-	    height: 30px;
-	    font-family: 'Noto Sans TC', sans-serif;
-	    font-weight: 100;
-	    letter-spacing: 2px;
-	    white-space: nowrap;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    justify-content: center;
-	    align-items: center;
-	    transition: 0.4s;
-	    -webkit-transition: 0.4s;
-	  }
-	  .button-index span{
-	    display: -moz-flex;
-	    display: -webkit-flex;
-	    display: 				 flex;
-	    color: #474747;
-	  }
-	  .button-index:hover{
-	    transition: 0.4s;
-	    -webkit-transition: 0.4s;
-	    background-color: #474747;
-	    color: #fff;
-	  }
-	  .button-index:hover span{
-	    color: #fff;
-	  }
-		.mobbox{
-			margin-left: 2rem;
-			display: -moz-flex;
-		  display: -webkit-flex;
-		  display: 				 flex;
-			flex-direction: column;
-		}
-	  #slide {
-	    width: calc(100% - 400px);
-	    position: fixed;
-	    top: 0;
-	    left: 0;
-	    justify-content: center;
-	    align-items: center;
-	    overflow: hidden;
-	  }
-	  #slide li {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    display: block;
-	    height: 100vh;
-	    opacity: 0;
-	    visibility: hidden;
-	    transition: 0.8s;
-	  }
-	  #slide li:first-child {
-	    position: static;
-	  }
-	  #slide li.show {
-	    opacity: 1;
-	    visibility: visible;
-	  }
-	  #slide .prev, #slide .next {
-	    display: block;
-	    position: absolute;
-	    top: 50%;
-	    transform: translateY(-50%);
-	    cursor: pointer;
-	    transition: 0.4s;
-	    background-color: rgba(0, 0, 0, 0.12);
-	    padding: 14px 12px;
-	  }
-	  #slide .prev:hover, #slide .next:hover {
-	    background-color: rgba(0, 0, 0, 0.24);
-	  }
-	  #slide .prev:after, #slide .next:after {
-	    display: block;
-	    content: "";
-	    width: 10px;
-	    height: 10px;
-	    border-top: 2px solid #fff;
-	    border-right: 2px solid #fff;
-	  }
-	  #slide .prev {
-	    left: 0;
-	  }
-	  #slide .prev:after {
-	    transform: rotate(-135deg);
-	    margin-left: 4px;
-	  }
-	  #slide .next {
-	    right: 0;
-	  }
-	  #slide .next:after {
-	    transform: rotate(45deg);
-	    margin-right: 4px;
-	  }
-	/*INDEX*/
-	@media only screen and (max-width: 736px) {
-		.leftmob{
-			height: 300px;
-		}
-	  .cleanfix{
-			height: auto;
-	    -moz-flex-direction: column;
-	    -webkit-flex-direction: column;
-	            flex-direction: column;
-	  }
-		#slide {
-			position: relative;
-			height: 120vw;
-	    width: 100vw;
-	    bottom: 0;
-	    left: 0;
-	  }
-		.picbox{
-		  width: 100vw;
-		  height: 60vw;
-		  position: absolute;
-			background-attachment: scroll;
-		}
-		.articlecontianer-index{
-			z-index: 10000000;
-			padding: 1rem;
-			bottom: -200px;
-			max-width: 100vw;
-			position: absolute;
-			margin-right: 0px;
-		}
-		.left{
-			display: none;
-		}
-		.leftmob{
-			-moz-flex-direction: row-reverse;
-	    -webkit-flex-direction: row-reverse;
-	            flex-direction: row-reverse;
-		}
-		.lefrtitlebox{
-			margin-right: 2rem;
-			font-size: 1.2rem;
-			line-height: 1.6rem;
-		}
-		#slide .prev, #slide .next {
-	    top: 25%;
-	  }
-		.contianer{
-			height: auto;
-		}
-		.buttonbox{
-			position: relative;
-			margin-top: 10rem;
-			bottom: 2rem;
-		}
-		.lefrtitlebox{
-			margin-top: 2rem;
-		}
-		.logobox{
-			margin-top: 50px;
-		}
-		.buttonbox{
-			margin-top: 5rem;
-		}
-		.title1-index{
-			font-size: 1rem;
-			letter-spacing: 0.05rem;
-		}
-		.button-index{
-			margin-top: 1rem;
-		}
+  /*WORKS*/
+
+
+
+  /*CONTACT*/
+	.infobox-contact{
+		position: absolute;
+		height: calc(100vh - 38.7vh);
+		width: 61.3vh;
+		bottom: 0;
+		padding: 3rem;
+		border-radius: 2rem;
+		background-color: #e2ded7;
+		line-height: 2rem;
+		letter-spacing: 0.2rem;
+		font-size: 1rem;
+	  font-weight: 300;
+	  font-family: 'Noto Sans TC', sans-serif;
+		justify-content: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+		flex-direction: column;
+		transform: translateY(100%);
+		transition: 0.3s ease-in-out;
+		z-index: 1;
+	}
+	.infobox-contact.viwe{
+		transform: translateY(0%);
+		z-index: 100;
+	}
+  /*CONTACT*/
+	.linebox{
+		margin-right: 2rem;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: 				 flex;
+	}
+	.line1{
+		transform: rotate(10deg);
+		border-radius: 1rem;
+		height: 2.5rem;
+		width: 0.7rem;
+		background-color: #e2ded7;
+		animation: 2s line ease-in-out ;
+	}
+	.line2{
+		margin-left: 0.6rem;
+		transform: rotate(10deg);
+		border-radius: 1rem;
+		height: 4.2rem;
+		width: 0.7rem;
+		background-color: #e2ded7;
+		animation: 2s line1 ease-in-out ;
+	}
+	.line3{
+		align-self: flex-end;
+		margin-left: 0.6rem;
+		transform: rotate(10deg);
+		border-radius: 1rem;
+		height: 2.5rem;
+		width: 0.7rem;
+		background-color: #e2ded7;
+		animation: 2s line ease-in-out ;
+	}
+	@keyframes line {
+		0% { transform: rotate(0deg)}
+		0% { height: 4.2rem}
+		50% { height: 2.5rem}
+  	70% { transform: rotate(10deg)}
+	}
+	@keyframes line1 {
+		0% { transform: rotate(0deg)}
+  	70% { transform: rotate(10deg)}
 	}
 
 
 
 
 	</style>
-</HEAD>
-<BODY>
-	<div class="cleanfix">
-		<div class="left">
-			<h1 class="lefrtitlebox">
-				國立聯合大學<br>
-				華語文學系
-			</h1>
-			<div class="logobox">
-				<img src="https://imgur.com/BqRxrFX.png" height="100%">
-			</div>
-			<p class="enname">
-				<span style="font-size:0.6rem; line-height:1.2rem;">National United University,</span><br>
-				Department of Chinese Language<br>
-				and Literature
-			</p>
-			<div  class="buttonbox">
-				<a href="https://cll.nuu.edu.tw/app/index.php" class="button">中文</a>
-				<a href="https://cll.nuu.edu.tw/?Lang=en" class="button">English</a>
-			</div>
+</head>
+<body>
+	<script>
+
+		$(window).load(function(){
+	   // PAGE IS FULLY LOADED
+	   // FADE OUT YOUR OVERLAYING DIV
+	   $('#overlay').fadeOut();
+		});
+
+		$(document).ready(function(){
+			$('body').css('display', 'none');
+			$('body').fadeIn(1400);
+		});
+		$(document).ready(function(){
+			$('.infobox-about').toggleClass('viwe',true);
+			$('.rightbox.about').toggleClass('viwe',true);
+			$('.bar').addClass('move');
+			$(".textA").addClass("showtitle");
+			$('a#click-a').click(function(){
+				var delayInMilliseconds = 250;
+				$('.rightbox.about').toggleClass('viwe',true);
+				$('.rightbox.works').removeClass('viwe');
+				$('.rightbox.contact').removeClass('viwe');
+				$('.infobox-about').toggleClass('viwe',true);
+				$('.infobox-works').toggleClass('viwe',false);
+				$('.infobox-contact').toggleClass('viwe',false);
+				$('.bar').toggleClass('move',true);
+				$("div#title").addClass("move-title");
+				setTimeout(function() {
+					$(".textA").addClass("showtitle");
+					$(".textW").removeClass("showtitle");
+					$(".textC").removeClass("showtitle");
+				}, delayInMilliseconds);
+			});
+			$('.bar').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move");
+			});
+			$('div#titleA').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move-title");
+			});
+		});
+
+		$(document).ready(function(){
+			$('a#click-w').click(function(){
+				var delayInMilliseconds = 250;
+				$('.infobox-works').toggleClass('viwe',true);
+				$('.infobox-about').toggleClass('viwe',false);
+				$('.infobox-contact').toggleClass('viwe',false);
+				$("div#title").addClass("move-title");
+				setTimeout(function() {
+					$(".textW").addClass("showtitle");
+					$(".textA").removeClass("showtitle");
+					$(".textC").removeClass("showtitle");
+				}, delayInMilliseconds);
+			});
+			$('.bar').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move");
+			});
+			$('div#title').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move-title");
+			});
+		});
+
+		$(document).ready(function(){
+			$('a#click-c').click(function(){
+				var delayInMilliseconds = 250;
+				$('.infobox-contact').toggleClass('viwe',true);
+				$('.infobox-works').toggleClass('viwe',false);
+				$('.infobox-about').toggleClass('viwe',false);
+				$("div#title").addClass("move-title");
+				setTimeout(function() {
+					$(".textC").addClass("showtitle");
+					$(".textA").removeClass("showtitle");
+					$(".textW").removeClass("showtitle");
+				}, delayInMilliseconds);
+			});
+			$('.bar').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move");
+			});
+			$('div#title').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move-title");
+			});
+		});
+	</script>
+	<div class="loadingbox" id="overlay">
+		<div class="linebox">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
 		</div>
-
-
-		<div class="leftmob">
-			<h1 class="lefrtitlebox">
-				國立聯合大學<br>
-				華語文學系
-			</h1>
-			<div class="mobbox">
-				<div class="logobox">
-					<img src="https://imgur.com/BqRxrFX.png" height="100%">
-				</div>
-				<p class="enname">
-					<span style="font-size:0.6rem; line-height:1.2rem;">National United University,</span><br>
-					Department of Chinese Language<br>
-					and Literature
-				</p>
-				<div  class="buttonbox">
-					<a href="https://cll.nuu.edu.tw/app/index.php" class="button">中文</a>
-					<a href="https://cll.nuu.edu.tw/?Lang=en" class="button">English</a>
-				</div>
-			</div>
+		<div class="linebox">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
 		</div>
-
-		<div class="contianer">
-				<ul id="slide">
-					<li>
-						<div class="picbox">
-							<div class="picbox" id="img1"></div>
-							<div class="articlecontianer-index">
-								<div class="title1-index">
-									在海外教華語<br>
-									實習你的教師夢
-								</div>
-								華語文學系師生在多個國家的華語教學機構進行交流互動的過程中，除了鞏固雙方的教學合作關係，實習學生得以將平日所學的教學理論實際應用在教學場域。
-								<a href="https://cll.nuu.edu.tw/p/412-1047-2680.php?Lang=zh-tw" class="button-index" style="color:#474747;"><span style="opacity:1;">關於我們 →</span></a>
-							</div>
-						</div>
-					</li>
-
-
-					<li>
-						<div class="picbox">
-							<div class="picbox" id="img2"></div>
-							<div class="articlecontianer-index">
-								<div class="title1-index">
-									選讀華文<br>
-									就業之路寬廣無限
-								</div>
-								海內外華語教師、華語教育相關研究者、語言學學術領域學者、數位學習及開發設計人才，各領域所必須的語文能力人才、編輯、作家、文書工作人員，國內外各級學校或語言中心、出版或文化事業公司教師或從業人員。
-								<a href="https://cll.nuu.edu.tw/p/412-1047-2408.php?Lang=zh-tw" class="button-index" style="color:#474747;"><span style="opacity:1;">閱讀更多 →</span></a>
-							</div>
-						</div>
-					</li>
-
-				</ul>
-
-
-			<script>
-
-				var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
-				slide = document.querySelector('#slide'),
-				items = slide.querySelectorAll('li'), // 抓取所有 li
-				itemsCount = items.length, // 圖片總數
-				prevBtn = document.createElement('a'), // 上一張按鈕
-				nextBtn = document.createElement('a'), // 下一張按鈕
-				timer = 7000, // 7 秒換圖
-				interval = window.setInterval(showNext, timer);  // 設定循環
-
-				prevBtn.classList.add('prev'); // 幫上一張按鈕加 class＝"prev" 給 CSS 指定樣式用
-				nextBtn.classList.add('next'); // 幫下一張按鈕加 class＝"next" 給 CSS 指定樣式用
-				slide.appendChild(prevBtn); // 將按鈕加到 #slide 裡
-				slide.appendChild(nextBtn);
-
-				// 帶入目前要顯示第幾張圖
-				var showCurrent = function(){
-						var itemToShow = Math.abs(counter % itemsCount); // 取餘數才能無限循環
-						[].forEach.call( items, function(el){
-							el.classList.remove('show'); // 將所有 img 的 class="show" 移除
-						});
-						items[itemToShow].classList.add('show'); // 將要顯示的 img 加入 class="show"
-				};
-
-				function showNext(){
-					counter++; // 將 counter+1 指定下一張圖
-					showCurrent();
-				}
-
-				function showPrev(){
-					counter--; // 將 counter－1 指定上一張圖
-					showCurrent();
-				}
-
-				// 滑鼠移到 #slider 上方時，停止循環計時
-				/*slide.addEventListener('mouseover', function(){
-					interval = clearInterval(interval);
-				});
-
-				// 滑鼠離開 #slider 時，重新開始循環計時
-				lide.addEventListener('mouseout', function(){
-					interval = window.setInterval(showNext, timer);
-				});*/
-
-				// 綁定點擊上一張，下一張按鈕的事件
-				nextBtn.addEventListener('click', showNext, false);
-				prevBtn.addEventListener('click', showPrev, false);
-
-				// 一開始秀出第一張圖，也可以在 HTML 的第一個 img 裡加上 class="show"
-				items[0].classList.add('show');
-							//# sourceURL=pen.js
-			</script>
-			<script src="http://naturalnvintage.com/js/jquery-2.1.3.min.js"></script>
-			<script src="http://naturalnvintage.com/js/jquery.easing.1.3.js"></script>
-			<script src="http://naturalnvintage.com/js/jquery.parallax-scroll.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	</div>
-</div>
-</BODY>
-</HTML>
+
+	<div class="cleanfix">
+    <div class="leftbox">
+      <div class=topbox>
+        <div class="logobox">
+          <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%";>
+        </div>
+        <div class="navbox">
+          <nav>
+						<a onclick="a" id="click-a">About</a>
+						<a id="click-w">Works</a>
+						<a id="click-c">Contact</a>
+          </nav>
+          <div class="titlebox">
+						<div class="titlebar" id="title"></div>
+            <div class="textA">About</div>
+						<div class="textW">Works</div>
+						<div class="textC">Contact</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class=infobox-about>
+      </div>
+
+
+			<div class=infobox-works>
+          <div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+                  <img src="https://imgur.com/jtBIQzX.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">Natural n' Vintage官網</div>
+              <div class="date-works">6.2018</div>
+          </div>
+					<div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+                  <img src="https://imgur.com/y350aTs.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="date-works">12.2018</div>
+          </div>
+          <div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+                  <img src="https://imgur.com/S0m3LOe.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="date-works">12.2018</div>
+          </div>
+					<div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+                  <img src="https://imgur.com/rggf2tx.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="date-works">12.2018</div>
+          </div>
+					<div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+									<img src="https://imgur.com/746EC3g.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="date-works">12.2018</div>
+          </div>
+					<div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+                  <img src="https://imgur.com/XvIby2A.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="date-works">12.2018</div>
+          </div>
+					<div class="grid-works">
+              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+                <figure>
+                  <img src="https://imgur.com/S0m3LOe.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="date-works">12.2018</div>
+          </div>
+			</div>
+
+
+			<div class=infobox-contact>
+					<p>0909-689-432</p>
+					<p>letsohyeah@gmail.com</p>
+			</div>
+
+
+    </div>
+
+
+
+		<div class="rightbox about" id="AboutR">
+			<div class="titlebox-skills">Skills</div>
+			<div class="skillsgrid">
+				<div class="skillsbox">
+					<div class="typebox">
+						Graphic Design
+						<div class="barbox">
+							<div class="bar move" style="width:80%;"></div><p> 80</p>
+						</div>
+					</div>
+					<div class="typebox">
+						Photograph
+						<div class="barbox">
+						 <div class="bar move" style="width:75%;"></div><p> 75</p>
+						</div>
+					</div>
+					<div class="typebox">
+						Film Editing
+						<div class="barbox">
+						 <div class="bar move" style="width:30%;"></div><p> 30</p>
+						</div>
+					</div>
+				</div>
+				<div class="skillstitle">Comercial Design</div>
+			</div>
+			<div class="skillsgrid">
+				<div class="skillsbox">
+					<div class="typebox">
+						UI / Graphic Design
+						<div class="barbox">
+							<div class="bar move" style="width:80%;"></div><p> 80</p>
+						</div>
+					</div>
+					<div class="typebox">
+						UX
+						<div class="barbox">
+						 <div class="bar move" style="width:65%;"></div><p> 65</p>
+						</div>
+					</div>
+					<div class="typebox">
+						HTML / CSS
+						<div class="barbox">
+						 <div class="bar move" style="width:75%;"></div><p> 75</p>
+						</div>
+					</div>
+					<div class="typebox">
+						Javascript / JQuery
+						<div class="barbox">
+						 <div class="bar move" style="width:45%;"></div><p> 45</p>
+						</div>
+					</div>
+				</div>
+				<div class="skillstitle">Web</div>
+			</div>
+		</div>
+		<div class="rightbox Works" id="WorksR">
+		</div>
+	</div>
+</body>
+</html>
