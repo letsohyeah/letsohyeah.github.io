@@ -223,7 +223,7 @@
 	}
 	.rightbox.about.viwe{
 		transform: translateX(0);
-		z-index = 100;
+		z-index: 1000;
 	}
 	.titlebox-skills{
 		font-family: 'Noto Sans TC', sans-serif;
@@ -302,17 +302,12 @@
 
   /*WORKS*/
 	.infobox-works{
-		padding: 0.6rem;
+		padding-top: 1rem;
     overflow: scroll;
-    flex-wrap: wrap;
-		justify-content: space-around;
 		position: absolute;
 		height: calc(100vh - 38.7vh);
 		width: 61.3vh;
 		bottom: 0;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: 				 flex;
 		border-radius: 2rem;
 		background-color: #e2ded7;
 		transform: translateY(100%);
@@ -339,14 +334,10 @@
 		transform: translateX(0);
 		z-index : 100;
 	}
-  .grid-works{
-		margin-top: 1rem;
-		width: 40%;
+  .item{
+		margin: 0.6rem;
+		width: 44%;
     min-width: 150px;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: 				 flex;
-    flex-direction: column;
   }
   .imgbox-works{
     overflow: hidden;
@@ -363,16 +354,25 @@
     font-weight: 300;
     letter-spacing: 0.2rem;
     display: table;
+		font-family: 'Noto Sans TC', sans-serif;
   }
 	.date-works{
+		margin-top: 1rem;
 	  width: 100%;
-	  text-align: center;
-	  margin-top: 0.5rem;
+	  text-align: right;
 	  font-size: 0.65rem;
 	  font-weight: 300;
 	  font-family: 'Noto Sans TC', sans-serif;
 	  letter-spacing: 0.15rem;
 	  color: #474747;
+	}
+	.titlebox-works{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 500;
+		letter-spacing: 0.1rem;
+		width: 100%;
+		text-align: right;
 	}
   /*WORKS*/
 
@@ -474,11 +474,10 @@
 			$('.rightbox.about').toggleClass('viwe',true);
 			$('.bar').addClass('move');
 			$(".textA").addClass("showtitle");
-			$('a#click-a').click(function(){
+			$('#click-a').click(function(){
 				var delayInMilliseconds = 250;
 				$('.rightbox.about').toggleClass('viwe',true);
 				$('.rightbox.works').removeClass('viwe');
-				$('.rightbox.contact').removeClass('viwe');
 				$('.infobox-about').toggleClass('viwe',true);
 				$('.infobox-works').toggleClass('viwe',false);
 				$('.infobox-contact').toggleClass('viwe',false);
@@ -499,7 +498,7 @@
 		});
 
 		$(document).ready(function(){
-			$('a#click-w').click(function(){
+			$('#click-w').click(function(){
 				var delayInMilliseconds = 250;
 				$('.infobox-works').toggleClass('viwe',true);
 				$('.infobox-about').toggleClass('viwe',false);
@@ -520,7 +519,7 @@
 		});
 
 		$(document).ready(function(){
-			$('a#click-c').click(function(){
+			$('#click-c').click(function(){
 				var delayInMilliseconds = 250;
 				$('.infobox-contact').toggleClass('viwe',true);
 				$('.infobox-works').toggleClass('viwe',false);
@@ -537,6 +536,14 @@
 			});
 			$('div#title').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
 					 $(this).removeClass("move-title");
+			});
+		});
+
+		$(document).ready(function(){
+			$('#1bt').click(function(){
+				$('.rightbox.works').toggleClass('viwe',true);
+				$('.rightbox.about').removeClass('viwe');
+				$('.rightbox.contact').removeClass('viwe');
 			});
 		});
 	</script>
@@ -561,7 +568,7 @@
         </div>
         <div class="navbox">
           <nav>
-						<a onclick="a" id="click-a">About</a>
+						<a id="click-a">About</a>
 						<a id="click-w">Works</a>
 						<a id="click-c">Contact</a>
           </nav>
@@ -583,17 +590,17 @@
 
 
 			<div class=infobox-works>
-          <div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+				<div class="waterfall">
+          <div class="item">
+              <a class="imgbox-works hover" id="1bt">
                 <figure>
                   <img src="https://imgur.com/jtBIQzX.png" width="100%">
                 </figure>
               </a>
               <div class="name-works" id="zh-item">Natural n' Vintage官網</div>
-              <div class="date-works">6.2018</div>
           </div>
-					<div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+					<div class="item">
+              <a class="imgbox-works hover">
                 <figure>
                   <img src="https://imgur.com/y350aTs.png" width="100%">
                 </figure>
@@ -601,17 +608,17 @@
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
               <div class="date-works">12.2018</div>
           </div>
-          <div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+          <div class="item">
+              <a class="imgbox-works hover">
                 <figure>
                   <img src="https://imgur.com/S0m3LOe.png" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="name-works" id="zh-item">New Antiques Online</div>
               <div class="date-works">12.2018</div>
           </div>
-					<div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+					<div class="item">
+              <a class="imgbox-works hover">
                 <figure>
                   <img src="https://imgur.com/rggf2tx.png" width="100%">
                 </figure>
@@ -619,8 +626,8 @@
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
               <div class="date-works">12.2018</div>
           </div>
-					<div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+					<div class="item">
+              <a class="imgbox-works hover">
                 <figure>
 									<img src="https://imgur.com/746EC3g.png" width="100%">
                 </figure>
@@ -628,8 +635,8 @@
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
               <div class="date-works">12.2018</div>
           </div>
-					<div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+					<div class="item">
+              <a class="imgbox-works hover">
                 <figure>
                   <img src="https://imgur.com/XvIby2A.png" width="100%">
                 </figure>
@@ -637,8 +644,8 @@
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
               <div class="date-works">12.2018</div>
           </div>
-					<div class="grid-works">
-              <a href="http://naturalnvintage.com/Item/sonstiges-327.html" class="imgbox-works hover">
+					<div class="item">
+              <a class="imgbox-works hover">
                 <figure>
                   <img src="https://imgur.com/S0m3LOe.png" width="100%">
                 </figure>
@@ -646,6 +653,7 @@
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
               <div class="date-works">12.2018</div>
           </div>
+				 </div>
 			</div>
 
 
@@ -714,8 +722,25 @@
 				<div class="skillstitle">Web</div>
 			</div>
 		</div>
+
+
 		<div class="rightbox Works" id="WorksR">
+			<div id="1">
+				<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
+				<div class="date-works">6.2018</div>
+			</div>
+
 		</div>
 	</div>
+	<script src="js/waterfall.min.js"></script>
+	<script>
+    var grid = document.querySelector('.waterfall');
+		$(window).load(function(){
+	 		waterfall(grid);
+		});
+		window.addEventListener('resize', function () {
+			waterfall(grid);
+		});
+  </script>
 </body>
 </html>
