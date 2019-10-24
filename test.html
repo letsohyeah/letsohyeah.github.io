@@ -100,7 +100,8 @@
     -webkit-flex-direction: column;
        flex-direction: column;
   }
-  .topbox{
+  #topbox{
+		transition: 0.4s;
     height: calc(100vh - 61.3vh);
     width: 100%;
 		border-radius: 2rem;
@@ -108,7 +109,7 @@
     display: -webkit-flex;
     display: 				 flex;
   }
-  .logobox{
+  #logobox{
     min-width:  calc(100vh - 61.3vh);
     height: 100%;
     border: 1px solid #474849;
@@ -120,7 +121,7 @@
     align-items: center;
     justify-content: center;
   }
-  .navbox{
+  #navbox{
     width: 100%;
     display: -moz-flex;
     display: -webkit-flex;
@@ -129,7 +130,7 @@
     -webkit-flex-direction: column;
        flex-direction: column;
   }
-  nav{
+  #nav{
 		height: calc(61.3vh - 38.7vh);
     padding: 2rem;
     border-bottom: 1px solid #474849;
@@ -147,7 +148,7 @@
        flex-direction: column;
     justify-content: center;
   }
-  .titlebox{
+  #titlebox{
     font-family: 'Noto Sans TC', sans-serif;
 		font-size: 1.4rem;
     font-weight: 800;
@@ -304,7 +305,7 @@
 
 
   /*WORKS*/
-	.infobox-works{
+	#infobox-works{
 		padding-top: 1rem;
     overflow: scroll;
 		position: absolute;
@@ -317,7 +318,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	.infobox-works.viwe{
+	#infobox-works.viwe{
 		transform: translateY(0%);
 		z-index: 100;
 	}
@@ -482,7 +483,7 @@
 				$('.rightbox.about').toggleClass('viwe',true);
 				$('.rightbox.works').removeClass('viwe');
 				$('.infobox-about').toggleClass('viwe',true);
-				$('.infobox-works').toggleClass('viwe',false);
+				$('#infobox-works').toggleClass('viwe',false);
 				$('.infobox-contact').toggleClass('viwe',false);
 				$('.bar').toggleClass('move',true);
 				$("div#title").addClass("move-title");
@@ -503,7 +504,7 @@
 		$(document).ready(function(){
 			$('#click-w').click(function(){
 				var delayInMilliseconds = 250;
-				$('.infobox-works').toggleClass('viwe',true);
+				$('#infobox-works').toggleClass('viwe',true);
 				$('.infobox-about').toggleClass('viwe',false);
 				$('.infobox-contact').toggleClass('viwe',false);
 				$("div#title").addClass("move-title");
@@ -525,7 +526,7 @@
 			$('#click-c').click(function(){
 				var delayInMilliseconds = 250;
 				$('.infobox-contact').toggleClass('viwe',true);
-				$('.infobox-works').toggleClass('viwe',false);
+				$('#infobox-works').toggleClass('viwe',false);
 				$('.infobox-about').toggleClass('viwe',false);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
@@ -565,17 +566,17 @@
 
 	<div class="cleanfix">
     <div class="leftbox">
-      <div class=topbox id="topbox">
-        <div class="logobox">
+      <div id="topbox">
+        <div id="logobox">
           <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%";>
         </div>
-        <div class="navbox">
-          <nav>
+        <div id="navbox">
+          <div id="nav">
 						<a id="click-a">About</a>
 						<a id="click-w">Works</a>
 						<a id="click-c">Contact</a>
-          </nav>
-          <div class="titlebox">
+          </div>
+          <div id="titlebox">
 						<div class="titlebar" id="title"></div>
             <div class="textA">About</div>
 						<div class="textW">Works</div>
@@ -592,7 +593,7 @@
       </div>
 
 
-			<div class=infobox-works id="infobox-works" onscroll="scrollFunction()">
+			<div id="infobox-works" onscroll="scrollFunction()">
 				<div class="waterfall">
           <div class="item">
               <a class="imgbox-works hover" id="1bt">
@@ -742,13 +743,23 @@
 	<script>
 
 	function scrollFunction() {
-		var elmnt = document.getElementById("infobox-works");
-		var top = document.getElementById("topbox");
-		var y = elmnt.scrollTop;
-		if (y > 80) {
-	    top.style.height = "10rem";
-	  } else {
-	  }
+		var yU = document.getElementById("infobox-works").scrollTop;
+		var yB = document.getElementById("infobox-works").scrollBottom;
+		var topH = document.getElementById('topbox').offsetHeight;
+		var infoH = document.getElementById('infobox-works').offsetHeight;
+		if (document.getElementById("infobox-works").scrollTop) {
+			document.getElementById("topbox").style.height = "calc(38.7vh - 22.6vh)";
+			document.getElementById("logobox").style.display = "none";
+			document.getElementById("navbox").style.flexDirection = "row";
+			document.getElementById("navbox").style.height = "5rem";
+			document.getElementById("nav").style.height = "calc(38.7vh - 22.6vh)";
+			document.getElementById("nav").style.flexDirection = "row";
+			document.getElementById("titlebox").style.width = "calc(100vh - 61.3vh)";
+			document.getElementById("nav").style.width = "100%";
+			document.getElementById("infobox-works").style.height = "calc( 100vh - 16.1vh )";
+		}
+
+
 	}
 
   </script>
