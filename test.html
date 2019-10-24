@@ -54,6 +54,9 @@
 	    padding: 0;
 			overflow: hidden;
 	  }
+	#overlay{
+		z-index: 10000;
+	}
 	.loadingbox{
 		justify-content: center;
 		align-items: center;
@@ -335,8 +338,8 @@
 		z-index : 100;
 	}
   .item{
-		margin: 0.6rem;
-		width: 44%;
+		margin: 0.9rem;
+		width: 40%;
     min-width: 150px;
   }
   .imgbox-works{
@@ -562,7 +565,7 @@
 
 	<div class="cleanfix">
     <div class="leftbox">
-      <div class=topbox>
+      <div class=topbox id="topbox">
         <div class="logobox">
           <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%";>
         </div>
@@ -589,7 +592,7 @@
       </div>
 
 
-			<div class=infobox-works>
+			<div class=infobox-works id="infobox-works" onscroll="scrollFunction()">
 				<div class="waterfall">
           <div class="item">
               <a class="imgbox-works hover" id="1bt">
@@ -606,7 +609,6 @@
                 </figure>
               </a>
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
-              <div class="date-works">12.2018</div>
           </div>
           <div class="item">
               <a class="imgbox-works hover">
@@ -615,7 +617,6 @@
                 </figure>
               </a>
               <div class="name-works" id="zh-item">New Antiques Online</div>
-              <div class="date-works">12.2018</div>
           </div>
 					<div class="item">
               <a class="imgbox-works hover">
@@ -624,7 +625,6 @@
                 </figure>
               </a>
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
-              <div class="date-works">12.2018</div>
           </div>
 					<div class="item">
               <a class="imgbox-works hover">
@@ -633,7 +633,6 @@
                 </figure>
               </a>
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
-              <div class="date-works">12.2018</div>
           </div>
 					<div class="item">
               <a class="imgbox-works hover">
@@ -642,7 +641,6 @@
                 </figure>
               </a>
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
-              <div class="date-works">12.2018</div>
           </div>
 					<div class="item">
               <a class="imgbox-works hover">
@@ -651,7 +649,6 @@
                 </figure>
               </a>
               <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
-              <div class="date-works">12.2018</div>
           </div>
 				 </div>
 			</div>
@@ -741,6 +738,19 @@
 		window.addEventListener('resize', function () {
 			waterfall(grid);
 		});
+  </script>
+	<script>
+
+	function scrollFunction() {
+		var elmnt = document.getElementById("infobox-works");
+		var top = document.getElementById("topbox");
+		var y = elmnt.scrollTop;
+		if (y > 80) {
+	    top.style.height = "10rem";
+	  } else {
+	  }
+	}
+
   </script>
 </body>
 </html>
