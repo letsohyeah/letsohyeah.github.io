@@ -122,6 +122,7 @@
     justify-content: center;
   }
   #navbox{
+		transition: 0.4s;
     width: 100%;
     display: -moz-flex;
     display: -webkit-flex;
@@ -149,6 +150,7 @@
     justify-content: center;
   }
   #titlebox{
+		transition: 0.4s;
     font-family: 'Noto Sans TC', sans-serif;
 		font-size: 1.4rem;
     font-weight: 800;
@@ -194,7 +196,7 @@
 	}
 
 	/*About*/
-	.infobox-about{
+	#infobox-about{
 		position: absolute;
 		height: calc(100vh - 38.7vh);
 		width: 61.3vh;
@@ -208,7 +210,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	.infobox-about.viwe{
+	#infobox-about.viwe{
 		transform: translateY(0%);
 		z-index: 100;
 	}
@@ -323,6 +325,7 @@
 		z-index: 100;
 	}
 	.rightbox.works{
+		overflow: scroll;
 		right: 0;
 		position: absolute;
 		padding: 5rem;
@@ -350,6 +353,17 @@
     display: 				 flex;
 		border-radius: 1rem;
   }
+	.imgbox1-works{
+		margin-top: 2rem;
+    width: 100%;
+		overflow: hidden;
+	  display: -moz-flex;
+	  display: -webkit-flex;
+	  display: 				 flex;
+	  justify-content: center;
+	  align-items: center;
+		border-radius: 1rem;
+  }
   .name-works{
     width: 100%;
     text-align: center;
@@ -361,18 +375,20 @@
 		font-family: 'Noto Sans TC', sans-serif;
   }
 	.date-works{
-		margin-top: 1rem;
+		margin-top: 8rem;
+		margin-bottom: 3rem;
 	  width: 100%;
 	  text-align: right;
 	  font-size: 0.65rem;
 	  font-weight: 300;
+		line-height: 1rem;
 	  font-family: 'Noto Sans TC', sans-serif;
 	  letter-spacing: 0.15rem;
-	  color: #474747;
+	  color: #474849;
 	}
 	.titlebox-works{
 		font-family: 'Noto Sans TC', sans-serif;
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 		font-weight: 500;
 		letter-spacing: 0.1rem;
 		width: 100%;
@@ -383,7 +399,7 @@
 
 
   /*CONTACT*/
-	.infobox-contact{
+	#infobox-contact{
 		position: absolute;
 		height: calc(100vh - 38.7vh);
 		width: 61.3vh;
@@ -406,7 +422,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	.infobox-contact.viwe{
+	#infobox-contact.viwe{
 		transform: translateY(0%);
 		z-index: 100;
 	}
@@ -474,7 +490,7 @@
 			$('body').fadeIn(1400);
 		});
 		$(document).ready(function(){
-			$('.infobox-about').toggleClass('viwe',true);
+			$('#infobox-about').toggleClass('viwe',true);
 			$('.rightbox.about').toggleClass('viwe',true);
 			$('.bar').addClass('move');
 			$(".textA").addClass("showtitle");
@@ -482,9 +498,9 @@
 				var delayInMilliseconds = 250;
 				$('.rightbox.about').toggleClass('viwe',true);
 				$('.rightbox.works').removeClass('viwe');
-				$('.infobox-about').toggleClass('viwe',true);
+				$('#infobox-about').toggleClass('viwe',true);
 				$('#infobox-works').toggleClass('viwe',false);
-				$('.infobox-contact').toggleClass('viwe',false);
+				$('#infobox-contact').toggleClass('viwe',false);
 				$('.bar').toggleClass('move',true);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
@@ -505,8 +521,8 @@
 			$('#click-w').click(function(){
 				var delayInMilliseconds = 250;
 				$('#infobox-works').toggleClass('viwe',true);
-				$('.infobox-about').toggleClass('viwe',false);
-				$('.infobox-contact').toggleClass('viwe',false);
+				$('#infobox-about').toggleClass('viwe',false);
+				$('#infobox-contact').toggleClass('viwe',false);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
 					$(".textW").addClass("showtitle");
@@ -525,9 +541,9 @@
 		$(document).ready(function(){
 			$('#click-c').click(function(){
 				var delayInMilliseconds = 250;
-				$('.infobox-contact').toggleClass('viwe',true);
+				$('#infobox-contact').toggleClass('viwe',true);
 				$('#infobox-works').toggleClass('viwe',false);
-				$('.infobox-about').toggleClass('viwe',false);
+				$('#infobox-about').toggleClass('viwe',false);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
 					$(".textC").addClass("showtitle");
@@ -589,7 +605,7 @@
 
 
 
-      <div class=infobox-about>
+      <div id="infobox-about">
       </div>
 
 
@@ -655,7 +671,7 @@
 			</div>
 
 
-			<div class=infobox-contact>
+			<div id=infobox-contact>
 					<p>0909-689-432</p>
 					<p>letsohyeah@gmail.com</p>
 			</div>
@@ -725,7 +741,22 @@
 		<div class="rightbox Works" id="WorksR">
 			<div id="1">
 				<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
-				<div class="date-works">6.2018</div>
+				<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
+				<div class="imgbox1-works">
+					<figure>
+						<img class="lazy img-responsive" data-original="https://imgur.com/xkothfN.png" width="100%">
+					</figure>
+				</div>
+				<div class="imgbox1-works">
+					<figure>
+						<img class="lazy img-responsive" data-original="https://imgur.com/Lt1nuU9.png" width="100%">
+					</figure>
+				</div>
+				<div class="imgbox1-works">
+					<figure>
+						<img class="lazy img-responsive" data-original="https://imgur.com/GMo5YLk.png" width="100%">
+					</figure>
+				</div>
 			</div>
 
 		</div>
@@ -747,16 +778,32 @@
 		var yB = document.getElementById("infobox-works").scrollBottom;
 		var topH = document.getElementById('topbox').offsetHeight;
 		var infoH = document.getElementById('infobox-works').offsetHeight;
-		if (document.getElementById("infobox-works").scrollTop) {
+		if (document.getElementById("infobox-works").scrollTop > 80) {
 			document.getElementById("topbox").style.height = "calc(38.7vh - 22.6vh)";
 			document.getElementById("logobox").style.display = "none";
 			document.getElementById("navbox").style.flexDirection = "row";
+			document.getElementById("nav").style.justifyContent = "space-around";
 			document.getElementById("navbox").style.height = "5rem";
-			document.getElementById("nav").style.height = "calc(38.7vh - 22.6vh)";
+			document.getElementById("nav").style.height = "5rem";
 			document.getElementById("nav").style.flexDirection = "row";
 			document.getElementById("titlebox").style.width = "calc(100vh - 61.3vh)";
+			document.getElementById("titlebox").style.height = "5rem";
 			document.getElementById("nav").style.width = "100%";
-			document.getElementById("infobox-works").style.height = "calc( 100vh - 16.1vh )";
+			document.getElementById("infobox-works").style.height = "calc( 100vh - 5rem )";
+			document.getElementById("infobox-about").style.height = "calc( 100vh - 5rem )";
+			document.getElementById("infobox-contact").style.height = "calc( 100vh - 5rem )";
+		}else {
+			document.getElementById("infobox-works").style.height = "calc(100vh - 38.7vh)";
+			document.getElementById("infobox-about").style.height = "calc(100vh - 38.7vh)";
+			document.getElementById("infobox-contact").style.height = "calc(100vh - 38.7vh)";
+			document.getElementById("topbox").style.height = "calc(100vh - 61.3vh)";
+			document.getElementById("navbox").style.height = "calc(100vh - 61.3vh)";
+			document.getElementById("nav").style.height = "calc(61.3vh - 38.7vh)";
+			document.getElementById("nav").style.flexDirection = "column";
+			document.getElementById("navbox").style.flexDirection = "column";
+			document.getElementById("logobox").style.display = "flex";
+			document.getElementById("titlebox").style.width = "100%";
+			document.getElementById("titlebox").style.height = "calc(38.7vh - 22.6vh)";
 		}
 
 
