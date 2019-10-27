@@ -210,7 +210,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	#infobox-about.viwe{
+	#infobox-about.view{
 		transform: translateY(0%);
 		z-index: 100;
 	}
@@ -227,7 +227,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	.rightbox.about.viwe{
+	.rightbox.about.view{
 		transform: translateX(0);
 		z-index: 1000;
 	}
@@ -320,7 +320,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	#infobox-works.viwe{
+	#infobox-works.view{
 		transform: translateY(0%);
 		z-index: 100;
 	}
@@ -337,7 +337,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	.rightbox.works.viwe{
+	.rightbox.works.view{
 		transform: translateX(0);
 		z-index : 100;
 	}
@@ -422,7 +422,7 @@
 		transition: 0.3s ease-in-out;
 		z-index: 1;
 	}
-	#infobox-contact.viwe{
+	#infobox-contact.view{
 		transform: translateY(0%);
 		z-index: 100;
 	}
@@ -490,17 +490,17 @@
 			$('body').fadeIn(1400);
 		});
 		$(document).ready(function(){
-			$('#infobox-about').toggleClass('viwe',true);
-			$('.rightbox.about').toggleClass('viwe',true);
+			$('#infobox-about').toggleClass('view',true);
+			$('.rightbox.about').toggleClass('view',true);
 			$('.bar').addClass('move');
 			$(".textA").addClass("showtitle");
 			$('#click-a').click(function(){
 				var delayInMilliseconds = 250;
-				$('.rightbox.about').toggleClass('viwe',true);
-				$('.rightbox.works').removeClass('viwe');
-				$('#infobox-about').toggleClass('viwe',true);
-				$('#infobox-works').toggleClass('viwe',false);
-				$('#infobox-contact').toggleClass('viwe',false);
+				$('.rightbox.about').toggleClass('view',true);
+				$('.rightbox.works').removeClass('view');
+				$('#infobox-about').toggleClass('view',true);
+				$('#infobox-works').toggleClass('view',false);
+				$('#infobox-contact').toggleClass('view',false);
 				$('.bar').toggleClass('move',true);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
@@ -520,9 +520,9 @@
 		$(document).ready(function(){
 			$('#click-w').click(function(){
 				var delayInMilliseconds = 250;
-				$('#infobox-works').toggleClass('viwe',true);
-				$('#infobox-about').toggleClass('viwe',false);
-				$('#infobox-contact').toggleClass('viwe',false);
+				$('#infobox-works').toggleClass('view',true);
+				$('#infobox-about').toggleClass('view',false);
+				$('#infobox-contact').toggleClass('view',false);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
 					$(".textW").addClass("showtitle");
@@ -541,9 +541,9 @@
 		$(document).ready(function(){
 			$('#click-c').click(function(){
 				var delayInMilliseconds = 250;
-				$('#infobox-contact').toggleClass('viwe',true);
-				$('#infobox-works').toggleClass('viwe',false);
-				$('#infobox-about').toggleClass('viwe',false);
+				$('#infobox-contact').toggleClass('view',true);
+				$('#infobox-works').toggleClass('view',false);
+				$('#infobox-about').toggleClass('view',false);
 				$("div#title").addClass("move-title");
 				setTimeout(function() {
 					$(".textC").addClass("showtitle");
@@ -561,9 +561,29 @@
 
 		$(document).ready(function(){
 			$('#1bt').click(function(){
-				$('.rightbox.works').toggleClass('viwe',true);
-				$('.rightbox.about').removeClass('viwe');
-				$('.rightbox.contact').removeClass('viwe');
+				$('#1').toggleClass('view',true);
+				$('#2').removeClass('view');
+				$('#3').removeClass('view');
+				$('.rightbox.about').removeClass('view');
+				$('.rightbox.contact').removeClass('view');
+			});
+		});
+		$(document).ready(function(){
+			$('#2bt').click(function(){
+				$('#2').toggleClass('view',true);
+				$('#1').removeClass('view');
+				$('#3').removeClass('view');
+				$('.rightbox.about').removeClass('view');
+				$('.rightbox.contact').removeClass('view');
+			});
+		});
+		$(document).ready(function(){
+			$('#3bt').click(function(){
+				$('#3').toggleClass('view',true);
+				$('#2').removeClass('view');
+				$('#1').removeClass('view');
+				$('.rightbox.about').removeClass('view');
+				$('.rightbox.contact').removeClass('view');
 			});
 		});
 	</script>
@@ -620,15 +640,15 @@
               <div class="name-works" id="zh-item">Natural n' Vintage官網</div>
           </div>
 					<div class="item">
-              <a class="imgbox-works hover">
+              <a class="imgbox-works hover" id="2bt">
                 <figure>
                   <img src="https://imgur.com/y350aTs.png" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="name-works" id="zh-item">Side Chair海報</div>
           </div>
           <div class="item">
-              <a class="imgbox-works hover">
+              <a class="imgbox-works hover" id="2bt">
                 <figure>
                   <img src="https://imgur.com/S0m3LOe.png" width="100%">
                 </figure>
@@ -681,7 +701,7 @@
 
 
 
-		<div class="rightbox about" id="AboutR">
+		<div class="rightbox about">
 			<div class="titlebox-skills">Skills</div>
 			<div class="skillsgrid">
 				<div class="skillsbox">
@@ -738,8 +758,8 @@
 		</div>
 
 
-		<div class="rightbox Works" id="WorksR">
-			<div id="1">
+		<div class="rightbox Works" id="1">
+			<div >
 				<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
 				<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
 				<div class="imgbox1-works">
@@ -758,8 +778,32 @@
 					</figure>
 				</div>
 			</div>
-
 		</div>
+		<div class="rightbox Works" id="2">
+			<div>
+				<div class="titlebox-works">Side Chair海報</div>
+				<div class="date-works">12.2018<br>graphic design</div>
+				<div class="imgbox1-works">
+					<figure>
+						<img class="lazy img-responsive" data-original="https://imgur.com/y350aTs.png" width="100%">
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="rightbox Works" id="3">
+			<div>
+				<div class="titlebox-works">New Antiques Online</div>
+				<div class="date-works">8.2018<br>graphic design</div>
+				<div class="imgbox1-works">
+					<figure>
+						<img class="lazy img-responsive" data-original="https://imgur.com/y350aTs.png" width="100%">
+					</figure>
+				</div>
+			</div>
+		</div>
+
+
+
 	</div>
 	<script src="js/waterfall.min.js"></script>
 	<script>
@@ -800,13 +844,12 @@
 			document.getElementById("navbox").style.height = "calc(100vh - 61.3vh)";
 			document.getElementById("nav").style.height = "calc(61.3vh - 38.7vh)";
 			document.getElementById("nav").style.flexDirection = "column";
+			document.getElementById("nav").style.justifyContent = "center";
 			document.getElementById("navbox").style.flexDirection = "column";
 			document.getElementById("logobox").style.display = "flex";
 			document.getElementById("titlebox").style.width = "100%";
 			document.getElementById("titlebox").style.height = "calc(38.7vh - 22.6vh)";
 		}
-
-
 	}
 
   </script>
