@@ -8,13 +8,17 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script type="text/javascript" charset="utf-8">
-		$(window).ready(function() {
-				$("img.lazy").lazyload({
-						effect : "fadeIn"
-				});
-		});
+	$(document).ready(function () {
+		$("img")
+			 .lazyload({
+					 event: "lazyload",
+					 effect: "fadeIn",
+					 effectspeed: 500
+				 })
+			 .trigger("lazyload");
+});
 	</script>
-	<title> Test - Natural n' Vintage </title>
+	<title> ㄌㄌ - 賴廷昱 </title>
 	<style>
 	@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 	@font-face {
@@ -559,34 +563,22 @@
 			});
 		});
 
-		$(document).ready(function(){
-			$('#1bt').click(function(){
-				$('#1').toggleClass('view',true);
-				$('#2').removeClass('view');
-				$('#3').removeClass('view');
-				$('.rightbox.about').removeClass('view');
-				$('.rightbox.contact').removeClass('view');
-			});
-		});
-		$(document).ready(function(){
-			$('#2bt').click(function(){
-				$('#2').toggleClass('view',true);
-				$('#1').removeClass('view');
-				$('#3').removeClass('view');
-				$('.rightbox.about').removeClass('view');
-				$('.rightbox.contact').removeClass('view');
-			});
-		});
-		$(document).ready(function(){
-			$('#3bt').click(function(){
-				$('#3').toggleClass('view',true);
-				$('#2').removeClass('view');
-				$('#1').removeClass('view');
-				$('.rightbox.about').removeClass('view');
-				$('.rightbox.contact').removeClass('view');
-			});
-		});
+
+
+		$(document).ready(function() {
+			 $('.waterfall a').each(function(){
+							 $(this).click(
+									 function(){
+										 var id = $(this).attr('id');
+										 $('#A' + id ).toggleClass('view',true);
+										 $('#A' + id ).siblings().toggleClass('view',false);
+											 });
+					 });
+});
+
 	</script>
+
+
 	<div class="loadingbox" id="overlay">
 		<div class="linebox">
 			<div class="line1"></div>
@@ -632,61 +624,62 @@
 			<div id="infobox-works" onscroll="scrollFunction()">
 				<div class="waterfall">
           <div class="item">
-              <a class="imgbox-works hover" id="1bt">
+              <a class="imgbox-works hover" id="1">
                 <figure>
-                  <img src="https://imgur.com/jtBIQzX.png" width="100%">
+                  <img src="https://imgur.com/0TTpgFE.png" width="100%">
                 </figure>
               </a>
               <div class="name-works" id="zh-item">Natural n' Vintage官網</div>
           </div>
 					<div class="item">
-              <a class="imgbox-works hover" id="2bt">
+              <a class="imgbox-works hover" id="2">
                 <figure>
-                  <img src="https://imgur.com/y350aTs.png" width="100%">
+                  <img src="https://imgur.com/1VbHJcf.png" width="100%">
                 </figure>
               </a>
               <div class="name-works" id="zh-item">Side Chair海報</div>
           </div>
           <div class="item">
-              <a class="imgbox-works hover" id="2bt">
+              <a class="imgbox-works hover" id="3">
                 <figure>
-                  <img src="https://imgur.com/S0m3LOe.png" width="100%">
+                  <img src="https://imgur.com/HNg3XsA.png" width="100%">
                 </figure>
               </a>
               <div class="name-works" id="zh-item">New Antiques Online</div>
           </div>
 					<div class="item">
-              <a class="imgbox-works hover">
+              <a class="imgbox-works hover" id="4">
                 <figure>
-                  <img src="https://imgur.com/rggf2tx.png" width="100%">
+                  <img src="https://imgur.com/u9vjgiU.png" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="name-works" id="zh-item">國立聯合大學<br>45週年校慶</div>
           </div>
 					<div class="item">
-              <a class="imgbox-works hover">
+              <a class="imgbox-works hover" id="5">
                 <figure>
-									<img src="https://imgur.com/746EC3g.png" width="100%">
+                  <img src="https://imgur.com/KLUcuNF.png" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="name-works" id="zh-item">國立聯合大學<br>44週年校慶</div>
           </div>
 					<div class="item">
-              <a class="imgbox-works hover">
+              <a class="imgbox-works hover" id="6">
                 <figure>
-                  <img src="https://imgur.com/XvIby2A.png" width="100%">
+									<img src="https://imgur.com/OX8Dp0p.png" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="name-works" id="zh-item"><span id="en-item">NUR / SCHO KO</div>
           </div>
 					<div class="item">
-              <a class="imgbox-works hover">
+              <a class="imgbox-works hover" id="7">
                 <figure>
-                  <img src="https://imgur.com/S0m3LOe.png" width="100%">
+                  <img src="https://imgur.com/5yrQibe.png" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item"><span id="en-item">EverNew</span>學生便當盒</div>
+              <div class="name-works" id="zh-item">初夜</div>
           </div>
+
 				 </div>
 			</div>
 
@@ -700,107 +693,212 @@
     </div>
 
 
+		<ul>
+			<li class="rightbox about">
+				<div class="titlebox-skills">Skills</div>
+				<div class="skillsgrid">
+					<div class="skillsbox">
+						<div class="typebox">
+							Graphic Design
+							<div class="barbox">
+								<div class="bar move" style="width:80%;"></div><p> 80</p>
+							</div>
+						</div>
+						<div class="typebox">
+							Photograph
+							<div class="barbox">
+							 <div class="bar move" style="width:75%;"></div><p> 75</p>
+							</div>
+						</div>
+						<div class="typebox">
+							Film Editing
+							<div class="barbox">
+							 <div class="bar move" style="width:30%;"></div><p> 30</p>
+							</div>
+						</div>
+					</div>
+					<div class="skillstitle">Comercial Design</div>
+				</div>
+				<div class="skillsgrid">
+					<div class="skillsbox">
+						<div class="typebox">
+							UI / Graphic Design
+							<div class="barbox">
+								<div class="bar move" style="width:80%;"></div><p> 80</p>
+							</div>
+						</div>
+						<div class="typebox">
+							UX
+							<div class="barbox">
+							 <div class="bar move" style="width:65%;"></div><p> 65</p>
+							</div>
+						</div>
+						<div class="typebox">
+							HTML / CSS
+							<div class="barbox">
+							 <div class="bar move" style="width:75%;"></div><p> 75</p>
+							</div>
+						</div>
+						<div class="typebox">
+							Javascript / JQuery
+							<div class="barbox">
+							 <div class="bar move" style="width:45%;"></div><p> 45</p>
+							</div>
+						</div>
+					</div>
+					<div class="skillstitle">Web</div>
+				</div>
+			</li>
 
-		<div class="rightbox about">
-			<div class="titlebox-skills">Skills</div>
-			<div class="skillsgrid">
-				<div class="skillsbox">
-					<div class="typebox">
-						Graphic Design
-						<div class="barbox">
-							<div class="bar move" style="width:80%;"></div><p> 80</p>
-						</div>
-					</div>
-					<div class="typebox">
-						Photograph
-						<div class="barbox">
-						 <div class="bar move" style="width:75%;"></div><p> 75</p>
-						</div>
-					</div>
-					<div class="typebox">
-						Film Editing
-						<div class="barbox">
-						 <div class="bar move" style="width:30%;"></div><p> 30</p>
-						</div>
-					</div>
-				</div>
-				<div class="skillstitle">Comercial Design</div>
-			</div>
-			<div class="skillsgrid">
-				<div class="skillsbox">
-					<div class="typebox">
-						UI / Graphic Design
-						<div class="barbox">
-							<div class="bar move" style="width:80%;"></div><p> 80</p>
-						</div>
-					</div>
-					<div class="typebox">
-						UX
-						<div class="barbox">
-						 <div class="bar move" style="width:65%;"></div><p> 65</p>
-						</div>
-					</div>
-					<div class="typebox">
-						HTML / CSS
-						<div class="barbox">
-						 <div class="bar move" style="width:75%;"></div><p> 75</p>
-						</div>
-					</div>
-					<div class="typebox">
-						Javascript / JQuery
-						<div class="barbox">
-						 <div class="bar move" style="width:45%;"></div><p> 45</p>
-						</div>
-					</div>
-				</div>
-				<div class="skillstitle">Web</div>
-			</div>
-		</div>
 
-
-		<div class="rightbox Works" id="1">
-			<div >
-				<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
-				<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
-				<div class="imgbox1-works">
-					<figure>
-						<img class="lazy img-responsive" data-original="https://imgur.com/xkothfN.png" width="100%">
-					</figure>
+			<li class="rightbox Works" id="A1">
+				<div >
+					<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
+					<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/xkothfN.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/Lt1nuU9.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/GMo5YLk.png" width="100%">
+						</figure>
+					</div>
 				</div>
-				<div class="imgbox1-works">
-					<figure>
-						<img class="lazy img-responsive" data-original="https://imgur.com/Lt1nuU9.png" width="100%">
-					</figure>
+			</li>
+			<li class="rightbox Works" id="A2">
+				<div>
+					<div class="titlebox-works">Side Chair海報</div>
+					<div class="date-works">12.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/y350aTs.png" width="100%">
+						</figure>
+					</div>
 				</div>
-				<div class="imgbox1-works">
-					<figure>
-						<img class="lazy img-responsive" data-original="https://imgur.com/GMo5YLk.png" width="100%">
-					</figure>
+			</li>
+			<li class="rightbox Works" id="A3">
+				<div>
+					<div class="titlebox-works">New<br>Antiques<br>Online!</div>
+					<div class="date-works">8.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/S0m3LOe.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/LnzfGFZ.png" width="100%">
+						</figure>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="rightbox Works" id="2">
-			<div>
-				<div class="titlebox-works">Side Chair海報</div>
-				<div class="date-works">12.2018<br>graphic design</div>
-				<div class="imgbox1-works">
-					<figure>
-						<img class="lazy img-responsive" data-original="https://imgur.com/y350aTs.png" width="100%">
-					</figure>
+			</li>
+			<li class="rightbox Works" id="A4">
+				<div>
+					<div class="titlebox-works">國立聯合大學<br>45週年校慶</div>
+					<div class="date-works">11.2017<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/YrZxc1G.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/PaJ3goJ.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/Yn24LlM.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/CGja3Bo.png" width="100%">
+						</figure>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="rightbox Works" id="3">
-			<div>
-				<div class="titlebox-works">New Antiques Online</div>
-				<div class="date-works">8.2018<br>graphic design</div>
-				<div class="imgbox1-works">
-					<figure>
-						<img class="lazy img-responsive" data-original="https://imgur.com/y350aTs.png" width="100%">
-					</figure>
+			</li>
+			<li class="rightbox Works" id="A5">
+				<div>
+					<div class="titlebox-works">國立聯合大學<br>44週年校慶</div>
+					<div class="date-works">11.2016<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/JQE9f3y.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/7ewpwNL.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/cZ0x4NV.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/ep3Mscj.png" width="100%">
+						</figure>
+					</div>
 				</div>
-			</div>
-		</div>
+			</li>
+			<li class="rightbox Works" id="A6">
+				<div>
+					<div class="titlebox-works">NUR<br>/<br>SCHO<br>KO</div>
+					<div class="date-works">4.2016<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/ZwzlGIe.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/eglCjU0.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/4ZZ00Mp.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/yqxLjGh.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A7">
+				<div>
+					<div class="titlebox-works">初夜</div>
+					<div class="date-works">9.2016<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/PzyVivr.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/fEwyOSb.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/LTONbw8.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+		</ul>
 
 
 
