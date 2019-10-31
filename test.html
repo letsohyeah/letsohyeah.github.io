@@ -9,14 +9,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script type="text/javascript" charset="utf-8">
 	$(document).ready(function () {
-		$("img")
-			 .lazyload({
-					 event: "lazyload",
-					 effect: "fadeIn",
-					 effectspeed: 500
-				 })
-			 .trigger("lazyload");
-});
+		$("img.lazy").lazyload({
+			effect : "fadeIn"
+		});
+	});
 	</script>
 	<title> ㄌㄌ - 賴廷昱 </title>
 	<style>
@@ -572,6 +568,7 @@
 										 var id = $(this).attr('id');
 										 $('#A' + id ).toggleClass('view',true);
 										 $('#A' + id ).siblings().toggleClass('view',false);
+										 $("#A" + id + " .lazy").trigger('appear');
 											 });
 					 });
 });
@@ -757,17 +754,17 @@
 					<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/xkothfN.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/0N5OlTS.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/Lt1nuU9.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/cyrmfoH.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/GMo5YLk.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/M3WHaTx.png" width="100%">
 						</figure>
 					</div>
 				</div>
@@ -778,7 +775,7 @@
 					<div class="date-works">12.2018<br>graphic design</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/y350aTs.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/uA76D2P.png" width="100%">
 						</figure>
 					</div>
 				</div>
@@ -789,12 +786,12 @@
 					<div class="date-works">8.2018<br>graphic design</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/S0m3LOe.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/PMkTKHb.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/LnzfGFZ.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/0n12ICb.png" width="100%">
 						</figure>
 					</div>
 				</div>
@@ -805,7 +802,7 @@
 					<div class="date-works">11.2017<br>graphic design</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/YrZxc1G.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/ZyBVYGJ.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
@@ -836,17 +833,17 @@
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/7ewpwNL.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/BnnWUFY.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/cZ0x4NV.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/LFm7obU.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/ep3Mscj.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/1pJJPg4.png" width="100%">
 						</figure>
 					</div>
 				</div>
@@ -888,12 +885,12 @@
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/fEwyOSb.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/O9JwdPp.png" width="100%">
 						</figure>
 					</div>
 					<div class="imgbox1-works">
 						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/LTONbw8.png" width="100%">
+							<img class="lazy img-responsive" data-original="https://imgur.com/uwHZB2u.png" width="100%">
 						</figure>
 					</div>
 				</div>
