@@ -206,6 +206,7 @@
 		display: -webkit-flex;
 		display: 				 flex;
 		flex-direction: column;
+		justify-content: space-around;
 		border-radius: 2rem;
 		background-color: #e2ded7;
 		transform: translateY(100%);
@@ -236,7 +237,7 @@
 	.titlebox-skills{
 		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 1.6rem;
-		font-weight: 500;
+		font-weight: 300;
 		letter-spacing: 0.1rem;
 		width: 100%;
 		text-align: right;
@@ -253,7 +254,7 @@
 		width: 100%;
 		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 1rem;
-		font-weight: 500;
+		font-weight: 300;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: 				 flex;
@@ -264,7 +265,7 @@
 		text-align: right;
 		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 1rem;
-		font-weight: 500;
+		font-weight: 300;
 		letter-spacing: 0.1rem;
 	}
 	.typebox{
@@ -309,20 +310,19 @@
 		line-height: 0.8rem;
 		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 1.2rem;
-		font-weight: 500;
-		letter-spacing: 0.1rem;
+		font-weight: 400;
+		letter-spacing: 0.2rem;
 	}
 	.en-name{
 		line-height: 2.1rem;
 		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 0.6rem;
-		font-weight: 500;
+		font-weight: 300;
 	}
 	.content-about{
-		margin-top: 3rem;
 		font-family: 'Noto Sans TC', sans-serif;
 		font-size: 0.8rem;
-		font-weight: 500;
+		font-weight: 300;
 		letter-spacing: 0.1rem;
 	}
 	/*About*/
@@ -637,10 +637,12 @@
 
 
       <div id="infobox-about">
-				<div class="name-about">賴廷昱</div>
-				<div class="en-name">Ting Yu,Lai</div>
+				<div>
+					<div class="name-about">賴廷昱</div>
+					<div class="en-name">Ting Yu,Lai</div>
+				</div>
 				<div class="content-about">
-					1994年出生於台中，現居於台北。<br>
+					1994年出生於台中，現居於台北。<br><br>
 					高中就讀台中高工製圖科，大學就讀國立聯合大學機械系。
 					自幼便對設計有興趣，於高中和大學就讀期間便自學設計相關技能與軟體。
 					大學實習於刀庫製造商吉輔企業擔任助理製圖員，
@@ -724,57 +726,58 @@
 		<ul>
 			<li class="rightbox about">
 				<div class="titlebox-skills">Skills</div>
-				<div class="skillsgrid">
-					<div class="skillsbox">
-						<div class="typebox">
-							Graphic Design
-							<div class="barbox">
-								<div class="bar move" style="width:80%;"></div><p> 80</p>
-							</div>
-						</div>
-						<div class="typebox">
-							Photograph
-							<div class="barbox">
-							 <div class="bar move" style="width:75%;"></div><p> 75</p>
-							</div>
-						</div>
-						<div class="typebox">
-							Film Editing
-							<div class="barbox">
-							 <div class="bar move" style="width:30%;"></div><p> 30</p>
-							</div>
-						</div>
-					</div>
-					<div class="skillstitle">Comercial Design</div>
-				</div>
+
 				<div class="skillsgrid">
 					<div class="skillsbox">
 						<div class="typebox">
 							UI / Graphic Design
 							<div class="barbox">
-								<div class="bar move" style="width:80%;"></div><p> 80</p>
+								<div class="bar move" style="width:80%;"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							UX
 							<div class="barbox">
-							 <div class="bar move" style="width:65%;"></div><p> 65</p>
+							 <div class="bar move" style="width:55%;"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							HTML / CSS
 							<div class="barbox">
-							 <div class="bar move" style="width:75%;"></div><p> 75</p>
+							 <div class="bar move" style="width:75%;"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							Javascript / JQuery
 							<div class="barbox">
-							 <div class="bar move" style="width:45%;"></div><p> 45</p>
+							 <div class="bar move" style="width:60%;"></div>
 							</div>
 						</div>
 					</div>
 					<div class="skillstitle">Web</div>
+				</div>
+				<div class="skillsgrid">
+					<div class="skillsbox">
+						<div class="typebox">
+							Graphic Design
+							<div class="barbox">
+								<div class="bar move" style="width:80%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							Photograph
+							<div class="barbox">
+							 <div class="bar move" style="width:75%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							Film Editing
+							<div class="barbox">
+							 <div class="bar move" style="width:30%;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="skillstitle">Comercial Design</div>
 				</div>
 			</li>
 
