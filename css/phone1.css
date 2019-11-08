@@ -192,7 +192,7 @@ body {
 
 /*About*/
 #infobox-about{
-	padding: 3rem;
+	padding: 2rem;
 	width: 100vw;
 	height: calc(100vh - 38.7vh);
 	bottom: 0;
@@ -214,8 +214,8 @@ body {
 }
 .rightbox.about{
 	width: 100vw;
-	overflow: scroll;
-	padding: 3rem;
+	height: auto;
+	padding: 2rem;
 	display: none;
 	flex-direction: column;
 	transform: translateX(100%);
