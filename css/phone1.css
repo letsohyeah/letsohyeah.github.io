@@ -330,7 +330,7 @@ body {
 	position: absolute;
 	height: calc(100vh - 38.7vh);
 	width: 100vw;
-	bottom: 0;
+	top: calc(100vh - 61.3vh);
 	border-radius: 2rem;
 	background-color: #e2ded7;
 	transform: translate3d(100%,0,0);
@@ -445,7 +445,7 @@ height: 0.8rem;
 	position: absolute;
 	height: calc(100vh - 38.7vh);
 	width: 100vw;
-	bottom: 0;
+	top: calc(100vh - 61.3vh);
 	padding: 3rem;
 	border-radius: 2rem;
 	background-color: #e2ded7;
