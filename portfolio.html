@@ -497,6 +497,10 @@
 			document.getElementById("titlebox").style.width = "calc(100vh - 61.3vh)";
 			document.getElementById("titlebox").style.height = "5rem";
 			document.getElementById("nav").style.width = "100%";
+			if ( $(window).width() < 767) {
+				document.getElementById("infobox-works").style.top = "5rem";
+				document.getElementById("infobox-contact").style.top = "5rem";
+			}
 			document.getElementById("infobox-works").style.height = "calc( 100vh - 5rem )";
 			document.getElementById("infobox-about").style.height = "calc( 100vh - 5rem )";
 			document.getElementById("infobox-contact").style.height = "calc( 100vh - 5rem )";
@@ -513,6 +517,10 @@
 			document.getElementById("logobox").style.display = "flex";
 			document.getElementById("titlebox").style.width = "100%";
 			document.getElementById("titlebox").style.height = "calc(38.7vh - 22.6vh)";
+			if ( $(window).width() < 767) {
+				document.getElementById("infobox-works").style.top = "calc(100vh - 61.3vh)";
+				document.getElementById("infobox-contact").style.top = "calc(100vh - 61.3vh)";
+			}
 		}
 	}
 	function closeFunction(){
