@@ -31,15 +31,24 @@ button{
 						margin: 0;
 						padding: 0;
 	}
-body,html{
+html {
 	overflow-x: hidden;
 	overflow-y: scroll;
-	position:relative;
-	width: 100vw;
+	height: 100%;
 	margin: 0;
 	padding: 0;
+	border: none;
 	background-color: #474849;
- }
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	height: 100%;
+}
 #overlay{
 	z-index: 10000;
 }
@@ -119,7 +128,7 @@ body,html{
 }
 #nav{
 	height: calc(61.3vh - 38.7vh);
-	padding: 2rem;
+	padding: 1.8rem;
 	border-bottom: 1px solid #474849;
 	border-radius: 2rem;
 	background-color: #e2ded7;
@@ -138,7 +147,7 @@ body,html{
 #titlebox{
 	transition: 0.4s;
 	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	font-weight: 800;
 	letter-spacing: 0.2rem;
 	height: calc(38.7vh - 22.6vh);
@@ -192,12 +201,12 @@ body,html{
 	justify-content: space-around;
 	border-radius: 2rem;
 	background-color: #e2ded7;
-	transform: translateX(100%);
+	opacity: 0;
 	transition: 0.3s ease-in-out;
 	z-index: 1;
 }
 #infobox-about.view{
-	transform: translateX(0%);
+	opacity: 1;
 	z-index: 100;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -206,7 +215,7 @@ body,html{
 .rightbox.about{
 	width: 100vw;
 	overflow: scroll;
-	padding: 5rem;
+	padding: 3rem;
 	display: none;
 	flex-direction: column;
 	transform: translateX(100%);
@@ -324,12 +333,14 @@ body,html{
 	bottom: 0;
 	border-radius: 2rem;
 	background-color: #e2ded7;
-	transform: translateX(100%);
+	transform: translate3d(100%,0,0);
+	-webkit-transform: translate3d(100%,0,0);
 	transition: 0.3s ease-in-out;
 	z-index: 1;
 }
 #infobox-works.view{
-	transform: translateX(0%);
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
 	z-index: 100;
 }
 .rightbox.works{
@@ -449,12 +460,14 @@ height: 0.8rem;
 	display: -webkit-flex;
 	display: 				 flex;
 	flex-direction: column;
-	transform: translateX(100%);
+	transform: translate3d(100%,0,0);
+	-webkit-transform: translate3d(100%,0,0);
 	transition: 0.3s ease-in-out;
 	z-index: 1;
 }
 #infobox-contact.view{
-	transform: translateX(0%);
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
 	z-index: 100;
 }
 /*CONTACT*/
