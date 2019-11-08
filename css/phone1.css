@@ -88,7 +88,6 @@ body {
 	border-radius: 2rem;
 	border-top: 1px solid #474849;
 	background-color: #e2ded7;
-	height: 100vh;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -105,8 +104,10 @@ body {
 	display: 				 flex;
 }
 #logobox{
-	min-width:  calc(100vh - 61.3vh);
-	height: calc(100vh - 61.3vh);
+	min-width:  38.7vh;
+	min-width:  calc(var(--vh, 1vh) * 38.7);
+	height: 38.7vh;
+	height: calc(var(--vh, 1vh) * 38.7);
 	border: 1px solid #474849;
 	background-color: #e2ded7;
 	border-radius: 2rem;
@@ -127,7 +128,8 @@ body {
 		 flex-direction: column;
 }
 #nav{
-	height: calc(61.3vh - 38.7vh);
+	height: 22.6vh;
+	height: calc(var(--vh, 1vh) * 22.6);
 	padding: 1.8rem;
 	border-bottom: 1px solid #474849;
 	border-radius: 2rem;
@@ -150,7 +152,8 @@ body {
 	font-size: 1.2rem;
 	font-weight: 800;
 	letter-spacing: 0.2rem;
-	height: calc(38.7vh - 22.6vh);
+	height: 16.1vh;
+	height: calc(var(--vh, 1vh) * 16.1);
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -194,7 +197,8 @@ body {
 #infobox-about{
 	padding: 2rem;
 	width: 100vw;
-	height: calc(100vh - 38.7vh);
+	height: 61.3vh;
+	height: calc(var(--vh, 1vh) * 61.3);
 	bottom: 0;
 	display: none;
 	flex-direction: column;
@@ -328,9 +332,11 @@ body {
 	padding-top: 1rem;
 	overflow: scroll;
 	position: absolute;
-	height: calc(100vh - 38.7vh);
+	height: 61.3vh;
+	height: calc(var(--vh, 1vh) * 61.3);
 	width: 100vw;
-	top: calc(100vh - 61.3vh);
+	top: 38.7vh;
+	top: calc(var(--vh, 1vh) * 38.7);
 	border-radius: 2rem;
 	background-color: #e2ded7;
 	transform: translate3d(100%,0,0);
@@ -443,9 +449,11 @@ height: 0.8rem;
 /*CONTACT*/
 #infobox-contact{
 	position: absolute;
-	height: calc(100vh - 38.7vh);
+	height: 61.3vh;
+	height: calc(var(--vh, 1vh) * 61.3);
 	width: 100vw;
-	top: calc(100vh - 61.3vh);
+	top: 38.7vh;
+	top: calc(var(--vh, 1vh) * 38.7);
 	padding: 3rem;
 	border-radius: 2rem;
 	background-color: #e2ded7;
