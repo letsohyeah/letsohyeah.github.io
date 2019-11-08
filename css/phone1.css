@@ -347,7 +347,7 @@ body {
 	overflow: scroll;
 	top: 0;
 	position: absolute;
-	padding: 5rem;
+	padding: 2rem;
 	display: none;
 	flex-direction: column;
 	transform: translateY(100%);
