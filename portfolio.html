@@ -520,10 +520,11 @@
 		}else {
 
 
-			document.getElementById("infobox-contact").style.height = "calc(var(--vh, 1vh) * 61.3)";
+
 			if ( $(window).width() < 767 ) {
-				document.getElementById("infobox-about").style.height = "auto";
+				document.getElementById("infobox-about").style.height = "100vw";
 				document.getElementById("infobox-works").style.height = "100%";
+				document.getElementById("infobox-contact").style.height = "100vw";
 				document.getElementById("topbox").style.height = "auto";
 				document.getElementById("navbox").style.height = "auto";
 				document.getElementById("nav").style.height = "38.7vw";
@@ -537,6 +538,7 @@
 				document.getElementById("navbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
 				document.getElementById("nav").style.height = "calc(var(--vh, 1vh) * 38.7)";
 				document.getElementById("titlebox").style.height = "calc(var(--vh, 1vh) * 16.1)";
+				document.getElementById("infobox-contact").style.height = "calc(var(--vh, 1vh) * 61.3)";
 			}
 			document.getElementById("nav").style.flexDirection = "column";
 			document.getElementById("nav").style.justifyContent = "center";
