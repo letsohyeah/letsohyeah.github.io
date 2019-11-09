@@ -500,7 +500,6 @@
 			document.getElementById("navbox").style.height = "5rem";
 			document.getElementById("nav").style.height = "5rem";
 			document.getElementById("nav").style.flexDirection = "row";
-			document.getElementById("titlebox").style.width = "38.7vh";
 			document.getElementById("titlebox").style.width = "calc(var(--vh, 1vh) * 38.7)";
 			document.getElementById("titlebox").style.height = "5rem";
 			document.getElementById("nav").style.width = "100%";
@@ -508,36 +507,24 @@
 				document.getElementById("infobox-works").style.top = "5rem";
 				document.getElementById("infobox-contact").style.top = "5rem";
 			}
-			document.getElementById("infobox-works").style.height = "calc( 100vh - 5rem )";
 			document.getElementById("infobox-works").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
-			document.getElementById("infobox-about").style.height = "calc( 100vh - 5rem )";
 			document.getElementById("infobox-about").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
-			document.getElementById("infobox-contact").style.height = "calc( 100vh - 5rem )";
 			document.getElementById("infobox-contact").style.height = "calc( var(--vh, 1vh) * 100 - 5rem ))";
 		}else {
-			document.getElementById("infobox-works").style.height = "61.3vh";
 			document.getElementById("infobox-works").style.height = "calc(var(--vh, 1vh) * 61.3)";
-			document.getElementById("infobox-about").style.height = "61.3vh";
 			document.getElementById("infobox-about").style.height = "calc(var(--vh, 1vh) * 61.3)";
-			document.getElementById("infobox-contact").style.height = "61.3vh";
 			document.getElementById("infobox-contact").style.height = "calc(var(--vh, 1vh) * 61.3)";
-			document.getElementById("topbox").style.height = "38.7vh";
 			document.getElementById("topbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
-			document.getElementById("navbox").style.height = "38.7vh";
 			document.getElementById("navbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
-			document.getElementById("nav").style.height = "38.7vh";
 			document.getElementById("nav").style.height = "calc(var(--vh, 1vh) * 38.7)";
 			document.getElementById("nav").style.flexDirection = "column";
 			document.getElementById("nav").style.justifyContent = "center";
 			document.getElementById("navbox").style.flexDirection = "column";
 			document.getElementById("logobox").style.display = "flex";
 			document.getElementById("titlebox").style.width = "100%";
-			document.getElementById("titlebox").style.height = "16.1vh";
 			document.getElementById("titlebox").style.height = "calc(var(--vh, 1vh) * 16.1)";
 			if ( $(window).width() < 767) {
-				document.getElementById("infobox-works").style.top = "38.7vh";
 				document.getElementById("infobox-works").style.top = "calc(var(--vh, 1vh) * 38.7)";
-				document.getElementById("infobox-contact").style.top = "38.7vh";
 				document.getElementById("infobox-contact").style.top = "calc(var(--vh, 1vh) * 38.7)";
 			}
 		}
