@@ -104,10 +104,8 @@ body {
 	display: 				 flex;
 }
 #logobox{
-	min-width:  38.7vh;
-	min-width:  calc(var(--vh, 1vh) * 38.7);
-	height: 38.7vh;
-	height: calc(var(--vh, 1vh) * 38.7);
+	min-width:  61.3vw;
+	height: 61.3vw;
 	border: 1px solid #474849;
 	background-color: #e2ded7;
 	border-radius: 2rem;
@@ -128,8 +126,7 @@ body {
 		 flex-direction: column;
 }
 #nav{
-	height: 22.6vh;
-	height: calc(var(--vh, 1vh) * 22.6);
+	height: 38.7vw;
 	padding: 1.8rem;
 	border-bottom: 1px solid #474849;
 	border-radius: 2rem;
@@ -152,8 +149,7 @@ body {
 	font-size: 1.2rem;
 	font-weight: 800;
 	letter-spacing: 0.2rem;
-	height: 16.1vh;
-	height: calc(var(--vh, 1vh) * 16.1);
+	height: 22.6vw;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -197,8 +193,6 @@ body {
 #infobox-about{
 	padding: 2rem;
 	width: 100vw;
-	height: 61.3vh;
-	height: calc(var(--vh, 1vh) * 61.3);
 	bottom: 0;
 	display: none;
 	flex-direction: column;
@@ -332,11 +326,9 @@ body {
 	padding-top: 1rem;
 	overflow: scroll;
 	position: absolute;
-	height: 61.3vh;
-	height: calc(var(--vh, 1vh) * 61.3);
+	height: 100%;
 	width: 100vw;
-	top: 38.7vh;
-	top: calc(var(--vh, 1vh) * 38.7);
+	top: 61.3vw;
 	border-radius: 2rem;
 	background-color: #e2ded7;
 	transform: translate3d(100%,0,0);
@@ -449,11 +441,9 @@ height: 0.8rem;
 /*CONTACT*/
 #infobox-contact{
 	position: absolute;
-	height: 61.3vh;
-	height: calc(var(--vh, 1vh) * 61.3);
+	height: 100vw;
 	width: 100vw;
-	top: 38.7vh;
-	top: calc(var(--vh, 1vh) * 38.7);
+	top: 61.3vw;
 	padding: 3rem;
 	border-radius: 2rem;
 	background-color: #e2ded7;
