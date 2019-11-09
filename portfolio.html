@@ -519,9 +519,10 @@
 			document.getElementById("infobox-contact").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
 		}else {
 
-			document.getElementById("infobox-about").style.height = "auto";
+
 			document.getElementById("infobox-contact").style.height = "calc(var(--vh, 1vh) * 61.3)";
 			if ( $(window).width() < 767 ) {
+				document.getElementById("infobox-about").style.height = "auto";
 				document.getElementById("infobox-works").style.height = "100%";
 				document.getElementById("topbox").style.height = "auto";
 				document.getElementById("navbox").style.height = "auto";
@@ -530,6 +531,7 @@
 				document.getElementById("infobox-works").style.top = "61.3vw";
 				document.getElementById("infobox-contact").style.top = "61.3vw";
 			}else {
+				document.getElementById("infobox-about").style.height = "calc(var(--vh, 1vh) * 61.3)";
 				document.getElementById("infobox-works").style.height = "calc(var(--vh, 1vh) * 61.3)";
 				document.getElementById("topbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
 				document.getElementById("navbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
