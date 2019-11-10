@@ -75,8 +75,8 @@ body {
 	background-color: #474849;
 	}
 .leftbox{
-	border-radius: 2rem;
 	width: 100vw;
+	height: auto;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
@@ -146,7 +146,7 @@ body {
 #titlebox{
 	transition: 0.4s;
 	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 600;
 	letter-spacing: 0.2rem;
 	height: 22.6vw;
@@ -315,6 +315,7 @@ body {
 	font-family: 'Noto Sans TC', sans-serif;
 	font-size: 0.6rem;
 	font-weight: 300;
+	margin-bottom: 3rem;
 }
 .content-about{
 	font-family: 'Noto Sans TC', sans-serif;
@@ -327,10 +328,10 @@ body {
 
 /*WORKS*/
 #infobox-works{
-	padding-top: 1rem;
+	padding: 1rem;
 	overflow: scroll;
 	position: absolute;
-	height: 100%;
+	height: calc( 100vh - 61.3vw );
 	width: 100vw;
 	top: 61.3vw;
 	border-radius: 2rem;
@@ -364,9 +365,8 @@ body {
 	display: 				 flex;
 }
 .item{
-	margin: 0.9rem;
-	width: 40%;
-	min-width: 150px;
+	margin: 0.5rem;
+	max-width: 45%;
 }
 .imgbox-works{
 	overflow: hidden;

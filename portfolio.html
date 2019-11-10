@@ -523,7 +523,7 @@
 
 			if ( $(window).width() < 767 ) {
 				document.getElementById("infobox-about").style.height = "100vw";
-				document.getElementById("infobox-works").style.height = "100%";
+				document.getElementById("infobox-works").style.height = "calc( var(--vh, 1vh) * 100 - 61.3vw )";
 				document.getElementById("infobox-contact").style.height = "100vw";
 				document.getElementById("topbox").style.height = "auto";
 				document.getElementById("navbox").style.height = "auto";
