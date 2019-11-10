@@ -192,7 +192,9 @@ body {
 /*About*/
 #infobox-about{
 	padding: 2rem;
-	height: 100vw;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	height: auto;
 	width: 100vw;
 	bottom: 0;
 	display: -moz-flex;
