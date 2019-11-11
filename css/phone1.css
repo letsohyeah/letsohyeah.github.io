@@ -260,12 +260,14 @@ body {
 	flex-direction: column;
 }
 .skillstitle{
-	margin-left: 4rem;
-	text-align: right;
+	padding-top: 0.6rem;
+	margin-left: 1rem;
+	text-align: left;
 	font-family: 'Noto Sans TC', sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	letter-spacing: 0.1rem;
+	writing-mode: vertical-rl;
 }
 .typebox{
 	width: 100%;
@@ -306,18 +308,25 @@ body {
 	letter-spacing: 0rem;
 }
 .name-about{
-	line-height: 0.8rem;
+	line-height: 1.6rem;
 	font-family: 'Noto Sans TC', sans-serif;
 	font-size: 1.2rem;
 	font-weight: 400;
 	letter-spacing: 0.1rem;
 }
 .en-name{
-	line-height: 2.1rem;
+	line-height: 1rem;
 	font-family: 'Noto Sans TC', sans-serif;
 	font-size: 0.6rem;
 	font-weight: 300;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
+}
+.subcontent-about{
+	color: #555;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 0.7rem;
+	font-weight: 300;
+	margin-bottom: 5rem;
 }
 .content-about{
 	font-family: 'Noto Sans TC', sans-serif;
@@ -330,7 +339,7 @@ body {
 
 /*WORKS*/
 #infobox-works{
-	padding: 1rem;
+	padding: 1rem 0.5rem;
 	overflow: scroll;
 	position: absolute;
 	height: calc( 100vh - 61.3vw );
@@ -353,22 +362,26 @@ body {
 	top: 0;
 	position: absolute;
 	padding: 2rem;
-	display: none;
+	width: 100vw;
+	height: auto;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: 				 flex;
 	flex-direction: column;
-	transform: translateY(100%);
+	transform: translate3d(300%,0,0);
+	-webkit-transform: translate3d(300%,0,0);
 	transition: 0.3s ease-in-out;
 	z-index: 1;
 }
 .rightbox.works.view{
-	transform: translateY(0);
-	z-index : 100;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: 				 flex;
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	z-index : 1000;
+
 }
 .item{
-	margin: 0.5rem;
-	max-width: 42%;
+	grid-column-gap: 0.5rem;
+	max-width: 45%;
 }
 .imgbox-works{
 	overflow: hidden;
