@@ -301,6 +301,13 @@ body{
   font-size: 0.6rem;
   font-weight: 300;
 }
+.subcontent-about{
+	color: #555;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 0.7rem;
+	font-weight: 300;
+	margin-bottom: 5rem;
+}
 .content-about{
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 0.8rem;
