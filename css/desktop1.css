@@ -135,7 +135,7 @@ body{
   transition: 0.4s;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.2rem;
   height: calc(38.7vh - 22.6vh);
   display: -moz-flex;
