@@ -360,10 +360,10 @@ body {
 .rightbox.works{
 	overflow: scroll;
 	top: 0;
-	position: absolute;
+	position: fixed;
 	padding: 2rem;
 	width: 100vw;
-	height: auto;
+	height: 100%;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: 				 flex;
