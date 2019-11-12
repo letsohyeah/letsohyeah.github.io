@@ -339,7 +339,7 @@ body {
 
 /*WORKS*/
 #infobox-works{
-	padding: 1rem 0.5rem;
+	padding: 1rem;
 	overflow: scroll;
 	position: absolute;
 	height: calc( 100vh - 61.3vw );
@@ -380,8 +380,9 @@ body {
 
 }
 .item{
-	grid-column-gap: 0.5rem;
+	grid-column-gap: 1rem;
 	max-width: 45%;
+	margin-bottom: 1.4rem;
 }
 .imgbox-works{
 	overflow: hidden;
