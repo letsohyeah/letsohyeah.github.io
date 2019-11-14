@@ -302,11 +302,11 @@ body{
   font-weight: 300;
 }
 .subcontent-about{
-	color: #555;
-	font-family: 'Noto Sans TC', sans-serif;
-	font-size: 0.7rem;
-	font-weight: 300;
-	margin-bottom: 5rem;
+  color: #555;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
 }
 .content-about{
   font-family: 'Noto Sans TC', sans-serif;
@@ -320,6 +320,8 @@ body{
 /*WORKS*/
 #infobox-works{
   padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   overflow: scroll;
   position: absolute;
   height: calc(100vh - 38.7vh);
@@ -353,9 +355,8 @@ body{
   z-index : 100;
 }
 .item{
-  margin: 0.9rem;
-  width: 40%;
-  min-width: 150px;
+  padding: 0.5rem;
+  width: calc(50vw - 1rem);
 }
 .imgbox-works{
   overflow: hidden;
