@@ -1,0 +1,705 @@
+<html lang="zh">
+<head>
+	<link href="http://naturalnvintage.com/css/phone1.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 0px) and (max-width: 736px)" />
+	<link href="http://naturalnvintage.com/css/desktop1.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 737px)" />
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="viewport" content="width=device-width">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(document).ready(function () {
+		$("img.lazy").lazyload({
+			effect : "fadeIn"
+		});
+	});
+	</script>
+	<script>
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		let vh = window.innerHeight * 0.01;
+		// Then we set the value in the --vh custom property to the root of the document
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+		// We listen to the resize event
+		window.addEventListener('resize', () => {
+		  // We execute the same script as before
+		  let vh = window.innerHeight * 0.01;
+		  document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+	</script>
+	<title> 賴廷昱 Laitingyu Portfolio </title>
+</head>
+<body>
+	<script>
+
+		$(window).load(function(){
+	   // PAGE IS FULLY LOADED
+	   // FADE OUT YOUR OVERLAYING DIV
+	   $('#overlay').fadeOut();
+		});
+
+		$(document).ready(function(){
+			$('body').css('display', 'none');
+			$('body').fadeIn(1400);
+		});
+		$(document).ready(function(){
+			$('#infobox-about').toggleClass('view',true);
+			$('.rightbox.about').toggleClass('view',true);
+			$('.bar').addClass('move');
+			$(".textA").addClass("showtitle");
+			$('#click-a').click(function(){
+				var delayInMilliseconds = 250;
+				$('.rightbox.about').toggleClass('view',true);
+				$('.rightbox.works').removeClass('view');
+				$('#infobox-about').toggleClass('view',true);
+				$('#infobox-works').toggleClass('view',false);
+				$('#infobox-contact').toggleClass('view',false);
+				$('.bar').toggleClass('move',true);
+				$("div#title").addClass("move-title");
+				setTimeout(function() {
+					$(".textA").addClass("showtitle");
+					$(".textW").removeClass("showtitle");
+					$(".textC").removeClass("showtitle");
+				}, delayInMilliseconds);
+			});
+			$('.bar').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move");
+			});
+			$('div#titleA').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move-title");
+			});
+		});
+
+		$(document).ready(function(){
+			$('#click-w').click(function(){
+				var delayInMilliseconds = 250;
+				$('#infobox-works').toggleClass('view',true);
+				$('#infobox-about').toggleClass('view',false);
+				$('#infobox-contact').toggleClass('view',false);
+				if ($(window).width() < 737) {
+					$('.rightbox.about').toggleClass('view',false);
+					$('.rightbox.works').toggleClass('view',false);
+				}
+				$("div#title").addClass("move-title");
+				setTimeout(function() {
+					$(".textW").addClass("showtitle");
+					$(".textA").removeClass("showtitle");
+					$(".textC").removeClass("showtitle");
+				}, delayInMilliseconds);
+			});
+			$('.bar').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move");
+			});
+			$('div#title').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move-title");
+			});
+		});
+
+		$(document).ready(function(){
+			$('#click-c').click(function(){
+				var delayInMilliseconds = 250;
+				$('#infobox-contact').toggleClass('view',true);
+				$('#infobox-works').toggleClass('view',false);
+				$('#infobox-about').toggleClass('view',false);
+				if ($(window).width() < 737) {
+					$('.rightbox.about').toggleClass('view',false);
+					$('.rightbox.works').toggleClass('view',false);
+				}
+				$("div#title").addClass("move-title");
+				setTimeout(function() {
+					$(".textC").addClass("showtitle");
+					$(".textA").removeClass("showtitle");
+					$(".textW").removeClass("showtitle");
+				}, delayInMilliseconds);
+			});
+			$('.bar').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move");
+			});
+			$('div#title').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+					 $(this).removeClass("move-title");
+			});
+		});
+
+
+
+		$(document).ready(function() {
+			 $('.waterfall a').each(function(){
+							 $(this).click(
+									 function(){
+										 var id = $(this).attr('id');
+										 $('#A' + id ).toggleClass('view',true);
+										 $('#A' + id ).siblings().toggleClass('view',false);
+										 $("#A" + id + " .lazy").trigger('appear');
+											 });
+					 });
+});
+
+	</script>
+
+
+	<div class="loadingbox" id="overlay">
+		<div class="linebox">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+		<div class="linebox">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+
+	<div class="cleanfix">
+    <div class="leftbox">
+      <div id="topbox">
+        <div id="logobox">
+          <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%";>
+        </div>
+        <div id="navbox">
+          <div id="nav">
+						<a id="click-a">321</a>
+						<a id="click-w">Works</a>
+						<a id="click-c">Contact</a>
+          </div>
+          <div id="titlebox">
+						<div class="titlebar" id="title"></div>
+            <div class="textA">About</div>
+						<div class="textW">Works</div>
+						<div class="textC">Contact</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div id="infobox-about">
+				<div>
+					<div class="name-about">賴廷昱</div>
+					<div class="en-name">Ting Yu,Lai</div>
+				</div>
+				<div class="subcontent-about">
+					25歲<br>
+					台中高工製圖科 , 國立聯合大學機械工程學系<br>
+					吉輔企業 , Natural n' Vintage
+				</div>
+				<div class="content-about">
+					1994年出生於台中，現居於台北。<br><br>
+					高中就讀台中高工製圖科，大學就讀國立聯合大學機械系。
+					自幼便對設計有興趣，於高中和大學就讀期間便自學設計相關技能與軟體。
+					大學實習於刀庫製造商吉輔企業擔任助理製圖員，
+					畢業後任職於Natural n' Vintage，負責網頁、平面文宣、攝影、銷售等事務。
+				</div>
+      </div>
+
+
+			<div id="infobox-works" onscroll="scrollFunction()">
+				<div class="waterfall">
+          <div class="item">
+              <a class="imgbox-works hover" id="1">
+                <figure>
+                  <img src="https://imgur.com/0TTpgFE.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">Natural n' Vintage官網</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="11">
+                <figure>
+                  <img src="https://imgur.com/eH0OrM0.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">facebook行銷組圖</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="8">
+                <figure>
+                  <img src="https://imgur.com/RqYiOWH.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">NUU Club貼紙</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="10">
+                <figure>
+                  <img src="https://imgur.com/yxZIS4o.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">聯大華文系歡迎頁</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="12">
+                <figure>
+                  <img src="https://imgur.com/av4oGMq.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">估價單設計</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="2">
+                <figure>
+                  <img src="https://imgur.com/1VbHJcf.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">Side Chair海報</div>
+          </div>
+          <div class="item">
+              <a class="imgbox-works hover" id="3">
+                <figure>
+                  <img src="https://imgur.com/HNg3XsA.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">New Antiques Online</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="9">
+                <figure>
+                  <img src="https://imgur.com/T8bbudk.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">聯大吉祥物提案</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="4">
+                <figure>
+                  <img src="https://imgur.com/u9vjgiU.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">國立聯合大學<br>45週年校慶</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="5">
+                <figure>
+                  <img src="https://imgur.com/KLUcuNF.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">國立聯合大學<br>44週年校慶</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="6">
+                <figure>
+									<img src="https://imgur.com/OX8Dp0p.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item"><span id="en-item">NUR / SCHO KO</div>
+          </div>
+					<div class="item">
+              <a class="imgbox-works hover" id="7">
+                <figure>
+                  <img src="https://imgur.com/5yrQibe.png" width="100%">
+                </figure>
+              </a>
+              <div class="name-works" id="zh-item">初夜</div>
+          </div>
+
+				 </div>
+			</div>
+
+
+			<div id=infobox-contact>
+					<p>0909-689-432</p>
+					<p>letsohyeah@gmail.com</p>
+			</div>
+
+
+    </div>
+
+
+		<ul>
+			<li class="rightbox about">
+				<div class="titlebox-skills">Skills</div>
+
+				<div class="skillsgrid">
+					<div class="skillsbox">
+						<div class="typebox">
+							UI / Graphic Design
+							<div class="barbox">
+								<div class="bar move" style="width:80%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							UX
+							<div class="barbox">
+							 <div class="bar move" style="width:70%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							HTML / CSS
+							<div class="barbox">
+							 <div class="bar move" style="width:75%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							Javascript / JQuery
+							<div class="barbox">
+							 <div class="bar move" style="width:60%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							Vue.js
+							<div class="barbox">
+							 <div class="bar move" style="width:40%;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="skillstitle">Web</div>
+				</div>
+				<div class="skillsgrid">
+					<div class="skillsbox">
+						<div class="typebox">
+							Graphic Design
+							<div class="barbox">
+								<div class="bar move" style="width:80%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							Photograph
+							<div class="barbox">
+							 <div class="bar move" style="width:75%;"></div>
+							</div>
+						</div>
+						<div class="typebox">
+							Film Editing
+							<div class="barbox">
+							 <div class="bar move" style="width:35%;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="skillstitle">Comercial Design</div>
+				</div>
+			</li>
+
+
+			<li class="rightbox Works" id="A1">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
+					<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/90a3s1n.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/C80aZOZ.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/0N5OlTS.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/cyrmfoH.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/M3WHaTx.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A2">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">Side Chair海報</div>
+					<div class="date-works">12.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/uA76D2P.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A3">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">New<br>Antiques<br>Online!</div>
+					<div class="date-works">8.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/PMkTKHb.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/0n12ICb.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A4">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">國立聯合大學<br>45週年校慶</div>
+					<div class="date-works">11.2017<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/ZyBVYGJ.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/PaJ3goJ.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/Yn24LlM.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/CGja3Bo.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A5">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">國立聯合大學<br>44週年校慶</div>
+					<div class="date-works">11.2016<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/JQE9f3y.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/BnnWUFY.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/LFm7obU.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/1pJJPg4.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A6">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">NUR<br>/<br>SCHO<br>KO</div>
+					<div class="date-works">4.2016<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/ZwzlGIe.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/eglCjU0.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/4ZZ00Mp.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/yqxLjGh.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A7">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">初夜</div>
+					<div class="date-works">9.2016<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/PzyVivr.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/O9JwdPp.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/uwHZB2u.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A8">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">NUU Club貼紙</div>
+					<div class="date-works">10.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/RqYiOWH.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/NO668BD.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/W0H5qYk.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A9">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">聯大吉祥物提案</div>
+					<div class="date-works">6.2017<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/T8bbudk.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/Dl5Wx77.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A10">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">聯大華文系歡迎頁</div>
+					<div class="date-works">6.2019<br>web design / front-end</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/vZyEXFC.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/HpQXdgm.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A11">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">facebook行銷組圖</div>
+					<div class="date-works">11.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/M9oUCYq.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/1tYvoAC.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+			<li class="rightbox Works" id="A12">
+				<div>
+					<div class="close" onclick="closeFunction()"></div>
+					<div class="titlebox-works">估價單設計</div>
+					<div class="date-works">11.2018<br>graphic design</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/av4oGMq.png" width="100%">
+						</figure>
+					</div>
+					<div class="imgbox1-works">
+						<figure>
+							<img class="lazy img-responsive" data-original="https://imgur.com/gPTv1gd.png" width="100%">
+						</figure>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+
+
+	</div>
+	<script src="js/waterfall.min.js"></script>
+	<script>
+    var grid = document.querySelector('.waterfall');
+		$(window).load(function(){
+	 		waterfall(grid);
+		});
+		window.addEventListener('resize', function () {
+			waterfall(grid);
+		});
+  </script>
+	<script>
+
+	function scrollFunction() {
+		var yU = document.getElementById("infobox-works").scrollTop;
+		var yB = document.getElementById("infobox-works").scrollBottom;
+		var topH = document.getElementById('topbox').offsetHeight;
+		var infoH = document.getElementById('infobox-works').offsetHeight;
+		if (document.getElementById("infobox-works").scrollTop > 80) {
+			document.getElementById("topbox").style.height = "5rem";
+			document.getElementById("logobox").style.display = "none";
+			document.getElementById("navbox").style.flexDirection = "row";
+			document.getElementById("nav").style.justifyContent = "space-around";
+			document.getElementById("nav").style.borderRight = "1px solid #474849";
+			document.getElementById("navbox").style.height = "5rem";
+			document.getElementById("nav").style.height = "5rem";
+			document.getElementById("nav").style.flexDirection = "row";
+			document.getElementById("titlebox").style.width = "calc(var(--vh, 1vh) * 38.7)";
+			document.getElementById("titlebox").style.height = "5rem";
+			document.getElementById("nav").style.width = "100%";
+			if ( $(window).width() < 767) {
+				document.getElementById("infobox-works").style.top = "5rem";
+				document.getElementById("infobox-contact").style.top = "5rem";
+			}
+			document.getElementById("infobox-works").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
+			document.getElementById("infobox-about").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
+			document.getElementById("infobox-contact").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
+		}else {
+			if ( $(window).width() < 767 ) {
+				document.getElementById("infobox-about").style.height = "auto";
+				document.getElementById("infobox-works").style.height = "calc( var(--vh, 1vh) * 100 - 61.3vw )";
+				document.getElementById("infobox-contact").style.height = "100vw";
+				document.getElementById("topbox").style.height = "auto";
+				document.getElementById("navbox").style.height = "auto";
+				document.getElementById("nav").style.height = "38.7vw";
+				document.getElementById("titlebox").style.height = "22.6vw";
+				document.getElementById("infobox-works").style.top = "61.3vw";
+				document.getElementById("infobox-contact").style.top = "61.3vw";
+			}else {
+				document.getElementById("infobox-about").style.height = "calc(var(--vh, 1vh) * 61.3)";
+				document.getElementById("infobox-works").style.height = "calc(var(--vh, 1vh) * 61.3)";
+				document.getElementById("topbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
+				document.getElementById("navbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
+				document.getElementById("nav").style.height = "calc(var(--vh, 1vh) * 22.6)";
+				document.getElementById("titlebox").style.height = "calc(var(--vh, 1vh) * 16.1)";
+				document.getElementById("infobox-contact").style.height = "calc(var(--vh, 1vh) * 61.3)";
+			}
+			document.getElementById("nav").style.borderRight = "none";
+			document.getElementById("nav").style.flexDirection = "column";
+			document.getElementById("nav").style.justifyContent = "center";
+			document.getElementById("navbox").style.flexDirection = "column";
+			document.getElementById("logobox").style.display = "flex";
+			document.getElementById("titlebox").style.width = "100%";
+		}
+	}
+	function closeFunction(){
+		$('.rightbox.Works').toggleClass('view',false);
+	}
+  </script>
+</body>
+</html>
