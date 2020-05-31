@@ -368,16 +368,26 @@ body {
 	display: -webkit-flex;
 	display: 				 flex;
 	flex-direction: column;
-	transform: translate3d(300%,0,0);
-	-webkit-transform: translate3d(300%,0,0);
+	z-index: 100;
 	transition: 0.3s ease-in-out;
-	z-index: 1;
+	transform: translateX(100%);
 }
 .rightbox.works.view{
-	transform: translate3d(0,0,0);
-	-webkit-transform: translate3d(0,0,0);
-	z-index : 1000;
-
+	transform: translateX(0);
+}
+.mobile{
+	display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.desktop{
+  display: none;
+}
+.fade-enter-active,.fade-leave-active {
+  transition: all .5s ease;
+}
+.fade-enter, .fade-leave-to{
+  transform: translateX(100%);
 }
 .item{
 	padding: 0.5rem;

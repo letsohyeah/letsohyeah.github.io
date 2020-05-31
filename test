@@ -1,0 +1,82 @@
+<html lang="zh">
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="viewport" content="width=device-width">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<title> 賴廷昱 Laitingyu Portfolio </title>
+</head>
+<style>
+	body{
+		padding: 0;
+		margin: 0;
+	}
+	.box1{
+		margin: auto;
+		background-color: #eee;
+		height: 30rem;
+		position: relative;
+		width: 100%;
+		max-width: 1000px;
+	}
+	.box2{
+		background-color: #aaa;
+		height: 75px;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+	.cbox{
+
+		margin: auto;
+		text-align: justify;
+		width: 100%;
+		max-width: 1000px;
+	}
+	.cbox:after{
+		display: inline-block;
+		content: '';
+		margin: auto;
+		border: 1px solid #000;
+		width: 100%;
+		max-width: 1000px;
+	}
+	.grid{
+		margin: auto;
+		display: inline-block;
+		border: 1px solid #000;
+		width: 30%;
+		height: 50px;
+	}
+</style>
+<body>
+	<div class="box1">
+		<div class="box2">
+
+		</div>
+	</div>
+	<div class="cbox">
+		<div class="grid">
+			123
+		</div>
+		<div class="grid">
+			123
+		</div>
+		<div class="grid">
+			123
+		</div>
+		<div class="grid">
+			123
+		</div>
+		<div class="grid">
+			123
+		</div>
+		<div class="grid">
+			123
+		</div>
+	</div>
+</body>
+</html>

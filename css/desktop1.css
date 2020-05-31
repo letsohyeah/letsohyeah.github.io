@@ -342,17 +342,21 @@ body{
   right: 0;
   position: absolute;
   padding: 5rem;
+  flex-direction: column;
+}
+.mobile{
+  display: none;
+}
+.desktop{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  transition: 0.3s ease-in-out;
-  z-index: 1;
 }
-.rightbox.works.view{
-  transform: translateX(0);
-  z-index : 100;
+.fade-enter-active,.fade-leave-active {
+  transition: all .5s ease;
+}
+.fade-enter, .fade-leave-to{
+  transform: translateX(100%);
 }
 .item{
   padding: 0.5rem;

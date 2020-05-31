@@ -1,15 +1,16 @@
 <html lang="zh">
 <head>
-	<link href="https://letsohyeah.github.io/css/phone1.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 0px) and (max-width: 736px)" />
-	<link href="https://letsohyeah.github.io/css/desktop1.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 737px)" />
-	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+	<link href="css/phone1.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 0px) and (max-width: 768px)" />
+	<link href="css/desktop1.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 737px)" />
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta name="viewport" content="width=device-width">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
-	<script type="text/javascript" charset="utf-8">
+	<script src="js/waterfall.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
 	$(document).ready(function () {
 		$("img.lazy").lazyload({
 			effect : "fadeIn"
@@ -120,11 +121,19 @@
 			$('div#title').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
 					 $(this).removeClass("move-title");
 			});
+			if ($(window).width() < 737) {
+				$('.item').on('click',function(){
+					$('.rightbox.Works.mobile').toggleClass('view',true);
+				});
+				$('.close').on('click',function(){
+					$('.rightbox.Works.mobile').toggleClass('view',false);
+				});
+			}
 		});
 
 
 
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 			 $('.waterfall a').each(function(){
 							 $(this).click(
 									 function(){
@@ -134,7 +143,7 @@
 										 $("#A" + id + " .lazy").trigger('appear');
 											 });
 					 });
-});
+		});*/
 
 	</script>
 
@@ -152,11 +161,11 @@
 		</div>
 	</div>
 
-	<div class="cleanfix">
+	<div class="cleanfix" id="app">
     <div class="leftbox">
       <div id="topbox">
         <div id="logobox">
-          <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%";>
+          <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%">
         </div>
         <div id="navbox">
           <div id="nav">
@@ -199,103 +208,14 @@
 
 			<div id="infobox-works" onscroll="scrollFunction()">
 				<div class="waterfall">
-          <div class="item">
-              <a class="imgbox-works hover" id="1">
+					<div class="item" v-if="i.cover!=''" v-on:click="works_click(index)" v-for="(i,index) in works">
+              <a class="imgbox-works hover">
                 <figure>
-                  <img src="https://imgur.com/0TTpgFE.png" width="100%">
+                  <img v-bind:src="i.cover" width="100%">
                 </figure>
               </a>
-              <div class="name-works" id="zh-item">Natural n' Vintage官網</div>
+              <div class="name-works" id="zh-item" v-html="i.cover_title"></div>
           </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="11">
-                <figure>
-                  <img src="https://imgur.com/eH0OrM0.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">facebook行銷組圖</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="8">
-                <figure>
-                  <img src="https://imgur.com/RqYiOWH.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">NUU Club貼紙</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="10">
-                <figure>
-                  <img src="https://imgur.com/yxZIS4o.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">聯大華文系歡迎頁</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="12">
-                <figure>
-                  <img src="https://imgur.com/av4oGMq.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">估價單設計</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="2">
-                <figure>
-                  <img src="https://imgur.com/1VbHJcf.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">Side Chair海報</div>
-          </div>
-          <div class="item">
-              <a class="imgbox-works hover" id="3">
-                <figure>
-                  <img src="https://imgur.com/HNg3XsA.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">New Antiques Online</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="9">
-                <figure>
-                  <img src="https://imgur.com/T8bbudk.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">聯大吉祥物提案</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="4">
-                <figure>
-                  <img src="https://imgur.com/u9vjgiU.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">國立聯合大學<br>45週年校慶</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="5">
-                <figure>
-                  <img src="https://imgur.com/KLUcuNF.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">國立聯合大學<br>44週年校慶</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="6">
-                <figure>
-									<img src="https://imgur.com/OX8Dp0p.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item"><span id="en-item">NUR / SCHO KO</div>
-          </div>
-					<div class="item">
-              <a class="imgbox-works hover" id="7">
-                <figure>
-                  <img src="https://imgur.com/5yrQibe.png" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item">初夜</div>
-          </div>
-
 				 </div>
 			</div>
 
@@ -318,31 +238,31 @@
 						<div class="typebox">
 							UI / Graphic Design
 							<div class="barbox">
-								<div class="bar move" style="width:80%;"></div>
+								<div class="bar move" style="width:80%"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							UX
 							<div class="barbox">
-							 <div class="bar move" style="width:70%;"></div>
+							 <div class="bar move" style="width:70%"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							HTML / CSS
 							<div class="barbox">
-							 <div class="bar move" style="width:75%;"></div>
+							 <div class="bar move" style="width:75%"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							Javascript / JQuery
 							<div class="barbox">
-							 <div class="bar move" style="width:60%;"></div>
+							 <div class="bar move" style="width:60%"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							Vue.js
 							<div class="barbox">
-							 <div class="bar move" style="width:40%;"></div>
+							 <div class="bar move" style="width:40%"></div>
 							</div>
 						</div>
 					</div>
@@ -353,278 +273,43 @@
 						<div class="typebox">
 							Graphic Design
 							<div class="barbox">
-								<div class="bar move" style="width:80%;"></div>
+								<div class="bar move" style="width:80%"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							Photograph
 							<div class="barbox">
-							 <div class="bar move" style="width:75%;"></div>
+							 <div class="bar move" style="width:75%"></div>
 							</div>
 						</div>
 						<div class="typebox">
 							Film Editing
 							<div class="barbox">
-							 <div class="bar move" style="width:35%;"></div>
+							 <div class="bar move" style="width:35%"></div>
 							</div>
 						</div>
 					</div>
 					<div class="skillstitle">Comercial Design</div>
 				</div>
 			</li>
-
-
-			<li class="rightbox Works" id="A1">
+			<transition name="fade">
+				<li v-if="show" class="rightbox Works desktop">
+					<div>
+						<div class="titlebox-works" v-html="works[id].title"></div>
+						<div class="date-works">{{works[id].date}}<br>{{works[id].type}}<br><a v-bind:href="works[id].url">{{works[id].url}}</a></div>
+						<div class="imgbox1-works" v-for="i in works[id].img">
+								<img v-bind:src="i" width="100%">
+						</div>
+					</div>
+				</li>
+			</transition>
+			<li class="rightbox Works mobile">
 				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">Natural n' Vintage<br>官方網站</div>
-					<div class="date-works">6.2018<br>web design / front-end<br><a href="naturalnvintage.com">naturalnvintage.com</a></div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/90a3s1n.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/C80aZOZ.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/0N5OlTS.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/cyrmfoH.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/M3WHaTx.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A2">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">Side Chair海報</div>
-					<div class="date-works">12.2018<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/uA76D2P.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A3">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">New<br>Antiques<br>Online!</div>
-					<div class="date-works">8.2018<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/PMkTKHb.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/0n12ICb.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A4">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">國立聯合大學<br>45週年校慶</div>
-					<div class="date-works">11.2017<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/ZyBVYGJ.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/PaJ3goJ.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/Yn24LlM.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/CGja3Bo.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A5">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">國立聯合大學<br>44週年校慶</div>
-					<div class="date-works">11.2016<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/JQE9f3y.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/BnnWUFY.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/LFm7obU.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/1pJJPg4.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A6">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">NUR<br>/<br>SCHO<br>KO</div>
-					<div class="date-works">4.2016<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/ZwzlGIe.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/eglCjU0.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/4ZZ00Mp.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/yqxLjGh.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A7">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">初夜</div>
-					<div class="date-works">9.2016<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/PzyVivr.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/O9JwdPp.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/uwHZB2u.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A8">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">NUU Club貼紙</div>
-					<div class="date-works">10.2018<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/RqYiOWH.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/NO668BD.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/W0H5qYk.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A9">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">聯大吉祥物提案</div>
-					<div class="date-works">6.2017<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/T8bbudk.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/Dl5Wx77.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A10">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">聯大華文系歡迎頁</div>
-					<div class="date-works">6.2019<br>web design / front-end</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/vZyEXFC.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/HpQXdgm.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A11">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">facebook行銷組圖</div>
-					<div class="date-works">11.2018<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/M9oUCYq.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/1tYvoAC.png" width="100%">
-						</figure>
-					</div>
-				</div>
-			</li>
-			<li class="rightbox Works" id="A12">
-				<div>
-					<div class="close" onclick="closeFunction()"></div>
-					<div class="titlebox-works">估價單設計</div>
-					<div class="date-works">11.2018<br>graphic design</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/av4oGMq.png" width="100%">
-						</figure>
-					</div>
-					<div class="imgbox1-works">
-						<figure>
-							<img class="lazy img-responsive" data-original="https://imgur.com/gPTv1gd.png" width="100%">
-						</figure>
+					<div class="close"></div>
+					<div class="titlebox-works" v-html="works[id].title"></div>
+					<div class="date-works">{{works[id].date}}<br>{{works[id].type}}<br><a v-bind:href="works[id].url">{{works[id].url}}</a></div>
+					<div class="imgbox1-works" v-for="i in works[id].img">
+							<img v-bind:src="i" width="100%">
 					</div>
 				</div>
 			</li>
@@ -633,7 +318,185 @@
 
 
 	</div>
-	<script src="js/waterfall.min.js"></script>
+	<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			show:true,
+			id:'0',
+			works:[{
+				cover:'',
+				cover_title:'',
+				title: '',
+				date:'',
+				type:'',
+				url: '',
+				img:[
+					''
+				]
+			},{
+				cover:'https://imgur.com/0TTpgFE.png',
+				cover_title:'Natural n Vintage官網',
+				title: 'Natural n Vintage<br>官方網站',
+				date:'6.2018',
+				type:'web design / front-end',
+				url: 'naturalnvintage.com',
+				img:[
+					'https://imgur.com/90a3s1n.png',
+					'https://imgur.com/C80aZOZ.png',
+					'https://imgur.com/0N5OlTS.png',
+					'https://imgur.com/cyrmfoH.png',
+					'https://imgur.com/M3WHaTx.png'
+				]
+			},{
+				cover:'https://imgur.com/1VbHJcf.png',
+				cover_title:'Side Chair海報',
+				title: 'Side Chair海報',
+				date:'12.2018',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/uA76D2P.png'
+				]
+			},{
+				cover:'https://imgur.com/HNg3XsA.png',
+				cover_title:'New Antiques Online',
+				title: 'New<br>Antiques<br>Online!',
+				date:'8.2018',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/PMkTKHb.png',
+					'https://imgur.com/0n12ICb.png'
+				]
+			},{
+				cover:'https://imgur.com/u9vjgiU.png',
+				cover_title:'國立聯合大學<br>45週年校慶',
+				title: '國立聯合大學<br>45週年校慶',
+				date:'11.2017',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/ZyBVYGJ.png',
+					'https://imgur.com/PaJ3goJ.png',
+					'https://imgur.com/Yn24LlM.png',
+					'https://imgur.com/CGja3Bo.png'
+				]
+			},{
+				cover:'https://imgur.com/KLUcuNF.png',
+				cover_title:'國立聯合大學<br>44週年校慶',
+				title: '國立聯合大學<br>44週年校慶',
+				date:'11.2016',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/JQE9f3y.png',
+					'https://imgur.com/BnnWUFY.png',
+					'https://imgur.com/LFm7obU.png',
+					'https://imgur.com/1pJJPg4.png'
+				]
+			},{
+				cover:'https://imgur.com/OX8Dp0p.png',
+				cover_title:'NUR / SCHO KO',
+				title: 'NUR<br>/<br>SCHO<br>KO',
+				date:'4.2016',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/ZwzlGIe.png',
+					'https://imgur.com/eglCjU0.png',
+					'https://imgur.com/4ZZ00Mp.png',
+					'https://imgur.com/yqxLjGh.png'
+				]
+			},{
+				cover:'https://imgur.com/5yrQibe.png',
+				cover_title:'初夜',
+				title: '初夜',
+				date:'9.2016',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/PzyVivr.png',
+					'https://imgur.com/O9JwdPp.png',
+					'https://imgur.com/uwHZB2u.png'
+				]
+			},{
+				cover:'https://imgur.com/RqYiOWH.png',
+				cover_title:'NUU Club貼紙',
+				title: 'NUU Club貼紙',
+				date:'10.2016',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/RqYiOWH.png',
+					'https://imgur.com/NO668BD.png',
+					'https://imgur.com/W0H5qYk.png'
+				]
+			},{
+				cover:'https://imgur.com/T8bbudk.png',
+				cover_title:'聯大吉祥物提案',
+				title: '聯大吉祥物提案',
+				date:'6.2017',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/T8bbudk.png',
+					'https://imgur.com/Dl5Wx77.png'
+				]
+			},{
+				cover:'https://imgur.com/yxZIS4o.png',
+				cover_title:'聯大華文系歡迎頁',
+				title: '聯大華文系歡迎頁',
+				date:'6.2019',
+				type:'web design / front-end',
+				url: '',
+				img:[
+					'https://imgur.com/vZyEXFC.png',
+					'https://imgur.com/HpQXdgm.png'
+				]
+			},{
+				cover:'https://imgur.com/eH0OrM0.png',
+				cover_title:'facebook行銷組圖',
+				title: 'facebook行銷組圖',
+				date:'11.2018',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/M9oUCYq.png',
+					'https://imgur.com/1tYvoAC.png'
+				]
+			},{
+				cover:'https://imgur.com/av4oGMq.png',
+				cover_title:'估價單設計',
+				title: '估價單設計',
+				date:'11.2018',
+				type:'graphic design',
+				url: '',
+				img:[
+					'https://imgur.com/av4oGMq.png',
+					'https://imgur.com/gPTv1gd.png'
+				]
+			}]
+		},
+		methods: {
+			works_click: function(event){
+				$('.rightbox.Works').siblings().removeClass('view');
+				if (this.id != event) {
+					this.show=false;
+					this.id=event;
+				};
+			}
+		},
+	  updated: function () {
+			this.$nextTick(function () {
+				var v = this;
+				setTimeout(function(){
+					v.show=true;
+				},350)
+			})
+	  }
+	})
+	</script>
 	<script>
     var grid = document.querySelector('.waterfall');
 		$(window).load(function(){
@@ -696,9 +559,6 @@
 			document.getElementById("logobox").style.display = "flex";
 			document.getElementById("titlebox").style.width = "100%";
 		}
-	}
-	function closeFunction(){
-		$('.rightbox.Works').toggleClass('view',false);
 	}
   </script>
 </body>
