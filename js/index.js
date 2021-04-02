@@ -125,7 +125,13 @@ $(document).ready(function(){
                    });
        });
 });*/
-
+var grid = document.querySelector('.waterfall');
+$(window).load(function(){
+  waterfall(grid);
+});
+window.addEventListener('resize', function () {
+  waterfall(grid);
+});
 
 function scrollFunction() {
   var yU = document.getElementById("infobox-works").scrollTop;
