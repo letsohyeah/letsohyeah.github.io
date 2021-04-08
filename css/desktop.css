@@ -1,4 +1,4 @@
-html { overflow: hidden; } 
+html { overflow: hidden; }
 li{
   list-style: none;
 }
@@ -124,6 +124,9 @@ body{
      flex-direction: column;
   justify-content: center;
 }
+#nav a{
+  cursor: pointer;
+}
 #titlebox{
   transition: 0.4s;
   font-family: 'Noto Sans TC', sans-serif;
@@ -181,7 +184,7 @@ body{
   display: -webkit-flex;
   display: 				 flex;
   flex-direction: column;
-  justify-content: space-around;
+  overflow-y: scroll;
   border-radius: 2rem;
   background-color: #e2ded7;
   transform: translateY(100%);
@@ -271,26 +274,43 @@ body{
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
+  margin-top: 1rem;
 }
 .content-about{
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #474849;
 }
 .resume-about{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
-  max-width: 500px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 400px;
   font-weight: 1rem;
   font-size: 0.8rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #474849;
+  margin-top: 2rem;
   background: #e2ded7;
   color: #474849;
+}
+.company{
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.job-info{
+  margin-bottom: 2rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
 }
 /*About*/
 
@@ -330,14 +350,31 @@ body{
   display: -webkit-flex;
   display: 				 flex;
 }
+.slide-enter-active,.slide-leave-active {
+  transition: all .5s ease;
+}
+.slide-enter, .slide-leave-to{
+  transform: translateX(100%);
+}
 .fade-enter-active,.fade-leave-active {
   transition: all .5s ease;
 }
 .fade-enter, .fade-leave-to{
-  transform: translateX(100%);
+  opacity: 0;
+}
+.waterfall{
+  width: calc(100% - 2rem);
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.waterfall span{
+  width: 100%;
 }
 .item{
-  padding: 0.5rem;
+  padding: 0rem;
   width: calc(50% - 1rem);
 }
 .imgbox-works{
@@ -667,7 +704,7 @@ body{
   	font-weight: 300;
   	letter-spacing: 0.1rem;
   	width: 100%;
-  	text-align: right;
+  	text-align: left;
   	margin-bottom: 4rem;
   }
   .skillsgrid{
@@ -679,20 +716,21 @@ body{
   }
   .skill_box {
     margin-right: 1.2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   .type_title{
     min-width: 0;
     font-weight: 300;
-    writing-mode: vertical-rl;
-    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
   .typebox{
   	width: 100%;
-  	margin-bottom: 1.2rem;
+  	margin-bottom: 3rem;
   	display: -moz-flex;
   	display: -webkit-flex;
   	display: 				 flex;
+    flex-direction: column-reverse;
   }
   .bar{
   	margin-right: 0.3rem;
@@ -774,14 +812,23 @@ body{
   .desktop{
     display: none;
   }
+  .slide-enter-active,.slide-leave-active {
+    transition: all .5s ease;
+  }
+  .slide-enter, .slide-leave-to{
+    transform: translateX(100%);
+  }
   .fade-enter-active,.fade-leave-active {
     transition: all .5s ease;
   }
   .fade-enter, .fade-leave-to{
-    transform: translateX(100%);
+    opacity: 0;
+  }
+  .waterfall{
+    width: calc(100% - 0rem);
   }
   .item{
-  	padding: 0.5rem;
+    padding: 0.5rem;
   	width: calc(50vw - 1rem);
   	margin-bottom: 0.5rem;
   }

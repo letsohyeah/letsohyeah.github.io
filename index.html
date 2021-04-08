@@ -7,12 +7,40 @@
 	<link href="css/desktop.css" rel="stylesheet" type="text/css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="js/waterfall.min.js"></script>
 	<script src="js/index.js"></script>
 	<title> 賴廷昱 Laitingyu Portfolio </title>
+
+	<style>
+		.tabbox{
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			padding: 0 1rem;
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+		.tab{
+			width: 30%;
+			min-width: 6rem;
+			background: #fff;
+			padding: 0.5rem 0;
+			margin: 0 0.5rem;
+			border-radius: 4rem;
+			font-size: 0.8rem;
+			text-align: center;
+			cursor: pointer;
+		}
+		.tab.actived{
+			color: #fff;
+			background: #474849;
+		}
+	</style>
 </head>
 <body>
 
@@ -57,50 +85,74 @@
 
 
       <div id="infobox-about">
-				<div>
+				<div class="namebox-about">
 					<div class="name-about">賴廷昱</div>
 					<div class="en-name">Ting Yu,Lai</div>
 				</div>
 				<div class="subcontent-about">
 					26歲<br>
-					國立聯合大學機械工程學系<br>
+					台中高級工業職業學校 製圖科<br>
+					國立聯合大學 機械工程學系<br>
 				</div>
 				<div class="resume-about">
 					<div class="company">
-						Natural n' Vintage<br>
-						JK2U
+						Natural n' Vintage
 					</div>
-					<div class="job">
-						創始成員<br>
-						視覺設計師<br>
-						前端互動設計師
+					<div class="job-info">
+						<div class="job">
+							籌備成員<br>
+							店長
+						</div>
+						<div class="job-time">
+							2017.09 - 2018.05<br>
+							2018.06 - 2019.11
+						</div>
 					</div>
-					<div class="job-time">
-						2017.09 - 2019.11<br>
-						2019.12 - 2020.06<br>
-						2020.07 - 2021.05
+					<div class="company">
+						JK2U 吉爾集思數位行銷
 					</div>
+					<div class="job-info">
+						<div class="job">
+							視覺設計師<br>
+							前端互動設計師
+						</div>
+						<div class="job-time">
+							2019.12 - 2020.06<br>
+							2020.06 - 2021.05
+						</div>
+					</div>
+
 				</div>
 				<div class="content-about">
 					1994年出生於台中，現居於台北。<br><br>
-					高中就讀台中高工製圖科，大學就讀國立聯合大學機械系。
-					自幼便對設計有興趣，於高中和大學就讀期間便自學設計相關技能與軟體。
-					大學實習於刀庫製造商吉輔企業擔任助理製圖員，
-					畢業後任職於Natural n' Vintage，負責網頁、平面文宣、攝影、銷售等事務。
+					個性內向、慢熟、理性、脾氣好、有耐心，
+					自學能力強，遇到問題多能自行尋找方法解決。
+					自幼便對設計與網站有興趣，於高中和大學就讀期間便自學相關技能與軟體。<br><br>
+					畢業後任職於古董傢俱店 Natural n' Vintage，籌備時期負責網頁建置、平面文宣、行銷宣傳等事務；
+					開業後負責網頁維護、商品攝影、商品銷售等事宜。<br><br>
+					2019.12於JK2U擔任視覺設計師，負責網頁設計/切版、廣告素材製作；
+					2020.07轉任前端互動設計師，負責網頁設計/切版、網頁特效、前端功能、AR
 				</div>
       </div>
 
 
 			<div id="infobox-works" onscroll="scrollFunction()">
+				<div class="tabbox">
+					<div class="tab actived" @click="tab=['front_end']">Front-end</div>
+					<div class="tab" @click="tab=['design']">Design</div>
+				</div>
+
 				<div class="waterfall">
-					<div class="item" v-if="i.cover!=''" v-on:click="works_click(index)" v-for="(i,index) in works">
-              <a class="imgbox-works hover">
-                <figure>
-                  <img v-bind:src="i.cover" width="100%">
-                </figure>
-              </a>
-              <div class="name-works" id="zh-item" v-html="i.cover_title"></div>
-          </div>
+					<transition-group name="fade" mode="out-in">
+						<div class="item" v-if="i.cover!=''" v-on:click="works_click(i.id)" v-for="i in filtered" :key="i.id">
+	              <a class="imgbox-works hover">
+	                <figure>
+	                  <img v-bind:src="i.cover" width="100%">
+	                </figure>
+	              </a>
+	              <div class="name-works" id="zh-item" v-html="i.cover_title"></div>
+	          </div>
+					</transition-group>
 				 </div>
 			</div>
 
@@ -152,12 +204,12 @@
 							<ul>
 								<li>NPM</li>
 								<li>Webpack</li>
-								<li>Github git</li>
+								<li>Github Desktop</li>
 							</ul>
 						</div>
 						<div class="skill_box">
 							<div class="skill_title">
-								UI Frameworks
+								Frameworks
 							</div>
 							<ul>
 								<li>Vue.js</li>
@@ -205,7 +257,7 @@
 
 
 			</li>
-			<transition name="fade">
+			<transition name="slide">
 				<li v-if="show" class="rightbox Works desktop">
 					<div>
 						<div class="titlebox-works" v-html="works[id].title"></div>

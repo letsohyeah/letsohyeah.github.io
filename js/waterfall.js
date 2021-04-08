@@ -1,7 +1,12 @@
-var grid = document.querySelector('.waterfall');
-$(window).load(function(){
-  waterfall(grid);
+$(window).on('load', function(){
+  waterfall('.waterfall span');
 });
+window.addEventListener('resize', function () {
+  waterfall('.waterfall span');
+});
+
+/*
 window.addEventListener('resize', function () {
   waterfall(grid);
 });
+*/
