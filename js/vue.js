@@ -1,3 +1,6 @@
+Vue.use(VueLazyload)
+
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -13,6 +16,7 @@ var app = new Vue({
       date:'',
       type:'',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         ''
@@ -26,6 +30,7 @@ var app = new Vue({
       date:'6.2018',
       type:'web design / front-end',
       tag:[],
+      url_name:'Natural n Vintage',
       url: 'naturalnvintage.com',
       img:[
         'https://imgur.com/90a3s1n.png',
@@ -43,6 +48,7 @@ var app = new Vue({
       date:'12.2018',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/uA76D2P.png'
@@ -56,6 +62,7 @@ var app = new Vue({
       date:'8.2018',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/PMkTKHb.png',
@@ -70,6 +77,7 @@ var app = new Vue({
       date:'11.2017',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/ZyBVYGJ.png',
@@ -86,6 +94,7 @@ var app = new Vue({
       date:'11.2016',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/JQE9f3y.png',
@@ -102,6 +111,7 @@ var app = new Vue({
       date:'4.2016',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/ZwzlGIe.png',
@@ -118,6 +128,7 @@ var app = new Vue({
       date:'9.2016',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/PzyVivr.png',
@@ -133,6 +144,7 @@ var app = new Vue({
       date:'10.2016',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/RqYiOWH.png',
@@ -148,6 +160,7 @@ var app = new Vue({
       date:'6.2017',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/T8bbudk.png',
@@ -162,6 +175,7 @@ var app = new Vue({
       date:'6.2019',
       type:'web design / front-end',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/vZyEXFC.png',
@@ -176,6 +190,7 @@ var app = new Vue({
       date:'11.2018',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/M9oUCYq.png',
@@ -190,6 +205,7 @@ var app = new Vue({
       date:'11.2018',
       type:'graphic design',
       tag:[],
+      url_name:'',
       url: '',
       img:[
         'https://imgur.com/av4oGMq.png',
@@ -200,10 +216,11 @@ var app = new Vue({
       category:['front_end'],
       cover:'https://i.imgur.com/GuC2C44.png',
       cover_title:'AQUOS sense4 Plus官網',
-      title: 'AQUOS sense4 Plus官網',
+      title: 'AQUOS<br>sense4 Plus官網',
       date:'11.2020',
       type:'web design / front-end',
-      tag:['GSAP','ahrelax']
+      tag:['GSAP','ahrelax'],
+      url_name:'AQUOS sense4 Plus',
       url: 'https://aquosmobile.sharp.com.tw/WebSubSite/aquos/sense4.html',
       img:[
         'https://i.imgur.com/GuC2C44.png',

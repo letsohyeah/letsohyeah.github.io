@@ -10,6 +10,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
 	<script src="js/waterfall.min.js"></script>
 	<script src="js/index.js"></script>
 	<title> 賴廷昱 Laitingyu Portfolio </title>
@@ -124,8 +125,8 @@
 
 				</div>
 				<div class="content-about">
-					1994年出生於台中，現居於台北。<br><br>
-					個性內向、慢熟、理性、脾氣好、有耐心，
+					來自台中，現居台北。<br><br>
+					個性內向、慢熟、理性、隨和、脾氣好、有耐心，
 					自學能力強，遇到問題多能自行尋找方法解決。
 					自幼便對設計與網站有興趣，於高中和大學就讀期間便自學相關技能與軟體。<br><br>
 					畢業後任職於古董傢俱店 Natural n' Vintage，籌備時期負責網頁建置、平面文宣、行銷宣傳等事務；
@@ -261,9 +262,14 @@
 				<li v-if="show" class="rightbox Works desktop">
 					<div>
 						<div class="titlebox-works" v-html="works[id].title"></div>
-						<div class="date-works">{{works[id].date}}<br>{{works[id].type}}<br><a v-bind:href="works[id].url">{{works[id].url}}</a></div>
+						<div class="works-info-text">{{works[id].date}}</div>
+						<div class="works-info-text">{{works[id].type}}</div>
+						<a v-bind:href="works[id].url">{{works[id].url_name}}</a>
+						<div class="tagbox">
+							<span v-for="i in works[id].tag">#{{i}}</span>
+						</div>
 						<div class="imgbox1-works" v-for="i in works[id].img">
-								<img v-bind:src="i" width="100%">
+								<img v-lazy="i" width="100%">
 						</div>
 					</div>
 				</li>
@@ -272,9 +278,17 @@
 				<div>
 					<div class="close"></div>
 					<div class="titlebox-works" v-html="works[id].title"></div>
-					<div class="date-works">{{works[id].date}}<br>{{works[id].type}}<br><a v-bind:href="works[id].url">{{works[id].url}}</a></div>
+					<div class="works-info">
+						<div class="works-info-text">{{works[id].date}}</div>
+						<div class="works-info-text">{{works[id].type}}</div>
+						<a v-bind:href="works[id].url">{{works[id].url_name}}</a>
+						<div class="tagbox">
+							<span v-for="i in works[id].tag">#{{i}}</span>
+						</div>
+					</div>
+
 					<div class="imgbox1-works" v-for="i in works[id].img">
-							<img v-bind:src="i" width="100%">
+							<img v-lazy="i" width="100%">
 					</div>
 				</div>
 			</li>

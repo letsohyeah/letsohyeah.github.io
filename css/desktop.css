@@ -405,7 +405,7 @@ body{
   display: table;
   font-family: 'Noto Sans TC', sans-serif;
 }
-.date-works{
+.works-info{
   margin-top: 8rem;
   margin-bottom: 3rem;
   width: 100%;
@@ -416,6 +416,26 @@ body{
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.15rem;
   color: #474849;
+}
+.works-info a{
+  text-decoration: underline;
+}
+.works-info-text{
+  margin-bottom: 0.5rem;
+}
+.tagbox{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.tagbox span{
+  border-radius: 2rem;
+  color: #fff;
+  background: #474849;
+  padding: 0.2rem 0.8rem;
+  margin-left: 0.5rem;
 }
 .titlebox-works{
   font-family: 'Noto Sans TC', sans-serif;
@@ -860,18 +880,6 @@ body{
   	display: table;
   	font-family: 'Noto Sans TC', sans-serif;
   }
-  .date-works{
-  	margin-top: 8rem;
-  	margin-bottom: 3rem;
-  	width: 100%;
-  	text-align: right;
-  	font-size: 0.65rem;
-  	font-weight: 300;
-  	line-height: 1rem;
-  	font-family: 'Noto Sans TC', sans-serif;
-  	letter-spacing: 0.15rem;
-  	color: #474849;
-  }
   .titlebox-works{
   	font-family: 'Noto Sans TC', sans-serif;
   	font-size: 1.2rem;
@@ -881,9 +889,9 @@ body{
   	text-align: right;
   }
   .close {
-  position: absolute;
-  width: 0.8rem;
-  height: 0.8rem;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
   }
   .close:before, .close:after {
   	position: absolute;
@@ -899,6 +907,9 @@ body{
   }
   .close:after {
   	transform: rotate(-45deg);
+  }
+  .works-info{
+    margin-top: 4rem;
   }
 
 
