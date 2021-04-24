@@ -440,9 +440,7 @@ body{
 }
 .imgbox-works{
   overflow: hidden;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
+  display: inline-block;
   border-radius: 1rem;
 }
 .imgbox1-works{
