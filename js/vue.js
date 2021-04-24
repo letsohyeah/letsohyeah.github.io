@@ -1,5 +1,5 @@
 Vue.use(VueLazyload,{
-  loading:require('/img/default.gif')
+  loading:'img/default.gif'
 })
 
 
