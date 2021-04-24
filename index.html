@@ -13,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap" rel="stylesheet">
 	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
 	<script src="js/waterfall.min.js"></script>
@@ -257,7 +256,7 @@
 						<div class="works-info">
 							<div class="works-info-text">{{works[id].date}}</div>
 							<div class="works-info-text">{{works[id].type}}</div>
-							<a v-bind:href="works[id].url" v-if="works[id].url !=''">{{works[id].url_name}} <i class="fas fa-link"></i></a>
+							<a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}} <i class="fas fa-link"></i></a>
 							<div class="tagbox">
 								<span v-for="i in works[id].tag">#{{i}}</span>
 							</div>
@@ -277,7 +276,7 @@
 					<div class="works-info">
 						<div class="works-info-text">{{works[id].date}}</div>
 						<div class="works-info-text">{{works[id].type}}</div>
-						<a v-bind:href="works[id].url">{{works[id].url_name}} <i class="fas fa-external-link-alt"></i></a>
+						<a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}} <i class="fas fa-external-link-alt"></i></a>
 						<div class="tagbox">
 							<span v-for="i in works[id].tag">#{{i}}</span>
 						</div>
