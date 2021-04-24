@@ -504,6 +504,7 @@ body{
   background: #474849;
   padding: 0.2rem 0.8rem;
   margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .titlebox-works{
   font-family: 'Noto Sans TC', sans-serif;
@@ -930,9 +931,6 @@ body{
   }
   .imgbox-works{
   	overflow: hidden;
-  	display: -moz-flex;
-  	display: -webkit-flex;
-  	display: 				 flex;
   	border-radius: 1rem;
   }
   .imgbox1-works{

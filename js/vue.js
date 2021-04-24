@@ -381,6 +381,7 @@ var app = new Vue({
       var v = this;
       setTimeout(function(){
         v.show=true;
+        waterfall('.waterfall span');
       },350)
     })
   }
