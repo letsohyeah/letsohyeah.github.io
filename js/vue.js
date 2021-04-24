@@ -1,4 +1,6 @@
-Vue.use(VueLazyload)
+Vue.use(VueLazyload,{
+  loading:require('/img/default.gif')
+})
 
 
 var app = new Vue({
@@ -47,7 +49,7 @@ var app = new Vue({
       type:'web design / front-end',
       tag:[],
       url_name:'Natural n Vintage',
-      url: 'naturalnvintage.com',
+      url: 'https://naturalnvintage.com',
       descript:'',
       img:[
         ['https://imgur.com/90a3s1n.png',''],
