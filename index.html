@@ -1,12 +1,17 @@
 <html lang="zh">
+
 <head>
 	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<link href="css/desktop.css" rel="stylesheet" type="text/css"/>
+	<!-- CSS -->
+	<link href="css/desktop.css" rel="stylesheet" type="text/css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap" rel="stylesheet">
+	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -14,35 +19,8 @@
 	<script src="js/waterfall.min.js"></script>
 	<script src="js/index.js"></script>
 	<title> 賴廷昱 Laitingyu Portfolio </title>
-
-	<style>
-		.tabbox{
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			padding: 0 1rem;
-			margin-top: 1rem;
-			margin-bottom: 2rem;
-		}
-		.tab{
-			width: 30%;
-			min-width: 6rem;
-			background: #fff;
-			padding: 0.5rem 0;
-			margin: 0 0.5rem;
-			border-radius: 4rem;
-			font-size: 0.8rem;
-			text-align: center;
-			cursor: pointer;
-		}
-		.tab.actived{
-			color: #fff;
-			background: #474849;
-		}
-	</style>
 </head>
+
 <body>
 
 
@@ -61,31 +39,31 @@
 	</div>
 
 	<div class="cleanfix" id="app">
-    <div class="leftbox">
-      <div id="topbox">
-        <div id="logobox">
-          <img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%">
-        </div>
-        <div id="navbox">
-          <div id="nav">
+		<div class="leftbox">
+			<div id="topbox">
+				<div id="logobox">
+					<img class="lazy img-responsive" data-original="https://imgur.com/MSNitx5.jpg" height="40%">
+				</div>
+				<div id="navbox">
+					<div id="nav">
 						<a id="click-a">About</a>
 						<a id="click-w">Works</a>
 						<a id="click-c">Contact</a>
-          </div>
-          <div id="titlebox">
+					</div>
+					<div id="titlebox">
 						<div class="titlebar" id="title"></div>
-            <div class="textA">About</div>
+						<div class="textA">About</div>
 						<div class="textW">Works</div>
 						<div class="textC">Contact</div>
-          </div>
-        </div>
-      </div>
+					</div>
+				</div>
+			</div>
 
 
 
 
 
-      <div id="infobox-about">
+			<div id="infobox-about">
 				<div class="namebox-about">
 					<div class="name-about">賴廷昱</div>
 					<div class="en-name">Ting Yu,Lai</div>
@@ -134,7 +112,7 @@
 					2019.12於JK2U擔任視覺設計師，負責網頁設計/切版、廣告素材製作；
 					2020.07轉任前端互動設計師，負責網頁設計/切版、網頁特效、前端功能、AR
 				</div>
-      </div>
+			</div>
 
 
 			<div id="infobox-works" onscroll="scrollFunction()">
@@ -144,27 +122,25 @@
 				</div>
 
 				<div class="waterfall">
-					<transition-group name="fade" mode="out-in">
+					<transition-group name="fade" mode="out-in" v-on:after-enter="afterEnter">
 						<div class="item" v-if="i.cover!=''" v-on:click="works_click(i.id)" v-for="i in filtered" :key="i.id">
-	              <a class="imgbox-works hover">
-	                <figure>
-	                  <img v-bind:src="i.cover" width="100%">
-	                </figure>
-	              </a>
-	              <div class="name-works" id="zh-item" v-html="i.cover_title"></div>
-	          </div>
+							<a class="imgbox-works hover">
+								<img v-lazy="i.cover" width="100%">
+							</a>
+							<div class="name-works" id="zh-item" v-html="i.cover_title"></div>
+						</div>
 					</transition-group>
-				 </div>
+				</div>
 			</div>
 
 
 			<div id=infobox-contact>
-					<p>0909-689-432</p>
-					<p>letsohyeah@gmail.com</p>
+				<p>0909-689-432</p>
+				<p>letsohyeah@gmail.com</p>
 			</div>
 
 
-    </div>
+		</div>
 
 
 		<ul>
@@ -194,8 +170,22 @@
 								JavaScript
 							</div>
 							<ul>
-								<li>ES6+</li>
+								<li>ES5</li>
+								<li>ES6+<span>(Fair)</span></li>
 								<li>jquery</li>
+							</ul>
+						</div>
+						<div class="skill_box">
+							<div class="skill_title">
+								Effects
+							</div>
+							<ul>
+								<li>GSAP<span>(animation)</span></li>
+								<li>ScrollTrigger<span>(scroll animation)</span></li>
+								<li>ahrelax.js<span>(scroll animation)</span></li>
+								<li>Locomotive-Scroll<span>(parallax-scrolling)</span></li>
+								<li>D3.js<span>(data visualization)</span></li>
+								<li>Panolens<span>(360°)</span></li>
 							</ul>
 						</div>
 						<div class="skill_box">
@@ -205,6 +195,8 @@
 							<ul>
 								<li>NPM</li>
 								<li>Webpack</li>
+								<li>ajax</li>
+								<li>axios</li>
 								<li>Github Desktop</li>
 							</ul>
 						</div>
@@ -241,7 +233,7 @@
 						</div>
 						<div class="skill_box">
 							<div class="skill_title">
-								3D
+								3D Modeling
 							</div>
 							<ul>
 								<li>Sketch UP</li>
@@ -262,14 +254,18 @@
 				<li v-if="show" class="rightbox Works desktop">
 					<div>
 						<div class="titlebox-works" v-html="works[id].title"></div>
-						<div class="works-info-text">{{works[id].date}}</div>
-						<div class="works-info-text">{{works[id].type}}</div>
-						<a v-bind:href="works[id].url">{{works[id].url_name}}</a>
-						<div class="tagbox">
-							<span v-for="i in works[id].tag">#{{i}}</span>
+						<div class="works-info">
+							<div class="works-info-text">{{works[id].date}}</div>
+							<div class="works-info-text">{{works[id].type}}</div>
+							<a v-bind:href="works[id].url" v-if="works[id].url !=''">{{works[id].url_name}} <i class="fas fa-link"></i></a>
+							<div class="tagbox">
+								<span v-for="i in works[id].tag">#{{i}}</span>
+							</div>
+							<div class="works-descript" v-html="works[id].descript"></div>
 						</div>
 						<div class="imgbox1-works" v-for="i in works[id].img">
-								<img v-lazy="i" width="100%">
+							<div class="img-descript" v-if="i[1] != ''">{{i[1]}}</div>
+							<img v-lazy="i[0]" width="100%">
 						</div>
 					</div>
 				</li>
@@ -281,23 +277,22 @@
 					<div class="works-info">
 						<div class="works-info-text">{{works[id].date}}</div>
 						<div class="works-info-text">{{works[id].type}}</div>
-						<a v-bind:href="works[id].url">{{works[id].url_name}}</a>
+						<a v-bind:href="works[id].url">{{works[id].url_name}} <i class="fas fa-external-link-alt"></i></a>
 						<div class="tagbox">
 							<span v-for="i in works[id].tag">#{{i}}</span>
 						</div>
+						<div class="works-descript" v-html="works[id].descript"></div>
 					</div>
-
 					<div class="imgbox1-works" v-for="i in works[id].img">
-							<img v-lazy="i" width="100%">
+						<div class="img-descript" v-if="i[1] != ''">{{i[1]}}</div>
+						<img v-lazy="i[0]" width="100%">
 					</div>
 				</div>
 			</li>
 		</ul>
-
-
-
 	</div>
 	<script src="js/vue.js"></script>
 	<script src="js/waterfall.js"></script>
 </body>
+
 </html>

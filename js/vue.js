@@ -8,7 +8,7 @@ var app = new Vue({
     id:'0',
     tab:['front_end'],
     works:[{
-      id:'0',
+      id:'',
       category:[],
       cover:'',
       cover_title:'',
@@ -18,11 +18,27 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        ''
+        ['','']
       ]
     },{
-      id:'1',
+      id:'',
+      category:['front_end','design'],
+      cover:'https://i.imgur.com/he01UyH.jpg',
+      cover_title:'Una Photography',
+      title: 'Una Photography',
+      date:'04.2021',
+      type:'web design / front-end',
+      tag:['Vue.js','ScrollTrigger','Locomotive-Scroll'],
+      url_name:'Una Photography',
+      url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/una/index2.html',
+      descript:'此專案為本人自行接案，尚在開發階段，尚未支援手機瀏覽。<br>後續預計使用Google App Scripts作為簡易DB',
+      img:[
+        ['http://i.imgur.com/XgHq2qL.gif','']
+      ]
+    },{
+      id:'',
       category:['front_end','design'],
       cover:'https://imgur.com/0TTpgFE.png',
       cover_title:'Natural n Vintage官網',
@@ -32,15 +48,16 @@ var app = new Vue({
       tag:[],
       url_name:'Natural n Vintage',
       url: 'naturalnvintage.com',
+      descript:'',
       img:[
-        'https://imgur.com/90a3s1n.png',
-        'https://imgur.com/C80aZOZ.png',
-        'https://imgur.com/0N5OlTS.png',
-        'https://imgur.com/cyrmfoH.png',
-        'https://imgur.com/M3WHaTx.png'
+        ['https://imgur.com/90a3s1n.png',''],
+        ['https://imgur.com/C80aZOZ.png',''],
+        ['https://imgur.com/0N5OlTS.png',''],
+        ['https://imgur.com/cyrmfoH.png',''],
+        ['https://imgur.com/M3WHaTx.png','']
       ]
     },{
-      id:'2',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/1VbHJcf.png',
       cover_title:'Side Chair海報',
@@ -50,11 +67,12 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/uA76D2P.png'
+        ['https://imgur.com/uA76D2P.png','']
       ]
     },{
-      id:'3',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/HNg3XsA.png',
       cover_title:'New Antiques Online',
@@ -64,12 +82,13 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/PMkTKHb.png',
-        'https://imgur.com/0n12ICb.png'
+        ['https://imgur.com/PMkTKHb.png',''],
+        ['https://imgur.com/0n12ICb.png','']
       ]
     },{
-      id:'4',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/u9vjgiU.png',
       cover_title:'國立聯合大學<br>45週年校慶',
@@ -79,14 +98,15 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/ZyBVYGJ.png',
-        'https://imgur.com/PaJ3goJ.png',
-        'https://imgur.com/Yn24LlM.png',
-        'https://imgur.com/CGja3Bo.png'
+        ['https://imgur.com/ZyBVYGJ.png',''],
+        ['https://imgur.com/PaJ3goJ.png',''],
+        ['https://imgur.com/Yn24LlM.png',''],
+        ['https://imgur.com/CGja3Bo.png','']
       ]
     },{
-      id:'5',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/KLUcuNF.png',
       cover_title:'國立聯合大學<br>44週年校慶',
@@ -96,14 +116,15 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/JQE9f3y.png',
-        'https://imgur.com/BnnWUFY.png',
-        'https://imgur.com/LFm7obU.png',
-        'https://imgur.com/1pJJPg4.png'
+        ['https://imgur.com/JQE9f3y.png',''],
+        ['https://imgur.com/BnnWUFY.png',''],
+        ['https://imgur.com/LFm7obU.png',''],
+        ['https://imgur.com/1pJJPg4.png','']
       ]
     },{
-      id:'6',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/OX8Dp0p.png',
       cover_title:'NUR / SCHO KO',
@@ -113,14 +134,15 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/ZwzlGIe.png',
-        'https://imgur.com/eglCjU0.png',
-        'https://imgur.com/4ZZ00Mp.png',
-        'https://imgur.com/yqxLjGh.png'
+        ['https://imgur.com/ZwzlGIe.png',''],
+        ['https://imgur.com/eglCjU0.png',''],
+        ['https://imgur.com/4ZZ00Mp.png',''],
+        ['https://imgur.com/yqxLjGh.png','']
       ]
     },{
-      id:'7',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/5yrQibe.png',
       cover_title:'初夜',
@@ -130,13 +152,14 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/PzyVivr.png',
-        'https://imgur.com/O9JwdPp.png',
-        'https://imgur.com/uwHZB2u.png'
+        ['https://imgur.com/PzyVivr.png',''],
+        ['https://imgur.com/O9JwdPp.png',''],
+        ['https://imgur.com/uwHZB2u.png','']
       ]
     },{
-      id:'8',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/RqYiOWH.png',
       cover_title:'NUU Club貼紙',
@@ -146,13 +169,14 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/RqYiOWH.png',
-        'https://imgur.com/NO668BD.png',
-        'https://imgur.com/W0H5qYk.png'
+        ['https://imgur.com/RqYiOWH.png',''],
+        ['https://imgur.com/NO668BD.png',''],
+        ['https://imgur.com/W0H5qYk.png','']
       ]
     },{
-      id:'9',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/T8bbudk.png',
       cover_title:'聯大吉祥物提案',
@@ -162,12 +186,13 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/T8bbudk.png',
-        'https://imgur.com/Dl5Wx77.png'
+        ['https://imgur.com/T8bbudk.png',''],
+        ['https://imgur.com/Dl5Wx77.png','']
       ]
     },{
-      id:'10',
+      id:'',
       category:['front_end','design'],
       cover:'https://imgur.com/yxZIS4o.png',
       cover_title:'聯大華文系歡迎頁',
@@ -177,12 +202,13 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/vZyEXFC.png',
-        'https://imgur.com/HpQXdgm.png'
+        ['https://imgur.com/vZyEXFC.png',''],
+        ['https://imgur.com/HpQXdgm.png','']
       ]
     },{
-      id:'11',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/eH0OrM0.png',
       cover_title:'facebook行銷組圖',
@@ -192,12 +218,13 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/M9oUCYq.png',
-        'https://imgur.com/1tYvoAC.png'
+        ['https://imgur.com/M9oUCYq.png',''],
+        ['https://imgur.com/1tYvoAC.png','']
       ]
     },{
-      id:'12',
+      id:'',
       category:['design'],
       cover:'https://imgur.com/av4oGMq.png',
       cover_title:'估價單設計',
@@ -207,26 +234,115 @@ var app = new Vue({
       tag:[],
       url_name:'',
       url: '',
+      descript:'',
       img:[
-        'https://imgur.com/av4oGMq.png',
-        'https://imgur.com/gPTv1gd.png'
+        ['https://imgur.com/av4oGMq.png',''],
+        ['https://imgur.com/gPTv1gd.png','']
       ]
     },{
-      id:'13',
+      id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/GuC2C44.png',
-      cover_title:'AQUOS sense4 Plus官網',
+      cover_title:'AQUOS<br>sense4 Plus官網',
       title: 'AQUOS<br>sense4 Plus官網',
       date:'11.2020',
       type:'web design / front-end',
       tag:['GSAP','ahrelax'],
       url_name:'AQUOS sense4 Plus',
       url: 'https://aquosmobile.sharp.com.tw/WebSubSite/aquos/sense4.html',
+      descript:'',
       img:[
-        'https://i.imgur.com/GuC2C44.png',
-        'https://i.imgur.com/QHrL1FQ.png',
-        'https://i.imgur.com/ECnyiri.png',
-        'https://i.imgur.com/ZxAHnv2.png'
+        ['https://i.imgur.com/GuC2C44.png',''],
+        ['https://i.imgur.com/QHrL1FQ.png',''],
+        ['https://i.imgur.com/ECnyiri.png',''],
+        ['https://i.imgur.com/ZxAHnv2.png','']
+      ]
+    },{
+      id:'',
+      category:['front_end','design'],
+      cover:'https://i.imgur.com/N863v7v.png',
+      cover_title:'Sony Alpha 官網',
+      title: 'Sony α 官網',
+      date:'12.2020',
+      type:'web design / front-end',
+      tag:['Vue.js'],
+      url_name:'Sony α',
+      url: 'https://store.sony.com.tw/alpha/',
+      descript:'',
+      img:[
+        ['https://i.imgur.com/N863v7v.png',''],
+        ['https://i.imgur.com/OrIgd9J.png',''],
+        ['https://i.imgur.com/0GGLTnU.png','']
+      ]
+    },{
+      id:'',
+      category:['front_end'],
+      cover:'https://i.imgur.com/4GUOi98.png',
+      cover_title:'Fayd 飛宜得',
+      title: 'Fayd 飛宜得',
+      date:'02.2021',
+      type:'front-end',
+      tag:['Vue.js','GSAP','ScrollTrigger','Locomotive-Scroll'],
+      url_name:'飛宜得',
+      url: 'https://www.fayd.com.tw/',
+      descript:'此專案本人負責之部分為網頁滾動特效製作與店家搜尋功能建置',
+      img:[
+        ['https://i.imgur.com/4GUOi98.png',''],
+        ['https://i.imgur.com/OMOmKyX.gif',''],
+        ['https://i.imgur.com/2fzI6WD.gif',''],
+        ['https://i.imgur.com/aROnlA5.gif',''],
+        ['https://i.imgur.com/KuagRKd.png','']
+      ]
+    },{
+      id:'',
+      category:['front_end','design'],
+      cover:'https://i.imgur.com/c2nPBUb.png',
+      cover_title:'2021得利空間<br>色彩趨勢',
+      title: '2021得利空間色彩趨勢',
+      date:'09.2020',
+      type:'web design / front-end',
+      tag:[],
+      url_name:'2021得利空間色彩趨勢',
+      url: 'https://www.letscolor.com.tw/colour_futures/',
+      descript:'',
+      img:[
+        ['https://i.imgur.com/aQe3ipL.jpg',''],
+        ['https://i.imgur.com/xF3SR8O.png',''],
+        ['https://i.imgur.com/9HPikFA.jpg','提案階段視覺'],
+        ['https://i.imgur.com/Q9KnkuH.jpg','']
+      ]
+    },{
+      id:'',
+      category:['design'],
+      cover:'https://i.imgur.com/yMsdwwZ.jpg',
+      cover_title:'元大期貨 iTrader<br>網頁視覺提案',
+      title: '元大期貨 iTrader<br>網頁視覺提案',
+      date:'11.2020',
+      type:'web design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        ['https://i.imgur.com/IF1YdNr.jpg','']
+      ]
+    },{
+      id:'',
+      category:['design'],
+      cover:'https://i.imgur.com/w9Imc03.jpg',
+      cover_title:'台啤特釀研究室<br>平面視覺提案',
+      title: '台啤特釀研究室<br>平面視覺提案',
+      date:'01.2021',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        ['https://i.imgur.com/w9Imc03.jpg',''],
+        ['https://i.imgur.com/jjgYYxz.jpg',''],
+        ['https://i.imgur.com/KWf01Ur.jpg',''],
+        ['https://i.imgur.com/AEHD1A8.jpg','']
       ]
     }]
   },
@@ -238,6 +354,9 @@ var app = new Vue({
         this.show=false;
         this.id=event;
       };
+    },
+    afterEnter: function(){
+      waterfall('.waterfall span');
     }
   },
   computed:{
@@ -247,21 +366,22 @@ var app = new Vue({
       return works.filter((works) => {
         return works.category.indexOf(tab[0]) >= 0;
       })
-
     }
-
+  },
+  created: function(){
+    for (var i = 0; i < this.works.length; i++) {
+      this.works[i].id=i
+    }
   },
   updated: function () {
     this.$nextTick(function () {
-      waterfall('.waterfall span');
+      this.$Lazyload.$on('loaded', function (listener) {
+        waterfall('.waterfall span');
+      })
       var v = this;
       setTimeout(function(){
         v.show=true;
-        waterfall('.waterfall span');
       },350)
-      setTimeout(function(){
-        waterfall('.waterfall span');
-      },1000)
     })
   }
 })

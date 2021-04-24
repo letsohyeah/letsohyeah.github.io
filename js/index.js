@@ -118,54 +118,24 @@ $(document).ready(function(){
        });
 });*/
 function scrollFunction() {
-  var yU = document.getElementById("infobox-works").scrollTop;
-  var yB = document.getElementById("infobox-works").scrollBottom;
-  var topH = document.getElementById('topbox').offsetHeight;
-  var infoH = document.getElementById('infobox-works').offsetHeight;
-  if (document.getElementById("infobox-works").scrollTop > 80) {
-    document.getElementById("topbox").style.height = "5rem";
-    document.getElementById("logobox").style.display = "none";
-    document.getElementById("navbox").style.flexDirection = "row";
-    document.getElementById("nav").style.justifyContent = "space-around";
-    document.getElementById("nav").style.borderRight = "1px solid #474849";
-    document.getElementById("navbox").style.height = "5rem";
-    document.getElementById("nav").style.height = "5rem";
-    document.getElementById("nav").style.flexDirection = "row";
-    document.getElementById("titlebox").style.width = "calc(var(--vh, 1vh) * 38.7)";
-    document.getElementById("titlebox").style.height = "5rem";
-    document.getElementById("nav").style.width = "100%";
-    if ( $(window).width() < 768) {
-      document.getElementById("infobox-works").style.top = "5rem";
-      document.getElementById("infobox-contact").style.top = "5rem";
-    }
-    document.getElementById("infobox-works").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
-    document.getElementById("infobox-about").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
-    document.getElementById("infobox-contact").style.height = "calc( var(--vh, 1vh) * 100 - 5rem )";
+  var yU = $("#infobox-works").scrollTop();
+  if (yU > 80) {
+    $("#logobox").css('display','none');
+    $("#topbox").toggleClass('scroll',true);
+    $("#navbox").toggleClass('scroll',true);
+    $("#nav").toggleClass('scroll',true);
+    $("#titlebox").toggleClass('scroll',true);
+    $("#infobox-works").toggleClass('scroll',true);
+    $("#infobox-about").toggleClass('scroll',true);
+    $("#infobox-contact").toggleClass('scroll',true);
   }else {
-    if ( $(window).width() < 768 ) {
-      document.getElementById("infobox-about").style.height = "auto";
-      document.getElementById("infobox-works").style.height = "calc( var(--vh, 1vh) * 100 - 61.3vw )";
-      document.getElementById("infobox-contact").style.height = "100vw";
-      document.getElementById("topbox").style.height = "auto";
-      document.getElementById("navbox").style.height = "auto";
-      document.getElementById("nav").style.height = "38.7vw";
-      document.getElementById("titlebox").style.height = "22.6vw";
-      document.getElementById("infobox-works").style.top = "61.3vw";
-      document.getElementById("infobox-contact").style.top = "61.3vw";
-    }else {
-      document.getElementById("infobox-about").style.height = "calc(var(--vh, 1vh) * 61.3)";
-      document.getElementById("infobox-works").style.height = "calc(var(--vh, 1vh) * 61.3)";
-      document.getElementById("topbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
-      document.getElementById("navbox").style.height = "calc(var(--vh, 1vh) * 38.7)";
-      document.getElementById("nav").style.height = "calc(var(--vh, 1vh) * 22.6)";
-      document.getElementById("titlebox").style.height = "calc(var(--vh, 1vh) * 16.1)";
-      document.getElementById("infobox-contact").style.height = "calc(var(--vh, 1vh) * 61.3)";
-    }
-    document.getElementById("nav").style.borderRight = "none";
-    document.getElementById("nav").style.flexDirection = "column";
-    document.getElementById("nav").style.justifyContent = "center";
-    document.getElementById("navbox").style.flexDirection = "column";
-    document.getElementById("logobox").style.display = "flex";
-    document.getElementById("titlebox").style.width = "100%";
+    $("#topbox").toggleClass('scroll',false);
+    $("#titlebox").toggleClass('scroll',false);
+    $("#infobox-works").toggleClass('scroll',false);
+    $("#infobox-about").toggleClass('scroll',false);
+    $("#infobox-contact").toggleClass('scroll',false);
+    $("#nav").toggleClass('scroll',false);
+    $("#navbox").toggleClass('scroll',false);
+    $("#logobox").css('display','flex');
   }
 }
