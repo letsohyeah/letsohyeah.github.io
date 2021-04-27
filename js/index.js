@@ -102,7 +102,10 @@ $(document).ready(function(){
                    });
        });
 });*/
+
+
 function scrollFunction() {
+
   var yU = $("#infobox-works").scrollTop();
   if (yU > 80) {
     $("#logobox").css('display','none');

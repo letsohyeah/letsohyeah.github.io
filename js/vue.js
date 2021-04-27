@@ -10,6 +10,7 @@ var app = new Vue({
     id:'0',
     tab:['front_end'],
     works:[{
+      hide:true,
       id:'',
       category:[],
       cover:'',
@@ -25,6 +26,7 @@ var app = new Vue({
         ['','']
       ]
     },{
+      hide:false,
       id:'',
       category:['front_end','design'],
       cover:'https://i.imgur.com/he01UyH.jpg',
@@ -37,9 +39,10 @@ var app = new Vue({
       url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/una/index2.html',
       descript:'此專案為本人自行接案，尚在開發階段，尚未支援手機瀏覽。<br>後續預計使用Google App Scripts作為簡易DB',
       img:[
-        ['http://i.imgur.com/XgHq2qL.gif','']
+        {src:'http://i.imgur.com/XgHq2qL.gif',descript:''}
       ]
     },{
+      hide:false,
       id:'',
       category:['front_end','design'],
       cover:'https://imgur.com/0TTpgFE.png',
@@ -52,214 +55,14 @@ var app = new Vue({
       url: 'https://naturalnvintage.com',
       descript:'',
       img:[
-        ['https://imgur.com/90a3s1n.png',''],
-        ['https://imgur.com/C80aZOZ.png',''],
-        ['https://imgur.com/0N5OlTS.png',''],
-        ['https://imgur.com/cyrmfoH.png',''],
-        ['https://imgur.com/M3WHaTx.png','']
+        {src:'https://imgur.com/90a3s1n.png',descript:''},
+        {src:'https://imgur.com/C80aZOZ.png',descript:''},
+        {src:'https://imgur.com/0N5OlTS.png',descript:''},
+        {src:'https://imgur.com/cyrmfoH.png',descript:''},
+        {src:'https://imgur.com/M3WHaTx.png',descript:''}
       ]
     },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/1VbHJcf.png',
-      cover_title:'Side Chair海報',
-      title: 'Side Chair海報',
-      date:'12.2018',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/uA76D2P.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/HNg3XsA.png',
-      cover_title:'New Antiques Online',
-      title: 'New<br>Antiques<br>Online!',
-      date:'8.2018',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/PMkTKHb.png',''],
-        ['https://imgur.com/0n12ICb.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/u9vjgiU.png',
-      cover_title:'國立聯合大學<br>45週年校慶',
-      title: '國立聯合大學<br>45週年校慶',
-      date:'11.2017',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/ZyBVYGJ.png',''],
-        ['https://imgur.com/PaJ3goJ.png',''],
-        ['https://imgur.com/Yn24LlM.png',''],
-        ['https://imgur.com/CGja3Bo.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/KLUcuNF.png',
-      cover_title:'國立聯合大學<br>44週年校慶',
-      title: '國立聯合大學<br>44週年校慶',
-      date:'11.2016',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/JQE9f3y.png',''],
-        ['https://imgur.com/BnnWUFY.png',''],
-        ['https://imgur.com/LFm7obU.png',''],
-        ['https://imgur.com/1pJJPg4.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/OX8Dp0p.png',
-      cover_title:'NUR / SCHO KO',
-      title: 'NUR<br>/<br>SCHO<br>KO',
-      date:'4.2016',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/ZwzlGIe.png',''],
-        ['https://imgur.com/eglCjU0.png',''],
-        ['https://imgur.com/4ZZ00Mp.png',''],
-        ['https://imgur.com/yqxLjGh.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/5yrQibe.png',
-      cover_title:'初夜',
-      title: '初夜',
-      date:'9.2016',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/PzyVivr.png',''],
-        ['https://imgur.com/O9JwdPp.png',''],
-        ['https://imgur.com/uwHZB2u.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/RqYiOWH.png',
-      cover_title:'NUU Club貼紙',
-      title: 'NUU Club貼紙',
-      date:'10.2016',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/RqYiOWH.png',''],
-        ['https://imgur.com/NO668BD.png',''],
-        ['https://imgur.com/W0H5qYk.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/T8bbudk.png',
-      cover_title:'聯大吉祥物提案',
-      title: '聯大吉祥物提案',
-      date:'6.2017',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/T8bbudk.png',''],
-        ['https://imgur.com/Dl5Wx77.png','']
-      ]
-    },{
-      id:'',
-      category:['front_end','design'],
-      cover:'https://imgur.com/yxZIS4o.png',
-      cover_title:'聯大華文系歡迎頁',
-      title: '聯大華文系歡迎頁',
-      date:'6.2019',
-      type:'web design / front-end',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/vZyEXFC.png',''],
-        ['https://imgur.com/HpQXdgm.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/eH0OrM0.png',
-      cover_title:'facebook行銷組圖',
-      title: 'facebook行銷組圖',
-      date:'11.2018',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/M9oUCYq.png',''],
-        ['https://imgur.com/1tYvoAC.png','']
-      ]
-    },{
-      id:'',
-      category:['design'],
-      cover:'https://imgur.com/av4oGMq.png',
-      cover_title:'估價單設計',
-      title: '估價單設計',
-      date:'11.2018',
-      type:'graphic design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'',
-      img:[
-        ['https://imgur.com/av4oGMq.png',''],
-        ['https://imgur.com/gPTv1gd.png','']
-      ]
-    },{
-      id:'',
-      category:['front_end'],
-      cover:'https://i.imgur.com/GuC2C44.png',
-      cover_title:'AQUOS<br>sense4 Plus官網',
-      title: 'AQUOS<br>sense4 Plus官網',
-      date:'11.2020',
-      type:'web design / front-end',
-      tag:['GSAP','ahrelax'],
-      url_name:'AQUOS sense4 Plus',
-      url: 'https://aquosmobile.sharp.com.tw/WebSubSite/aquos/sense4.html',
-      descript:'',
-      img:[
-        ['https://i.imgur.com/GuC2C44.png',''],
-        ['https://i.imgur.com/QHrL1FQ.png',''],
-        ['https://i.imgur.com/ECnyiri.png',''],
-        ['https://i.imgur.com/ZxAHnv2.png','']
-      ]
-    },{
+      hide:false,
       id:'',
       category:['front_end','design'],
       cover:'https://i.imgur.com/N863v7v.png',
@@ -272,11 +75,48 @@ var app = new Vue({
       url: 'https://store.sony.com.tw/alpha/',
       descript:'',
       img:[
-        ['https://i.imgur.com/N863v7v.png',''],
-        ['https://i.imgur.com/OrIgd9J.png',''],
-        ['https://i.imgur.com/0GGLTnU.png','']
+        {src:'https://i.imgur.com/N863v7v.png',descript:''},
+        {src:'https://i.imgur.com/OrIgd9J.png',descript:''},
+        {src:'https://i.imgur.com/0GGLTnU.png',descript:''}
       ]
     },{
+      hide:false,
+      id:'',
+      category:['front_end'],
+      cover:'https://i.imgur.com/GuC2C44.png',
+      cover_title:'AQUOS<br>sense4 Plus官網',
+      title: 'AQUOS<br>sense4 Plus官網',
+      date:'11.2020',
+      type:'web design / front-end',
+      tag:['GSAP','ahrelax'],
+      url_name:'AQUOS sense4 Plus',
+      url: 'https://aquosmobile.sharp.com.tw/WebSubSite/aquos/sense4.html',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/GuC2C44.png',descript:''},
+        {src:'https://i.imgur.com/QHrL1FQ.png',descript:''},
+        {src:'https://i.imgur.com/ECnyiri.png',descript:''},
+        {src:'https://i.imgur.com/ZxAHnv2.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['front_end'],
+      cover:'https://i.imgur.com/zaDX4Za.jpg',
+      cover_title:'松菸360°導覽',
+      title: '松菸360°導覽',
+      date:'03.2021',
+      type:'front-end',
+      tag:['Panolens'],
+      url_name:'360°導覽',
+      url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/360tour/',
+      descript:'此為提案階段之Demo頁面',
+      img:[
+        {src:'https://i.imgur.com/zaDX4Za.jpg',descript:''},
+        {src:'https://i.imgur.com/j4jHI9k.jpg',descript:''}
+      ]
+    },{
+      hide:false,
       id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/4GUOi98.png',
@@ -289,13 +129,14 @@ var app = new Vue({
       url: 'https://www.fayd.com.tw/',
       descript:'此專案本人負責之部分為網頁滾動特效製作與店家搜尋功能建置',
       img:[
-        ['https://i.imgur.com/4GUOi98.png',''],
-        ['https://i.imgur.com/OMOmKyX.gif',''],
-        ['https://i.imgur.com/2fzI6WD.gif',''],
-        ['https://i.imgur.com/aROnlA5.gif',''],
-        ['https://i.imgur.com/KuagRKd.png','']
+        {src:'https://i.imgur.com/4GUOi98.png',descript:''},
+        {src:'https://i.imgur.com/OMOmKyX.gif',descript:''},
+        {src:'https://i.imgur.com/2fzI6WD.gif',descript:''},
+        {src:'https://i.imgur.com/aROnlA5.gif',descript:''},
+        {src:'https://i.imgur.com/KuagRKd.png',descript:''}
       ]
     },{
+      hide:false,
       id:'',
       category:['front_end','design'],
       cover:'https://i.imgur.com/c2nPBUb.png',
@@ -308,12 +149,13 @@ var app = new Vue({
       url: 'https://www.letscolor.com.tw/colour_futures/',
       descript:'',
       img:[
-        ['https://i.imgur.com/aQe3ipL.jpg',''],
-        ['https://i.imgur.com/xF3SR8O.png',''],
-        ['https://i.imgur.com/9HPikFA.jpg','提案階段視覺'],
-        ['https://i.imgur.com/Q9KnkuH.jpg','']
+        {src:'https://i.imgur.com/9HPikFA.jpg',descript:'提案階段'},
+        {src:'https://i.imgur.com/Q9KnkuH.jpg',descript:''},
+        {src:'https://i.imgur.com/aQe3ipL.jpg',descript:'完稿'},
+        {src:'https://i.imgur.com/xF3SR8O.png',descript:''}
       ]
     },{
+      hide:false,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/yMsdwwZ.jpg',
@@ -326,9 +168,10 @@ var app = new Vue({
       url: '',
       descript:'',
       img:[
-        ['https://i.imgur.com/IF1YdNr.jpg','']
+        {src:'https://i.imgur.com/IF1YdNr.jpg',descript:''}
       ]
     },{
+      hide:false,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/w9Imc03.jpg',
@@ -341,10 +184,272 @@ var app = new Vue({
       url: '',
       descript:'',
       img:[
-        ['https://i.imgur.com/w9Imc03.jpg',''],
-        ['https://i.imgur.com/jjgYYxz.jpg',''],
-        ['https://i.imgur.com/KWf01Ur.jpg',''],
-        ['https://i.imgur.com/AEHD1A8.jpg','']
+        {src:'https://i.imgur.com/w9Imc03.jpg',descript:''},
+        {src:'https://i.imgur.com/jjgYYxz.jpg',descript:''},
+        {src:'https://i.imgur.com/KWf01Ur.jpg',descript:''},
+        {src:'https://i.imgur.com/AEHD1A8.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/1VbHJcf.png',
+      cover_title:'Side Chair海報',
+      title: 'Side Chair海報',
+      date:'12.2018',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/uA76D2P.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/HNg3XsA.png',
+      cover_title:'New Antiques Online',
+      title: 'New<br>Antiques<br>Online!',
+      date:'8.2018',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/PMkTKHb.png',descript:''},
+        {src:'https://imgur.com/0n12ICb.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/u9vjgiU.png',
+      cover_title:'國立聯合大學<br>45週年校慶',
+      title: '國立聯合大學<br>45週年校慶',
+      date:'11.2017',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/ZyBVYGJ.png',descript:''},
+        {src:'https://imgur.com/PaJ3goJ.png',descript:''},
+        {src:'https://imgur.com/Yn24LlM.png',descript:''},
+        {src:'https://imgur.com/CGja3Bo.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/KLUcuNF.png',
+      cover_title:'國立聯合大學<br>44週年校慶',
+      title: '國立聯合大學<br>44週年校慶',
+      date:'11.2016',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/JQE9f3y.png',descript:''},
+        {src:'https://imgur.com/BnnWUFY.png',descript:''},
+        {src:'https://imgur.com/LFm7obU.png',descript:''},
+        {src:'https://imgur.com/1pJJPg4.png',descript:''}
+      ]
+    },{
+      hide:true,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/OX8Dp0p.png',
+      cover_title:'NUR / SCHO KO',
+      title: 'NUR<br>/<br>SCHO<br>KO',
+      date:'4.2016',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/ZwzlGIe.png',descript:''},
+        {src:'https://imgur.com/eglCjU0.png',descript:''},
+        {src:'https://imgur.com/4ZZ00Mp.png',descript:''},
+        {src:'https://imgur.com/yqxLjGh.png',descript:''}
+      ]
+    },{
+      hide:true,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/5yrQibe.png',
+      cover_title:'初夜',
+      title: '初夜',
+      date:'9.2016',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/PzyVivr.png',descript:''},
+        {src:'https://imgur.com/O9JwdPp.png',descript:''},
+        {src:'https://imgur.com/uwHZB2u.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/RqYiOWH.png',
+      cover_title:'NUU Club貼紙',
+      title: 'NUU Club貼紙',
+      date:'10.2016',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/RqYiOWH.png',descript:''},
+        {src:'https://imgur.com/NO668BD.png',descript:''},
+        {src:'https://imgur.com/W0H5qYk.png',descript:''}
+      ]
+    },{
+      hide:true,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/T8bbudk.png',
+      cover_title:'聯大吉祥物提案',
+      title: '聯大吉祥物提案',
+      date:'6.2017',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/T8bbudk.png',descript:''},
+        {src:'https://imgur.com/Dl5Wx77.png',descript:''}
+      ]
+    },{
+      hide:true,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/yxZIS4o.png',
+      cover_title:'聯大華文系歡迎頁',
+      title: '聯大華文系歡迎頁',
+      date:'6.2019',
+      type:'web design / front-end',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/vZyEXFC.png',descript:''},
+        {src:'https://imgur.com/HpQXdgm.png',descript:''}
+      ]
+    },{
+      hide:true,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/eH0OrM0.png',
+      cover_title:'facebook行銷組圖',
+      title: 'facebook行銷組圖',
+      date:'11.2018',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/M9oUCYq.png',descript:''},
+        {src:'https://imgur.com/1tYvoAC.png',descript:''}
+      ]
+    },{
+      hide:true,
+      id:'',
+      category:['design'],
+      cover:'https://imgur.com/av4oGMq.png',
+      cover_title:'估價單設計',
+      title: '估價單設計',
+      date:'11.2018',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://imgur.com/av4oGMq.png',descript:''},
+        {src:'https://imgur.com/gPTv1gd.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://i.imgur.com/MQSDhBi.jpg',
+      cover_title:'高雄華航春節Banner',
+      title: '高雄華航春節Banner',
+      date:'01.2021',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/MQSDhBi.jpg',descript:''},
+        {src:'https://i.imgur.com/P2HKTnt.jpg',descript:''},
+        {src:'https://i.imgur.com/vyuX7QE.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://i.imgur.com/FaMCdqI.jpg',
+      cover_title:'2020華航雄U號LP提案',
+      title: '2020華航雄U號LP提案',
+      date:'02.2020',
+      type:'web design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/FaMCdqI.jpg',descript:''},
+        {src:'https://i.imgur.com/h0QLcve.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['front_end','design'],
+      cover:'https://i.imgur.com/SgZecV1.jpg',
+      cover_title:'Sharp AQUOS X e-Sports',
+      title: 'Sharp AQUOS X e-Sports',
+      date:'07.2020',
+      type:'web design',
+      tag:[],
+      url_name:'AQUOS X e-Sports ',
+      url: 'https://aquosmobile.sharp.com.tw/WebSubSite/aquos/ahq.html',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/SgZecV1.jpg',descript:''},
+        {src:'https://i.imgur.com/1lpthg3.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://i.imgur.com/jcquZ7j.jpg',
+      cover_title:'松菸官網改版提案',
+      title: '松菸官網改版提案',
+      date:'03.2021',
+      type:'web design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'本人負責此專案其中一頁面，除頁首、頁尾外皆為本人之設計',
+      img:[
+        {src:'https://i.imgur.com/nSlMxzj.jpg',descript:''}
       ]
     }]
   },
