@@ -261,7 +261,7 @@
 							<div class="works-info-text">{{works[id].type}}</div>
 							<a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}} <i class="fas fa-link"></i></a>
 							<div class="tagbox">
-								<span v-for="i in works[id].tag">#{{i}}</span>
+								<span v-for="i in works[id].tag">{{i}}</span>
 							</div>
 							<div class="works-descript" v-html="works[id].descript"></div>
 						</div>
@@ -281,7 +281,7 @@
 						<div class="works-info-text">{{works[id].type}}</div>
 						<a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}} <i class="fas fa-external-link-alt"></i></a>
 						<div class="tagbox">
-							<span v-for="i in works[id].tag">#{{i}}</span>
+							<span v-for="i in works[id].tag">{{i}}</span>
 						</div>
 						<div class="works-descript" v-html="works[id].descript"></div>
 					</div>
