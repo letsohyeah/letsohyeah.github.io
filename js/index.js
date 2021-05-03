@@ -23,6 +23,9 @@ $(document).ready(function(){
     $('#infobox-works').toggleClass('view',false);
     $('#infobox-contact').toggleClass('view',false);
     $('.bar').toggleClass('move',true);
+    if ($(window).width() < 768) {
+      $('.cleanfix').toggleClass('works',false);
+    }
     $("div#title").addClass("move-title");
     setTimeout(function() {
       $(".textA").addClass("showtitle");
@@ -36,6 +39,7 @@ $(document).ready(function(){
     $('#infobox-about').toggleClass('view',false);
     $('#infobox-contact').toggleClass('view',false);
     if ($(window).width() < 768) {
+      $('.cleanfix').toggleClass('works',true);
       $('.rightbox.about').toggleClass('view',false);
       $('.rightbox.works').toggleClass('view',false);
     }
@@ -52,6 +56,7 @@ $(document).ready(function(){
     $('#infobox-works').toggleClass('view',false);
     $('#infobox-about').toggleClass('view',false);
     if ($(window).width() < 768) {
+      $('.cleanfix').toggleClass('works',true);
       $('.rightbox.about').toggleClass('view',false);
       $('.rightbox.works').toggleClass('view',false);
     }
@@ -86,6 +91,7 @@ $(document).ready(function(){
     $('.close').on('click',function(){
       $('.rightbox.Works.mobile').toggleClass('view',false);
     });
+
   }
 });
 
@@ -105,9 +111,11 @@ $(document).ready(function(){
 
 
 function scrollFunction() {
-
+  function convertRemToPixels(rem) {
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+  }
   var yU = $("#infobox-works").scrollTop();
-  if (yU > 80) {
+  if (yU > 150) {
     $("#logobox").css('display','none');
     $("#topbox").toggleClass('scroll',true);
     $("#navbox").toggleClass('scroll',true);
@@ -116,6 +124,15 @@ function scrollFunction() {
     $("#infobox-works").toggleClass('scroll',true);
     $("#infobox-about").toggleClass('scroll',true);
     $("#infobox-contact").toggleClass('scroll',true);
+    if ($(window).width() < 768) {
+      var wh = window.innerHeight;
+      $('#infobox-works').css({
+        height: wh - convertRemToPixels(5)
+      })
+      $('#infobox-contact').css({
+        height: wh - convertRemToPixels(5)
+      })
+    }
   }else {
     $("#topbox").toggleClass('scroll',false);
     $("#titlebox").toggleClass('scroll',false);
@@ -125,5 +142,16 @@ function scrollFunction() {
     $("#nav").toggleClass('scroll',false);
     $("#navbox").toggleClass('scroll',false);
     $("#logobox").css('display','flex');
+    if ($(window).width() < 768) {
+      var wh = window.innerHeight;
+      $('#infobox-works').css({
+        height:  wh - ($(window).width()*0.613)
+      })
+      $('#infobox-contact').css({
+        height:  wh - ($(window).width()*0.613)
+      })
+    }
   }
+
+
 }

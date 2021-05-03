@@ -274,7 +274,7 @@ body{
   font-weight: 300;
 }
 .skill_box ul li{
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 .skill_box ul li span{
   margin-left: 0.5rem;
@@ -436,6 +436,7 @@ body{
 }
 .item{
   padding: 1rem;
+  transition: 0.5s;
   width: calc(50% - 0rem);
 }
 .imgbox-works{
@@ -627,7 +628,13 @@ body{
   	display: 				 flex;
   	flex-direction: column;
   	background-color: #474849;
-  	}
+  }
+  .cleanfix.works{
+    height: fill-available;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    overflow-y: hidden;
+  }
   .leftbox{
   	width: 100vw;
   	height: auto;
@@ -673,6 +680,7 @@ body{
   #navbox{
   	transition: 0.4s;
   	width: 100%;
+    height: 61.3vw;
   	display: -moz-flex;
   	display: -webkit-flex;
   	display: 				 flex;
