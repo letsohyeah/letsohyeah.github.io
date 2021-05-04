@@ -209,20 +209,17 @@ var app = new Vue({
       hide:false,
       id:'',
       category:['design'],
-      cover:'https://i.imgur.com/w9Imc03.jpg',
-      cover_title:'台啤特釀研究室<br>平面視覺提案',
-      title: '台啤特釀研究室<br>平面視覺提案',
-      date:'01.2021',
-      type:'graphic design',
+      cover:'https://i.imgur.com/jcquZ7j.jpg',
+      cover_title:'松菸官網改版提案',
+      title: '松菸官網改版提案',
+      date:'03.2021',
+      type:'web design',
       tag:[],
       url_name:'',
       url: '',
-      descript:'',
+      descript:'本人負責此專案其中一頁面，除頁首、頁尾外皆為本人之設計',
       img:[
-        {src:'https://i.imgur.com/w9Imc03.jpg',descript:''},
-        {src:'https://i.imgur.com/jjgYYxz.jpg',descript:''},
-        {src:'https://i.imgur.com/KWf01Ur.jpg',descript:''},
-        {src:'https://i.imgur.com/AEHD1A8.jpg',descript:''}
+        {src:'https://i.imgur.com/nSlMxzj.jpg',descript:''}
       ]
     },{
       hide:false,
@@ -422,6 +419,25 @@ var app = new Vue({
       hide:false,
       id:'',
       category:['design'],
+      cover:'https://i.imgur.com/w9Imc03.jpg',
+      cover_title:'台啤特釀研究室<br>平面視覺提案',
+      title: '台啤特釀研究室<br>平面視覺提案',
+      date:'01.2021',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/w9Imc03.jpg',descript:''},
+        {src:'https://i.imgur.com/jjgYYxz.jpg',descript:''},
+        {src:'https://i.imgur.com/KWf01Ur.jpg',descript:''},
+        {src:'https://i.imgur.com/AEHD1A8.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
       cover:'https://i.imgur.com/MQSDhBi.jpg',
       cover_title:'高雄華航春節Banner',
       title: '高雄華航春節Banner',
@@ -469,22 +485,6 @@ var app = new Vue({
       img:[
         {src:'https://i.imgur.com/SgZecV1.jpg',descript:''},
         {src:'https://i.imgur.com/1lpthg3.jpg',descript:''}
-      ]
-    },{
-      hide:false,
-      id:'',
-      category:['design'],
-      cover:'https://i.imgur.com/jcquZ7j.jpg',
-      cover_title:'松菸官網改版提案',
-      title: '松菸官網改版提案',
-      date:'03.2021',
-      type:'web design',
-      tag:[],
-      url_name:'',
-      url: '',
-      descript:'本人負責此專案其中一頁面，除頁首、頁尾外皆為本人之設計',
-      img:[
-        {src:'https://i.imgur.com/nSlMxzj.jpg',descript:''}
       ]
     }]
   },
