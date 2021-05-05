@@ -265,6 +265,7 @@ body{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  font-weight: bold;
   letter-spacing: 0.1rem;
 }
 .skill_box{
