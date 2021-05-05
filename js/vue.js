@@ -37,7 +37,7 @@ var app = new Vue({
       tag:['Vue.js','ScrollTrigger','Locomotive-Scroll'],
       url_name:'Una Photography',
       url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/una/index2.html',
-      descript:'此專案為本人自行接案，尚在開發階段，尚未支援手機瀏覽。<br>後續預計使用Google App Scripts作為簡易DB',
+      descript:'此專案為本人自行接案，尚在開發階段，尚未支援手機瀏覽<br>後續預計使用Google App Scripts作為簡易DB',
       img:[
         {src:'http://i.imgur.com/XgHq2qL.gif',descript:''}
       ]
@@ -192,7 +192,7 @@ var app = new Vue({
     },{
       hide:false,
       id:'',
-      category:['front_end','design'],
+      category:['front_end'],
       cover:'https://i.imgur.com/svcMMsU.jpg',
       cover_title:'2021得利空間<br>色彩趨勢AR',
       title: '2021得利空間色彩趨勢AR',
@@ -203,9 +203,9 @@ var app = new Vue({
       url: 'https://reurl.cc/Xka90M',
       descript:'',
       img:[
-        {src:'https://i.imgur.com/m5t3Pwr.jpg',descript:'提案階段'},
+        {src:'https://i.imgur.com/m5t3Pwr.jpg',descript:''},
         {src:'https://i.imgur.com/4XoT1Wp.jpg',descript:''},
-        {src:'https://i.imgur.com/jh7wh1a.jpg',descript:'完稿'},
+        {src:'https://i.imgur.com/jh7wh1a.jpg',descript:''},
         {src:'https://i.imgur.com/MVqoMKz.jpg',descript:''},
         {src:'https://i.imgur.com/svcMMsU.jpg',descript:''}
       ]
@@ -262,6 +262,44 @@ var app = new Vue({
       hide:false,
       id:'',
       category:['design'],
+      cover:'https://i.imgur.com/OyyoBYO.jpg',
+      cover_title:'橘寶寵物美容<br>名片設計',
+      title: '橘寶寵物美容<br>名片設計',
+      date:'10.2020',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/OyyoBYO.jpg',descript:''},
+        {src:'https://i.imgur.com/JSRIfb5.jpg',descript:''},
+        {src:'https://i.imgur.com/IQBmmLw.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
+      cover:'https://i.imgur.com/8T7B1Bz.jpg',
+      cover_title:'Jack & Nana<br>名片設計',
+      title: 'Jack & Nana<br>名片設計',
+      date:'06.2020',
+      type:'graphic design',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'logo為原店家使用之logo',
+      img:[
+        {src:'https://i.imgur.com/8T7B1Bz.jpg',descript:''},
+        {src:'https://i.imgur.com/X7xMQR2.jpg',descript:''},
+        {src:'https://i.imgur.com/FKw5VHD.jpg',descript:''},
+        {src:'https://i.imgur.com/A4CF5x9.jpg',descript:''},
+        {src:'https://i.imgur.com/N8QOwOa.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
       cover:'https://imgur.com/1VbHJcf.png',
       cover_title:'Side Chair海報',
       title: 'Side Chair海報',
@@ -281,7 +319,7 @@ var app = new Vue({
       cover:'https://imgur.com/HNg3XsA.png',
       cover_title:'New Antiques Online',
       title: 'New<br>Antiques<br>Online!',
-      date:'8.2018',
+      date:'08.2018',
       type:'graphic design',
       tag:[],
       url_name:'',
