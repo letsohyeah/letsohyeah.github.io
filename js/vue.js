@@ -192,6 +192,43 @@ var app = new Vue({
     },{
       hide:false,
       id:'',
+      category:['front_end','design'],
+      cover:'https://i.imgur.com/svcMMsU.jpg',
+      cover_title:'2021得利空間<br>色彩趨勢AR',
+      title: '2021得利空間色彩趨勢AR',
+      date:'09.2020',
+      type:'front-end',
+      tag:[],
+      url_name:'得利空間色彩趨勢AR',
+      url: 'https://reurl.cc/Xka90M',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/m5t3Pwr.jpg',descript:'提案階段'},
+        {src:'https://i.imgur.com/4XoT1Wp.jpg',descript:''},
+        {src:'https://i.imgur.com/jh7wh1a.jpg',descript:'完稿'},
+        {src:'https://i.imgur.com/MVqoMKz.jpg',descript:''},
+        {src:'https://i.imgur.com/svcMMsU.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['front_end'],
+      cover:'https://i.imgur.com/n059WQq.png',
+      cover_title:'數獨練習',
+      title: '數獨練習',
+      date:'05.2020',
+      type:'front-end',
+      tag:['Vue.js'],
+      url_name:'sudoku',
+      url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/sudoku.html',
+      descript:'此次練習主要是想測試使用鍵盤作為操控介面。<br>主要功能有：筆記、清除、返回、重做、自動填入筆記數字、產生題目<br>產生題目功能試了三種方法，產生之題目有時解題到最後仍會有一開始無法察覺之矛盾<br><br>此次練習大幅增進了對jquery工具與陣列處理的熟悉度',
+      img:[
+        {src:'https://i.imgur.com/YXAlxNu.png',descript:'自動填入每格可能之數字'},
+        {src:'https://i.imgur.com/uq3qn1c.png',descript:'自動檢查錯誤'}
+      ]
+    },{
+      hide:false,
+      id:'',
       category:['design'],
       cover:'https://i.imgur.com/yMsdwwZ.jpg',
       cover_title:'元大期貨 iTrader<br>網頁視覺提案',
