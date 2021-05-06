@@ -300,6 +300,23 @@ var app = new Vue({
       hide:false,
       id:'',
       category:['design'],
+      cover:'https://i.imgur.com/a4nGTRs.jpg',
+      cover_title:'小雀幸 blissure',
+      title: '小雀幸<br>blissure',
+      date:'05.2020',
+      type:'logotype',
+      tag:[],
+      url_name:'',
+      url: '',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/a4nGTRs.jpg',descript:''},
+        {src:'https://i.imgur.com/4XXJ9Pk.jpg',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['design'],
       cover:'https://imgur.com/1VbHJcf.png',
       cover_title:'Side Chair海報',
       title: 'Side Chair海報',
