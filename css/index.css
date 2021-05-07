@@ -1086,7 +1086,7 @@ body{
   }
 
 }
-@media (max-width: 1400px;) {
+@media (min-width: 1400px) {
   .imgbox1-works{
     max-width: 1000px;
   }
