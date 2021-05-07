@@ -73,9 +73,9 @@
 				</div>
 				<div id="navbox">
 					<div id="nav">
-						<a id="click-a">About</a>
-						<a id="click-w">Works</a>
-						<a id="click-c">Contact</a>
+						<a id="click-a" onclick="gtag('event', 'click', {'event_category' : 'portfolio','event_label' : 'nav_about'});">About</a>
+						<a id="click-w" onclick="gtag('event', 'click', {'event_category' : 'portfolio','event_label' : 'nav_works'});">Works</a>
+						<a id="click-c" onclick="gtag('event', 'click', {'event_category' : 'portfolio','event_label' : 'nav_contact'});">Contact</a>
 					</div>
 					<div id="titlebox">
 						<div class="titlebar" id="title"></div>
@@ -146,8 +146,8 @@
 
 			<div id="infobox-works" onscroll="scrollFunction()">
 				<div class="tabbox">
-					<div class="tab actived" @click="tab=['front_end']">Front-end</div>
-					<div class="tab" @click="tab=['design']">Design</div>
+					<div class="tab actived" @click="tab=['front_end']" onclick="gtag('event', 'click', {'event_category' : 'portfolio','event_label' : 'tab_front'});">Front-end</div>
+					<div class="tab" @click="tab=['design']" onclick="gtag('event', 'click', {'event_category' : 'portfolio','event_label' : 'tab_design'});">Design</div>
 				</div>
 
 				<div class="waterfall">
