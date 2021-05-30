@@ -1,7 +1,6 @@
 function square(){
   var w=$('.works_top').outerWidth();
   $('.works_top').css('min-height',w);
-  console.log('s')
 }
 if($(window).width()>768 && $(window).width()<1500){
   square();
