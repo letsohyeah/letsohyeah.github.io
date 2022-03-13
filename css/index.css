@@ -1,4 +1,7 @@
-html { overflow: hidden; }
+html {
+  overflow: hidden;
+  font-family: 'Noto Sans TC', sans-serif;
+}
 li{
   list-style: none;
 }
@@ -10,7 +13,7 @@ button{
   border: none;
   background: none;
   text-align: left;
-  font-family: 'Noto Sans TC', sans-serif;
+
   font-size: 0.8rem;
   line-height: 1.4rem;
   letter-spacing: 0.1rem;
@@ -23,7 +26,7 @@ button{
             padding: 0;
   }
 body{
-    font-family: 'Noto Sans TC', sans-serif;
+
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -31,6 +34,9 @@ body{
   }
 #overlay{
   z-index: 10000;
+}
+.player {
+  max-width: none !important;
 }
 .loadingbox{
   justify-content: center;
@@ -117,11 +123,10 @@ body{
 }
 #nav{
   height: calc(61.3vh - 38.7vh);
-  padding: 2rem;
+  padding: 3rem;
   border-bottom: 1px solid #474849;
   border-radius: 2rem;
   background-color: #e2ded7;
-  font-family: 'Noto Sans TC', sans-serif;
   font-size: 0.8rem;
   line-height: 1.4rem;
   letter-spacing: 0.1rem;
@@ -130,25 +135,43 @@ body{
   display: 				 flex;
   -moz-flex-directio: column:
   -webkit-flex-direction: column;
-     flex-direction: column;
+  flex-direction: column;
   justify-content: center;
 }
 #nav.scroll{
   justify-content: space-around;
   border-right: 1px solid #474849;
   height: 5rem;
+  padding: 0 2rem;
+  align-items: center;
   width: 100%;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
 }
-#nav a{
-  cursor: pointer;
+#nav.scroll li{
+  margin-bottom: 0;
 }
+#nav li{
+  cursor: pointer;
+  font-size: 1.8vh;
+  line-height: normal;
+  margin-bottom: 0.6vh;
+  transition: opacity 0.3s;
+}
+
+#nav li:hover{
+  opacity: 0.5;
+}
+
+#nav li:last-child{
+  margin-bottom: 0;
+}
+
 #titlebox{
   transition: 0.4s;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1.4rem;
+  font-size: 2.6vh;
+  line-height: normal;
   font-weight: 500;
   letter-spacing: 0.2rem;
   height: calc(38.7vh - 22.6vh);
@@ -167,7 +190,7 @@ body{
   width: 38.7vh;
 }
 .titlebar{
-  width: 8rem;
+  width: 12vh;
   height: 2rem;
   position: absolute;
   background-color: #e2ded7;
@@ -200,14 +223,10 @@ body{
 #infobox-about{
   padding: 3rem;
   position: absolute;
+  overflow-y: scroll;
   height: calc(100vh - 38.7vh);
   width: 61.3vh;
   bottom: 0;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: 				 flex;
-  flex-direction: column;
-  overflow-y: scroll;
   border-radius: 2rem;
   background-color: #e2ded7;
   transform: translateY(100%);
@@ -225,7 +244,7 @@ body{
   overflow: scroll;
   right: 0;
   position: absolute;
-  padding: 4rem;
+  padding: 3rem;
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
@@ -239,7 +258,7 @@ body{
   z-index: 1000;
 }
 .titlebox-skills{
-  font-family: 'Noto Sans TC', sans-serif;
+
   font-size: 1.6rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
@@ -289,63 +308,91 @@ body{
   border-bottom: 1px solid #000;
 }
 
-.name-about{
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1.4rem;
+.about__name-zh{
+  font-size: 22px;
   font-weight: 400;
   letter-spacing: 0.3rem;
 }
-.en-name{
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 0.7rem;
+.about__name-en{
+  font-size: 12px;
   font-weight: 300;
 }
-.subcontent-about{
+.about__info{
   color: #555;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 0.7rem;
+  font-size: 12px;
   font-weight: 300;
   margin-top: 1rem;
 }
 .content-about{
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 300;
   padding-top: 2rem;
-  border-top: 1px solid #474849;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .content-about-title{
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
-.resume-about{
+.about__experience{
+  width: 100%;
+  position: relative;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-width: 400px;
-  font-weight: 1rem;
+  flex-wrap: wrap;
   font-size: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 40px;
   background: #e2ded7;
   color: #474849;
 }
-.company{
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.job-info{
-  margin-bottom: 2rem;
+
+.job {
+  width: 100%;
+  margin-bottom: 64px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.job:last-child {
+  margin-bottom: 0;
+}
+.job__company{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.job__info{
+  font-size: 14px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 16px;
+  color: #555;
+  font-weight: 300;
+}
+.job__info li {
+  margin-right: 24px;
+}
+.job__info-title {
+  font-size: 14px;
+}
+.job__info-time {
+  font-size: 12px;
+}
+.job__title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 /*About*/
 
@@ -391,9 +438,10 @@ body{
   padding: 0.5rem 0;
   margin: 0 0.5rem;
   border-radius: 4rem;
-  font-size: 0.8rem;
+  font-size: 1.2vh;
   text-align: center;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .tab.actived {
@@ -404,7 +452,7 @@ body{
   overflow: scroll;
   right: 0;
   position: absolute;
-  padding: 5rem;
+  padding: 3rem;
   flex-direction: column;
 }
 .mobile{
@@ -447,6 +495,15 @@ body{
   overflow: hidden;
   display: inline-block;
   border-radius: 1rem;
+  cursor: pointer;
+}
+.imgbox-works img{
+  transition: 0.3s;
+}
+.imgbox-works:hover img{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .imgbox1-works{
   margin: auto;
@@ -463,65 +520,73 @@ body{
   justify-content: center;
   align-items: center;
 }
-.imgbox1-works img{
+.imgbox1-works__img{
+  width: 100%;
+  overflow: hidden;
   border-radius: 1rem;
+  position: relative;
+}
+.imgbox1-works__img iframe, .imgbox1-works__img img  {
+  width: 100%;
 }
 .img-descript{
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
+  font-size: 14px;
+  color: #474849;
 }
 .name-works{
   width: 100%;
   text-align: center;
   margin-top: 10px;
-  font-size: 0.7rem;
+  font-size: 1.2vh;
   font-weight: 300;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   display: table;
-  font-family: 'Noto Sans TC', sans-serif;
+
 }
 .works-info{
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  font-size: 14px;
+  margin: 3rem 0;
   width: 100%;
-  text-align: right;
-  font-size: 0.65rem;
-  font-weight: 300;
-  line-height: 1rem;
-  font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 0.15rem;
+  line-height: 1.5;
   color: #474849;
+}
+.works-descript {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: normal;
 }
 .works-info a{
   font-weight: bold;
   color: #000;
+  line-height: 1.5;
 }
 .works-info-text{
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 .tagbox{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 1rem 0;
+  margin: 2rem 0;
+  letter-spacing: normal;
+  font-size: 12px;
 }
 .tagbox span{
   border-radius: 2rem;
   color: #fff;
   background: #474849;
   padding: 0.2rem 0.8rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-bottom: 0.5rem;
 }
 .titlebox-works{
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1.2rem;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.1rem;
   width: 100%;
-  text-align: right;
 }
 /*WORKS*/
 
@@ -540,7 +605,7 @@ body{
   letter-spacing: 0.2rem;
   font-size: 1rem;
   font-weight: 300;
-  font-family: 'Noto Sans TC', sans-serif;
+
   justify-content: center;
   align-items: center;
   display: -moz-flex;
@@ -564,6 +629,9 @@ body{
   display: -moz-flex;
   display: -webkit-flex;
   display: 				 flex;
+}
+.linebox:last-child {
+  margin-right: 0;
 }
 .line1{
   transform: rotate(10deg);
@@ -702,7 +770,7 @@ body{
   	border-bottom: 1px solid #474849;
   	border-radius: 2rem;
   	background-color: #e2ded7;
-  	font-family: 'Noto Sans TC', sans-serif;
+
   	font-size: 0.8rem;
   	line-height: 1.4rem;
   	letter-spacing: 0.1rem;
@@ -714,9 +782,13 @@ body{
   		 flex-direction: column;
   	justify-content: center;
   }
+
+  #nav li{
+    font-size: 1.4vh;
+  }
+
   #titlebox{
   	transition: 0.4s;
-  	font-family: 'Noto Sans TC', sans-serif;
   	font-size: 1rem;
   	font-weight: 600;
   	letter-spacing: 0.2rem;
@@ -809,7 +881,7 @@ body{
   	display: 				 flex;
   }
   .titlebox-skills{
-  	font-family: 'Noto Sans TC', sans-serif;
+
   	font-size: 1.6rem;
   	font-weight: 300;
   	letter-spacing: 0.1rem;
@@ -867,7 +939,7 @@ body{
   	display: 				 flex;
   	flex-direction:  row;
   	line-height: 2.1rem;
-  	font-family: 'Noto Sans TC', sans-serif;
+
   	font-size: 0.8rem;
   	font-weight: 500;
   	letter-spacing: 0rem;
@@ -948,6 +1020,7 @@ body{
   .imgbox-works{
   	overflow: hidden;
   	border-radius: 1rem;
+    cursor: pointer;
   }
   .imgbox1-works{
   	margin-top: 2rem;
@@ -968,24 +1041,28 @@ body{
   	font-weight: 300;
   	letter-spacing: 0.2rem;
   	display: table;
-  	font-family: 'Noto Sans TC', sans-serif;
+
   }
   .titlebox-works{
-  	font-family: 'Noto Sans TC', sans-serif;
+
   	font-size: 1.2rem;
   	font-weight: 500;
   	letter-spacing: 0.1rem;
-  	width: 100%;
-  	text-align: right;
+  	width: calc(100% - 21px);
   }
   .close {
     position: absolute;
-    width: 0.8rem;
-    height: 0.8rem;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    right: 0;
+    top: 2px;
+    pointer-events: auto;
   }
   .close:before, .close:after {
   	position: absolute;
-  	left: 15px;
+    top: -2px;
+    left: 10px;
   	content: ' ';
   	height: 1.6rem;
   	width: 3px;
@@ -1001,7 +1078,9 @@ body{
   .works-info{
     margin-top: 4rem;
   }
-
+  .rightbox-container {
+    position: relative;
+  }
 
   /*WORKS*/
 
@@ -1020,7 +1099,7 @@ body{
   	letter-spacing: 0.2rem;
   	font-size: 1rem;
   	font-weight: 300;
-  	font-family: 'Noto Sans TC', sans-serif;
+
   	justify-content: center;
   	align-items: center;
   	display: -moz-flex;
