@@ -412,6 +412,11 @@ body{
   transform: translateY(100%);
   transition: 0.3s ease-in-out;
   z-index: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#infobox-works::-webkit-scrollbar{
+  display: none;
 }
 #infobox-works.view{
   transform: translateY(0%);
@@ -730,7 +735,12 @@ body{
   	display: 				 flex;
   	-moz-flex-directio: column:
   	-webkit-flex-direction: column;
-  		 flex-direction: column;
+  	flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .rightbox::-webkit-scrollbar {
+    display: none;
   }
   #topbox{
   	transition: 0.4s;
@@ -784,7 +794,7 @@ body{
   }
 
   #nav li{
-    font-size: 1.4vh;
+    font-size: 14px;
   }
 
   #titlebox{
@@ -852,6 +862,11 @@ body{
   	z-index: 1;
   	transform: translate3d(100%,0,0);
   	-webkit-transform: translate3d(100%,0,0);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #infobox-about::-webkit-scrollbar {
+    display: none;
   }
   #infobox-about.view{
   	transform: translate3d(0,0,0);
@@ -1080,6 +1095,9 @@ body{
   }
   .rightbox-container {
     position: relative;
+  }
+  .tab {
+    font-size: 12px;
   }
 
   /*WORKS*/

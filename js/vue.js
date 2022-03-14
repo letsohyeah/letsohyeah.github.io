@@ -240,7 +240,7 @@ var app = new Vue({
         {src:'https://i.imgur.com/j4jHI9k.jpg',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/4GUOi98.png',
@@ -262,12 +262,12 @@ var app = new Vue({
     },{
       hide:false,
       id:'',
-      category:['front_end','design'],
+      category:['design'],
       cover:'https://i.imgur.com/c2nPBUb.png',
       cover_title:'2021得利空間<br>色彩趨勢',
       title: '2021得利空間色彩趨勢',
       date:'2020.09',
-      type:'Web design / Front-end',
+      type:'Web design',
       tag:[],
       url_name:'2021得利空間色彩趨勢',
       url: 'https://www.letscolor.com.tw/colour_futures/',
@@ -303,14 +303,14 @@ var app = new Vue({
       id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/n059WQq.png',
-      cover_title:'數獨練習',
-      title: '數獨練習',
+      cover_title:'【練習】數獨',
+      title: '【練習】數獨',
       date:'2020.05',
       type:'Front-end',
       tag:['Vue.js'],
       url_name:'sudoku',
       url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/sudoku.html',
-      descript:'此次練習主要是想測試使用鍵盤作為操控介面。<br>主要功能有：筆記、清除、返回、重做、自動填入筆記數字、產生題目<br>產生題目功能試了三種方法，產生之題目有時解題到最後仍會有一開始無法察覺之矛盾<br><br>此次練習大幅增進了對jquery工具與陣列處理的熟悉度',
+      descript:'此次練習主要是想測試使用鍵盤作為操控介面。<br>主要功能有：筆記、清除、返回、重做、自動填入筆記數字、產生題目<br>產生題目功能試了三種方法，產生之題目有時解題到最後仍會有一開始無法察覺之矛盾<br><br>此次練習大幅增進了對javascript與陣列處理的熟悉度',
       img:[
         {src:'https://i.imgur.com/YXAlxNu.png',descript:'自動填入每格可能之數字'},
         {src:'https://i.imgur.com/uq3qn1c.png',descript:'自動檢查錯誤'}
@@ -634,7 +634,7 @@ var app = new Vue({
         {src:'https://i.imgur.com/vyuX7QE.jpg',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/FaMCdqI.jpg',
