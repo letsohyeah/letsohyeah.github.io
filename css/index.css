@@ -79,7 +79,12 @@ body{
   display: 				 flex;
   -moz-flex-directio: column:
   -webkit-flex-direction: column;
-     flex-direction: column;
+  flex-direction: column;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.rightbox::-webkit-scrollbar {
+  display: none;
 }
 #topbox{
   transition: 0.4s;
