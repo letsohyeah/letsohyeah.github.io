@@ -195,7 +195,7 @@ body{
   width: 38.7vh;
 }
 .titlebar{
-  width: 12vh;
+  width: 13vh;
   height: 2rem;
   position: absolute;
   background-color: #e2ded7;
@@ -816,6 +816,9 @@ body{
   	border-bottom: 1px solid #474849;
   	background-color: #e2ded7;
   	border-radius: 2rem;
+  }
+  #titlebox.scroll{
+    width: 12rem;
   }
   .titlebar{
   	width: 6rem;

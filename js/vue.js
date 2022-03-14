@@ -133,24 +133,6 @@ var app = new Vue({
     },{
       hide:false,
       id:'',
-      category:['front_end','design'],
-      cover:'https://i.imgur.com/N863v7v.png',
-      cover_title:'Sony α',
-      title: 'Sony α',
-      date:'2020.12',
-      type:'Web design / Front-end',
-      tag:['Vue.js'],
-      url_name:'Sony α',
-      url: 'https://store.sony.com.tw/alpha/',
-      descript:'',
-      img:[
-        {src:'https://i.imgur.com/N863v7v.png',descript:''},
-        {src:'https://i.imgur.com/OrIgd9J.png',descript:''},
-        {src:'https://i.imgur.com/0GGLTnU.png',descript:''}
-      ]
-    },{
-      hide:false,
-      id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/ihB2a9x.png',
       cover_title:'新北市政府觀光局<br>提案Demo',
@@ -185,6 +167,24 @@ var app = new Vue({
         {src:'https://imgur.com/0N5OlTS.png',descript:''},
         {src:'https://imgur.com/cyrmfoH.png',descript:''},
         {src:'https://imgur.com/M3WHaTx.png',descript:''}
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['front_end','design'],
+      cover:'https://i.imgur.com/N863v7v.png',
+      cover_title:'Sony α',
+      title: 'Sony α',
+      date:'2020.12',
+      type:'Web design / Front-end',
+      tag:['Vue.js'],
+      url_name:'Sony α',
+      url: 'https://store.sony.com.tw/alpha/',
+      descript:'',
+      img:[
+        {src:'https://i.imgur.com/N863v7v.png',descript:''},
+        {src:'https://i.imgur.com/OrIgd9J.png',descript:''},
+        {src:'https://i.imgur.com/0GGLTnU.png',descript:''}
       ]
     },{
       hide:false,
@@ -332,7 +332,7 @@ var app = new Vue({
         {src:'https://i.imgur.com/IF1YdNr.jpg',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/jcquZ7j.jpg',
@@ -511,7 +511,7 @@ var app = new Vue({
         {src:'https://imgur.com/uwHZB2u.png',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['design'],
       cover:'https://imgur.com/RqYiOWH.png',
