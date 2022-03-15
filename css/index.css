@@ -1202,3 +1202,21 @@ body{
     max-width: 1000px;
   }
 }
+
+@media (max-width:1440px) {
+  #nav {
+    padding: 4rem;
+  }
+  #infobox-about {
+    padding: 5rem 4rem;
+  }
+  #infobox-works {
+    padding: 3rem;
+  }
+  .rightbox.about {
+    padding: 4rem;
+  }
+  .rightbox.works{
+    padding: 4rem;
+  }
+}
