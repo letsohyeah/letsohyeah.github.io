@@ -226,7 +226,7 @@ body{
 
 /*About*/
 #infobox-about{
-  padding: 5rem 3rem;
+  padding: 4rem 3rem;
   position: absolute;
   overflow-y: scroll;
   height: calc(100vh - 38.7vh);
