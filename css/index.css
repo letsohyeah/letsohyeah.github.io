@@ -237,6 +237,11 @@ body{
   transform: translateY(100%);
   transition: 0.3s ease-in-out;
   z-index: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#infobox-about::-webkit-scrollbar {
+  display: none;
 }
 #infobox-about.view{
   transform: translateY(0%);
@@ -1203,7 +1208,7 @@ body{
   }
 }
 
-@media (max-width:1440px) {
+@media (min-width:1440px) {
   #nav {
     padding: 4rem;
   }
