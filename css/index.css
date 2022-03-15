@@ -226,7 +226,7 @@ body{
 
 /*About*/
 #infobox-about{
-  padding: 3rem;
+  padding: 5rem 3rem;
   position: absolute;
   overflow-y: scroll;
   height: calc(100vh - 38.7vh);
@@ -282,8 +282,9 @@ body{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  max-width: 30rem;
+  max-width: 60rem;
   flex-wrap: wrap;
+  flex: 1;
 }
 .type_title{
   display: -webkit-flex;
@@ -323,10 +324,15 @@ body{
   font-weight: 300;
 }
 .about__info{
-  color: #555;
   font-size: 12px;
-  font-weight: 300;
   margin-top: 1rem;
+  color: #474849;
+}
+.about__description {
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 64px;
+  color: #474849;
 }
 .content-about{
   font-size: 14px;
@@ -373,7 +379,7 @@ body{
 }
 .job__company{
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 16px;
 }
 .job__info{
@@ -396,7 +402,7 @@ body{
 }
 .job__title {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 /*About*/
@@ -925,8 +931,8 @@ body{
   }
   .type_title{
     min-width: 0;
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 20px;
     margin-bottom: 2rem;
   }
   .typebox{
