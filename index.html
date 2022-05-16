@@ -1,395 +1,411 @@
 <html lang="zh">
 
 <head>
-	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html charset=UTF-8">
-	<meta http-equiv="Content-Script-Type" content="text/javascript">
-	<meta http-equiv="Content-Style-Type" content="text/css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<!-- CSS -->
-	<link href="css/index.css" rel="stylesheet" type="text/css" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap" rel="stylesheet">
-	<!-- JS -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
-	<script src="js/waterfall.min.js"></script>
-	<script src="js/index.js"></script>
-	<title> 賴廷昱 Laitingyu Portfolio </title>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LK8JVTFVVZ"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- CSS -->
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
+    <script src="js/waterfall.min.js"></script>
+    <script src="js/index.js"></script>
+    <title> 賴廷昱 Laitingyu Portfolio </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LK8JVTFVVZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-	  gtag('config', 'G-LK8JVTFVVZ');
-	</script>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-T8KMCM5');</script>
-	<!-- End Google Tag Manager -->
+        gtag('config', 'G-LK8JVTFVVZ');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T8KMCM5');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8KMCM5"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8KMCM5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 
-        <div class="loadingbox" id="overlay">
-            <div class="linebox">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <div class="linebox">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+    <div class="loadingbox" id="overlay">
+        <div class="linebox">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-        <div class="cleanfix" id="app">
-            <div class="leftbox">
-                <div id="topbox">
-                    <div id="logobox">
-                        <img src="https://imgur.com/MSNitx5.jpg" height="40%">
-                    </div>
-                    <div id="navbox">
-                        <ul id="nav">
-													<li id="click-a">About</li>
-													<li id="click-w">Works</li>
-													<li id="click-c">Contact</li>
-                        </ul>
-                        <div id="titlebox">
-													<div class="titlebar" id="title"></div>
-													<div class="textA">About</div>
-													<div class="textW">Works</div>
-													<div class="textC">Contact</div>
-                        </div>
-                    </div>
+        <div class="linebox">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+    <div class="cleanfix" id="app">
+        <div class="leftbox">
+            <div id="topbox">
+                <div id="logobox">
+                    <img src="https://imgur.com/MSNitx5.jpg" height="40%">
                 </div>
-
-
-
-
-
-                <div id="infobox-about">
-                    <div class="about__name">
-                        <div class="about__name-zh">賴廷昱</div>
-                        <div class="about__name-en">Ting Yu, Lai</div>
-                    </div>
-                    <ul class="about__info">
-												<li>前端工程師 / 網頁設計師</li>
-                        <li>國立聯合大學 機械工程學系</li>
+                <div id="navbox">
+                    <ul id="nav">
+                        <li id="click-a">About</li>
+                        <li id="click-w">Works</li>
+                        <li id="click-c">Contact</li>
                     </ul>
-										<div class="about__description">
-											前端/設計自學者，遇到問題多能自行尋找方法解決，並持續精進實力中。
-											擅長製作網頁動態特效、複雜頁面切版，對於製作好看、有趣、酷的網頁有極大熱誠。
-											時常關注Awwwards、國內外工作室作品、前端技術社團等，了解產業趨勢。
-										</div>
-                    <ul class="about__experience">
-												<li class="job">
-														<div class="job__company">
-																版塊設計
-														</div>
-														<ul class="job__info">
-																<li>
-																		<div class="job__info-title">
-																				前端工程師
-																		</div>
-																		<div class="job__info-time">
-																				2021.06 - 2021.03
-																		</div>
-																</li>
-														</ul>
-														<div class="job__title">
-																前端技能大躍進，深化動態特效思維
-														</div>
-														<div class="job__description">
-																進入版塊設計後，除了接觸了許多以往小型專案無法接觸到的現代前端工具/技能（如docker、Nuxt、AWS部署...等）；在協作方面也學習到元件化、多人協作開發、版本控制等經驗；在切版與動態的細節上也因為公司對於品質的要求，而有所精進。是在各面向上都有突破性成長的一段經歷。
-														</div>
-												</li>
-												<li class="job">
-														<div class="job__company">
-																JK2U 吉爾集思數位行銷
-														</div>
-														<ul class="job__info">
-																<li>
-																		<div class="job__info-title">
-																				前端互動設計
-																		</div>
-																		<div class="job__info-time">
-																				2020.06 - 2021.05
-																		</div>
-																</li>
-																<li>
-																		<div class="job__info-title">
-																				視覺設計
-																		</div>
-																		<div class="job__info-time">
-																				2019.02 - 2020.06
-																		</div>
-																</li>
-														</ul>
-														<div class="job__title">
-																深刻商業薰陶，因應需求成為一個切版快手
-														</div>
-														<div class="job__description">
-																2019.12於JK2U擔任視覺設計，負責網頁設計/切版、廣告素材製作；2020.07轉任前端互動設計，負責網頁設計/切版、網頁特效、前端功能、AR、老闆交辦之研究項目。JK2U在業界有快手的稱號，因此為符合公司以及客戶的要求，也練就了切版的速度。有些網頁的超急件，也都會交由我來切版。
-														</div>
-												</li>
-												<li class="job">
-														<div class="job__company">
-																Natural n' Vintage
-														</div>
-														<ul class="job__info">
-																<li>
-																		<div class="job__info-title">
-																				店長
-																		</div>
-																		<div class="job__info-time">
-																				2018.06 - 2019.11
-																		</div>
-																</li>
-																<li>
-																		<div class="job__info-title">
-																				籌備成員
-																		</div>
-																		<div class="job__info-time">
-																				2017.09 - 2018.05
-																		</div>
-																</li>
-														</ul>
-														<div class="job__title">
-																建立美感與開啟網頁之路的開端
-														</div>
-														<div class="job__description">
-																畢業後任職於古董傢俱店 Natural n' Vintage，籌備時期負責網頁建置、平面文宣、行銷宣傳等事務； 開業後負責網頁維護、商品攝影、商品銷售等事宜。 這份工作讓我從完全不會切版，到架設完整的官網，為我跨入網頁領域打下了基礎。除了網頁相關技術外，因為雇主與工作需求，也在美感上獲得大量的薰陶。
-														</div>
-												</li>
-                    </ul>
-                </div>
-
-
-                <div id="infobox-works" onscroll="scrollFunction()">
-                    <div class="tabbox">
-                        <div class="tab actived" @click="tab=['front_end']">Front-end</div>
-                        <div class="tab" @click="tab=['design']">Design</div>
-                    </div>
-
-                    <div class="waterfall">
-                        <transition-group name="fade" mode="out-in" v-on:after-enter="afterEnter">
-                            <div class="item" v-if="i.cover!='' && i.hide==false" v-on:click="works_click(i.id)" v-for="i in filtered" :key="i.id">
-                                <div class="imgbox-works">
-                                    <img v-lazy="i.cover" width="100%">
-                                </div>
-                                <div class="name-works" id="zh-item" v-html="i.cover_title"></div>
-                            </div>
-                        </transition-group>
+                    <div id="titlebox">
+                        <div class="titlebar" id="title"></div>
+                        <div class="textA">About</div>
+                        <div class="textW">Works</div>
+                        <div class="textC">Contact</div>
                     </div>
                 </div>
-
-
-                <div id=infobox-contact>
-                    <p>0909-689-432</p>
-                    <p>letsohyeah@gmail.com</p>
-                </div>
-
-
             </div>
 
 
-            <ul>
-                <li class="rightbox about">
-                    <div class="titlebox-skills">Skills</div>
-                    <div class="typebox">
-                        <div class="type_content">
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    HTML / PHP
-                                </div>
-                                <ul>
-                                    <li>HTML</li>
-																		<li>Twig</li>
-																		<li>PHP</li>
-                                </ul>
-                            </div>
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    CSS
-                                </div>
-                                <ul>
-                                    <li>CSS3</li>
-                                    <li>SASS / SCSS</li>
-                                </ul>
-                            </div>
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    JavaScript
-                                </div>
-                                <ul>
-                                    <li>ES2015</li>
-                                    <li>JQuery</li>
-                                </ul>
-                            </div>
-														<div class="skill_box">
-                                <div class="skill_title">
-                                    Tools
-                                </div>
-                                <ul>
-                                    <li>NPM</li>
-																		<li>Yarn</li>
-                                    <li>Webpack</li>
-																		<li>Postman</li>
-                                    <li>Docker<span>·novice</span></li>
-                                    <li>Nginx<span>·novice</span></li>
-                                </ul>
-                            </div>
-														<div class="skill_box">
-                                <div class="skill_title">
-                                    Frameworks
-                                </div>
-                                <ul>
-                                    <li>Vue2</li>
-																		<li>Vue3<span>·novice</span></li>
-                                    <li>Nuxt<span>·novice</span></li>
-                                </ul>
-                            </div>
-														<div class="skill_box">
-                                <div class="skill_title">
-                                    Others
-                                </div>
-                                <ul>
-                                    <li>Git</li>
-                                    <li>Google Analytics</li>
-                                    <li>Google TagManager</li>
-																		<li>AWS Deployment<span>·novice</span></li>
-                                </ul>
-                            </div>
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    Effects
-                                </div>
-                                <ul>
-																		<li>GSAP<span>(animation)</span></li>
-                                    <li>Ahrelax.js<span>(scroll animation)</span></li>
-																		<li>Paper.js<span>(canvas animation)</span></li>
-                                    <li>ScrollReveals<span>(scroll animation)</span></li>
-																		<li>AOS<span>(scroll effects)</span></li>
-																		<li>Swiper<span>(carousel)</span></li>
-                                    <li>ahrelax.js<span>(scroll animation)</span></li>
-                                    <li>ScrollReveals<span>(scroll effects)</span></li>
-                                    <li>Locomotive-Scroll<span>(parallax-scrolling)</span></li>
-                                    <li>D3.js<span>(data visualization)</span></li>
-                                    <li>Panolens<span>(360°)</span></li>
-																		<li>Three.js<span>(360°)·novice</span></li>
-                                </ul>
-                            </div>
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    AR
-                                </div>
-                                <ul>
-                                    <li>Spark AR</li>
-                                </ul>
-                            </div>
+
+
+
+            <div id="infobox-about">
+                <div class="about__name">
+                    <div class="about__name-zh">賴廷昱</div>
+                    <div class="about__name-en">Ting Yu, Lai</div>
+                </div>
+                <ul class="about__info">
+                    <li>前端工程師 / 網頁設計師</li>
+                    <li>國立聯合大學 機械工程學系</li>
+                </ul>
+                <div class="about__description">
+                    前端/設計自學者，遇到問題多能自行尋找方法解決，並持續精進實力中。
+                    擅長製作網頁動態特效、複雜頁面切版，對於製作好看、有趣、酷的網頁有極大熱誠。
+                    時常關注Awwwards、國內外工作室作品、前端技術社團等，了解產業趨勢。
+                </div>
+                <ul class="about__experience">
+                    <li class="job">
+                        <div class="job__company">
+                            版塊設計
                         </div>
-                        <div class="type_title">Front-end</div>
-                    </div>
-                    <div class="typebox">
-                        <div class="type_content">
-														<div class="skill_box">
-																<div class="skill_title">
-																		Coding
-																</div>
-																<ul>
-																		<li>Visual Studio Code</li>
-																		<li>Atom</li>
-																</ul>
-														</div>
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    Graphic / UI
+                        <ul class="job__info">
+                            <li>
+                                <div class="job__info-title">
+                                    前端工程師
                                 </div>
-                                <ul>
-																		<li>Figma</li>
-                                    <li>Illustrator</li>
-                                    <li>Photoshop</li>
-                                </ul>
-                            </div>
-                            <div class="skill_box">
-                                <div class="skill_title">
-                                    3D Modeling
+                                <div class="job__info-time">
+                                    2021.06 - 2021.03
                                 </div>
-                                <ul>
-                                    <li>Sketch UP</li>
-                                    <li>Blender</li>
-                                    <li>SolidWorks</li>
-                                </ul>
-                            </div>
+                            </li>
+                        </ul>
+                        <div class="job__title">
+                            前端技能大躍進，深化動態特效思維
                         </div>
-                        <div class="type_title">Software</div>
-                    </div>
-
-
-
-                </li>
-                <transition name="slide">
-                    <li v-if="show" class="rightbox Works desktop" >
-                        <div class="rightbox-container">
-                            <div class="titlebox-works" v-html="works[id].title"></div>
-                            <div class="works-info">
-                                <div class="works-info-text">{{works[id].date}}</div>
-                                <div class="works-info-text">{{works[id].type}}</div>
-                                <a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}} <i class="fas fa-link"></i></a>
-                                <div class="tagbox">
-                                    <span v-for="i in works[id].tag">{{i}}</span>
-                                </div>
-                                <div class="works-descript" v-html="works[id].descript"></div>
-                            </div>
-                            <div class="imgbox1-works" v-for="i in works[id].img">
-																<div class="imgbox1-works__img">
-																	<img v-lazy="i.src" v-if="i.src">
-																	<iframe v-if="i.video" :src="i.video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="前進十四峰"></iframe>
-																</div>
-																<div class="img-descript" v-if="i.descript != ''">{{i.descript}}</div>
-                            </div>
+                        <div class="job__description">
+                            進入版塊設計後，除了接觸了許多以往小型專案無法接觸到的現代前端工具/技能（如docker、Nuxt、AWS部署...等）；在協作方面也學習到元件化、多人協作開發、版本控制等經驗；在切版與動態的細節上也因為公司對於品質的要求，而有所精進。是在各面向上都有突破性成長的一段經歷。
                         </div>
                     </li>
-                </transition>
-                <li class="rightbox Works mobile">
+                    <li class="job">
+                        <div class="job__company">
+                            JK2U 吉爾集思數位行銷
+                        </div>
+                        <ul class="job__info">
+                            <li>
+                                <div class="job__info-title">
+                                    前端互動設計
+                                </div>
+                                <div class="job__info-time">
+                                    2020.06 - 2021.05
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job__info-title">
+                                    視覺設計
+                                </div>
+                                <div class="job__info-time">
+                                    2019.02 - 2020.06
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="job__title">
+                            深刻商業薰陶，因應需求成為一個切版快手
+                        </div>
+                        <div class="job__description">
+                            2019.12於JK2U擔任視覺設計，負責網頁設計/切版、廣告素材製作；
+                            2020.07轉任前端互動設計，負責網頁設計/切版、網頁特效、前端功能、AR、老闆交辦之研究項目。JK2U在業界有快手的稱號，因此為符合公司以及客戶的要求，也練就了切版的速度。有些網頁的超急件，也都會交由我來切版。
+                        </div>
+                    </li>
+                    <li class="job">
+                        <div class="job__company">
+                            Natural n' Vintage
+                        </div>
+                        <ul class="job__info">
+                            <li>
+                                <div class="job__info-title">
+                                    店長
+                                </div>
+                                <div class="job__info-time">
+                                    2018.06 - 2019.11
+                                </div>
+                            </li>
+                            <li>
+                                <div class="job__info-title">
+                                    籌備成員
+                                </div>
+                                <div class="job__info-time">
+                                    2017.09 - 2018.05
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="job__title">
+                            建立美感與開啟網頁之路的開端
+                        </div>
+                        <div class="job__description">
+                            畢業後任職於古董傢俱店 Natural n' Vintage，籌備時期負責網頁建置、平面文宣、行銷宣傳等事務； 開業後負責網頁維護、商品攝影、商品銷售等事宜。
+                            這份工作讓我從完全不會切版，到架設完整的官網，為我跨入網頁領域打下了基礎。除了網頁相關技術外，因為雇主與工作需求，也在美感上獲得大量的薰陶。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="infobox-works" onscroll="scrollFunction()">
+                <div class="tabbox">
+                    <div class="tab actived" @click="tab=['front_end']">Front-end</div>
+                    <div class="tab" @click="tab=['design']">Design</div>
+                </div>
+
+                <div class="waterfall">
+                    <transition-group name="fade" mode="out-in" v-on:after-enter="afterEnter">
+                        <div class="item" v-if="i.cover!='' && i.hide==false" v-on:click="works_click(i.id)"
+                            v-for="i in filtered" :key="i.id">
+                            <div class="imgbox-works">
+                                <img v-lazy="i.cover" width="100%">
+                            </div>
+                            <div class="name-works" id="zh-item" v-html="i.cover_title"></div>
+                        </div>
+                    </transition-group>
+                </div>
+            </div>
+
+
+            <div id=infobox-contact>
+                <p>0909-689-432</p>
+                <p>letsohyeah@gmail.com</p>
+            </div>
+
+
+        </div>
+
+
+        <ul>
+            <li class="rightbox about">
+                <div class="titlebox-skills">Skills</div>
+                <div class="typebox">
+                    <div class="type_content">
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                HTML / PHP
+                            </div>
+                            <ul>
+                                <li>HTML</li>
+                                <li>Twig</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                CSS
+                            </div>
+                            <ul>
+                                <li>CSS3</li>
+                                <li>SASS / SCSS</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                JavaScript
+                            </div>
+                            <ul>
+                                <li>ES2015</li>
+                                <li>JQuery</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                Tools
+                            </div>
+                            <ul>
+                                <li>NPM</li>
+                                <li>Yarn</li>
+                                <li>Webpack</li>
+                                <li>Postman</li>
+                                <li>Docker</li>
+                                <li>Nginx</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                Frameworks
+                            </div>
+                            <ul>
+                                <li>Vue2</li>
+                                <li>Vue3</li>
+                                <li>Nuxt</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                Others
+                            </div>
+                            <ul>
+                                <li>Git</li>
+                                <li>Google Analytics</li>
+                                <li>Google TagManager</li>
+                                <li>Deployment</li>
+                                <li>Wordpress</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                Effects
+                            </div>
+                            <ul>
+                                <li>GSAP<span>(animation)</span></li>
+                                <li>Ahrelax.js<span>(scroll animation)</span></li>
+                                <li>Paper.js<span>(canvas animation)</span></li>
+                                <li>ScrollReveals<span>(scroll animation)</span></li>
+                                <li>AOS<span>(scroll effects)</span></li>
+                                <li>Swiper<span>(carousel)</span></li>
+                                <li>ahrelax.js<span>(scroll animation)</span></li>
+                                <li>ScrollReveals<span>(scroll effects)</span></li>
+                                <li>Locomotive-Scroll<span>(parallax-scrolling)</span></li>
+                                <li>D3.js<span>(data visualization)</span></li>
+                                <li>Panolens<span>(360°)</span></li>
+                                <li>Three.js<span>(360°)·novice</span></li>
+                                <li>barba.js<span>(SPA transition)</span></li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                AR
+                            </div>
+                            <ul>
+                                <li>Spark AR</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="type_title">Front-end</div>
+                </div>
+                <div class="typebox">
+                    <div class="type_content">
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                Coding
+                            </div>
+                            <ul>
+                                <li>Visual Studio Code</li>
+                                <li>Atom</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                Graphic / UI
+                            </div>
+                            <ul>
+                                <li>Figma</li>
+                                <li>Illustrator</li>
+                                <li>Photoshop</li>
+                            </ul>
+                        </div>
+                        <div class="skill_box">
+                            <div class="skill_title">
+                                3D Modeling
+                            </div>
+                            <ul>
+                                <li>Sketch UP</li>
+                                <li>Blender</li>
+                                <li>SolidWorks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="type_title">Software</div>
+                </div>
+
+
+
+            </li>
+            <transition name="slide">
+                <li v-if="show" class="rightbox Works desktop">
                     <div class="rightbox-container">
-                        <div class="close"></div>
                         <div class="titlebox-works" v-html="works[id].title"></div>
                         <div class="works-info">
                             <div class="works-info-text">{{works[id].date}}</div>
                             <div class="works-info-text">{{works[id].type}}</div>
-                            <a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}} <i class="fas fa-external-link-alt"></i></a>
+                            <a v-bind:href="works[id].url" v-if="works[id].url !=''"
+                                target="_blank">{{works[id].url_name}} <i class="fas fa-link"></i></a>
                             <div class="tagbox">
                                 <span v-for="i in works[id].tag">{{i}}</span>
                             </div>
                             <div class="works-descript" v-html="works[id].descript"></div>
                         </div>
                         <div class="imgbox1-works" v-for="i in works[id].img">
-														<div class="imgbox1-works__img">
-															<img v-lazy="i.src" v-if="i.src">
-															<iframe v-if="i.video" :src="i.video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="前進十四峰"></iframe>
-														</div>
-														<div class="img-descript" v-if="i.descript != ''">{{i.descript}}</div>
+                            <div class="imgbox1-works__img">
+                                <img v-lazy="i.src" v-if="i.src">
+                                <iframe v-if="i.video" :src="i.video" frameborder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    title="前進十四峰"></iframe>
+                            </div>
+                            <div class="img-descript" v-if="i.descript != ''">{{i.descript}}</div>
                         </div>
                     </div>
                 </li>
-            </ul>
-        </div>
+            </transition>
+            <li class="rightbox Works mobile">
+                <div class="rightbox-container">
+                    <div class="close"></div>
+                    <div class="titlebox-works" v-html="works[id].title"></div>
+                    <div class="works-info">
+                        <div class="works-info-text">{{works[id].date}}</div>
+                        <div class="works-info-text">{{works[id].type}}</div>
+                        <a v-bind:href="works[id].url" v-if="works[id].url !=''" target="_blank">{{works[id].url_name}}
+                            <i class="fas fa-external-link-alt"></i></a>
+                        <div class="tagbox">
+                            <span v-for="i in works[id].tag">{{i}}</span>
+                        </div>
+                        <div class="works-descript" v-html="works[id].descript"></div>
+                    </div>
+                    <div class="imgbox1-works" v-for="i in works[id].img">
+                        <div class="imgbox1-works__img">
+                            <img v-lazy="i.src" v-if="i.src">
+                            <iframe v-if="i.video" :src="i.video" frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="前進十四峰"></iframe>
+                        </div>
+                        <div class="img-descript" v-if="i.descript != ''">{{i.descript}}</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
     </div>
 </body>
 <script src="js/vue.js"></script>
 <script src="js/waterfall.js"></script>
+
 </html>
