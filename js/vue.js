@@ -29,7 +29,7 @@ var app = new Vue({
       hide:false,
       id:'',
       category:['front_end'],
-      cover:'https://i.imgur.com/q5OJqJS.png',
+      cover:'https://imgur.com/cjxFVTV.png',
       cover_title:'前進十四峰',
       title: '前進十四峰<br>橘子關懷基金會',
       date:'2021.08',
@@ -39,6 +39,9 @@ var app = new Vue({
       url: 'https://gonext14peaks.gamaniacheerup.org/',
       descript:'設計總監：Lee Ming<br>專案經理：Tani Tsai<br>網站設計：Tani Tsai<br>網站設計協助：Zhung Wu<br>工程開發：<b>Les Lai</b><br>工程開發協助：Evan Yang<br><br>此專案除3D線段動畫、按讚動畫、頁面路由設定由Evan Yang協助外，其餘全站頁面切版、動畫製作、Wordpress ACF開設/串接皆為本人負責製作',
       img:[
+        {src:'https://imgur.com/cjxFVTV.png'},
+        {src:'https://imgur.com/jiDpf5F.png'},
+        {src:'https://imgur.com/aMfb580.png'},
         {src:'https://i.imgur.com/q5OJqJS.png',descript:''},
         {src:'https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e343bb0c-301c-4f74-a902-54a6221b6a13.gif?ClientID=vimeo-core-prod&Date=1646903925&Signature=9ab7ef620a998c9e33cf11125fb654aac9641f9e',descript:''},
         {src:'https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/30d1d55c-09ff-4024-8271-7793d986617a.gif?ClientID=vimeo-core-prod&Date=1647073619&Signature=ded38608614637c43062773c5b6558952fb93133',descript:''},
@@ -69,6 +72,48 @@ var app = new Vue({
         {src:'https://i.imgur.com/ElfRTB9.png',descript:''},
         {src:'https://i.imgur.com/9Ld1jNl.png',descript:''},
         {src:'https://i.imgur.com/Iv4G8UG.png',descript:''},
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['front_end','design'],
+      cover:'https://imgur.com/eaFk15E.png',
+      cover_title:'Una Photography',
+      title: 'Una Photography',
+      date:'2021.04',
+      type:'Web design / Front-end',
+      tag:['Nuxt 3','Wordpress','ScrollTrigger','GSAP','Locomotive','Pinia'],
+      url_name:'Una Photography',
+      url: 'https://unaliu.love',
+      descript:'此專案為本人自行接案，已完成設計，尚在開發階段',
+      img:[
+        {src:'https://imgur.com/KseMwuo.png',descript:''},
+        {src:'https://imgur.com/eaFk15E.png',descript:''},
+        {src:'https://imgur.com/MGaUDz6.png',descript:''},
+        {src:'https://imgur.com/jA3jSHP.png',descript:''},
+        {src:'https://imgur.com/jwOc0E1.png',descript:''},
+        {src:'https://imgur.com/L0QRqWx.png',descript:''},
+        {src:'https://imgur.com/k2KxIEz.png',descript:''},
+        {src:'https://imgur.com/scFMGBC.png',descript:''},
+        {src:'https://imgur.com/I0uKePH.png',descript:''},
+      ]
+    },{
+      hide:false,
+      id:'',
+      category:['front_end'],
+      cover:'https://imgur.com/eq5HGZd.png',
+      cover_title:'新舞台藝術節',
+      title: '新舞台藝術節',
+      date:'2022.09',
+      type:'Front-end',
+      tag:['Nuxt 3','GSAP','Three.js'],
+      url_name:'新舞台藝術節',
+      url: 'http://client.e-s.tw/',
+      descript:'此專案為本人第一次使用Three.js，非常有趣的經驗',
+      img:[
+        {src:'https://imgur.com/eq5HGZd.png',descript:''},
+        {src:'https://imgur.com/OAgVigf.gif',descript:''},
+        {src:'https://imgur.com/LRoDl57.png',descript:''},
       ]
     },{
       hide:false,
@@ -110,28 +155,41 @@ var app = new Vue({
     },{
       hide:false,
       id:'',
-      category:['front_end','design'],
-      cover:'https://i.imgur.com/MBRixcE.png',
-      cover_title:'Una Photography',
-      title: 'Una Photography',
-      date:'2021.04',
-      type:'Web design / Front-end',
-      tag:['Vue.js','ScrollTrigger','Locomotive-Scroll'],
-      url_name:'首頁動態示意Demo',
-      url: 'http://blog.jk2u.com/work_site/jk2u_test/leo/una/index2.html',
-      descript:'此專案為本人自行接案，已完成設計，尚在開發階段',
+      category:['front_end'],
+      cover:'https://imgur.com/uig5kDO.png',
+      cover_title:'AJ2',
+      title: 'AJ2',
+      date:'2022.08',
+      type:'Front-end',
+      tag:['Vite','GSAP','ScrollTrigger','Locomotive'],
+      url_name:'Ultra Tech高效能貓抓布 沙發系列',
+      url: 'http://aj2.e-s.tw/',
+      descript:'除了SVG動畫與Swiper部分外，其餘皆為本人製作',
       img:[
-        {src:'https://i.imgur.com/PKkoySt.png',descript:''},
-        {src:'https://i.imgur.com/MBRixcE.png',descript:''},
-        {src:'https://i.imgur.com/SBvzx8I.png',descript:''},
-        {src:'https://i.imgur.com/psfnCxY.png',descript:''},
-        {src:'https://i.imgur.com/4sHDSOc.png',descript:''},
-        {src:'https://i.imgur.com/7lhkbk1.png',descript:''},
-        {src:'https://i.imgur.com/t0FI6jO.png',descript:''},
-        {src:'https://i.imgur.com/BezmwZM.png',descript:''},
+        {src:'https://imgur.com/uig5kDO.png',descript:''},
+        {src:'https://imgur.com/lVsihi6.gif',descript:''},
+        {src:'https://imgur.com/Fd8PYlF.gif',descript:''},
       ]
     },{
       hide:false,
+      id:'',
+      category:['front_end'],
+      cover:'https://imgur.com/V0Ul4yv.png',
+      cover_title:'Bolon',
+      title: 'Bolon',
+      date:'2022.06',
+      type:'Front-end',
+      tag:['Nuxt 3','Wordpress','GSAP','ScrollTrigger','Locomotive','Pinia'],
+      url_name:'Ultra Tech高效能貓抓布 沙發系列',
+      url: 'https://dd-a.tw/',
+      descript:'與Eason Chiu共同製作，為第一次使用Nuxt 3，也是為公司開發模板的基底',
+      img:[
+        {src:'https://imgur.com/V0Ul4yv.png',descript:''},
+        {src:'https://imgur.com/RtnGQfH.png',descript:'post-type 篩選、收尋功能'},
+        {src:'https://imgur.com/fIN6Nnm.png',descript:'簡易購物車、寄信功能'},
+      ]
+    },{
+      hide:true,
       id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/ihB2a9x.png',
@@ -160,7 +218,10 @@ var app = new Vue({
       tag:[],
       url_name:'Natural n Vintage',
       url: 'https://naturalnvintage.com',
-      descript:'',
+      descript:`在Natural n Vintage籌備初期，阿吉（老闆）問我有沒有辦法架網站，
+      我：「可以，但是我不會寫程式」，
+      阿吉：「沒關係，你慢慢研究」，
+      於是我們就這樣開始了。`,
       img:[
         {src:'https://imgur.com/90a3s1n.png',descript:''},
         {src:'https://imgur.com/C80aZOZ.png',descript:''},
@@ -169,7 +230,7 @@ var app = new Vue({
         {src:'https://imgur.com/M3WHaTx.png',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['front_end','design'],
       cover:'https://i.imgur.com/N863v7v.png',
@@ -223,7 +284,7 @@ var app = new Vue({
         {src:'https://i.imgur.com/vI2vSS6.jpg',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['front_end'],
       cover:'https://i.imgur.com/zaDX4Za.jpg',
@@ -597,7 +658,7 @@ var app = new Vue({
         {src:'https://imgur.com/gPTv1gd.png',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/w9Imc03.jpg',
@@ -616,7 +677,7 @@ var app = new Vue({
         {src:'https://i.imgur.com/AEHD1A8.jpg',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/MQSDhBi.jpg',
@@ -651,7 +712,7 @@ var app = new Vue({
         {src:'https://i.imgur.com/h0QLcve.jpg',descript:''}
       ]
     },{
-      hide:false,
+      hide:true,
       id:'',
       category:['design'],
       cover:'https://i.imgur.com/SgZecV1.jpg',

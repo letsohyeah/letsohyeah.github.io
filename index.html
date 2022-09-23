@@ -16,9 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
-    <script src="js/waterfall.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-lazyload/1.3.3/vue-lazyload.js"></script>
     <title> 賴廷昱 Laitingyu Portfolio </title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LK8JVTFVVZ"></script>
@@ -95,11 +93,35 @@
                     <li>國立聯合大學 機械工程學系</li>
                 </ul>
                 <div class="about__description">
-                    前端/設計自學者，遇到問題多能自行尋找方法解決，並持續精進實力中。
+                    前端/設計自學者，遇到問題能自行尋找方法解決，並持續精進實力中。
                     擅長製作網頁動態特效、複雜頁面切版，對於製作好看、有趣、酷的網頁有極大熱誠。
                     時常關注Awwwards、國內外工作室作品、前端技術社團等，了解產業趨勢。
                 </div>
                 <ul class="about__experience">
+                    <li class="job">
+                        <div class="job__company">
+                            ES Design
+                        </div>
+                        <ul class="job__info">
+                            <li>
+                                <div class="job__info-title">
+                                    前端工程師
+                                </div>
+                                <div class="job__info-time">
+                                    2022.04 - Now
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="job__title">
+                            協助建立開發模板，前端技能大躍進
+                        </div>
+                        <div class="job__description">
+                            進入ES後，借助之前的經驗，引入BEM命名、改善Paragraph設定、協助公司開發模板。
+                            新模板採用全新的Nuxt 3作為前端開發框架，搭配WordPress作為後端資料庫與CMS，自行撰寫API與前端串接。
+                            在此之前從未接觸過Nuxt，因此在這段期間學習了Nuxt的基本使用，在Wordpress方面實作了會員系統、文章搜尋、寄信等功能。
+                            並且因應職務需求自行學習了第三方登入、主機部署等知識，也嘗試了之前沒有機會接觸的three.js，是在各面向上都有突破性成長的一段經歷。
+                        </div>
+                    </li>
                     <li class="job">
                         <div class="job__company">
                             版塊設計
@@ -110,15 +132,15 @@
                                     前端工程師
                                 </div>
                                 <div class="job__info-time">
-                                    2021.06 - 2021.03
+                                    2021.06 - 2022.03
                                 </div>
                             </li>
                         </ul>
                         <div class="job__title">
-                            前端技能大躍進，深化動態特效思維
+                            模組化多人協作開發經驗
                         </div>
                         <div class="job__description">
-                            進入版塊設計後，除了接觸了許多以往小型專案無法接觸到的現代前端工具/技能（如docker、Nuxt、AWS部署...等）；在協作方面也學習到元件化、多人協作開發、版本控制等經驗；在切版與動態的細節上也因為公司對於品質的要求，而有所精進。是在各面向上都有突破性成長的一段經歷。
+                            主要負責網頁專案開發、與同事協作大型專案，除了接觸了許多以往無法接觸到的工具/技能（如docker、SCSS、Wordpress...等）；在協作方面也學習到元件化、多人協作、版本控制與Coding/設計上的規範（如BEM、Column System、Paragraph規範...等）；在切版與動態的細節上也因為公司對於品質的要求，而有所精進。
                         </div>
                     </li>
                     <li class="job">
@@ -221,30 +243,15 @@
                     <div class="type_content">
                         <div class="skill_box">
                             <div class="skill_title">
-                                HTML / PHP
+                                Basic Skills
                             </div>
                             <ul>
                                 <li>HTML</li>
                                 <li>Twig</li>
                                 <li>PHP</li>
-                            </ul>
-                        </div>
-                        <div class="skill_box">
-                            <div class="skill_title">
-                                CSS
-                            </div>
-                            <ul>
                                 <li>CSS3</li>
                                 <li>SASS / SCSS</li>
-                            </ul>
-                        </div>
-                        <div class="skill_box">
-                            <div class="skill_title">
-                                JavaScript
-                            </div>
-                            <ul>
-                                <li>ES2015</li>
-                                <li>JQuery</li>
+                                <li>ES6+</li>
                             </ul>
                         </div>
                         <div class="skill_box">
@@ -258,6 +265,11 @@
                                 <li>Postman</li>
                                 <li>Docker</li>
                                 <li>Nginx</li>
+                                <li>PM2</li>
+                                <li>Git</li>
+                                <li>Supabase</li>
+                                <li>Pinia</li>
+                                <li>i18n</li>
                             </ul>
                         </div>
                         <div class="skill_box">
@@ -265,9 +277,10 @@
                                 Frameworks
                             </div>
                             <ul>
-                                <li>Vue2</li>
-                                <li>Vue3</li>
-                                <li>Nuxt</li>
+                                <li>Vue 2</li>
+                                <li>Vue 3</li>
+                                <li>Nuxt 3</li>
+                                <li>Vite</li>
                             </ul>
                         </div>
                         <div class="skill_box">
@@ -275,11 +288,9 @@
                                 Others
                             </div>
                             <ul>
-                                <li>Git</li>
-                                <li>Google Analytics</li>
-                                <li>Google TagManager</li>
-                                <li>Deployment</li>
-                                <li>Wordpress</li>
+                                <li>Linux Deployment</li>
+                                <li>Wordpress ACF</li>
+                                <li>Wordpress Rest-API</li>
                             </ul>
                         </div>
                         <div class="skill_box">
@@ -288,7 +299,6 @@
                             </div>
                             <ul>
                                 <li>GSAP<span>(animation)</span></li>
-                                <li>Ahrelax.js<span>(scroll animation)</span></li>
                                 <li>Paper.js<span>(canvas animation)</span></li>
                                 <li>ScrollReveals<span>(scroll animation)</span></li>
                                 <li>AOS<span>(scroll effects)</span></li>
@@ -298,16 +308,8 @@
                                 <li>Locomotive-Scroll<span>(parallax-scrolling)</span></li>
                                 <li>D3.js<span>(data visualization)</span></li>
                                 <li>Panolens<span>(360°)</span></li>
-                                <li>Three.js<span>(3D)·novice</span></li>
+                                <li>Three.js<span>(3D)</span></li>
                                 <li>barba.js<span>(SPA transition)</span></li>
-                            </ul>
-                        </div>
-                        <div class="skill_box">
-                            <div class="skill_title">
-                                AR
-                            </div>
-                            <ul>
-                                <li>Spark AR</li>
                             </ul>
                         </div>
                     </div>
@@ -330,18 +332,17 @@
                             </div>
                             <ul>
                                 <li>Figma</li>
+                                <li>XD</li>
                                 <li>Illustrator</li>
                                 <li>Photoshop</li>
                             </ul>
                         </div>
                         <div class="skill_box">
                             <div class="skill_title">
-                                3D Modeling
+                                AR
                             </div>
                             <ul>
-                                <li>Sketch UP</li>
-                                <li>Blender</li>
-                                <li>SolidWorks</li>
+                                <li>Spark AR</li>
                             </ul>
                         </div>
                     </div>
@@ -405,6 +406,8 @@
     </div>
     </div>
 </body>
+<script src="js/waterfall.min.js"></script>
+<script src="js/index.js"></script>
 <script src="js/vue.js"></script>
 <script src="js/waterfall.js"></script>
 
