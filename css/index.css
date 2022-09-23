@@ -333,9 +333,13 @@ body{
   margin-top: 1rem;
   color: #474849;
 }
+.about__info li {
+  margin-bottom: 4px;
+}
 .about__description {
   font-size: 14px;
-  margin-top: 16px;
+  line-height: 2;
+  margin-top: 24px;
   margin-bottom: 64px;
   color: #474849;
 }
@@ -392,7 +396,7 @@ body{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   color: #555;
   font-weight: 300;
 }
@@ -408,7 +412,10 @@ body{
 .job__title {
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+}
+.job__description {
+  line-height: 2;
 }
 /*About*/
 
@@ -575,16 +582,17 @@ body{
 }
 .works-descript {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: normal;
+  white-space: pre-line;
 }
 .works-info a{
   font-weight: bold;
   color: #000;
-  line-height: 1.5;
+  line-height: 2;
 }
 .works-info-text{
-  line-height: 1.5;
+  line-height: 2;
 }
 .tagbox{
   display: -webkit-flex;
