@@ -37,7 +37,15 @@ var app = new Vue({
       tag:['Vue.js','Wordpress','GSAP','Swiper'],
       url_name:'前進十四峰｜橘子關懷基金會',
       url: 'https://gonext14peaks.gamaniacheerup.org/',
-      descript:'設計總監：Lee Ming<br>專案經理：Tani Tsai<br>網站設計：Tani Tsai<br>網站設計協助：Zhung Wu<br>工程開發：<b>Les Lai</b><br>工程開發協助：Evan Yang<br><br>此專案除3D線段動畫、按讚動畫、頁面路由設定由Evan Yang協助外，其餘全站頁面切版、動畫製作、Wordpress ACF開設/串接皆為本人負責製作',
+      descript:`設計總監：Lee Ming
+        專案經理：Tani Tsai
+        網站設計：Tani Tsai
+        網站設計協助：Zhung Wu
+        工程開發：<b>Les Lai</b>
+        工程開發協助：Evan Yang
+        
+        此專案除3D線段動畫、按讚動畫、頁面路由設定由Evan Yang協助外，其餘全站頁面切版、動畫製作、Wordpress ACF開設/串接皆為本人負責製作
+        是我進入版塊後第一個作為主工程師的專案`,
       img:[
         {src:'https://imgur.com/cjxFVTV.png'},
         {src:'https://imgur.com/jiDpf5F.png'},
@@ -85,7 +93,9 @@ var app = new Vue({
       tag:['Nuxt 3','Wordpress','ScrollTrigger','GSAP','Locomotive','Pinia'],
       url_name:'Una Photography',
       url: 'https://unaliu.love',
-      descript:'此專案為本人自行接案，已完成設計，尚在開發階段',
+      descript:`<b>-此專案尚在開發階段-</b>
+      
+        此專案為本人自行接案，設計與開發皆為本人獨自進行`,
       img:[
         {src:'https://imgur.com/KseMwuo.png',descript:''},
         {src:'https://imgur.com/eaFk15E.png',descript:''},
@@ -109,10 +119,13 @@ var app = new Vue({
       tag:['Nuxt 3','GSAP','Three.js'],
       url_name:'新舞台藝術節',
       url: 'http://client.e-s.tw/',
-      descript:'此專案為本人第一次使用Three.js，非常有趣的經驗',
+      descript:`<b>-此專案尚在開發階段-</b>
+
+        此專案為本人第一次使用Three.js，嘗試了Shader的應用與AnimationMixer的應用，並且使用GSAP製作了一些動畫效果。
+        shader的部分是參考了這個<a href="https://codepen.io/vcomics/pen/jeWpgX?editors=1010" target="__blank">codepen</a>，並且自己做了一些修改`,
       img:[
         {src:'https://imgur.com/eq5HGZd.png',descript:''},
-        {src:'https://imgur.com/OAgVigf.gif',descript:''},
+        {src:'https://imgur.com/rffvHUV.gif',descript:''},
         {src:'https://imgur.com/LRoDl57.png',descript:''},
       ]
     },{
